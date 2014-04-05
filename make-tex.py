@@ -4,6 +4,7 @@
 # IMPORTS
 #=========
 
+import string
 import sys
 
 
@@ -31,10 +32,55 @@ def isAtChapterName(s):
 def extractChapterName(s):
     if len(s) < 5:
         reportError("Invalid chapter syntax");
-    return s[4:]
+    return s[4:].strip()
 
-def isEmptyLine(s):
+def isAtSectionName(s):
+    if len(s) == 0 or s[0] == ' ':
+        return False
+    for c in s:
+        if string.letters.find(c) > -1 and not string.uppercase.find(c) > -1:
+            return False
+    return True
+
+def extractSectionName(s):
+    return s[0] + s[1:].strip().lower()
+
+def checkSpacesExact(s, num):
+    return len(s) > num + 1 and s[0:num] == " " * num and s[num] != ' '
+
+def checkSpacesAtLeast(s, num):
+    return len(s) > num + 1 and s[0:num] == " " * num
+
+def isAtIndentedText(s):
+    return checkSpacesExact(s, 6)
+
+def isAtIndentedTextContinue(s):
+    return checkSpacesAtLeast(s, 8)
+
+def isAtTextExcerpt(s):
+    return checkSpacesExact(s, 8)
+
+def isAtTextExcerptContinue(s):
+    return checkSpacesAtLeast(s, 10)
+
+def isAtQuote(s):
+    return len(s) > 2 and (s[0] == '-' or s[0] == '+') and s[1] == ' '
+
+def isAtQuoteContinue(s):
+    return checkSpacesExact(s, 2)
+
+def isAtEmptyLine(s):
     return len(s) == 0
+
+def toLatex(s):
+    # TODO: implement
+    return s
+
+def extractQuoteParts(s):
+    pos = s.find("] ")
+    if pos < 0:
+        reportError("Invalid quote syntax")
+    return s[0:pos], s[pos+2:]
 
 
 
@@ -78,7 +124,7 @@ while i < len(content):
     if isAtChapterSeparator(content[i]):
         i += 1
         if isAtChapterName(content[i]):
-            print "\chapter{" + extractChapterName(content[i]) + "}"
+            print "\\chapter{" + toLatex(extractChapterName(content[i])) + "}"
             i += 1
             if not isAtChapterSeparator(content[i]):
                 reportError("Expected chapter separator not found")
@@ -86,8 +132,51 @@ while i < len(content):
         else:
             # At end of content
             break
-    elif isEmptyLine(content[i]):
-        print ""
-
-    # TODO: implement
-    break
+    elif isAtSectionName(content[i]):
+        print "\\section{" + toLatex(extractSectionName(content[i])) + "}"
+        i += 1
+    elif isAtIndentedText(content[i]):
+        print "\\begin{indentText}"
+        while i < len(content) and isAtIndentedText(content[i]):
+            j = i + 1
+            while j < len(content) and isAtIndentedTextContinue(content[j]):
+                j += 1
+            print ("\\indentItem{"
+                   + toLatex(
+                        " ".join([ content[k].strip() for k in range(i, j) ])
+                     )
+                   + "}")
+            i = j
+        print "\end{indentText}"
+    elif isAtTextExcerpt(content[i]):
+        print "\\begin{excerptText}"
+        while i < len(content) and isAtTextExcerpt(content[i]):
+            j = i + 1
+            while j < len(content) and isAtTextExcerptContinue(content[j]):
+                j += 1
+            print ("\\excerptItem{"
+                   + toLatex(
+                        " ".join([ content[k].strip() for k in range(i, j) ])
+                     )
+                   + "}")
+            i = j
+        print "\end{excerptText}"
+    elif isAtQuote(content[i]):
+        # Extract quote part
+        j = i + 1
+        while j < len(content) and isAtQuoteContinue(content[j]):
+            j += 1
+        pages, quote = extractQuoteParts(
+                         " ".join([ content[k].strip() for k in range(i, j) ])
+                       )
+        print "\\apQuote{" + pages + "}{" + toLatex(quote) + "}"
+        i = j
+    elif isAtEmptyLine(content[i]):
+        print
+        i += 1
+    else:
+        j = i
+        while j < len(content) and not isAtEmptyLine(content[j]):
+            j += 1
+        print toLatex(" ".join(content[i:j]))
+        i = j
