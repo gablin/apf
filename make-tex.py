@@ -79,19 +79,36 @@ def isAtEmptyLine(s):
     return len(s) == 0
 
 def replace(s, m_start, m_end, t_start, t_end):
+    sep_chars = " '\",."
     new_s = ""
     i = 0
     while True:
         start_pos = s.find(m_start, i)
         if start_pos <= -1:
             break
+        must_be_within_same_word = (m_start == m_end
+                                    and start_pos != 0
+                                    and sep_chars.find(s[start_pos - 1]) <= -1)
         end_pos = s.find(m_end, start_pos + len(m_start))
         if end_pos <= -1:
-            reportError("Expected m_end in 'replace' not found")
-        new_s += (s[i:start_pos]
-                  + t_start
-                  + s[start_pos + len(m_start):end_pos]
-                  + t_end)
+            break
+        do_skip = False
+        if end_pos > start_pos + len(m_start):
+            if must_be_within_same_word:
+                section = s[start_pos + len(m_start):end_pos]
+                for c in sep_chars:
+                    if section.find(c) > -1:
+                        do_skip = True
+                        break
+            if not do_skip:
+                new_s += (s[i:start_pos]
+                          + t_start
+                          + s[start_pos + len(m_start):end_pos]
+                          + t_end)
+        else:
+            do_skip = True
+        if do_skip:
+            new_s += s[i:end_pos + len(m_end)]
         i = end_pos + len(m_end)
     new_s += s[i:]
     return new_s
@@ -100,6 +117,7 @@ def toLatex(s):
     s = s.replace("...", "\\ldots{}");
     s = replace(s, "_", "_", "\\emph{", "}")
     s = replace(s, "*", "*", "\\emph{", "}")
+    s = replace(s, "<<", ">>", "\\footnote{", "}")
     # TODO: add missing replacements
     return s
 
