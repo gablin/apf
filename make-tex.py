@@ -121,6 +121,68 @@ def toLatex(s):
     # TODO: add missing replacements
     return s
 
+def typesetDeath(s):
+    new_s = ""
+    offset = 0
+    i = offset
+    while i < len(s):
+        start_of_smallcaps = s[i].isalpha() and s[i].isupper()
+        i += 1
+        if start_of_smallcaps:
+            j = i
+            k = j
+            while k < len(s):
+                is_uppercase = s[k].isalpha() and s[k].isupper()
+                if is_uppercase:
+                    j = k
+                end_of_smallcaps = s[k].isalpha() and not s[k].isupper()
+                k += 1
+                if end_of_smallcaps:
+                    break
+            section = s[i-1:j+1]
+            num_uppercase = 0
+            for c in section:
+                if c.isupper():
+                    num_uppercase += 1
+            if num_uppercase >= 3:
+                section = section.lower()
+
+                # Make 'I' into uppercase
+                k = 0
+                while k < len(section):
+                    if (section[k] == 'i'
+                        and (k < len(section) - 1
+                             and not section[k + 1].isalpha())
+                        and (k == 0
+                             or not section[k - 1].isalpha())
+                        ):
+                        section = (section[:k]
+                                   + section[k].upper()
+                                   + section[k + 1:])
+                    k += 1
+                # Make first letter of new sentence uppercase
+                k = 0
+                while k < len(section):
+                    if section[k] == '.':
+                        if k < len(section) - 2 and section[k + 1] == ' ':
+                            section = (section[:k + 2]
+                                       + section[k + 2].upper()
+                                       + section[k + 3:])
+                            k += 3
+                    else:
+                        k += 1
+
+                # Make all occurrances of 'Death' as title
+                section = section.replace("death", "Death")
+
+                new_s += s[offset:i - 1] + "\\textsc{" + section + "}"
+            else:
+                new_s += s[offset:j + 1]
+            offset = j + 1
+            i = offset
+    new_s += s[offset:]
+    return new_s
+
 def extractQuoteParts(s):
     pos = s.find("] ")
     if pos < 0:
@@ -213,7 +275,7 @@ while i < len(content):
         pages, quote = extractQuoteParts(
                          " ".join([ content[k].strip() for k in range(i, j) ])
                        )
-        print "\\apQuote{" + pages + "}{" + toLatex(quote) + "}"
+        print "\\apQuote{" + pages + "}{" + toLatex(typesetDeath(quote)) + "}"
         i = j
     elif isAtEmptyLine(content[i]):
         print
