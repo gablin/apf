@@ -69,11 +69,38 @@ def isAtQuote(s):
 def isAtQuoteContinue(s):
     return checkSpacesExact(s, 2)
 
+def isAtQuoteDescription(s):
+    return checkSpacesExact(s, 2)
+
+def isAtQuoteDescriptionContinue(s):
+    return checkSpacesExact(s, 2)
+
 def isAtEmptyLine(s):
     return len(s) == 0
 
+def replace(s, m_start, m_end, t_start, t_end):
+    new_s = ""
+    i = 0
+    while True:
+        start_pos = s.find(m_start, i)
+        if start_pos <= -1:
+            break
+        end_pos = s.find(m_end, start_pos + len(m_start))
+        if end_pos <= -1:
+            reportError("Expected m_end in 'replace' not found")
+        new_s += (s[i:start_pos]
+                  + t_start
+                  + s[start_pos + len(m_start):end_pos]
+                  + t_end)
+        i = end_pos + len(m_end)
+    new_s += s[i:]
+    return new_s
+
 def toLatex(s):
-    # TODO: implement
+    s = s.replace("...", "\\ldots{}");
+    s = replace(s, "_", "_", "\\emph{", "}")
+    s = replace(s, "*", "*", "\\emph{", "}")
+    # TODO: add missing replacements
     return s
 
 def extractQuoteParts(s):
@@ -162,7 +189,6 @@ while i < len(content):
             i = j
         print "\end{excerptText}"
     elif isAtQuote(content[i]):
-        # Extract quote part
         j = i + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
@@ -174,6 +200,12 @@ while i < len(content):
     elif isAtEmptyLine(content[i]):
         print
         i += 1
+    elif isAtQuoteDescription(content[i]):
+        j = i + 1
+        while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
+            j += 1
+        print toLatex(" ".join([ content[k].strip() for k in range(i, j) ]))
+        i = j
     else:
         j = i
         while j < len(content) and not isAtEmptyLine(content[j]):
