@@ -121,6 +121,7 @@ def toLatex(s):
     s = s.replace("&", "\&");
     s = s.replace("$", "\$");
     s = s.replace("%", "\%");
+    s = s.replace("#", "\#");
     s = s.replace("...", "\\ldots{}");
     s = replace(s, "_", "_", "\\emph{", "}")
     s = replace(s, "*", "*", "\\emph{", "}")
