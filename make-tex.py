@@ -38,7 +38,7 @@ def isAtSectionName(s):
     if len(s) == 0 or s[0] == ' ':
         return False
     for c in s:
-        if string.letters.find(c) > -1 and not string.uppercase.find(c) > -1:
+        if string.letters.find(c) >= 0 and not string.uppercase.find(c) >= 0:
             return False
     return True
 
@@ -84,20 +84,20 @@ def replace(s, m_start, m_end, t_start, t_end):
     i = 0
     while True:
         start_pos = s.find(m_start, i)
-        if start_pos <= -1:
+        if start_pos < 0:
             break
         must_be_within_same_word = (m_start == m_end
                                     and start_pos != 0
-                                    and sep_chars.find(s[start_pos - 1]) <= -1)
+                                    and sep_chars.find(s[start_pos - 1]) < 0)
         end_pos = s.find(m_end, start_pos + len(m_start))
-        if end_pos <= -1:
+        if end_pos < 0:
             break
         do_skip = False
         if end_pos > start_pos + len(m_start):
             if must_be_within_same_word:
                 section = s[start_pos + len(m_start):end_pos]
                 for c in sep_chars:
-                    if section.find(c) > -1:
+                    if section.find(c) >= 0:
                         do_skip = True
                         break
             if not do_skip:
@@ -118,8 +118,29 @@ def toLatex(s):
     s = replace(s, "_", "_", "\\emph{", "}")
     s = replace(s, "*", "*", "\\emph{", "}")
     s = replace(s, "<<", ">>", "\\footnote{", "}")
-    # TODO: add missing replacements
+    s = replace(s, "<", ">", "\\url{", "}")
+    s = typesetUsenet(s)
     return s
+
+def typesetUsenet(s):
+    new_s = ""
+    i = 0
+    while i < len(s):
+        start_pos = s.find("alt.", i)
+        if start_pos >= 0:
+            end_pos = s.find(" ", start_pos)
+            if end_pos < 0:
+                end_pos = len(s) - 1
+            for j in reversed(range(start_pos, end_pos)):
+                if string.letters.find(s[j]) >= 0:
+                    end_pos = j + 1
+                    break
+            new_s = s[i:start_pos] + "\\url{" + s[start_pos:end_pos] + "}"
+            i = end_pos
+        else:
+            break
+    new_s += s[i:]
+    return new_s
 
 def typesetDeath(s):
     new_s = ""
@@ -139,7 +160,7 @@ def typesetDeath(s):
                 k += 1
                 if end_of_smallcaps:
                     break
-            section = s[i-1:j+1]
+            section = s[i - 1:j + 1]
             num_uppercase = 0
             at_least_two_adjacent_uppercase = False
             previous_was_uppercase = False
@@ -195,11 +216,11 @@ def typesetDeath(s):
 
 def extractQuoteParts(s):
     pos = s.find("] ")
-    if pos > -1:
+    if pos >= 0:
         return s[0:pos], s[pos + 2:]
     else:
         pos = s.find(" ")
-        if pos > -1:
+        if pos >= 0:
             return s[:pos], s[pos + 1:]
         else:
             reportError("Invalid quote syntax")
@@ -230,6 +251,10 @@ for i in range(len(content)):
 
 # Produce copyright data
 # TODO: implement
+
+print "\\makeTitlePage"
+print "\\makeCopyrightPage"
+print "\\makeTOCPage"
 
 # Move to beginning of first chapter
 i = 0
