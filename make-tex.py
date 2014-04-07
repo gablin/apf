@@ -172,6 +172,7 @@ def toLatexSub(s):
     s = s.replace("%", "\%")
     s = s.replace("#", "\#")
     s = s.replace("...", "\\ldots{}")
+    s = s.replace("LaTeX", "\\LaTeX")
     s = typesetUsenet(s)
     return s
 
@@ -300,7 +301,7 @@ def extractMetaData(content, tag):
     reportError("Metadata tag '" + tag + "' not found")
 
 def printMetadata(cmd_suffix, value):
-    print "\\renewcommand{\\set" + cmd_suffix + "}{" + toLatex(value) + "}"
+    print "\\renewcommand{\\this" + cmd_suffix + "}{" + toLatex(value) + "}"
 
 def onlyOneDot(s):
     pos = s.find(" ")
@@ -351,9 +352,12 @@ printMetadata("Subject", extractMetaData(content, "Subject"))
 printMetadata("DocBuild", time.strftime("%Y-%m-%d %H:%M:%S"))
 print
 
+print "\\frontmatter"
 print "\\makeTitlePage"
 print "\\makeCopyrightPage"
 print "\\makeTOCPage"
+print
+print "\\mainmatter"
 print
 
 # Move to beginning of first chapter
