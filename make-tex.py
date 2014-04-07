@@ -251,7 +251,7 @@ def extractMetaData(content, tag):
     reportError("Metadata tag '" + tag + "' not found")
 
 def printMetadata(cmd_suffix, value):
-    print "\\renewcommand{\\set" + cmd_suffix + "{" + toLatex(value) + "}}"
+    print "\\renewcommand{\\set" + cmd_suffix + "}{" + toLatex(value) + "}"
 
 def onlyOneDot(s):
     pos = s.find(" ")
