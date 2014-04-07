@@ -289,7 +289,7 @@ def typesetHex(s):
 def extractQuoteParts(s):
     pos = s.find("] ")
     if pos >= 0:
-        return s[0:pos], s[pos + 2:]
+        return s[0:pos + 1], s[pos + 2:]
     else:
         pos = s.find(" ")
         if pos >= 0:
