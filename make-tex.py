@@ -83,7 +83,7 @@ def isAtEmptyLine(s):
     return len(s) == 0
 
 def replace(s, m_start, m_end, t_start, t_end):
-    sep_chars = " '\",."
+    sep_chars = " '\",.(-/"
     new_s = ""
     i = 0
     while True:
