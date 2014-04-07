@@ -141,10 +141,17 @@ def typesetDeath(s):
                     break
             section = s[i-1:j+1]
             num_uppercase = 0
+            at_least_two_adjacent_uppercase = False
+            previous_was_uppercase = False
             for c in section:
-                if c.isupper():
+                if c.isalpha() and c.isupper():
                     num_uppercase += 1
-            if num_uppercase >= 3:
+                    if previous_was_uppercase:
+                        at_least_two_adjacent_uppercase = True
+                    previous_was_uppercase = True
+                else:
+                    previous_was_uppercase = False
+            if num_uppercase >= 3 and at_least_two_adjacent_uppercase:
                 section = section.lower()
 
                 # Make 'I' into uppercase
@@ -160,6 +167,7 @@ def typesetDeath(s):
                                    + section[k].upper()
                                    + section[k + 1:])
                     k += 1
+
                 # Make first letter of new sentence uppercase
                 k = 0
                 while k < len(section):
@@ -169,6 +177,8 @@ def typesetDeath(s):
                                        + section[k + 2].upper()
                                        + section[k + 3:])
                             k += 3
+                        else:
+                            k += 1
                     else:
                         k += 1
 
@@ -185,9 +195,14 @@ def typesetDeath(s):
 
 def extractQuoteParts(s):
     pos = s.find("] ")
-    if pos < 0:
-        reportError("Invalid quote syntax")
-    return s[0:pos], s[pos+2:]
+    if pos > -1:
+        return s[0:pos], s[pos + 2:]
+    else:
+        pos = s.find(" ")
+        if pos > -1:
+            return s[:pos], s[pos + 1:]
+        else:
+            reportError("Invalid quote syntax")
 
 
 
