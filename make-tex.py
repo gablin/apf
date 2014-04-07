@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+# Copyright (c) 2014
+# Written by Gabriel Hjort Blindell <ghb@kth.se>
+
 #=========
 # IMPORTS
 #=========
