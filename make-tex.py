@@ -47,7 +47,7 @@ def isAtSectionName(s):
     return True
 
 def extractSectionName(s):
-    return s[0] + s[1:].strip().lower()
+    return s[0] + s[1:].strip().lower().replace(" apf", " APF")
 
 def checkSpacesExact(s, num):
     return len(s) > num + 1 and s[0:num] == " " * num and s[num] != ' '
