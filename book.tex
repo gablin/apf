@@ -141,8 +141,13 @@
 }
 
 % Commands for typesetting quotes from the Pratchett books
-\newcommand{\apQuote}[2]{%
-  % TODO: implement
+\newcommand{\apQuote}[3]{%
+  \vspace{\baselineskip}
+
+  \noindent
+  \mbox{\texttt{#1~#2}} #3
+
+  \vspace{\baselineskip}
 }
 
 %==========

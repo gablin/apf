@@ -289,11 +289,11 @@ def typesetHex(s):
 def extractQuoteParts(s):
     pos = s.find("] ")
     if pos >= 0:
-        return s[0:pos + 1], s[pos + 2:]
+        return s[0], s[2:pos + 1], s[pos + 2:]
     else:
         pos = s.find(" ")
         if pos >= 0:
-            return s[:pos], s[pos + 1:]
+            return s[0], s[2:pos], s[pos + 1:]
         else:
             reportError("Invalid quote syntax")
 
@@ -432,10 +432,12 @@ while i < len(content):
         j = i + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
-        pages, quote = extractQuoteParts(
-                         " ".join([ content[k].strip() for k in range(i, j) ])
-                       )
+        sign, pages, quote = extractQuoteParts(
+            " ".join([ content[k].strip() for k in range(i, j) ])
+            )
         print ("\\apQuote{"
+               + sign
+               + "}{"
                + pages
                + "}{"
                + toLatex(typesetHex(typesetDeath(quote)))
