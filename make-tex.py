@@ -446,11 +446,17 @@ while i < len(content):
         j = i + 1
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
-        print toLatex(" ".join([ content[k].strip() for k in range(i, j) ]))
+        text = toLatex(" ".join([ content[k].strip() for k in range(i, j) ]))
+        if text[0].isalpha() and text[0].islower():
+            print "\\noindent"
+        print text
         i = j
     else:
         j = i
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
-        print toLatex(" ".join(content[i:j]))
+        text = toLatex(" ".join(content[i:j]))
+        if text[0].isalpha() and text[0].islower():
+            print "\\noindent"
+        print text
         i = j
