@@ -90,6 +90,10 @@ def replace(s, m_start, m_end, t_start, t_end):
         start_pos = s.find(m_start, i)
         if start_pos < 0:
             break
+        if start_pos + 1 < len(s) and s[start_pos + 1] == ' ':
+            new_s += s[i:start_pos + 1]
+            i = start_pos + 1
+            continue
         must_be_within_same_word = (m_start == m_end
                                     and start_pos != 0
                                     and sep_chars.find(s[start_pos - 1]) < 0)
@@ -194,7 +198,7 @@ def typesetDeath(s):
                 k = 0
                 while k < len(section):
                     if (section[k] == 'i'
-                        and (k < len(section) - 1
+                        and (k + 1 < len(section)
                              and not section[k + 1].isalpha())
                         and (k == 0
                              or not section[k - 1].isalpha())
@@ -208,7 +212,7 @@ def typesetDeath(s):
                 k = 0
                 while k < len(section):
                     if section[k] == '.':
-                        if k < len(section) - 2 and section[k + 1] == ' ':
+                        if k + 2 < len(section) and section[k + 1] == ' ':
                             section = (section[:k + 2]
                                        + section[k + 2].upper()
                                        + section[k + 3:])
