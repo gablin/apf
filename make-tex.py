@@ -406,11 +406,11 @@ while i < len(content):
             j = i + 1
             while j < len(content) and isAtIndentedTextContinue(content[j]):
                 j += 1
-            print ("\\indentItem{"
+            print ("\\item "
                    + toLatex(
                         " ".join([ content[k].strip() for k in range(i, j) ])
                      )
-                   + "}")
+                   )
             i = j
         print "\end{indentText}"
     elif isAtTextExcerpt(content[i]):
@@ -419,11 +419,11 @@ while i < len(content):
             j = i + 1
             while j < len(content) and isAtTextExcerptContinue(content[j]):
                 j += 1
-            print ("\\excerptItem{"
+            print ("\\item "
                    + toLatex(
                         " ".join([ content[k].strip() for k in range(i, j) ])
                      )
-                   + "}")
+                   )
             i = j
         print "\end{excerptText}"
     elif isAtQuote(content[i]):

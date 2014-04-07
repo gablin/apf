@@ -31,6 +31,7 @@
 \usepackage{microtype}
 \usepackage{anyfontsize}
 \usepackage{url}
+\usepackage{enumitem}
 
 
 
@@ -111,25 +112,14 @@
 \newcommand{\typesetUrl}[1]{\url{<#1>}}
 \newcommand{\typesetUsenet}[1]{\url{#1}}
 
-% Regions and commands for indenting regular text
-\newenvironment{indentText}{%
-  % TODO: implement
-}{%
-  % TODO: implement
-}
-\newcommand{\indentItem}[1]{%
-  % TODO: implement
-}
+\newlength{\indentWidth}
+\setlength{\indentWidth}{12pt}
 
-% Regions and commands for indenting excerpt texts
-\newenvironment{excerptText}{%
-  % TODO: implement
-}{%
-  % TODO: implement
-}
-\newcommand{\excerptItem}[1]{%
-  % TODO: implement
-}
+% Define list environment for indenting regular text
+\newlist{indentText}{description}{1}
+
+% Define list environment for excerpt texts
+\newlist{excerptText}{description}{1}
 
 % Commands for typesetting quotes from the Pratchett books
 \newcommand{\apQuote}[2]{%
