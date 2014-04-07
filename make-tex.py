@@ -86,7 +86,7 @@ def replace(s, m_start, m_end, t_start, t_end):
     sep_chars = " '\",.(-/"
     new_s = ""
     i = 0
-    while True:
+    while i < len(s):
         start_pos = s.find(m_start, i)
         if start_pos < 0:
             break
@@ -102,7 +102,10 @@ def replace(s, m_start, m_end, t_start, t_end):
             break
         do_skip = False
         if end_pos > start_pos + len(m_start):
-            if must_be_within_same_word:
+            if s[end_pos - 1] == ' ':
+                do_skip = True
+                i = end_pos + len(m_end)
+            if not do_skip and must_be_within_same_word:
                 section_start_pos = start_pos + len(m_start)
                 section = s[section_start_pos:end_pos]
                 for c in sep_chars:
@@ -127,15 +130,48 @@ def replace(s, m_start, m_end, t_start, t_end):
     return new_s
 
 def toLatex(s):
-    s = replace(s, "<", ">", "\\typesetUrl{", "}")
-    s = replace(s, "<<", ">>", "\\footnote{", "}")
+    url_start = "<"
+    url_end = ">"
+
+    new_s = ""
+    offset = 0
+    i = offset
+    while i < len(s):
+        url_start_pos = s.find(url_start, i)
+        if url_start_pos < 0:
+            break
+        is_url_start_ok = (url_start_pos + 1 < len(s)
+                           and s[url_start_pos + 1] != ' ')
+        if not is_url_start_ok:
+            i = url_start_pos + len(url_start)
+            continue
+        url_end_pos = s.find(url_end, url_start_pos + len(url_start))
+        if url_end_pos < 0:
+            break
+        is_url_end_ok = s[url_end_pos - 1] != ' '
+        url_section = s[url_start_pos + len(url_start):url_end_pos]
+        has_url_spaces = url_section.find(' ') >= 0
+        if not is_url_end_ok or has_url_spaces:
+            i = url_end_pos + len(url_end)
+            continue
+
+        # Found URL section
+        new_s += (toLatexSub(s[offset:url_start_pos])
+                  + "\\typesetUrl{" + url_section + "}")
+        offset = url_end_pos + len(url_end)
+        i = offset
+    new_s += toLatexSub(s[offset:])
+    return new_s
+
+def toLatexSub(s):
     s = replace(s, "_", "_", "\\emph{", "}")
     s = replace(s, "*", "*", "\\emph{", "}")
-    s = s.replace("&", "\&");
-    s = s.replace("$", "\$");
-    s = s.replace("%", "\%");
-    s = s.replace("#", "\#");
-    s = s.replace("...", "\\ldots{}");
+    s = replace(s, "<<", ">>", "\\footnote{", "}")
+    s = s.replace("&", "\&")
+    s = s.replace("$", "\$")
+    s = s.replace("%", "\%")
+    s = s.replace("#", "\#")
+    s = s.replace("...", "\\ldots{}")
     s = typesetUsenet(s)
     return s
 
