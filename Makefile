@@ -21,7 +21,7 @@ $(PDF_FILE): $(TEX_TEMPLATE_FILE) $(TEX_INPUT_FILE)
 	pdflatex $(basename $(TEX_TEMPLATE_FILE))
 
 $(TEX_INPUT_FILE): $(APF_FILE)
-	python make-tex.py $(APF_FILE)
+	python make-tex.py $(APF_FILE) > $@
 
 .PHONY: clean
 clean:
