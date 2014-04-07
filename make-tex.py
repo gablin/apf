@@ -171,6 +171,8 @@ def toLatexSub(s):
     s = s.replace("$", "\$")
     s = s.replace("%", "\%")
     s = s.replace("#", "\#")
+    s = s.replace("'-'", "'\\texttt{-}'")
+    s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
     s = s.replace("LaTeX", "\\LaTeX")
     s = typesetUsenet(s)
@@ -269,6 +271,18 @@ def typesetDeath(s):
             i = offset
     new_s += s[offset:]
     return new_s
+
+def typesetHex(s):
+    new_s = ""
+    plus_start_pos = s.find("+")
+    if plus_start_pos >= 0:
+        plus_end_pos = s.rfind("+", plus_start_pos + 1)
+        if plus_end_pos >= 0:
+            plus_end_pos += 1
+            return (s[:plus_start_pos]
+                    + "\\texttt{" + s[plus_start_pos:plus_end_pos] + "}"
+                    + s[plus_end_pos])
+    return s
 
 def extractQuoteParts(s):
     pos = s.find("] ")
@@ -419,7 +433,11 @@ while i < len(content):
         pages, quote = extractQuoteParts(
                          " ".join([ content[k].strip() for k in range(i, j) ])
                        )
-        print "\\apQuote{" + pages + "}{" + toLatex(typesetDeath(quote)) + "}"
+        print ("\\apQuote{"
+               + pages
+               + "}{"
+               + toLatex(typesetHex(typesetDeath(quote)))
+               + "}")
         i = j
     elif isAtEmptyLine(content[i]):
         print
