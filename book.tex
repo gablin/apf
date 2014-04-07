@@ -1,5 +1,119 @@
+% Copyright (c) 2014
+% Written by Gabriel Hjort Blindell <ghb@kth.se>
+
 \documentclass[a4paper]{memoir}
 
+%==========
+% PACKAGES
+%==========
+
+% TODO: decide font
+\usepackage{microtype}
+\usepackage{url}
+
+
+
+
+%========
+% MACROS
+%========
+
+% Predefine metadata commands (to be redefined by input file)
+\newcommand{\thisArchiveName}{}
+\newcommand{\thisAssistantEditor}{}
+\newcommand{\thisDocBuild}{}
+\newcommand{\thisDocUrl}{}
+\newcommand{\thisEditor}{}
+\newcommand{\thisFullVersion}{}
+\newcommand{\thisLastModified}{}
+\newcommand{\thisNewsgroups}{}
+\newcommand{\thisSubject}{}
+\newcommand{\thisTitle}{}
+\newcommand{\thisSubtitle}{}
+
+\newcommand{\makeTitlePage}{%
+  \thispagestyle{empty}
+  \begingroup
+    \centering%
+    \mbox{}
+    \vfill
+    {\Huge \thisTitle}
+
+    \vspace*{40pt}
+
+    {\huge Version \thisSubtitle}
+    \vfill
+    \mbox{}
+    \vfill
+  \endgroup%
+  \pagebreak%
+}
+
+\newcommand{\makeCopyrightPage}{%
+  \thispagestyle{empty}
+  \begingroup
+    \setlength{\parindent}{0pt}
+
+    \mbox{}
+    \vfill
+
+    Collected and edited by: \thisEditor\\
+    Assistant editor: \thisAssistantEditor\\
+    Newsgroups: \thisNewsgroups\\
+    Subject: \thisSubject\\
+    Full version: \thisFullVersion\\
+    Archive name: \texttt{\thisArchiveName}\\
+    Last modified: \thisLastModified
+
+    \vspace{\baselineskip}
+
+    Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX.
+    % TODO: add font info
+
+    \vspace{\baselineskip}
+
+    Document URL: \thisDocUrl\\
+    Document build: \texttt{\thisDocBuild}
+  \endgroup%
+  \pagebreak%
+}
+
+\newcommand{\makeTOCPage}{%
+  \tableofcontents
+}
+
+\newcommand{\typesetUrl}[1]{\url{<#1>}}
+\newcommand{\typesetUsenet}[1]{\url{#1}}
+
+% Regions and commands for indenting regular text
+\newenvironment{indentText}{%
+  % TODO: implement
+}{%
+  % TODO: implement
+}
+\newcommand{\indentItem}[1]{%
+  % TODO: implement
+}
+
+% Regions and commands for indenting excerpt texts
+\newenvironment{excerptText}{%
+  % TODO: implement
+}{%
+  % TODO: implement
+}
+\newcommand{\excerptItem}[1]{%
+  % TODO: implement
+}
+
+% Commands for typesetting quotes from the Pratchett books
+\newcommand{\apQuote}[2]{%
+  % TODO: implement
+}
+
+%==========
+% DOCUMENT
+%==========
+
 \begin{document}
-bla bla bla
+\input{\inputFile}
 \end{document}
