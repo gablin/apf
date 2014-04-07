@@ -99,34 +99,39 @@ def replace(s, m_start, m_end, t_start, t_end):
         do_skip = False
         if end_pos > start_pos + len(m_start):
             if must_be_within_same_word:
-                section = s[start_pos + len(m_start):end_pos]
+                section_start_pos = start_pos + len(m_start)
+                section = s[section_start_pos:end_pos]
                 for c in sep_chars:
-                    if section.find(c) >= 0:
+                    sep_pos = section.find(c)
+                    if sep_pos >= 0:
                         do_skip = True
+                        end_pos = section_start_pos + sep_pos
                         break
             if not do_skip:
                 new_s += (s[i:start_pos]
                           + t_start
                           + s[start_pos + len(m_start):end_pos]
                           + t_end)
+                i = end_pos + len(m_end)
         else:
             do_skip = True
+            end_pos += len(m_end)
         if do_skip:
-            new_s += s[i:end_pos + len(m_end)]
-        i = end_pos + len(m_end)
+            new_s += s[i:end_pos]
+            i = end_pos
     new_s += s[i:]
     return new_s
 
 def toLatex(s):
+    s = replace(s, "<", ">", "\\typesetUrl{", "}")
+    s = replace(s, "<<", ">>", "\\footnote{", "}")
+    s = replace(s, "_", "_", "\\emph{", "}")
+    s = replace(s, "*", "*", "\\emph{", "}")
     s = s.replace("&", "\&");
     s = s.replace("$", "\$");
     s = s.replace("%", "\%");
     s = s.replace("#", "\#");
     s = s.replace("...", "\\ldots{}");
-    s = replace(s, "_", "_", "\\emph{", "}")
-    s = replace(s, "*", "*", "\\emph{", "}")
-    s = replace(s, "<<", ">>", "\\footnote{", "}")
-    s = replace(s, "<", ">", "\\typesetUrl{", "}")
     s = typesetUsenet(s)
     return s
 
