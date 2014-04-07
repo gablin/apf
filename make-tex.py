@@ -438,7 +438,7 @@ while i < len(content):
         print ("\\apQuote{"
                + sign
                + "}{"
-               + pages
+               + pages.replace("p. ", "p.\\ ")
                + "}{"
                + toLatex(typesetHex(typesetDeath(quote)))
                + "}")
