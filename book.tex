@@ -30,6 +30,7 @@
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
 \usepackage{microtype}
+\usepackage{anyfontsize}
 \usepackage{url}
 
 
@@ -58,11 +59,13 @@
     \centering%
     \mbox{}
     \vfill
-    {\Huge \thisTitle}
+    {\fontsize{50}{60}\selectfont\textsc{\thisTitle}}
 
-    \vspace*{40pt}
+    \vspace*{36pt}
 
-    {\huge Version \thisSubtitle}
+    {\Huge Version \thisSubtitle}
+    \vfill
+    \mbox{}
     \vfill
     \mbox{}
     \vfill
@@ -94,9 +97,9 @@
 
     \vspace{\baselineskip}
 
-    Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX with
-    \emph{Garamond} (11pt) as basefont, \emph{Linux Libertine} as sans-serif
-    font, and \emph{Bera Mono} as monotype font.
+    Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX{}.\\
+    Fonts: \emph{Garamond} (basefont, 11pt), \emph{Linux Libertine}
+    (sans-serif), and \emph{Bera Mono} (monotype).
   \endgroup%
   \pagebreak%
   \twocolumn%
