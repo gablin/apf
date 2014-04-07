@@ -33,6 +33,9 @@
 \usepackage{url}
 \usepackage{enumitem}
 
+% TODO: remove
+\usepackage{lipsum}
+
 
 
 %========
@@ -113,13 +116,32 @@
 \newcommand{\typesetUsenet}[1]{\url{#1}}
 
 \newlength{\indentWidth}
-\setlength{\indentWidth}{12pt}
+\setlength{\indentWidth}{\parindent}
+\newlength{\indentContWidth}
+\setlength{\indentContWidth}{2\parindent}
+
+% Don't separate items in any lists
+\setlist{noitemsep}
 
 % Define list environment for indenting regular text
 \newlist{indentText}{description}{1}
+\setlist[indentText]{%
+  leftmargin=\indentContWidth,
+  labelindent=\indentWidth,
+  labelsep=0pt,
+  labelwidth=0pt,
+  itemsep=0pt,
+}
 
 % Define list environment for excerpt texts
 \newlist{excerptText}{description}{1}
+\setlist[excerptText]{%
+  leftmargin=\indentContWidth,
+  labelindent=\indentWidth,
+  labelsep=0pt,
+  labelwidth=0pt,
+  before=\itshape,
+}
 
 % Commands for typesetting quotes from the Pratchett books
 \newcommand{\apQuote}[2]{%
