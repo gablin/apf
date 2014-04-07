@@ -233,7 +233,7 @@ def typesetDeath(s):
                 else:
                     previous_was_uppercase = False
             if num_uppercase >= 3 and at_least_two_adjacent_uppercase:
-                section = section.lower()
+                section = section[0] + section[1:].lower()
 
                 # Make 'I' into uppercase
                 k = 0
@@ -252,7 +252,7 @@ def typesetDeath(s):
                 # Make first letter of new sentence uppercase
                 k = 0
                 while k < len(section):
-                    if section[k] == '.':
+                    if section[k] == '.' or section[k] == '?':
                         if k + 2 < len(section) and section[k + 1] == ' ':
                             section = (section[:k + 2]
                                        + section[k + 2].upper()
