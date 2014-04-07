@@ -6,6 +6,7 @@
 
 import string
 import sys
+import time
 
 
 
@@ -118,7 +119,7 @@ def toLatex(s):
     s = replace(s, "_", "_", "\\emph{", "}")
     s = replace(s, "*", "*", "\\emph{", "}")
     s = replace(s, "<<", ">>", "\\footnote{", "}")
-    s = replace(s, "<", ">", "\\url{", "}")
+    s = replace(s, "<", ">", "\\typesetUrl{", "}")
     s = typesetUsenet(s)
     return s
 
@@ -135,7 +136,9 @@ def typesetUsenet(s):
                 if string.letters.find(s[j]) >= 0:
                     end_pos = j + 1
                     break
-            new_s = s[i:start_pos] + "\\url{" + s[start_pos:end_pos] + "}"
+            new_s = (s[i:start_pos]
+                     + "\\typesetUsenet{"
+                     + s[start_pos:end_pos] + "}")
             i = end_pos
         else:
             break
@@ -225,6 +228,39 @@ def extractQuoteParts(s):
         else:
             reportError("Invalid quote syntax")
 
+def extractMetaData(content, tag):
+    for i in range(len(content)):
+        line = content[i]
+        start_pos = line.find(tag + ":")
+        if start_pos >= 0:
+            # Meta data found
+            data = line[line.find(":") + 1:].strip()
+
+            # Get all data (if it continues on the next line)
+            for j in range(i + 1, len(content)):
+                line = content[j]
+                if len(line) > 0 and line[0] == '\t':
+                    data += " " + line.strip()
+                else:
+                    break
+            return data
+    # Whole document scanned without finding the tag
+    reportError("Metadata tag '" + tag + "' not found")
+
+def printMetadata(cmd_suffix, value):
+    print "\\renewcommand{\\set" + cmd_suffix + "{" + toLatex(value) + "}}"
+
+def onlyOneDot(s):
+    pos = s.find(" ")
+    if pos >= 0:
+        s = s[0:pos]
+    pos = s.find(".")
+    if pos >= 0:
+        pos = s.find(".", pos + 1)
+        if pos >= 0:
+            return s[0:pos]
+    return s
+
 
 
 #=============
@@ -250,11 +286,23 @@ for i in range(len(content)):
     content[i] = content[i].rstrip()
 
 # Produce copyright data
-# TODO: implement
+printMetadata("Title", "The Annotated Pratchett File")
+printMetadata("Subtitle", onlyOneDot(extractMetaData(content, "Version")))
+printMetadata("ArchiveName", extractMetaData(content, "Archive-name"))
+printMetadata("LastModified", extractMetaData(content, "Last-modified"))
+printMetadata("FullVersion", extractMetaData(content, "Version"))
+printMetadata("Editor", extractMetaData(content, "Editor"))
+printMetadata("AssistantEditor", extractMetaData(content, "Assistant-Editor"))
+printMetadata("DocUrl", extractMetaData(content, "URL"))
+printMetadata("Newsgroups", extractMetaData(content, "Newsgroups"))
+printMetadata("Subject", extractMetaData(content, "Subject"))
+printMetadata("DocBuild", time.strftime("%Y-%m-%d %H:%M:%S"))
+print
 
 print "\\makeTitlePage"
 print "\\makeCopyrightPage"
 print "\\makeTOCPage"
+print
 
 # Move to beginning of first chapter
 i = 0
