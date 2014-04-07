@@ -26,6 +26,9 @@
 %==========
 
 % TODO: decide font
+\usepackage{libertine} % Sans-serif font
+\usepackage{garamondx} % Serif font
+\usepackage[scaled=.75]{beramono} % Typewriter font
 \usepackage{microtype}
 \usepackage{url}
 
@@ -86,13 +89,14 @@
 
     \vspace{\baselineskip}
 
-    Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX.
-    % TODO: add font info
+    Document URL: \thisDocUrl\\
+    Document build: \texttt{\thisDocBuild}
 
     \vspace{\baselineskip}
 
-    Document URL: \thisDocUrl\\
-    Document build: \texttt{\thisDocBuild}
+    Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX with
+    \emph{Garamond} (11pt) as basefont, \emph{Linux Libertine} as sans-serif
+    font, and \emph{Bera Mono} as monotype font.
   \endgroup%
   \pagebreak%
   \twocolumn%
