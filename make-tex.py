@@ -175,6 +175,7 @@ def toLatexSub(s):
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
     s = s.replace("-->", "$\\rightarrow$")
+    # TODO: add handling of 'Tyo yur atl ho sooten gatrunen'
     s = s.replace("LaTeX", "\\LaTeX")
     s = typesetUsenet(s)
     return s
