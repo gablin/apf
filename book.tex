@@ -1,7 +1,7 @@
 % Copyright (c) 2014
 % Written by Gabriel Hjort Blindell <ghb@kth.se>
 
-\documentclass[a4paper]{memoir}
+\documentclass[11pt,twocolumn,twoside]{memoir}
 
 %==========
 % PACKAGES
@@ -13,6 +13,18 @@
 
 
 
+
+\setstocksize{846bp}{648bp}
+\settrimmedsize{10.75in}{8in}{*}
+\settrims{36bp}{36bp}
+\settypeblocksize{600bp}{480bp}{*}
+\setcolsepandrule{18bp}{0pt}
+\setulmargins{111bp}{*}{*}
+\setlrmargins{36bp}{*}{*}
+\setheaderspaces{*}{54bp}{*}
+\setheadfoot{18bp}{21bp}
+\setmarginnotes{1bp}{1bp}{1bp}
+\checkandfixthelayout
 
 %========
 % MACROS
@@ -32,6 +44,7 @@
 \newcommand{\thisSubtitle}{}
 
 \newcommand{\makeTitlePage}{%
+  \onecolumn
   \thispagestyle{empty}
   \begingroup
     \centering%
@@ -47,13 +60,14 @@
     \vfill
   \endgroup%
   \pagebreak%
+  \twocolumn%
 }
 
 \newcommand{\makeCopyrightPage}{%
+  \onecolumn%
   \thispagestyle{empty}
   \begingroup
     \setlength{\parindent}{0pt}
-
     \mbox{}
     \vfill
 
@@ -76,6 +90,7 @@
     Document build: \texttt{\thisDocBuild}
   \endgroup%
   \pagebreak%
+  \twocolumn%
 }
 
 \newcommand{\makeTOCPage}{%
