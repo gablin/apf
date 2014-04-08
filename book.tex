@@ -106,7 +106,6 @@
 }
 
 \newcommand{\makeTOCPage}{%
-  % TODO: customize appearance
   \twocoltocetc
   \tableofcontents
 }
@@ -118,6 +117,9 @@
 \setlength{\indentWidth}{\parindent}
 \newlength{\indentContWidth}
 \setlength{\indentContWidth}{2\parindent}
+
+% Don't separate items in any lists
+\setlist{noitemsep}
 
 % Define list environment for indenting regular text
 \newlist{indentText}{description}{1}
@@ -149,13 +151,23 @@
   \vspace{\baselineskip}
 }
 
-% TODO: customize chapters and sections
+% Removes chapter and section numbering
+\setsecnumdepth{book}
+\maxsecnumdepth{book}
 
-% Customize two-column appearance
-\setlength{\columnseprule}{0.4pt}
+% Change typesetting of chapters
+% TODO: implement
 
-% Don't separate items in any lists
-\setlist{noitemsep}
+% Change typesetting of sections
+\newcommand*{\typesetSection}[1]{%
+  \noindent\rule{\linewidth}{0.4pt}
+
+  \huge\scshape\centering #1
+
+  \vspace*{-0.8ex}
+  \noindent\rule{\linewidth}{0.4pt}\par
+}
+\setsecheadstyle{\typesetSection}
 
 % Customize header and footer
 \renewcommand{\tocmark}{\markboth{\MakeUppercase{\contentsname}}{}}
@@ -163,6 +175,16 @@
 \renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}}
 \makeevenhead{headings}{\thepage}{}{\leftmark}
 \makeoddhead{headings}{\rightmark}{}{\thepage}
+
+% Remove leading dots from ToC
+\renewcommand{\cftdot}{}
+
+% Change typesetting of items in ToC
+\renewcommand{\cftchapterfont}{\bfseries\scshape}
+\renewcommand{\cftsectionfont}{\scshape}
+
+% Add vertical column rule
+\setlength{\columnseprule}{0.4pt}
 
 
 
