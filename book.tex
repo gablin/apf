@@ -106,8 +106,8 @@
 }
 
 \newcommand{\makeTOCPage}{%
-  % TODO: make into two-column
   % TODO: customize appearance
+  \twocoltocetc
   \tableofcontents
 }
 
@@ -118,14 +118,6 @@
 \setlength{\indentWidth}{\parindent}
 \newlength{\indentContWidth}
 \setlength{\indentContWidth}{2\parindent}
-
-% TODO: customize chapters and sections
-
-% Customize two-column appearance
-\setlength{\columnseprule}{0.4pt}
-
-% Don't separate items in any lists
-\setlist{noitemsep}
 
 % Define list environment for indenting regular text
 \newlist{indentText}{description}{1}
@@ -156,6 +148,23 @@
 
   \vspace{\baselineskip}
 }
+
+% TODO: customize chapters and sections
+
+% Customize two-column appearance
+\setlength{\columnseprule}{0.4pt}
+
+% Don't separate items in any lists
+\setlist{noitemsep}
+
+% Customize header and footer
+\renewcommand{\tocmark}{\markboth{\MakeUppercase{\contentsname}}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}}
+\makeevenhead{headings}{\thepage}{}{\leftmark}
+\makeoddhead{headings}{\rightmark}{}{\thepage}
+
+
 
 %==========
 % DOCUMENT
