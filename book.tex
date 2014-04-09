@@ -1,24 +1,7 @@
 % Copyright (c) 2014
 % Written by Gabriel Hjort Blindell <ghb@kth.se>
 
-\documentclass[11pt,twocolumn,twoside]{memoir}
-
-%============
-% PAPER SIZE
-%============
-
-% TODO: make text height higher
-\setstocksize{846bp}{648bp}
-\settrimmedsize{10.75in}{8in}{*}
-\settrims{36bp}{36bp}
-\settypeblocksize{600bp}{480bp}{*}
-\setcolsepandrule{18bp}{0pt}
-\setulmargins{111bp}{*}{*}
-\setlrmargins{36bp}{*}{*}
-\setheaderspaces{*}{20bp}{*}
-\setheadfoot{18bp}{21bp}
-\setmarginnotes{1bp}{1bp}{1bp}
-\checkandfixthelayout
+\documentclass[11pt,twoside]{memoir}
 
 
 
@@ -26,13 +9,32 @@
 % PACKAGES
 %==========
 
+\usepackage{microtype}
 \usepackage{libertine} % Sans-serif font
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
-\usepackage{microtype}
 \usepackage{anyfontsize}
-\usepackage{url}
+\usepackage{calc}
+\usepackage{etoolbox}
 \usepackage{enumitem}
+\usepackage{url}
+
+
+
+%============
+% PAPER SIZE
+%============
+
+\setstocksize{8.75in}{5.625in}
+\settrimmedsize{8.5in}{5.5in}{*}
+\settrims{(\stockheight-\paperheight)*\real{0.5}}%
+         {(\stockwidth-\paperwidth)*\real{0.5}}
+
+\settypeblocksize{34\baselineskip + \topskip}{*}{0.577} % Hexagon ratio
+\setlrmargins{*}{*}{2}
+\setulmargins{\spinemargin}{*}{*}
+\setlength{\footskip}{3\baselineskip}
+\checkandfixthelayout
 
 
 
@@ -54,7 +56,7 @@
 \newcommand{\thisSubtitle}{}
 
 \newcommand{\makeTitlePage}{%
-  \onecolumn
+%  \onecolumn
   \thispagestyle{empty}
   \begingroup
     \centering%
@@ -72,11 +74,11 @@
     \vfill
   \endgroup%
   \pagebreak%
-  \twocolumn%
+%  \twocolumn%
 }
 
 \newcommand{\makeCopyrightPage}{%
-  \onecolumn%
+%  \onecolumn%
   \thispagestyle{empty}
   \begingroup
     \setlength{\parindent}{0pt}
@@ -103,11 +105,11 @@
     (sans-serif), and \emph{Bera Mono} (monotype).
   \endgroup%
   \pagebreak%
-  \twocolumn%
+%  \twocolumn%
 }
 
 \newcommand{\makeTOCPage}{%
-  \twocoltocetc
+%  \twocoltocetc
   \tableofcontents
 }
 
@@ -171,11 +173,14 @@
 \setsecheadstyle{\typesetSection}
 
 % Customize header and footer
+\newcommand{\headingStyle}{\scriptsize}
 \renewcommand{\tocmark}{\markboth{\MakeUppercase{\contentsname}}{}}
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}}
-\makeevenhead{headings}{\thepage}{}{\leftmark}
-\makeoddhead{headings}{\rightmark}{}{\thepage}
+\makeevenhead{headings}{}{}{}
+\makeoddhead{headings}{}{}{}
+\makeevenfoot{headings}{\thepage}{}{\headingStyle\leftmark}
+\makeoddfoot{headings}{\headingStyle\rightmark}{}{\thepage}
 
 % Remove leading dots from ToC
 \renewcommand{\cftdot}{}
@@ -185,7 +190,21 @@
 \renewcommand{\cftsectionfont}{\scshape}
 
 % Add vertical column rule
-\setlength{\columnseprule}{0.4pt}
+\newlength{\mycolumnseprule}
+\setlength{\mycolumnseprule}{0.4pt}
+\setlength{\columnseprule}{\mycolumnseprule}
+
+% Remove vertical column rule from blank pages caused by \newpage
+\let\oldnewpage=\newpage
+\def\clearpage{%
+  \setlength{\columnseprule}{\mycolumnseprule}%
+  \oldnewpage%
+  \setlength{\columnseprule}{0pt}%
+}
+% Vertical column must be re-enabled at beginning of new chapter
+\renewcommand{\memendofchapterhook}{%
+  \setlength{\columnseprule}{\mycolumnseprule}%
+}
 
 
 
