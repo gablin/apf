@@ -20,6 +20,7 @@
 \usepackage{mdframed}
 \usepackage{url}
 \usepackage{xcolor}
+\usepackage{carolmin}
 
 
 
@@ -159,12 +160,7 @@
 
 % Change typesetting of sections
 \newcommand*{\typesetSection}[1]{%
-  \noindent\rule{\linewidth}{0.4pt}
-
-  \huge\scshape\centering #1
-
-  \vspace*{-0.8ex}
-  \noindent\rule{\linewidth}{0.4pt}\par
+  \Huge\cminfamily\centering #1%
 }
 \setsecheadstyle{\typesetSection}
 
