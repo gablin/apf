@@ -56,17 +56,16 @@
 \newcommand{\thisSubtitle}{}
 
 \newcommand{\makeTitlePage}{%
-%  \onecolumn
   \thispagestyle{empty}
   \begingroup
     \centering%
     \mbox{}
     \vfill
-    {\fontsize{50}{60}\selectfont\textsc{\thisTitle}}
+    {\fontsize{36}{48}\selectfont\textsc{\thisTitle}}
 
     \vspace*{36pt}
 
-    {\Huge Version \thisSubtitle}
+    {\huge Version \thisSubtitle}
     \vfill
     \mbox{}
     \vfill
@@ -74,12 +73,9 @@
     \vfill
   \endgroup%
   \pagebreak%
-%  \twocolumn%
 }
 
 \newcommand{\makeCopyrightPage}{%
-%  \onecolumn%
-  \thispagestyle{empty}
   \begingroup
     \setlength{\parindent}{0pt}
     \mbox{}
@@ -105,11 +101,9 @@
     (sans-serif), and \emph{Bera Mono} (monotype).
   \endgroup%
   \pagebreak%
-%  \twocolumn%
 }
 
 \newcommand{\makeTOCPage}{%
-%  \twocoltocetc
   \tableofcontents
 }
 
@@ -188,23 +182,6 @@
 % Change typesetting of items in ToC
 \renewcommand{\cftchapterfont}{\bfseries\scshape}
 \renewcommand{\cftsectionfont}{\scshape}
-
-% Add vertical column rule
-\newlength{\mycolumnseprule}
-\setlength{\mycolumnseprule}{0.4pt}
-\setlength{\columnseprule}{\mycolumnseprule}
-
-% Remove vertical column rule from blank pages caused by \newpage
-\let\oldnewpage=\newpage
-\def\clearpage{%
-  \setlength{\columnseprule}{\mycolumnseprule}%
-  \oldnewpage%
-  \setlength{\columnseprule}{0pt}%
-}
-% Vertical column must be re-enabled at beginning of new chapter
-\renewcommand{\memendofchapterhook}{%
-  \setlength{\columnseprule}{\mycolumnseprule}%
-}
 
 
 
