@@ -17,7 +17,9 @@
 \usepackage{calc}
 \usepackage{etoolbox}
 \usepackage{enumitem}
+\usepackage{mdframed}
 \usepackage{url}
+\usepackage{xcolor}
 
 
 
@@ -140,12 +142,12 @@
 
 % Commands for typesetting quotes from the Pratchett books
 \newcommand{\apQuote}[3]{%
-  \vspace{\baselineskip}
-
-  \noindent
-  \mbox{\texttt{#1~#2}} #3
-
-  \vspace{\baselineskip}
+  \begin{mdframed}[%
+      backgroundcolor=black!15,
+      hidealllines=true,
+    ]
+    \mbox{\texttt{#1~#2}} #3
+  \end{mdframed}
 }
 
 % Removes chapter and section numbering
