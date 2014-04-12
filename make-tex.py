@@ -47,7 +47,52 @@ def isAtSectionName(s):
     return True
 
 def extractSectionName(s):
-    return s[0] + s[1:].strip().lower().replace(" apf", " APF")
+    s = s[0] + s[1:].strip().lower()
+
+    s = s.replace(" apf", " APF")
+
+    # Make every start of word uppercase
+    i = 0
+    while i < len(s):
+        if s[i] == ' ':
+            i += 1
+            s = s[:i] + s[i].upper() + s[i + 1:]
+        else:
+            i += 1
+
+    # Make certain word lowercase
+    s = s.replace(" A ", " a ")
+    s = s.replace(" An ", " an ")
+    s = s.replace(" And ", " and ")
+    s = s.replace(" As ", " as ")
+    s = s.replace(" At ", " at ")
+    s = s.replace(" But ", " but ")
+    s = s.replace(" By ", " by ")
+    s = s.replace(" For ", " for ")
+    s = s.replace(" From ", " from ")
+    s = s.replace(" In ", " in ")
+    s = s.replace(" Into ", " into ")
+    s = s.replace(" Like ", " like ")
+    s = s.replace(" Nor ", " nor ")
+    s = s.replace(" Of ", " of ")
+    s = s.replace(" On ", " on ")
+    s = s.replace(" Onto ", " onto ")
+    s = s.replace(" Or ", " or ")
+    s = s.replace(" Over ", " over ")
+    s = s.replace(" Per ", " per ")
+    s = s.replace(" So ", " so ")
+    s = s.replace(" The ", " the ")
+    s = s.replace(" To ", " to ")
+    s = s.replace(" Unlike ", " unlike ")
+    s = s.replace(" Until ", " until ")
+    s = s.replace(" Via ", " via ")
+    s = s.replace(" Vs ", " vs ")
+    s = s.replace(" Vs. ", " vs. ")
+    s = s.replace(" With ", " with ")
+    s = s.replace(" Within ", " within ")
+    s = s.replace(" Without ", " without ")
+
+    return s
 
 def checkSpacesExact(s, num):
     return len(s) > num + 1 and s[0:num] == " " * num and s[num] != ' '
