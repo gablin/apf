@@ -308,8 +308,9 @@ def typesetDeath(s):
                     else:
                         k += 1
 
-                # Make all occurrances of 'Death' as title
+                # Capitalize certain words
                 section = section.replace("death", "Death")
+                section = section.replace("psephopololis", "Psephopololis")
 
                 new_s += s[offset:i - 1] + "\\textsc{" + section + "}"
             else:
