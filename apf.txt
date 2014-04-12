@@ -120,7 +120,7 @@ have any suggestions, questions, corrections, or new annotations. Without
 the enthusiastic reactions and input from its readers, the APF would never
 have survived so far. Please mail all your feedback to me at:
 
-      apf@lspace.org
+      <apf@lspace.org>
 
 and maybe you will see *your* contribution become a part of the next
 edition. I will now leave you to the annotations, and end this introduction
