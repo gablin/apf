@@ -381,7 +381,7 @@ def isContinuePar(s):
     return text[0].isalpha() and text[0].islower()
 
 def isUrlPar(s):
-    return len(text) > 12 and text[:12] == "\\typesetUrl{" and text[:-1] == '}'
+    return len(text) > 12 and text[:12] == "\\typesetUrl{" and text[-1] == '}'
 
 
 
