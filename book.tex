@@ -172,11 +172,13 @@
   \ifbool{firstSection}{%
     \global\boolfalse{firstSection}%
   }{%
-    \pgfornament[width=0.5\textwidth]{88}
+    \pgfornament[width=0.33\textwidth]{84}
 
     \vspace{\baselineskip}
   }%
-  \Huge\cminfamily\centering #1%
+  \Huge\cminfamily\centering #1
+
+  \vspace{0.5\baselineskip}%
 }
 \setsecheadstyle{\typesetSection}
 
