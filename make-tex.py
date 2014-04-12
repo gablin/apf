@@ -377,6 +377,12 @@ def onlyOneDot(s):
             return s[0:pos]
     return s
 
+def isContinuePar(s):
+    return text[0].isalpha() and text[0].islower()
+
+def isUrlPar(s):
+    return len(text) > 12 and text[:12] == "\\typesetUrl{" and text[:-1] == '}'
+
 
 
 #=============
@@ -498,7 +504,7 @@ while i < len(content):
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
         text = toLatex(" ".join([ content[k].strip() for k in range(i, j) ]))
-        if text[0].isalpha() and text[0].islower():
+        if isContinuePar(text) or isUrlPar(text):
             print "\\noindent"
         print text
         i = j
@@ -507,7 +513,7 @@ while i < len(content):
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
         text = toLatex(" ".join(content[i:j]))
-        if text[0].isalpha() and text[0].islower():
+        if isContinuePar(text) or isUrlPar(text):
             print "\\noindent"
         print text
         i = j
