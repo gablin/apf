@@ -158,7 +158,15 @@
 
 % Change typesetting of chapters
 \renewcommand{\printchaptertitle}[1]{%
-  \Huge\centering\scshape #1%
+  \centering%
+
+  \pgfornament[width=0.33\textwidth]{69}
+
+  \vspace{0.5\baselineskip}
+
+  \Huge\centering\scshape #1
+
+  \pgfornament[width=0.33\textwidth]{75}
 }
 \renewcommand{\memendofchapterhook}{%
   \global\booltrue{firstSection}%
