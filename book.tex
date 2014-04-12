@@ -13,6 +13,7 @@
 \usepackage{libertine} % Sans-serif font
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
+\usepackage{carolmin}  % For sections
 \usepackage{anyfontsize}
 \usepackage{calc}
 \usepackage{etoolbox}
@@ -20,7 +21,7 @@
 \usepackage{mdframed}
 \usepackage{url}
 \usepackage{xcolor}
-\usepackage{carolmin}
+\usepackage{pgfornament}
 
 
 
@@ -156,10 +157,25 @@
 \maxsecnumdepth{book}
 
 % Change typesetting of chapters
-% TODO: implement
+\renewcommand{\printchaptertitle}[1]{%
+  \Huge\centering\scshape #1%
+}
+\renewcommand{\memendofchapterhook}{%
+  \global\booltrue{firstSection}%
+}
 
 % Change typesetting of sections
+\newbool{firstSection}
+\booltrue{firstSection}
 \newcommand*{\typesetSection}[1]{%
+  \centering%
+  \ifbool{firstSection}{%
+    \global\boolfalse{firstSection}%
+  }{%
+    \pgfornament[width=24pt]{3}
+
+    \vspace{\baselineskip}
+  }%
   \Huge\cminfamily\centering #1%
 }
 \setsecheadstyle{\typesetSection}
