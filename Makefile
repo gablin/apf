@@ -27,9 +27,9 @@ $(TEX_INPUT_FILE): $(APF_FILE) $(TEX_INPUT_FILE_GEN_PY)
 
 .PHONY: clean
 clean:
+	$(RM) $(TEX_INPUT_FILE)
 	$(RM) *.aux *.log *.toc
 
 .PHONY: distclean
 distclean: clean
 	$(RM) $(TEX_TEMPLATE_FILE).pdf
-	$(RM) $(TEX_INPUT_FILE)
