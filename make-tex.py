@@ -321,13 +321,14 @@ def typesetDeath(s):
 
 def typesetHex(s):
     new_s = ""
-    plus_start_pos = s.find("+")
+    plus_start_pos = s.find("++")
     if plus_start_pos >= 0:
         plus_end_pos = s.rfind("+", plus_start_pos + 1)
         if plus_end_pos >= 0:
             plus_end_pos += 1
             return (s[:plus_start_pos]
-                    + "\\texttt{" + s[plus_start_pos:plus_end_pos] + "}"
+                    + "\\texttt{"
+                    + s[plus_start_pos:plus_end_pos] + "}"
                     + s[plus_end_pos])
     return s
 
