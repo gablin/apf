@@ -20,6 +20,7 @@
 \usepackage{enumitem}
 \usepackage{mdframed}
 \usepackage{url}
+\usepackage{ragged2e}
 \usepackage{xcolor}
 \usepackage{pgfornament}
 
@@ -149,7 +150,9 @@
       hidealllines=true,
       usetwoside=false, % Fixes lots of warnings about undefined pagelabel
     ]
+    \RaggedRight
     \mbox{\texttt{#1~#2}} #3
+    \par\justifying
   \end{mdframed}
 }
 
