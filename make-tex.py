@@ -373,7 +373,7 @@ def typesetDeath(s):
                 section = section.replace("death", "Death")
                 section = section.replace("psephopololis", "Psephopololis")
 
-                new_s += s[offset:i - 1] + "\\textsc{" + section + "}"
+                new_s += s[offset:i - 1] + "\\typesetDeath{" + section + "}"
             else:
                 new_s += s[offset:j + 1]
             offset = j + 1
@@ -427,6 +427,13 @@ def extractQuoteParts(s):
                           "\"'A song about Great Fiery Balls. [...]\\\\ "
                           + "Couldn't really make out the words, the reason "
                           + "bein', the piano exploded.'\"")
+    quote = quote.replace("\"Then it wrote: +++ Good Evening, Archchancellor. "
+                          + "I Am Fully Recovered And Enthusiastic About My "
+                          + "Tasks +++\"",
+                          "\"Then it wrote: +++ Good Evening, "
+                          + "Arch-\\\\chancellor. "
+                          + "I Am Fully Recovered And Enthusiastic About My "
+                          + "Tasks +++\"")
 
     return sign, pages, quote
 
