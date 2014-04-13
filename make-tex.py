@@ -196,7 +196,13 @@ def toLatex(s):
         is_url_end_ok = s[url_end_pos - 1] != ' '
         url_section = s[url_start_pos + len(url_start):url_end_pos]
         has_url_spaces = url_section.find(' ') >= 0
-        if not is_url_end_ok or has_url_spaces:
+        if (not is_url_end_ok
+            or has_url_spaces
+            or (not url_section.find("@") >= 0
+                and not url_section[:7] == "http://"
+                and not url_section[:6] == "ftp://"
+                )
+            ):
             i = url_end_pos + len(url_end)
             continue
 
@@ -220,6 +226,9 @@ def toLatexSub(s):
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
     s = s.replace("-->", "$\\rightarrow$")
+    s = s.replace("e.g. ", "e.g.\ ")
+    s = s.replace("i.e. ", "i.e.\ ")
+    s = s.replace("etc. ", "etc.\ ")
     s = s.replace("LaTeX", "\\LaTeX{}")
     s = s.replace("doppelgaenger", "doppelg\\\"{a}nger")
     s = s.replace("Danae", "Dana\\\"{e}")
@@ -229,6 +238,16 @@ def toLatexSub(s):
     s = s.replace("cliche", "clich\\'{e}")
     s = s.replace("Goedel", "G\\\"{o}del")
     s = s.replace("Schroedinger", "Schr\\\"{o}dinger")
+    s = s.replace("Quetzovercoatl", "Quetzoverc\\'{o}atl")
+    s = s.replace("flambe", "flamb\\'{e}")
+    s = s.replace("Ole!", "!`Ol\\'{e}!")
+    s = s.replace("Eminence", "\\'{E}minence")
+    s = s.replace("Cafe", "Caf\\'{e}")
+    s = s.replace("<heart>", "$\heartsuit$")
+    s = s.replace("Walkuere", "Walk\\\"{u}re")
+    s = s.replace("Schueschien", "Sch\\\"{u}schien")
+    s = s.replace("Pluen", "Pl\\\"{u}n")
+    s = s.replace("Tomas", "Tom\\'{a}s")
 #    s = s.replace("", "")
     s = typesetUsenet(s)
     s = typesetPath(s)
@@ -347,6 +366,7 @@ def typesetDeath(s):
             if (num_uppercase >= 3
                 and at_least_two_adjacent_uppercase
                 and at_least_one_space
+                and section != "VIA CLOACA"
                 ):
                 section = section[0] + section[1:].lower()
 
