@@ -260,6 +260,11 @@ def toLatexSub(s):
     s = s.replace("Tir-far-Thionn", "Tir-far-Thi\\'{o}nn")
     s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
 
+    # Typeset certain text parts as Death
+    s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
+                  "\"\\typesetDeath{I don't know about you, but I could murder "
+                  + "a curry}\"")
+
     s = typesetUsenet(s)
     s = typesetPath(s)
     s = s.replace(" discworld-constellations ",
