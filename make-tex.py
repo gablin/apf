@@ -221,7 +221,7 @@ def toLatexSub(s):
     s = s.replace("...", "\\ldots{}")
     s = s.replace("-->", "$\\rightarrow$")
     # TODO: add handling of 'Tyo yur atl ho sooten gatrunen'
-    s = s.replace("LaTeX", "\\LaTeX")
+    s = s.replace("LaTeX", "\\LaTeX{}")
     s = typesetUsenet(s)
     s = typesetPath(s)
     s = s.replace(" discworld-constellations ",
@@ -233,6 +233,7 @@ def toLatexSub(s):
                   "Arch\hyp{}Generalissimo\hyp{}Father\hyp{}of\hyp{}"
                   + "His\hyp{}Countryship")
     s = s.replace("computer-generated", "computer\hyp{}generated")
+    s = s.replace("y'knowwhatI'msayin?", "y'know\-what\-I'm\-sayin?")
 
     return s
 
@@ -434,6 +435,10 @@ def extractQuoteParts(s):
                           + "Arch-\\\\chancellor. "
                           + "I Am Fully Recovered And Enthusiastic About My "
                           + "Tasks +++\"")
+    quote = quote.replace("\"+++ Yes. I Am Preparing An Area Of Write-Only "
+                          + "Memory +++\"",
+                          "\"+++ Yes. I Am Preparing An Area Of Write-\\\\Only "
+                          + "Memory +++\"")
 
     return sign, pages, quote
 
