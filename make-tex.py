@@ -221,6 +221,12 @@ def toLatexSub(s):
     s = s.replace("...", "\\ldots{}")
     s = s.replace("-->", "$\\rightarrow$")
     s = s.replace("LaTeX", "\\LaTeX{}")
+    s = s.replace("doppelgaenger", "doppelg\"{a}nger")
+    s = s.replace("Danae", "Dana\"{e}")
+    s = s.replace("Goetterdaemmerung", "G\"{o}tterd\"{a}mmerung")
+    s = s.replace("Bjorn Ulvaeus", "Bj\"{o}rn Ulvaeus")
+    s = s.replace("Haendel", "H\"{a}ndel")
+#    s = s.replace("", "")
     s = typesetUsenet(s)
     s = typesetPath(s)
     s = s.replace(" discworld-constellations ",
