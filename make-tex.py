@@ -226,6 +226,14 @@ def toLatexSub(s):
     s = typesetPath(s)
     s = s.replace(" discworld-constellations ",
                   " \\typesetPath{discworld-constellations} ")
+
+    # For fixing overflowing \hboxes
+    s = s.replace("Shub-Niggurath", "Shub\hyp{}Niggurath")
+    s = s.replace("Arch-Generalissimo-Father-of-His-Countryship",
+                  "Arch\hyp{}Generalissimo\hyp{}Father\hyp{}of\hyp{}"
+                  + "His\hyp{}Countryship")
+    s = s.replace("computer-generated", "computer\hyp{}generated")
+
     return s
 
 def typesetUsenet(s):
@@ -390,13 +398,13 @@ def extractQuoteParts(s):
     if pos >= 0:
         sign = s[0]
         pages = s[2:pos + 1]
-        quote = s[pos + 2:]
+        quote = s[pos + 2:].strip()
     else:
         pos = s.find(" ")
         if pos >= 0:
             sign = s[0]
             pages = s[2:pos]
-            quote = s[pos + 1:]
+            quote = s[pos + 1:].strip()
         else:
             reportError("Invalid quote syntax")
 
@@ -409,6 +417,12 @@ def extractQuoteParts(s):
                           + "choice...'\"",
                           "\"'Truly, the world is the mollusc of your\\\\ "
                           + "choice...'\"")
+    quote = quote.replace("\"'A song about Great Fiery Balls. [...] Couldn't "
+                          + "really make out the words, the reason bein', the "
+                          + "piano exploded.'\"",
+                          "\"'A song about Great Fiery Balls. [...]\\\\ "
+                          + "Couldn't really make out the words, the reason "
+                          + "bein', the piano exploded.'\"")
 
     return sign, pages, quote
 
