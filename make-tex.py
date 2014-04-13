@@ -402,6 +402,13 @@ def extractQuoteParts(s):
 
     # Fix cases which will cause overflowing \hboxes
     quote = quote.replace("DM(Unseen)", "DM(Un\\-seen)")
+    quote = quote.replace("Hertzsprung-Russell", "Hertzsprung\hyp{}Russell")
+
+    # Same but truly UGLY fixes, but I can find no better way of doing it...
+    quote = quote.replace("\"'Truly, the world is the mollusc of your "
+                          + "choice...'\"",
+                          "\"'Truly, the world is the mollusc of your\\\\ "
+                          + "choice...'\"")
 
     return sign, pages, quote
 
@@ -511,8 +518,10 @@ while True:
         reportError("Beginning of first chapter not found")
 
 # Process regular content
+afterAPQuote = False
 while i < len(content):
     if isAtChapterSeparator(content[i]):
+        afterAPQuote = False
         i += 1
         if isAtChapterName(content[i]):
             print "\\chapter{" + toLatex(extractChapterName(content[i])) + "}"
@@ -524,9 +533,11 @@ while i < len(content):
             # At end of content
             break
     elif isAtSectionName(content[i]):
+        afterAPQuote = False
         print "\\section{" + toLatex(extractSectionName(content[i])) + "}"
         i += 1
     elif isAtIndentedText(content[i]):
+        afterAPQuote = False
         print "\\begin{indentText}"
         while i < len(content) and isAtIndentedText(content[i]):
             j = i + 1
@@ -540,6 +551,7 @@ while i < len(content):
             i = j
         print "\end{indentText}"
     elif isAtTextExcerpt(content[i]):
+        afterAPQuote = False
         print "\\begin{excerptText}"
         while i < len(content) and isAtTextExcerpt(content[i]):
             j = i + 1
@@ -553,6 +565,7 @@ while i < len(content):
             i = j
         print "\end{excerptText}"
     elif isAtQuote(content[i]):
+        afterAPQuote = True
         j = i + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
@@ -568,9 +581,13 @@ while i < len(content):
                + "}")
         i = j
     elif isAtEmptyLine(content[i]):
-        print
+        if afterAPQuote:
+            print "%"
+        else:
+            print
         i += 1
     elif isAtQuoteDescription(content[i]):
+        afterAPQuote = False
         j = i + 1
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
@@ -578,6 +595,7 @@ while i < len(content):
         printParagraph(text)
         i = j
     else:
+        afterAPQuote = False
         j = i
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
