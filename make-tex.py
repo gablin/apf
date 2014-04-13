@@ -227,7 +227,7 @@ def toLatexSub(s):
     s = s.replace("'-'", "'\\texttt{-}'")
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
-    s = s.replace(" -- ", "---")
+    s = s.replace(" -- ", " \!---\! ")
     s = s.replace("-->", "$\\rightarrow$")
     s = s.replace("e.g. ", "e.g.\ ")
     s = s.replace("i.e. ", "i.e.\ ")
