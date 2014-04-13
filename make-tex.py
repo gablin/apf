@@ -382,6 +382,9 @@ def typesetDeath(s):
                 and section != "JOE'S LIVERY STABLE"
                 and section != "TINKLE. TINKLE. *FIZZ"
                 and section != "TALK THAT TALK"
+                and section != ("HLISTEN TO ZEE CHILDREN OFF DER NIGHT... VOT "
+                                + "VONDERFUL MHUSICK DEY MAKE")
+                and section != "WHAT WE ARE FIGHTING FOR"
                 ):
                 section = section[0] + section[1:].lower()
 
