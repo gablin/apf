@@ -220,7 +220,6 @@ def toLatexSub(s):
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
     s = s.replace("-->", "$\\rightarrow$")
-    # TODO: add handling of 'Tyo yur atl ho sooten gatrunen'
     s = s.replace("LaTeX", "\\LaTeX{}")
     s = typesetUsenet(s)
     s = typesetPath(s)
@@ -412,6 +411,11 @@ def extractQuoteParts(s):
             quote = s[pos + 1:].strip()
         else:
             reportError("Invalid quote syntax")
+
+    # Custom quotes
+    quote = quote.replace("'? Tyo yur atl ho sooten gatrunen?'",
+                          "'? Ty\\o{} yur \\aa{}tl h\\o{} sooten "
+                          + "g\\aa{}trunen?'")
 
     # Fix cases which will cause overflowing \hboxes
     quote = quote.replace("DM(Unseen)", "DM(Un\\-seen)")
