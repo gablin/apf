@@ -314,10 +314,14 @@ def typesetDeath(s):
                 is_uppercase = s[k].isalpha() and s[k].isupper()
                 if is_uppercase:
                     j = k
-                end_of_smallcaps = s[k].isalpha() and not s[k].isupper()
+                is_end_of_smallcaps = s[k].isalpha() and not s[k].isupper()
                 k += 1
-                if end_of_smallcaps:
+                if is_end_of_smallcaps:
                     break
+            if s[j - 1] == ' ':
+                j -= 1
+                while not s[j].isalpha():
+                    j -= 1
             section = s[i - 1:j + 1]
             num_uppercase = 0
             at_least_two_adjacent_uppercase = False
