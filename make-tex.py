@@ -230,6 +230,8 @@ def toLatexSub(s):
     s = s.replace("i.e. ", "i.e.\ ")
     s = s.replace("etc. ", "etc.\ ")
     s = s.replace("LaTeX", "\\LaTeX{}")
+    s = s.replace("'? Tyo yur atl ho sooten gatrunen?'",
+                  "'? Ty\\o{} yur \\aa{}tl h\\o{} sooten g\\aa{}trunen?'")
     s = s.replace("doppelgaenger", "doppelg\\\"{a}nger")
     s = s.replace("Danae", "Dana\\\"{e}")
     s = s.replace("Goetterdaemmerung", "G\\\"{o}tterd\"{a}mmerung")
@@ -248,6 +250,12 @@ def toLatexSub(s):
     s = s.replace("Schueschien", "Sch\\\"{u}schien")
     s = s.replace("Pluen", "Pl\\\"{u}n")
     s = s.replace("Tomas", "Tom\\'{a}s")
+    s = s.replace("Nuernberg", "N\\\"{u}rnberg")
+    s = s.replace("Blue Oyster", "Blue \\\"{O}yster")
+    s = s.replace("Good Old Days(TM)", "Good Old Days\\texttrademark")
+    s = s.replace("naive", "na\\\"{i}ve")
+    s = s.replace("Tir-far-Thionn", "Tir-far-Thi\\'{o}nn")
+    s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
 #    s = s.replace("", "")
     s = typesetUsenet(s)
     s = typesetPath(s)
@@ -346,7 +354,7 @@ def typesetDeath(s):
                 k += 1
                 if is_end_of_smallcaps:
                     break
-            if s[j - 1] == ' ':
+            if not s[j - 1].isalpha():
                 j -= 1
                 while not s[j].isalpha():
                     j -= 1
@@ -363,10 +371,18 @@ def typesetDeath(s):
                     previous_was_uppercase = True
                 else:
                     previous_was_uppercase = False
+            print section
             if (num_uppercase >= 3
                 and at_least_two_adjacent_uppercase
                 and at_least_one_space
                 and section != "VIA CLOACA"
+                and section != "VENI VIDI VICI: A"
+                and section != "SEE ALSO"
+                and section != "LIVE FATS DIE YO GNU"
+                and section != "BORN TO RUNE"
+                and section != "JOE'S LIVERY STABLE"
+                and section != "TINKLE. TINKLE. *FIZZ"
+                and section != "TALK THAT TALK"
                 ):
                 section = section[0] + section[1:].lower()
 
@@ -440,11 +456,6 @@ def extractQuoteParts(s):
             quote = s[pos + 1:].strip()
         else:
             reportError("Invalid quote syntax")
-
-    # Custom quotes
-    quote = quote.replace("'? Tyo yur atl ho sooten gatrunen?'",
-                          "'? Ty\\o{} yur \\aa{}tl h\\o{} sooten "
-                          + "g\\aa{}trunen?'")
 
     # Fix cases which will cause overflowing \hboxes
     quote = quote.replace("DM(Unseen)", "DM(Un\\-seen)")
