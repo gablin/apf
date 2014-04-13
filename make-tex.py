@@ -296,6 +296,8 @@ def typesetUsenet(s):
             start_pos = s.find("rec.", i)
         if start_pos < 0:
             start_pos = s.find("sci.", i)
+        if start_pos < 0:
+            start_pos = s.find("lspace.", i)
         if start_pos >= 0:
             end_pos = s.find(" ", start_pos)
             if end_pos < 0:
@@ -613,6 +615,7 @@ while True:
         reportError("Beginning of first chapter not found")
 
 # Process regular content
+isAtVersionSection = False
 afterAPQuote = False
 while i < len(content):
     if isAtChapterSeparator(content[i]):
@@ -629,7 +632,12 @@ while i < len(content):
             break
     elif isAtSectionName(content[i]):
         afterAPQuote = False
-        print "\\section{" + toLatex(extractSectionName(content[i])) + "}"
+        section_name = extractSectionName(content[i])
+        if section_name == "Version History and Timeline":
+            isAtVersionSection = True
+        else:
+            isAtVersionSection = False
+        print "\\section{" + toLatex(section_name) + "}"
         i += 1
     elif isAtIndentedText(content[i]):
         afterAPQuote = False
@@ -695,5 +703,7 @@ while i < len(content):
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
         text = toLatex(" ".join(content[i:j]))
+        if isAtVersionSection:
+            print "\\noindent%"
         printParagraph(text)
         i = j
