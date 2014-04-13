@@ -268,6 +268,7 @@ def typesetDeath(s):
             section = s[i - 1:j + 1]
             num_uppercase = 0
             at_least_two_adjacent_uppercase = False
+            at_least_one_space = section.find(" ") >= 0
             previous_was_uppercase = False
             for c in section:
                 if c.isalpha() and c.isupper():
@@ -277,7 +278,10 @@ def typesetDeath(s):
                     previous_was_uppercase = True
                 else:
                     previous_was_uppercase = False
-            if num_uppercase >= 3 and at_least_two_adjacent_uppercase:
+            if (num_uppercase >= 3
+                and at_least_two_adjacent_uppercase
+                and at_least_one_space
+                ):
                 section = section[0] + section[1:].lower()
 
                 # Make 'I' into uppercase
