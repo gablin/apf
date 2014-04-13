@@ -217,7 +217,9 @@ def toLatex(s):
 def toLatexSub(s):
     s = replace(s, "_", "_", "\\emph{", "}")
     s = replace(s, "*", "*", "\\emph{", "}")
-    s = replace(s, "<<", ">>", "\\footnote{", "}")
+    s = replace(s, " <<", ">>", "\\footnote{", "}")
+    s = replace(s, "<<", ">>", "\\footnote{", "}") # Just in case...
+
     s = s.replace("&", "\&")
     s = s.replace("$", "\$")
     s = s.replace("%", "\%")
@@ -225,6 +227,7 @@ def toLatexSub(s):
     s = s.replace("'-'", "'\\texttt{-}'")
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
+    s = s.replace(" -- ", "---")
     s = s.replace("-->", "$\\rightarrow$")
     s = s.replace("e.g. ", "e.g.\ ")
     s = s.replace("i.e. ", "i.e.\ ")
@@ -256,11 +259,23 @@ def toLatexSub(s):
     s = s.replace("naive", "na\\\"{i}ve")
     s = s.replace("Tir-far-Thionn", "Tir-far-Thi\\'{o}nn")
     s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
-#    s = s.replace("", "")
+
     s = typesetUsenet(s)
     s = typesetPath(s)
     s = s.replace(" discworld-constellations ",
                   " \\typesetPath{discworld-constellations} ")
+
+    # Set appropriate dash for ranges
+    i = 0
+    while i < len(s):
+        pos = s.find("-", i)
+        if pos < 0:
+            break
+        if s[pos - 1].isdigit() and s[pos + 1].isdigit():
+            s = s[:pos] + "--" + s[pos + 1:]
+            i = pos + 2
+        else:
+            i = pos + 1
 
     # For fixing overflowing \hboxes
     s = s.replace("Shub-Niggurath", "Shub\hyp{}Niggurath")
@@ -277,6 +292,10 @@ def typesetUsenet(s):
     i = 0
     while i < len(s):
         start_pos = s.find("alt.", i)
+        if start_pos < 0:
+            start_pos = s.find("rec.", i)
+        if start_pos < 0:
+            start_pos = s.find("sci.", i)
         if start_pos >= 0:
             end_pos = s.find(" ", start_pos)
             if end_pos < 0:
