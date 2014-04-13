@@ -14,7 +14,7 @@
 \usepackage{libertine} % Sans-serif font
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
-\usepackage{carolmin}  % Font for sections
+\usepackage{aurical}  % Font for sections
 \usepackage{anyfontsize}
 \usepackage{calc}
 \usepackage{etoolbox}
@@ -106,7 +106,8 @@
 
     Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX{}.\\
     Fonts: \emph{Garamond} (serif basefont, \baseFontSize), \emph{Linux
-      Libertine} (sans-serif), and \emph{Bera Mono} (monotype).
+      Libertine} (sans-serif), \emph{Bera Mono} (monotype), and
+    \emph{Lukas Svatba} (for sections).
   \endgroup%
   \pagebreak%
 }
@@ -184,6 +185,7 @@
 % Change typesetting of sections
 \newbool{firstSection}
 \booltrue{firstSection}
+\newcommand{\sectionFont}{\Fontlukas}
 \newcommand*{\typesetSection}[1]{%
   \centering%
   \ifbool{firstSection}{%
@@ -193,7 +195,7 @@
 
     \vspace{\baselineskip}
   }%
-  \Huge\cminfamily\centering #1
+  \Huge\sectionFont\centering #1
 
   \vspace{0.5\baselineskip}%
 }
