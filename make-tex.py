@@ -223,6 +223,9 @@ def toLatexSub(s):
     # TODO: add handling of 'Tyo yur atl ho sooten gatrunen'
     s = s.replace("LaTeX", "\\LaTeX")
     s = typesetUsenet(s)
+    s = typesetPath(s)
+    s = s.replace(" discworld-constellations ",
+                  " \\typesetPath{discworld-constellations} ")
     return s
 
 def typesetUsenet(s):
@@ -242,6 +245,48 @@ def typesetUsenet(s):
                      + "\\typesetUsenet{"
                      + s[start_pos:end_pos] + "}")
             i = end_pos
+        else:
+            break
+    new_s += s[i:]
+    return new_s
+
+def typesetPath(s):
+    new_s = ""
+    i = 0
+    while i < len(s):
+        start_pos = s.find("/", i)
+        if start_pos >= 0 and (start_pos == 0 or s[start_pos - 1] == ' '):
+            next_pos = s.find("/", start_pos + 1)
+            has_next_pos = next_pos >= 0
+            has_space = has_next_pos and s[start_pos:next_pos].find(" ") >= 0
+            if has_next_pos and not has_space:
+                # Found a path
+                last_pos = next_pos + 1
+                # Find last slash in path
+                while True:
+                    next_pos = s.find("/", last_pos)
+                    has_next_pos = next_pos >= 0
+                    has_space = (has_next_pos
+                                 and s[last_pos:next_pos].find(" ") >= 0)
+                    if has_next_pos and not has_space:
+                        last_pos = next_pos + 1
+                    else:
+                        break
+                # Find end of path
+                end_pos = s.find(" ", last_pos)
+                if end_pos < 0:
+                    end_pos = len(s)
+                while not s[end_pos - 1].isalpha():
+                    end_pos -= 1
+                # Typeset
+                new_s = (s[i:start_pos]
+                         + "\\typesetPath{"
+                         + s[start_pos:end_pos] + "}")
+                i = end_pos
+            elif has_next_pos:
+                i = next_pos
+            else:
+                break
         else:
             break
     new_s += s[i:]
