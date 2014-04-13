@@ -400,6 +400,15 @@ def isContinuePar(s):
 def isUrlPar(s):
     return len(text) > 12 and text[:12] == "\\typesetUrl{" and text[-1] == '}'
 
+def printParagraph(text):
+    if isContinuePar(text) or isUrlPar(text):
+        print "\\noindent%"
+    if isUrlPar(text):
+        print "\\RaggedRight%"
+    print text
+    if isUrlPar(text):
+        print "\\par\\justifying%"
+
 
 
 #=============
@@ -521,16 +530,12 @@ while i < len(content):
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
         text = toLatex(" ".join([ content[k].strip() for k in range(i, j) ]))
-        if isContinuePar(text) or isUrlPar(text):
-            print "\\noindent"
-        print text
+        printParagraph(text)
         i = j
     else:
         j = i
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
         text = toLatex(" ".join(content[i:j]))
-        if isContinuePar(text) or isUrlPar(text):
-            print "\\noindent"
-        print text
+        printParagraph(text)
         i = j
