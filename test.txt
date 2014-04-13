@@ -1,0 +1,33 @@
+From: Leo Breebaart <apf@lspace.org>
+Subject: The Annotated Pratchett File, v9.0
+Newsgroups: alt.fan.pratchett,alt.books.pratchett
+Summary: BEING: THEE moft LEARNED and EDDYFYING COMPENDIUM intended for the
+	 AMUSEMENT of the NOBLE and the INSTRUCTION of the VULGAR, pofted
+	 on occafion upon THEE NETTE and CONSISTING of an OSTENTATIOUSNESS
+	 of COMMENTARIES and EXPLICATIONS by which shall be shewn the TRUE
+	 MEANING of the LEGION and MANY JESTS, SAWS and WITTICISMS to be
+	 FOUND in the MULTITUDINOUS WORKS of MISTER TERENCE PRATCHETT,
+	 OBE, scribe of thysse parifh. FEATURING a CAST of THOUSANDS
+	 confifting in PART of WIZARDS, WARRIORS, MONK^H^H^H^HAPES, DIURSE
+	 ALARUMS and ONE THOUSAND ELEPHANTS.
+	 BEWARE! Here be SPOILERS!
+Organization: Unseen University
+Followup-To: alt.fan.pratchett,alt.books.pratchett
+Reply-To: apf@lspace.org
+
+Archive-name: apf-9.0.5
+Last-modified: 2 February 2008
+Version: 9.0.5 (The Pointless Albatross Release)
+Editor: Leo Breebaart <apf@lspace.org>
+Assistant-Editor: Mike Kew <apf@lspace.org>
+URL: <http://www.lspace.org/books/apf/>
+
+---------------------------------------------------------------------------
+*** Preface to v9.0
+---------------------------------------------------------------------------
+
++ [p. 123] TINKLE. TINKLE. *FIZZ*.
+
+  An old advertising campaign for Alka-Seltzer (a medicine often used as a
+  hangover cure), used the line "Plop, plop, fizz, fizz" to describe -- the
+  sound of the pills dropping into water and dissolving. 8-9

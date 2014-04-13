@@ -19102,8 +19102,8 @@ Terry Pratchett tells us he's "never waved a hankie in anger" nor knows any
 morris dancers personally, but that he finds the morris dance kind of
 fascinating.
 
-Those interested can contact either Tom Keays (htkeys@syr.edu) or Rich
-Holmes (rsholmes@suhep.phy.syr.edu) about the Morris Dancing Discussion
+Those interested can contact either Tom Keays (<htkeys@syr.edu>) or Rich
+Holmes (<rsholmes@suhep.phy.syr.edu>) about the Morris Dancing Discussion
 List. You knew there was an ulterior motive here, didn't you?"
 
 There is also a web page for the Morris Dancing Discussion List. The URL
@@ -20715,7 +20715,7 @@ the Web instead (again: <http://www.lspace.org/>).
 
 If you want to translate a version of the APF into another language (or
 otherwise distribute a modified version of the APF), please first contact
-me at apf@lspace.org, and I will give you more information in email.
+me at <apf@lspace.org>, and I will give you more information in email.
 
 
 COPYRIGHT DISCUSSION 
