@@ -227,6 +227,8 @@ def toLatexSub(s):
     s = s.replace("Bjorn Ulvaeus", "Bj\\\"{o}rn Ulvaeus")
     s = s.replace("Haendel", "H\\\"{a}ndel")
     s = s.replace("cliche", "clich\\'{e}")
+    s = s.replace("Goedel", "G\\\"{o}del")
+    s = s.replace("Schroedinger", "Schr\\\"{o}dinger")
 #    s = s.replace("", "")
     s = typesetUsenet(s)
     s = typesetPath(s)
