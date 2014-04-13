@@ -338,15 +338,28 @@ def typesetHex(s):
     return s
 
 def extractQuoteParts(s):
+    sign = ""
+    pages = ""
+    quote = ""
     pos = s.find("] ")
     if pos >= 0:
-        return s[0], s[2:pos + 1], s[pos + 2:]
+        sign = s[0]
+        pages = s[2:pos + 1]
+        quote = s[pos + 2:]
     else:
         pos = s.find(" ")
         if pos >= 0:
-            return s[0], s[2:pos], s[pos + 1:]
+            sign = s[0]
+            pages = s[2:pos]
+            quote = s[pos + 1:]
         else:
             reportError("Invalid quote syntax")
+
+    # Fix cases which will cause overflowing \hboxes
+    quote = quote.replace("DM(Unseen)", "DM(Un\\-seen)")
+
+    return sign, pages, quote
+
 
 def extractMetaData(content, tag):
     for i in range(len(content)):
