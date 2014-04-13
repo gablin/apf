@@ -371,7 +371,6 @@ def typesetDeath(s):
                     previous_was_uppercase = True
                 else:
                     previous_was_uppercase = False
-            print section
             if (num_uppercase >= 3
                 and at_least_two_adjacent_uppercase
                 and at_least_one_space
