@@ -252,7 +252,7 @@ def toLatexSub(s):
     s = s.replace("Tomas", "Tom\\'{a}s")
     s = s.replace("Nuernberg", "N\\\"{u}rnberg")
     s = s.replace("Blue Oyster", "Blue \\\"{O}yster")
-    s = s.replace("Good Old Days(TM)", "Good Old Days\\texttrademark")
+    s = s.replace("(TM)", "\\texttrademark{}")
     s = s.replace("naive", "na\\\"{i}ve")
     s = s.replace("Tir-far-Thionn", "Tir-far-Thi\\'{o}nn")
     s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
