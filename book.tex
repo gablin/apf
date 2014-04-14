@@ -60,8 +60,9 @@
 \newcommand{\thisLastModified}{}
 \newcommand{\thisNewsgroups}{}
 \newcommand{\thisSubject}{}
-\newcommand{\thisTitle}{}
 \newcommand{\thisSubtitle}{}
+\newcommand{\thisSummary}{}
+\newcommand{\thisTitle}{}
 
 \newcommand{\makeTitlePage}{%
   \thispagestyle{empty}
@@ -82,31 +83,29 @@
 }
 
 \newcommand{\makeCopyrightPage}{%
-  \begingroup
-    \setlength{\parindent}{0pt}
-    \mbox{}
-    \vfill
-
-    Collected and edited by: \thisEditor\\
-    Assistant editor: \thisAssistantEditor\\
-    Newsgroups: \thisNewsgroups\\
-    Subject: \thisSubject\\
-    Full version: \thisFullVersion\\
-    Archive name: \texttt{\thisArchiveName}\\
-    Last modified: \thisLastModified
-
-    \vspace{\baselineskip}
-
-    Document URL: \thisDocUrl\\
-    Document build: \texttt{\thisDocBuild}
-
-    \vspace{\baselineskip}
-
-    Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using \LaTeX{}.\\
-    Fonts: \emph{Garamond} (serif basefont, \baseFontSize), \emph{Linux
-      Libertine} (sans-serif), \emph{Bera Mono} (monotype), and
-    \emph{Lukas Svatba} (for sections).
-  \endgroup%
+  \mbox{}
+  \vfill
+  \begin{copyrightText}
+    \item Collected and edited by: \thisEditor
+    \item Assistant editor: \thisAssistantEditor
+    \item Newsgroups: \thisNewsgroups
+    \item Subject: \thisSubject
+    \item Summary: \thisSummary
+    \item Full version: \thisFullVersion
+    \item Archive name: \texttt{\thisArchiveName}
+    \item Last modified: \thisLastModified
+  \end{copyrightText}
+  \begin{copyrightText}
+    \item Document URL: \thisDocUrl
+    \item Document build: \texttt{\thisDocBuild}
+  \end{copyrightText}
+  \begin{copyrightText}
+    \item Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using
+      \LaTeX{}.
+    \item Fonts: \emph{Garamond} (serif basefont, \baseFontSize), \emph{Linux
+      Libertine} (sans-serif), \emph{Bera Mono} (monotype), and \emph{Lukas
+      Svatba} (for sections).
+  \end{copyrightText}%
   \pagebreak%
 }
 
@@ -134,7 +133,6 @@
   labelindent=\indentWidth,
   labelsep=0pt,
   labelwidth=0pt,
-  itemsep=0pt,
 }
 
 % Define list environment for excerpt texts
@@ -145,6 +143,15 @@
   labelsep=0pt,
   labelwidth=0pt,
   before=\itshape,
+}
+
+% Define list environment for copyright texts
+\newlist{copyrightText}{description}{1}
+\setlist[copyrightText]{%
+  leftmargin=0.5\indentContWidth,
+  labelindent=0pt,
+  labelsep=0pt,
+  labelwidth=0pt,
 }
 
 % Commands for typesetting quotes from the Pratchett books

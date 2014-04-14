@@ -224,6 +224,8 @@ def toLatexSub(s):
     s = s.replace("$", "\$")
     s = s.replace("%", "\%")
     s = s.replace("#", "\#")
+    s = s.replace("_", "\_")
+    s = s.replace("^", "\^")
     s = s.replace("'-'", "'\\texttt{-}'")
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("...", "\\ldots{}")
@@ -598,6 +600,7 @@ printMetadata("AssistantEditor", extractMetaData(content, "Assistant-Editor"))
 printMetadata("DocUrl", extractMetaData(content, "URL"))
 printMetadata("Newsgroups", extractMetaData(content, "Newsgroups"))
 printMetadata("Subject", extractMetaData(content, "Subject"))
+printMetadata("Summary", extractMetaData(content, "Summary"))
 printMetadata("DocBuild", time.strftime("%Y-%m-%d %H:%M:%S"))
 print
 
