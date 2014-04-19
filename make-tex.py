@@ -613,8 +613,6 @@ print "\\makeCopyrightPage"
 print "\\makePreamblePage"
 print "\\makeTOCPage"
 print
-print "\\mainmatter"
-print
 
 # Move to beginning of first chapter
 i = 0
@@ -627,13 +625,22 @@ while True:
         reportError("Beginning of first chapter not found")
 
 # Process regular content
+isFirstChapter = True
+hasPrintedMainMatterCommand = False
 isAtVersionSection = False
-afterAPQuote = False
+isAfterAPQuote = False
 while i < len(content):
     if isAtChapterSeparator(content[i]):
-        afterAPQuote = False
+        isAfterAPQuote = False
         i += 1
         if isAtChapterName(content[i]):
+            if isFirstChapter:
+                isFirstChapter = False
+            else:
+                if not hasPrintedMainMatterCommand:
+                    hasPrintedMainMatterCommand = True
+                    print "\\mainmatter"
+                    print
             print "\\chapter{" + toLatex(extractChapterName(content[i])) + "}"
             i += 1
             if not isAtChapterSeparator(content[i]):
@@ -643,7 +650,7 @@ while i < len(content):
             # At end of content
             break
     elif isAtSectionName(content[i]):
-        afterAPQuote = False
+        isAfterAPQuote = False
         section_name = extractSectionName(content[i])
         if section_name == "Version History and Timeline":
             isAtVersionSection = True
@@ -652,7 +659,7 @@ while i < len(content):
         print "\\section{" + toLatex(section_name) + "}"
         i += 1
     elif isAtIndentedText(content[i]):
-        afterAPQuote = False
+        isAfterAPQuote = False
         print "\\begin{indentText}"
         while i < len(content) and isAtIndentedText(content[i]):
             j = i + 1
@@ -666,7 +673,7 @@ while i < len(content):
             i = j
         print "\end{indentText}"
     elif isAtTextExcerpt(content[i]):
-        afterAPQuote = False
+        isAfterAPQuote = False
         print "\\begin{excerptText}"
         while i < len(content) and isAtTextExcerpt(content[i]):
             j = i + 1
@@ -680,7 +687,7 @@ while i < len(content):
             i = j
         print "\end{excerptText}"
     elif isAtQuote(content[i]):
-        afterAPQuote = True
+        isAfterAPQuote = True
         j = i + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
@@ -696,13 +703,13 @@ while i < len(content):
                + "}")
         i = j
     elif isAtEmptyLine(content[i]):
-        if afterAPQuote:
+        if isAfterAPQuote:
             print "%"
         else:
             print
         i += 1
     elif isAtQuoteDescription(content[i]):
-        afterAPQuote = False
+        isAfterAPQuote = False
         j = i + 1
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
@@ -710,7 +717,7 @@ while i < len(content):
         printParagraph(text)
         i = j
     else:
-        afterAPQuote = False
+        isAfterAPQuote = False
         j = i
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
