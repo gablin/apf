@@ -49,6 +49,11 @@ def isAtSectionName(s):
 def extractSectionName(s):
     s = s[0] + s[1:].strip().lower()
 
+    # Custom fixes
+    s = s.replace(" ii:", " 2:")
+    s = s.replace(" iii:", " 3:")
+    s = s.replace(" iv:", " 4:")
+    s = s.replace(" v:", " 5:")
     s = s.replace(" apf", " APF")
 
     # Make every start of word uppercase
@@ -91,6 +96,15 @@ def extractSectionName(s):
     s = s.replace(" With ", " with ")
     s = s.replace(" Within ", " within ")
     s = s.replace(" Without ", " without ")
+
+    # Uppercase words after certain characters
+    i = 0
+    while i < len(s):
+        if s[i] == ':':
+            i += 2
+            s = s[:i] + s[i].upper() + s[i + 1:]
+        else:
+            i += 1
 
     return s
 
