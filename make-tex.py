@@ -292,6 +292,9 @@ def toLatexSub(s):
     s = s.replace("computer-generated", "computer\hyp{}generated")
     s = s.replace("y'knowwhatI'msayin?", "y'know\-what\-I'm\-sayin?")
 
+    # Other layout fixes
+    s = s.replace(" ]", "~]")
+
     return s
 
 def typesetUsenet(s):
