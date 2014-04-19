@@ -15,6 +15,7 @@
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
 \usepackage{aurical}  % Font for sections
+\usepackage{adjustbox}
 \usepackage{anyfontsize}
 \usepackage{calc}
 \usepackage{etoolbox}
@@ -23,8 +24,12 @@
 \usepackage{hyphenat}
 \usepackage{listings}
 \usepackage{mdframed}
+\usepackage{needspace}
+\usepackage{MnSymbol}
 \usepackage{pgfornament}
 \usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
 \usepackage{url}
 \usepackage{xcolor}
 
@@ -184,37 +189,52 @@
   \begin{minipage}{\textwidth}
     \centering%
 
-    \pgfornament[width=0.33\textwidth]{69}
+    \begin{tikzpicture}[%
+        nothing/.style={%
+          inner sep=0pt,
+          node distance=0pt,
+        },
+      ]
+      \node [nothing] (C) {\pgfornament[width=3cm]{69}};
+      \node [nothing,
+             above left=of C.south west,
+             xshift=6mm, yshift=1.5mm,
+            ]
+            {\pgfornament[width=2.5cm]{72}};
+      \node [nothing,
+             above right=of C.south east,
+             xshift=-6mm, yshift=1.5mm,
+            ]
+            {\pgfornament[width=2.5cm]{73}};
+    \end{tikzpicture}
 
-    \vspace{0.5\baselineskip}
+    \vspace{-0.25\baselineskip}
 
     \Huge\centering\scshape #1
 
-    \pgfornament[width=0.33\textwidth]{75}
+    \pgfornament[width=3.5cm]{75}
   \end{minipage}%
-}
-\renewcommand{\memendofchapterhook}{%
-  \global\booltrue{firstSection}%
 }
 
 % Change typesetting of sections
-\newbool{firstSection}
-\booltrue{firstSection}
 \newcommand{\sectionFont}{\Fontlukas}
-\newcommand*{\typesetSection}[1]{%
-  \centering%
-  \ifbool{firstSection}{%
-    \global\boolfalse{firstSection}%
-  }{%
-    \pgfornament[width=0.33\textwidth]{84}
-
-    \vspace{\baselineskip}
-  }%
-  \Huge\sectionFont\centering #1
-
-  \vspace{0.5\baselineskip}%
+\newlength{\sectionOrnamentWidth}
+\newsavebox{\sectionOrnament}
+\savebox{\sectionOrnament}{%
+  {\Huge$\filleddiamond$\hspace*{2mm}}%
 }
-\setsecheadstyle{\typesetSection}
+\settowidth{\sectionOrnamentWidth}{\usebox{\sectionOrnament}}
+\newcommand*{\typesetSection}[1]{%
+  \noindent\parbox[t]{\sectionOrnamentWidth}{\usebox{\sectionOrnament}}%
+  \parbox[t]{\textwidth-\sectionOrnamentWidth}{%
+    \raggedright\Huge\sectionFont #1%
+  }%
+}
+\setsecheadstyle{
+  % Prevent section titles from appearing alone on the bottom of a page
+  \needspace{8\baselineskip}%
+  \typesetSection%
+}
 
 % Customize header and footer
 \newcommand{\headingStyle}{\scriptsize}
@@ -294,19 +314,21 @@
 
 \begin{document}
 
+% TODO: finish
 \begin{lrbox}{\preambleBox}%
 \begin{lstlisting}
 Hex> make apf
 +++ Retrieving Scroll +++
 +++ Accessed Long-Term Storage Anthill (Scroll Not Found)
 +++ Accessed L-Space (Scroll Found) +++
-+++ Dissecting +++
++++ Parsing Scroll +++
 +++ Error On Page `\pageref{heart-symbol}`: Unknown Rune `\heartSymbol` +++
 +++ Redesign In Progress +++ Redo From Start +++
 Hex> !!
-+++ Dissecting +++
++++ Parsing Scroll +++
 +++ Initializing +++
 +++ Aligned Phase Of The Moon Generator
++++ ??
 +++ Released Mouse +++
 +++ Performing Occult Transformations (This May Take Some
 Time, Depending On Your Number Of Ramskulls) +++++++++++++++
@@ -315,8 +337,7 @@ Time, Depending On Your Number Of Ramskulls) +++++++++++++++
 +++ Warning: Out Of Cheese +++ Collecting Rubble +++
 +++ Optimizing Ant Colony +++
 +++ Producing PDFs (Portable Domain Files) +++
-+++ All Done +++ Unreal processing time: -2h 5m 17s +++
-
++++ Finished +++ Unreal processing time: -2h 5m 17s +++
 +++ Happy Reading! +++
 \end{lstlisting}
 \end{lrbox}
