@@ -29,7 +29,7 @@
 \usepackage{pgfornament}
 \usepackage{ragged2e}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{positioning,calc}
 \usepackage{url}
 \usepackage{xcolor}
 
@@ -42,10 +42,9 @@
 \setstocksize{8.75in}{5.625in}
 \settrimmedsize{8.5in}{5.5in}{*}
 \settrims{(\stockheight-\paperheight)*\real{0.5}}%
-         {(\stockwidth-\paperwidth)*\real{0.5}}
-
+         {(\stockwidth-\paperwidth)}
 \settypeblocksize{38\baselineskip + 2\topskip}{*}{0.577} % Hexagon ratio
-\setlrmargins{*}{*}{2}
+\setlrmargins{*}{*}{1.25}
 \setulmargins{\spinemargin}{*}{*}
 \setlength{\footskip}{3\baselineskip}
 \checkandfixthelayout
@@ -72,19 +71,58 @@
 
 \newcommand{\makeTitlePage}{%
   \thispagestyle{empty}
-  \begingroup
-    \centering%
-    \mbox{}
-    \vfill
-    {\fontsize{36}{48}\selectfont\textsc{\thisTitle}}
+  \mbox{}\vfill
+  \begin{center}
+    \def\cornerOrn{\pgfornament[width=1cm]{35}}%
+    \def\vLineOrnNum{84}%
+    \def\vLineOrnOffset{2.5mm}%
+    \def\hLineOrnNum{82}%
+    \def\hLineOrnOffset{-2.5mm}%
+    \def\yOffset{20pt}%
+    \begin{tikzpicture}[%
+        every node/.style={%
+          inner sep=0,
+          node distance=0,
+        },
+      ]
 
-    \vspace*{36pt}
+      \node [font=\fontsize{36}{36}\selectfont\scshape\centering] (title) {%
+        \parbox{0.75\textwidth}{%
+          \centering\thisTitle%
+        }};
+      \node [below left=of title.north west, yshift=\yOffset] (UL) {\cornerOrn};
+      \node [below right=of title.north east, yshift=\yOffset] (UR) {%
+        \adjustbox{reflect}{\cornerOrn}%
+      };
+      \node [above left=of title.south west, yshift=-\yOffset] (LL) {%
+        \adjustbox{rotate=90}{\cornerOrn}%
+      };
+      \node [above right=of title.south east, yshift=-\yOffset] (LR) {%
+        \adjustbox{rotate=90,reflect}{\cornerOrn}%
+      };
+      \draw [transform canvas={xshift=\vLineOrnOffset}]
+        (UL.south west) to [ornament=\vLineOrnNum] (LL.north west);
+      \draw [transform canvas={xshift=-\vLineOrnOffset}]
+        (UR.south east) to [ornament=\vLineOrnNum] (LR.north east);
+      \draw [transform canvas={yshift=\hLineOrnOffset}]
+        (UL.north east) to [ornament=\hLineOrnNum] (UR.north west);
+      \draw [transform canvas={yshift=-\hLineOrnOffset}]
+        (LL.south east) to [ornament=\hLineOrnNum] (LR.south west);
 
-    {\huge Version \thisSubtitle}
-    \vfill
-    \mbox{}
-    \vfill
-  \endgroup%
+%      \pgfornamentvline{UL}{LL}{west}{\vLineOrnNum}
+%      \pgfornamentvline{UR}{LR}{east}{\vLineOrnNum}
+%      \pgfornamenthline{UL}{UR}{north}{\hLineOrnNum}
+%      \pgfornamenthline{LL}{LR}{south}{\hLineOrnNum}
+    \end{tikzpicture}
+
+    \vspace{1.5\baselineskip}
+
+    \noindent{\huge Version \thisSubtitle}
+  \end{center}
+  \vfill
+  \mbox{}
+  \vfill
+  \mbox{}
   \pagebreak%
 }
 
@@ -316,7 +354,6 @@
 
 \begin{document}
 
-% TODO: finish
 \begin{lrbox}{\preambleBox}%
 \begin{lstlisting}
 Hex> make apf
