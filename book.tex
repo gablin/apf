@@ -19,8 +19,9 @@
 \usepackage{calc}
 \usepackage{etoolbox}
 \usepackage{enumitem}
-\usepackage{hyphenat}
 \usepackage{fnpct} % For forcing footnote placements after conjunctions
+\usepackage{hyphenat}
+\usepackage{listings}
 \usepackage{mdframed}
 \usepackage{pgfornament}
 \usepackage{ragged2e}
@@ -100,13 +101,20 @@
     \item Document build: \texttt{\thisDocBuild}
   \end{copyrightText}
   \begin{copyrightText}
-    \item Typeset by Gabriel Hjort Blindell \typesetUrl{ghb@kth.se} using
-      \LaTeX{}.
+    \item Preprocessed and typeset by Gabriel Hjort Blindell
+      \typesetUrl{ghb@kth.se} (using Python and \LaTHeX).
     \item Fonts: \emph{Garamond} (serif basefont, \baseFontSize), \emph{Linux
       Libertine} (sans-serif), \emph{Bera Mono} (monotype), and \emph{Lukas
       Svatba} (for sections).
   \end{copyrightText}%
   \pagebreak%
+}
+
+\newsavebox{\preambleBox}
+\newcommand{\makePreamblePage}{%
+  \chapter{Preamble}
+  \usebox{\preambleBox}
+  \clearpage
 }
 
 \newcommand{\makeTOCPage}{%
@@ -173,15 +181,17 @@
 
 % Change typesetting of chapters
 \renewcommand{\printchaptertitle}[1]{%
-  \centering%
+  \begin{minipage}{\textwidth}
+    \centering%
 
-  \pgfornament[width=0.33\textwidth]{69}
+    \pgfornament[width=0.33\textwidth]{69}
 
-  \vspace{0.5\baselineskip}
+    \vspace{0.5\baselineskip}
 
-  \Huge\centering\scshape #1
+    \Huge\centering\scshape #1
 
-  \pgfornament[width=0.33\textwidth]{75}
+    \pgfornament[width=0.33\textwidth]{75}
+  \end{minipage}%
 }
 \renewcommand{\memendofchapterhook}{%
   \global\booltrue{firstSection}%
@@ -222,6 +232,23 @@
 % Change typesetting of items in ToC
 \renewcommand{\cftchapterfont}{\bfseries\scshape}
 \renewcommand{\cftsectionfont}{\scshape}
+
+% Change style on listings
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fixed,
+  escapechar=`,
+}
+
+% Other macros
+\newcommand{\LaTHeX}{%
+  L{\hspace{-0.38em}\raisebox{0.2em}{\scriptsize A}}%
+  \hspace{-0.15em}T%
+  \hspace{-0.14em}{\scriptsize H}%
+  \raisebox{-0.25em}{E}%
+  \hspace{-0.14em}X%
+}
+\newcommand{\heartSymbol}{$\heartsuit$}
 
 
 
@@ -266,5 +293,34 @@
 %==========
 
 \begin{document}
+
+\begin{lrbox}{\preambleBox}%
+\begin{lstlisting}
+Hex> make apf
++++ Retrieving Scroll +++
++++ Accessed Long-Term Storage Anthill (Scroll Not Found)
++++ Accessed L-Space (Scroll Found) +++
++++ Dissecting +++
++++ Error On Page `\pageref{heart-symbol}`: Unknown Rune `\heartSymbol` +++
++++ Redesign In Progress +++ Redo From Start +++
+Hex> !!
++++ Dissecting +++
++++ Initializing +++
++++ Aligned Phase Of The Moon Generator
++++ Released Mouse +++
++++ Performing Occult Transformations (This May Take Some
+Time, Depending On Your Number Of Ramskulls) +++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++ Done +++
++++ Warning: Out Of Cheese +++ Collecting Rubble +++
++++ Optimizing Ant Colony +++
++++ Producing PDFs (Portable Domain Files) +++
++++ All Done +++ Unreal processing time: -2h 5m 17s +++
+
++++ Happy Reading! +++
+\end{lstlisting}
+\end{lrbox}
+
 \input{\inputFile}
+
 \end{document}

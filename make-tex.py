@@ -250,7 +250,7 @@ def toLatexSub(s):
     s = s.replace("Ole!", "!`Ol\\'{e}!")
     s = s.replace("Eminence", "\\'{E}minence")
     s = s.replace("Cafe", "Caf\\'{e}")
-    s = s.replace("<heart>", "$\heartsuit$")
+    s = s.replace("<heart>", "\heartSymbol\label{heart-symbol}")
     s = s.replace("Walkuere", "Walk\\\"{u}re")
     s = s.replace("Schueschien", "Sch\\\"{u}schien")
     s = s.replace("Pluen", "Pl\\\"{u}n")
@@ -607,6 +607,7 @@ print
 print "\\frontmatter"
 print "\\makeTitlePage"
 print "\\makeCopyrightPage"
+print "\\makePreamblePage"
 print "\\makeTOCPage"
 print
 print "\\mainmatter"
