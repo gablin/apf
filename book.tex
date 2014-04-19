@@ -87,7 +87,7 @@
       ]
 
       \node [font=\fontsize{36}{36}\selectfont\scshape\centering] (title) {%
-        \parbox{0.75\textwidth}{%
+        \parbox{0.71\textwidth}{%
           \centering\thisTitle%
         }};
       \node [below left=of title.north west, yshift=\yOffset] (UL) {\cornerOrn};
@@ -108,11 +108,6 @@
         (UL.north east) to [ornament=\hLineOrnNum] (UR.north west);
       \draw [transform canvas={yshift=-\hLineOrnOffset}]
         (LL.south east) to [ornament=\hLineOrnNum] (LR.south west);
-
-%      \pgfornamentvline{UL}{LL}{west}{\vLineOrnNum}
-%      \pgfornamentvline{UR}{LR}{east}{\vLineOrnNum}
-%      \pgfornamenthline{UL}{UR}{north}{\hLineOrnNum}
-%      \pgfornamenthline{LL}{LR}{south}{\hLineOrnNum}
     \end{tikzpicture}
 
     \vspace{1.5\baselineskip}
@@ -123,7 +118,7 @@
   \mbox{}
   \vfill
   \mbox{}
-  \pagebreak%
+  \newpage%
 }
 
 \newcommand{\makeCopyrightPage}{%
