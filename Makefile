@@ -21,6 +21,7 @@ LATEX_ARGS = "\newcommand{\inputFile}{$(TEX_INPUT_FILE)} \
 $(PDF_FILE): $(TEX_TEMPLATE_FILE) $(TEX_INPUT_FILE)
 	pdflatex $(LATEX_ARGS)
 	pdflatex $(LATEX_ARGS)
+	mv $(basename $(TEX_TEMPLATE_FILE)).pdf $(PDF_FILE)
 
 $(TEX_INPUT_FILE): $(APF_FILE) $(TEX_INPUT_FILE_GEN_PY)
 	python $(TEX_INPUT_FILE_GEN_PY) $(APF_FILE) > $@
