@@ -21,6 +21,7 @@
 \usepackage{etoolbox}
 \usepackage{enumitem}
 \usepackage{fnpct} % For forcing footnote placements after conjunctions
+\usepackage{manyfoot} % To be able to customize the footnote symbol
 \usepackage{hyphenat}
 \usepackage{listings}
 \usepackage{mdframed}
@@ -138,6 +139,13 @@
     \item Document URL: \thisDocUrl
     \item Document build: \texttt{\thisDocBuild}
   \end{copyrightText}
+  \begin{copyrightText}
+    \item Cover design\Footnote{*}{The material for the said design have been
+      shamelessly taken without prior permission, and copyrights have most
+      definitely been infringed. So if you happen to meet the copyright holders
+      in question, please don't tell them.} by Gabriel Hjort
+      Blindell.
+  \end{copyrightText}%
   \begin{copyrightText}
     \item Preprocessed and typeset by Gabriel Hjort Blindell
       \typesetUrl{ghb@kth.se} (using Python and \LaTHeX).
