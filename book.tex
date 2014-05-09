@@ -70,16 +70,25 @@
 \newcommand{\thisSummary}{}
 \newcommand{\thisTitle}{}
 
+\tikzset{%
+  ornament edge/.style args={#1}{%
+    draw=none,
+    ornament=#1,
+  },
+}
 \newcommand{\makeTitlePage}{%
   \thispagestyle{empty}
   \mbox{}\vfill
   \begin{center}
-    \def\cornerOrn{\pgfornament[width=1cm]{35}}%
+    \def\ulCornerOrn{\pgfornament[width=1cm]{35}}%
+    \def\urCornerOrn{\pgfornament[width=1cm]{36}}%
     \def\vLineOrnNum{84}%
-    \def\vLineOrnOffset{2.5mm}%
-    \def\hLineOrnNum{82}%
+    \def\vLineOrnOffset{2.6mm}%
+    \def\hLineOrnNum{83}%
     \def\hLineOrnOffset{-2.5mm}%
     \def\yOffset{20pt}%
+    \pgfdeclarelayer{background}
+    \pgfsetlayers{background,main}
     \begin{tikzpicture}[%
         every node/.style={%
           inner sep=0,
@@ -91,24 +100,32 @@
         \parbox{0.71\textwidth}{%
           \centering\thisTitle%
         }};
-      \node [below left=of title.north west, yshift=\yOffset] (UL) {\cornerOrn};
-      \node [below right=of title.north east, yshift=\yOffset] (UR) {%
-        \adjustbox{reflect}{\cornerOrn}%
-      };
-      \node [above left=of title.south west, yshift=-\yOffset] (LL) {%
-        \adjustbox{rotate=90}{\cornerOrn}%
-      };
-      \node [above right=of title.south east, yshift=-\yOffset] (LR) {%
-        \adjustbox{rotate=90,reflect}{\cornerOrn}%
-      };
-      \draw [transform canvas={xshift=\vLineOrnOffset}]
-        (UL.south west) to [ornament=\vLineOrnNum] (LL.north west);
-      \draw [transform canvas={xshift=-\vLineOrnOffset}]
-        (UR.south east) to [ornament=\vLineOrnNum] (LR.north east);
-      \draw [transform canvas={yshift=\hLineOrnOffset}]
-        (UL.north east) to [ornament=\hLineOrnNum] (UR.north west);
-      \draw [transform canvas={yshift=-\hLineOrnOffset}]
-        (LL.south east) to [ornament=\hLineOrnNum] (LR.south west);
+      \node [below left=of title.north west, yshift=\yOffset] (UL)
+            {\ulCornerOrn};
+      \node [below right=of title.north east, yshift=\yOffset] (UR)
+            {\urCornerOrn};
+      \node [above left=of title.south west, yshift=-\yOffset] (LL)
+            {\adjustbox{rotate=90}{\ulCornerOrn}};
+      \node [above right=of title.south east, yshift=-\yOffset] (LR)
+            {\adjustbox{rotate=-90}{\urCornerOrn}};
+      \begin{pgfonlayer}{background}
+        \draw [ornament edge=\vLineOrnNum]
+          ([xshift=-2.5mm, yshift=0.1mm] UL.south)
+          to
+          ([xshift=-2.5mm, yshift=-0.1mm] LL.north);
+        \draw [ornament edge=\vLineOrnNum]
+          ([xshift=2.8mm, yshift=0.1mm] UR.south)
+          to
+          ([xshift=2.8mm, yshift=-0.1mm] LR.north);
+        \draw [ornament edge=\hLineOrnNum]
+          ([xshift=-1mm, yshift=-2.4mm] UL.north east)
+          to
+          ([xshift=1mm, yshift=-2.4mm] UR.north west);
+        \draw [ornament edge=\hLineOrnNum]
+          ([xshift=-1mm, yshift=2.4mm] LL.south east)
+          to
+          ([xshift=1mm, yshift=2.4mm] LR.south west);
+      \end{pgfonlayer}
     \end{tikzpicture}
 
     \vspace{1.5\baselineskip}
