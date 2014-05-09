@@ -234,12 +234,12 @@ def toLatexSub(s):
     s = replace(s, " <<", ">>", "\\footnote{", "}")
     s = replace(s, "<<", ">>", "\\footnote{", "}") # Just in case...
 
-    s = s.replace("&", "\&")
-    s = s.replace("$", "\$")
-    s = s.replace("%", "\%")
-    s = s.replace("#", "\#")
-    s = s.replace("_", "\_")
-    s = s.replace("^", "\^")
+    s = s.replace("&", "\\&")
+    s = s.replace("$", "\\$")
+    s = s.replace("%", "\\%")
+    s = s.replace("#", "\\#")
+    s = s.replace("_", "\\_")
+    s = s.replace("^", "\\^{}")
     s = s.replace("'-'", "'\\texttt{-}'")
     s = s.replace("'+'", "'\\texttt{+}'")
     s = s.replace("[...]", "\\bracketsLDots{}")
