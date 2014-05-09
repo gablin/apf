@@ -47,7 +47,7 @@ def isAtSectionName(s):
     return True
 
 def extractSectionName(s):
-    s = s[0] + s[1:].strip().lower()
+    s = s[0] + s[1:].rstrip().lower()
 
     # Custom fixes
     s = s.replace(" ii:", " 2:")
@@ -242,6 +242,7 @@ def toLatexSub(s):
     s = s.replace("^", "\^")
     s = s.replace("'-'", "'\\texttt{-}'")
     s = s.replace("'+'", "'\\texttt{+}'")
+    s = s.replace("[...]", "\\bracketsLDots{}")
     s = s.replace("...", "\\ldots{}")
     s = s.replace(" -- ", " \emdash{} ")
     s = s.replace("-->", "$\\rightarrow$")
@@ -259,12 +260,13 @@ def toLatexSub(s):
     s = s.replace("cliche", "clich\\'{e}")
     s = s.replace("Goedel", "G\\\"{o}del")
     s = s.replace("Schroedinger", "Schr\\\"{o}dinger")
+    s = s.replace("Uberwald", "\\\"{U}berwald")
     s = s.replace("Quetzovercoatl", "Quetzoverc\\'{o}atl")
     s = s.replace("flambe", "flamb\\'{e}")
     s = s.replace("Ole!", "!`Ol\\'{e}!")
     s = s.replace("Eminence", "\\'{E}minence")
     s = s.replace("Cafe", "Caf\\'{e}")
-    s = s.replace("<heart>", "\heartSymbol\label{heart-symbol}")
+    s = s.replace("<heart>", "\heartSymbol{}\label{heart-symbol}")
     s = s.replace("Walkuere", "Walk\\\"{u}re")
     s = s.replace("Schueschien", "Sch\\\"{u}schien")
     s = s.replace("Pluen", "Pl\\\"{u}n")
@@ -308,6 +310,19 @@ def toLatexSub(s):
 
     # Other layout fixes
     s = s.replace(" ]", "~]")
+    s = s.replace(" p. ", " p.\\:")
+
+    # A period followed by a lowercase letter is not a full stop
+    i = 0
+    while i + 2 < len(s):
+        pos = s.find(". ", i)
+        if pos < 0:
+            break
+        if s[pos + 2].islower():
+            s = s[:pos] + ".\\ " + s[pos + 2:]
+            i = pos + 2
+        else:
+            i = pos + 1
 
     return s
 
@@ -513,23 +528,22 @@ def extractQuoteParts(s):
                           + "choice...'\"",
                           "\"'Truly, the world is the mollusc of your\\\\ "
                           + "choice...'\"")
-    quote = quote.replace("\"'A song about Great Fiery Balls. [...] Couldn't "
-                          + "really make out the words, the reason bein', the "
-                          + "piano exploded.'\"",
-                          "\"'A song about Great Fiery Balls. [...]\\\\ "
-                          + "Couldn't really make out the words, the reason "
-                          + "bein', the piano exploded.'\"")
-    quote = quote.replace("\"Then it wrote: +++ Good Evening, Archchancellor. "
-                          + "I Am Fully Recovered And Enthusiastic About My "
-                          + "Tasks +++\"",
-                          "\"Then it wrote: +++ Good Evening, "
-                          + "Arch-\\\\chancellor. "
-                          + "I Am Fully Recovered And Enthusiastic About My "
-                          + "Tasks +++\"")
-    quote = quote.replace("\"+++ Yes. I Am Preparing An Area Of Write-Only "
-                          + "Memory +++\"",
-                          "\"+++ Yes. I Am Preparing An Area Of Write-\\\\Only "
-                          + "Memory +++\"")
+    quote = quote.replace("\"'It sounded like 'I want to be a lawn', I "
+                          + "thought?'\"",
+                          "\"'It sounded like 'I want to be a lawn',\\\\"
+                          + "I thought?'\"")
+    quote = quote.replace("\"'[...] songs like 'The Streets of Ankh-"
+                          + "Morpork' [...]'\"",
+                          "\"'[...] songs like 'The Streets of Ankh-\\\\"
+                          + "Morpork' [...]'\"")
+    quote = quote.replace("\"'I think perhaps Lance-Constable Angua "
+                          + "shouldn't have another go with the longbow "
+                          + "until we've worked out how to stop her... "
+                          + "her getting in the way.'\"",
+                          "\"'I think perhaps Lance-Constable Angua \\\\"
+                          + "shouldn't have another go with the longbow "
+                          + "until we've worked out how to stop her... "
+                          + "her getting in the way.'\"")
 
     return sign, pages, quote
 
@@ -711,7 +725,7 @@ while i < len(content):
         print ("\\apQuote{"
                + sign
                + "}{"
-               + pages.replace("p. ", "p.\\ ")
+               + pages.replace("p. ", "p.\\:")
                + "}{"
                + toLatex(typesetHex(typesetDeath(quote)))
                + "}")
