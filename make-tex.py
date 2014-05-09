@@ -522,11 +522,18 @@ def extractQuoteParts(s):
         else:
             reportError("Invalid quote syntax")
 
-    # Fix cases which will cause overflowing \hboxes
-    quote = quote.replace("DM(Unseen)", "DM(Un\\-seen)")
-    quote = quote.replace("Hertzsprung-Russell", "Hertzsprung\hyp{}Russell")
-
-    # Same but truly UGLY fixes, but I can find no better way of doing it...
+    # Same but truly UGLY fixes for solving overflowing \hboxes, but I can find
+    # no better way of doing it...
+    quote = quote.replace("\"Whoever would be wearing those suits, "
+                          + "Rincewind decided, was expecting to boldly go "
+                          + "where no man [...] had boldly gone before [...]\"",
+                          "\"Whoever would be wearing those suits, \\\\"
+                          + "Rincewind decided, was expecting to boldly go "
+                          + "where no man [...] had boldly gone before [...]\"")
+    quote = quote.replace("\"[...] the only turtle ever to feature on the "
+                          + "Hertzsprung-Russell Diagram, [...]\"",
+                          "\"[...] the only turtle ever to feature on the \\\\"
+                          + "Hertzsprung-Russell Diagram, [...]\"")
     quote = quote.replace("\"'Truly, the world is the mollusc of your "
                           + "choice...'\"",
                           "\"'Truly, the world is the mollusc of your\\\\ "
@@ -535,10 +542,6 @@ def extractQuoteParts(s):
                           + "thought?'\"",
                           "\"'It sounded like 'I want to be a lawn',\\\\"
                           + "I thought?'\"")
-    quote = quote.replace("\"'[...] songs like 'The Streets of Ankh-"
-                          + "Morpork' [...]'\"",
-                          "\"'[...] songs like 'The Streets of Ankh-\\\\"
-                          + "Morpork' [...]'\"")
     quote = quote.replace("\"'I think perhaps Lance-Constable Angua "
                           + "shouldn't have another go with the longbow "
                           + "until we've worked out how to stop her... "
@@ -547,6 +550,18 @@ def extractQuoteParts(s):
                           + "shouldn't have another go with the longbow "
                           + "until we've worked out how to stop her... "
                           + "her getting in the way.'\"")
+    quote = quote.replace("\"It read: 'HLISTEN TO ZEE CHILDREN OFF DER "
+                          + "NIGHT... VOT VONDERFUL MHUSICK DEY MAKE. "
+                          + "Mnftrd. by Bergholt Stuttley Johnson, "
+                          + "Ankh-Morpork.' 'It's a Johnson,' she "
+                          + "breathed. 'I haven't got my hands on a Johnson "
+                          + "for ages...'\"",
+                          "\"It read: 'HLISTEN TO ZEE CHILDREN OFF DER "
+                          + "NIGHT... VOT VONDERFUL MHUSICK DEY MAKE. "
+                          + "Mnftrd. by Bergholt Stuttley Johnson, "
+                          + "Ankh-\\\\Morpork.' 'It's a Johnson,' she "
+                          + "breathed. 'I haven't got my hands on a Johnson "
+                          + "for ages...'\"")
 
     return sign, pages, quote
 
