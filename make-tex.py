@@ -352,6 +352,9 @@ def typesetUsenet(s):
         else:
             break
     new_s += s[i:]
+
+    new_s = new_s.replace(" a.f.p. ", " \\typesetUsenet{a.f.p.} ")
+
     return new_s
 
 def typesetPath(s):
