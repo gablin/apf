@@ -260,7 +260,6 @@ def toLatexSub(s):
     s = s.replace("cliche", "clich\\'{e}")
     s = s.replace("Goedel", "G\\\"{o}del")
     s = s.replace("Schroedinger", "Schr\\\"{o}dinger")
-    s = s.replace("Uberwald", "\\\"{U}berwald")
     s = s.replace("Quetzovercoatl", "Quetzoverc\\'{o}atl")
     s = s.replace("flambe", "flamb\\'{e}")
     s = s.replace("Ole!", "!`Ol\\'{e}!")
