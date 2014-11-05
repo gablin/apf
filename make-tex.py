@@ -827,7 +827,7 @@ while currentLine < len(content):
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
         sign, pages, quote = \
-          extractQuoteParts(toSingleLine(content[currentLine:j]))
+            extractQuoteParts(toSingleLine(content[currentLine:j]))
         print ( "\\apQuote{"
               + sign
               + "}{"
