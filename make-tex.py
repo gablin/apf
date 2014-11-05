@@ -21,7 +21,10 @@ def reportDebug(msg):
     sys.stderr.write(msg + "\n")
 
 def reportError(msg):
-    sys.stderr.write("ERROR at line " + str(currentLine + 1) + ":\n")
+    sys.stderr.write( "ERROR, somewhere around line "
+                    + str(currentLine + 1)
+                    + ":\n"
+                    )
     sys.stderr.write(msg + "\n")
 
 def reportErrorAndExit(msg):
@@ -229,7 +232,7 @@ def latexifyMarkup(s):
     else:
         reportErrorAndExit( "Required end of markup ("
                           + markup_end_str
-                          + ") not found"
+                          + ") not found (perhaps due to incorrected nesting)"
                           )
 
 def findMarkupStart(s, start_str, offset = 0, stop = -1):
