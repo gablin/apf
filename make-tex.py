@@ -182,7 +182,7 @@ def latexifyMarkup(s):
                         r_index = i
                         start_pos = pos
                         has_improper_start = not starts_before_word
-                        break
+                    break
                 else:
                     offset = pos + len(search_str)
             else:
