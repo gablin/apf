@@ -822,27 +822,37 @@ while currentLine < len(content):
         currentLine += 1
     elif isAtIndentedText(content[currentLine]):
         isAfterAPQuote = False
-        print "\\begin{indentText}"
+        items = []
         while (   currentLine < len(content)
               and isAtIndentedText(content[currentLine])
               ):
             j = currentLine + 1
             while j < len(content) and isAtIndentedTextContinue(content[j]):
                 j += 1
-            print "\\item " + toLatex(toSingleLine(content[currentLine:j]))
+            item = toSingleLine(content[currentLine:j])
+            items.append(item)
             currentLine = j
+        items = toLatex("\n\n".join(items)).split("\n\n")
+        print "\\begin{indentText}"
+        for i in items:
+            print "\\item " + i
         print "\end{indentText}"
     elif isAtTextExcerpt(content[currentLine]):
         isAfterAPQuote = False
-        print "\\begin{excerptText}"
+        items = []
         while (   currentLine < len(content)
               and isAtTextExcerpt(content[currentLine])
               ):
             j = currentLine + 1
             while j < len(content) and isAtTextExcerptContinue(content[j]):
                 j += 1
-            print "\\item " + toLatex(toSingleLine(content[currentLine:j]))
+            item = toSingleLine(content[currentLine:j])
+            items.append(item)
             currentLine = j
+        items = toLatex("\n\n".join(items)).split("\n\n")
+        print "\\begin{excerptText}"
+        for i in items:
+            print "\\item " + i
         print "\end{excerptText}"
     elif isAtQuote(content[currentLine]):
         isAfterAPQuote = True
@@ -875,8 +885,8 @@ while currentLine < len(content):
             j = currentLine + 1
             while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
                 j += 1
-            text = toSingleLine(content[currentLine:j])
-            paragraphs.append(text)
+            par = toSingleLine(content[currentLine:j])
+            paragraphs.append(par)
             while j < len(content) and len(content[j]) == 0:
                 j += 1
             currentLine = j
