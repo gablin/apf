@@ -236,7 +236,7 @@ def latexifyMarkup(s):
                           )
 
 def findMarkupStart(s, start_str, offset = 0, stop = -1):
-    valid_pre_chars = " /-'\"(["
+    valid_pre_chars = " /-'\"([\n"
     if stop < 0:
         stop = len(s)
 
@@ -252,7 +252,7 @@ def findMarkupStart(s, start_str, offset = 0, stop = -1):
         return (-1, False)
 
 def findMarkupStop(s, end_str, offset = 0, stop = -1):
-    valid_post_chars = " /-,.;:!?'\")]"
+    valid_post_chars = " /-,.;:!?'\")]\n"
     if stop < 0:
         stop = len(s)
 
@@ -686,19 +686,23 @@ def onlyOneDot(s):
     return s
 
 def isContinuePar(s):
-    return text[0].isalpha() and text[0].islower()
+    return s[0].isalpha() and s[0].islower()
 
 def isUrlPar(s):
-    return len(text) > 12 and text[:12] == "\\typesetUrl{" and text[-1] == '}'
+    return len(s) > 12 and s[:12] == "\\typesetUrl{" and s[-1] == '}'
 
-def printParagraph(text):
-    if isContinuePar(text) or isUrlPar(text):
+def printParagraph(s):
+    if isContinuePar(s) or isUrlPar(s):
         print "\\noindent%"
-    if isUrlPar(text):
+    if isUrlPar(s):
         print "\\RaggedRight%"
-    print text
-    if isUrlPar(text):
+    print s
+    if isUrlPar(s):
         print "\\par\\justifying%"
+    print
+
+def toSingleLine(lines):
+    return " ".join([ lines[k].strip() for k in range(len(lines)) ])
 
 
 
@@ -802,13 +806,7 @@ while currentLine < len(content):
             j = currentLine + 1
             while j < len(content) and isAtIndentedTextContinue(content[j]):
                 j += 1
-            print ( "\\item "
-                  + toLatex( " ".join( [ content[k].strip()
-                                         for k in range(currentLine, j)
-                                       ]
-                                     )
-                           )
-                  )
+            print "\\item " + toLatex(toSingleLine(content[currentLine:j]))
             currentLine = j
         print "\end{indentText}"
     elif isAtTextExcerpt(content[currentLine]):
@@ -820,13 +818,7 @@ while currentLine < len(content):
             j = currentLine + 1
             while j < len(content) and isAtTextExcerptContinue(content[j]):
                 j += 1
-            print ( "\\item "
-                  + toLatex( " ".join( [ content[k].strip()
-                                         for k in range(currentLine, j)
-                                       ]
-                                     )
-                           )
-                  )
+            print "\\item " + toLatex(toSingleLine(content[currentLine:j]))
             currentLine = j
         print "\end{excerptText}"
     elif isAtQuote(content[currentLine]):
@@ -835,11 +827,7 @@ while currentLine < len(content):
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
         sign, pages, quote = \
-          extractQuoteParts( " ".join( [ content[k].strip()
-                                         for k in range(currentLine, j)
-                                       ]
-                                     )
-                           )
+          extractQuoteParts(toSingleLine(content[currentLine:j]))
         print ( "\\apQuote{"
               + sign
               + "}{"
@@ -857,22 +845,27 @@ while currentLine < len(content):
         currentLine += 1
     elif isAtQuoteDescription(content[currentLine]):
         isAfterAPQuote = False
-        j = currentLine + 1
-        while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
-            j += 1
-        text = toLatex(" ".join( [ content[k].strip()
-                                   for k in range(currentLine, j)
-                                 ]
-                               )
-                      )
-        printParagraph(text)
-        currentLine = j
+        paragraphs = []
+        while (   currentLine < len(content)
+              and isAtQuoteDescription(content[currentLine])
+              ):
+            j = currentLine + 1
+            while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
+                j += 1
+            text = toSingleLine(content[currentLine:j])
+            paragraphs.append(text)
+            while j < len(content) and len(content[j]) == 0:
+                j += 1
+            currentLine = j
+        paragraphs = toLatex("\n\n".join(paragraphs)).split("\n\n")
+        for p in paragraphs:
+            printParagraph(p)
     else:
         isAfterAPQuote = False
         j = currentLine
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
-        text = toLatex(" ".join(content[currentLine:j]))
+        text = toLatex(toSingleLine(content[currentLine:j]))
         if isAtVersionSection:
             print "\\noindent%"
         printParagraph(text)
