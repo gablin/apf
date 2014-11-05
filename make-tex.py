@@ -21,7 +21,7 @@ def reportDebug(msg):
     sys.stderr.write(msg + "\n")
 
 def reportError(msg):
-    sys.stderr.write("ERROR at line " + str(i + 1) + ":\n")
+    sys.stderr.write("ERROR at line " + str(currentLine + 1) + ":\n")
     sys.stderr.write(msg + "\n")
 
 def reportErrorAndExit(msg):
@@ -744,13 +744,13 @@ print "\\makeTOCPage"
 print
 
 # Move to beginning of first chapter
-i = 0
+currentLine = 0
 while True:
-    line = content[i]
+    line = content[currentLine]
     if isAtChapterSeparator(line):
         break
-    i += 1
-    if i >= len(content):
+    currentLine += 1
+    if currentLine >= len(content):
         reportErrorAndExit("Beginning of first chapter not found")
 
 # Process regular content
@@ -758,11 +758,11 @@ isFirstChapter = True
 hasPrintedMainMatterCommand = False
 isAtVersionSection = False
 isAfterAPQuote = False
-while i < len(content):
-    if isAtChapterSeparator(content[i]):
+while currentLine < len(content):
+    if isAtChapterSeparator(content[currentLine]):
         isAfterAPQuote = False
-        i += 1
-        if isAtChapterName(content[i]):
+        currentLine += 1
+        if isAtChapterName(content[currentLine]):
             if isFirstChapter:
                 isFirstChapter = False
             else:
@@ -771,69 +771,69 @@ while i < len(content):
                     print "\\mainmatter"
                     print
             print ( "\\chapter{"
-                  + toLatex(extractChapterName(content[i]))
+                  + toLatex(extractChapterName(content[currentLine]))
                   + "}"
                   )
-            i += 1
-            if not isAtChapterSeparator(content[i]):
+            currentLine += 1
+            if not isAtChapterSeparator(content[currentLine]):
                 reportErrorAndExit("Expected chapter separator not found")
-            i += 1
+            currentLine += 1
         else:
             # At end of content
             break
-    elif isAtSectionName(content[i]):
+    elif isAtSectionName(content[currentLine]):
         isAfterAPQuote = False
-        section_name = extractSectionName(content[i])
+        section_name = extractSectionName(content[currentLine])
         if section_name == "Version History and Timeline":
             isAtVersionSection = True
         else:
             isAtVersionSection = False
         print "\\section{" + toLatex(section_name) + "}"
-        i += 1
-    elif isAtIndentedText(content[i]):
+        currentLine += 1
+    elif isAtIndentedText(content[currentLine]):
         isAfterAPQuote = False
         print "\\begin{indentText}"
-        while ( i < len(content)
-                and isAtIndentedText(content[i])
+        while ( currentLine < len(content)
+                and isAtIndentedText(content[currentLine])
               ):
-            j = i + 1
+            j = currentLine + 1
             while j < len(content) and isAtIndentedTextContinue(content[j]):
                 j += 1
             print ( "\\item "
                   + toLatex( " ".join( [ content[k].strip()
-                                         for k in range(i, j)
+                                         for k in range(currentLine, j)
                                        ]
                                      )
                            )
                   )
-            i = j
+            currentLine = j
         print "\end{indentText}"
-    elif isAtTextExcerpt(content[i]):
+    elif isAtTextExcerpt(content[currentLine]):
         isAfterAPQuote = False
         print "\\begin{excerptText}"
-        while (   i < len(content)
-              and isAtTextExcerpt(content[i])
+        while (   currentLine < len(content)
+              and isAtTextExcerpt(content[currentLine])
               ):
-            j = i + 1
+            j = currentLine + 1
             while j < len(content) and isAtTextExcerptContinue(content[j]):
                 j += 1
             print ( "\\item "
                   + toLatex( " ".join( [ content[k].strip()
-                                         for k in range(i, j)
+                                         for k in range(currentLine, j)
                                        ]
                                      )
                            )
                   )
-            i = j
+            currentLine = j
         print "\end{excerptText}"
-    elif isAtQuote(content[i]):
+    elif isAtQuote(content[currentLine]):
         isAfterAPQuote = True
-        j = i + 1
+        j = currentLine + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
         sign, pages, quote = \
           extractQuoteParts( " ".join( [ content[k].strip()
-                                         for k in range(i, j)
+                                         for k in range(currentLine, j)
                                        ]
                                      )
                            )
@@ -845,32 +845,32 @@ while i < len(content):
               + toLatex(typesetHex(typesetDeath(quote)))
               + "}"
               )
-        i = j
-    elif isAtEmptyLine(content[i]):
+        currentLine = j
+    elif isAtEmptyLine(content[currentLine]):
         if isAfterAPQuote:
             print "%"
         else:
             print
-        i += 1
-    elif isAtQuoteDescription(content[i]):
+        currentLine += 1
+    elif isAtQuoteDescription(content[currentLine]):
         isAfterAPQuote = False
-        j = i + 1
+        j = currentLine + 1
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
         text = toLatex(" ".join( [ content[k].strip()
-                                   for k in range(i, j)
+                                   for k in range(currentLine, j)
                                  ]
                                )
                       )
         printParagraph(text)
-        i = j
+        currentLine = j
     else:
         isAfterAPQuote = False
-        j = i
+        j = currentLine
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
-        text = toLatex(" ".join(content[i:j]))
+        text = toLatex(" ".join(content[currentLine:j]))
         if isAtVersionSection:
             print "\\noindent%"
         printParagraph(text)
-        i = j
+        currentLine = j
