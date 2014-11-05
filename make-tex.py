@@ -156,26 +156,28 @@ def latexifyMarkup(s):
     #    #1: String that ends markup
     #    #2: String to replace the markup start with
     #    #3: String to replace the markup end with
-    #    #4: Whether the markup can start in the middle of a word
-    #    #5: Whether a matching end of markup must be found if a start is found
-    r_data = [ [  "_",  "_",    "\\emph{",  "}", False,  True ]
-             , [  "*",  "*",    "\\emph{",  "}",  True,  True ]
-             , [" <<", ">>", "\\foonote{",  "}", False,  True ]
-             , [  "'",  "'",          "`",  "'", False, False ]
-             , [ "\"", "\"",         "``", "''", False,  True ]
+    #    #4: Whether the markup can occur in the middle of a word
+    #    #5: Whether the markup can span across multiple paragraphs
+    #    #6: Whether a matching end of markup must be found if a start is found
+    r_data = [ [  "_",  "_",    "\\emph{",  "}", False, False,  True ]
+             , [  "*",  "*",    "\\emph{",  "}",  True, False,  True ]
+             , [" <<", ">>", "\\foonote{",  "}", False, False,  True ]
+             , [  "'",  "'",          "`",  "'", False, False, False ]
+             , [ "\"", "\"",         "``", "''", False,  True,  True ]
              ]
 
     # Find earliest start of (any) markup
     r_index = -1
     start_pos = sys.maxint
-    must_remain_within_word = False
+    has_improper_start = False
     for i in range(len(r_data)):
-        pos, is_in_word = findMarkupStart(s, r_data[i][0])
-        if pos >= 0 and (not is_in_word or r_data[i][4]):
+        pos, starts_before_word = findMarkupStart(s, r_data[i][0])
+        are_improper_starts_allowed = r_data[i][4]
+        if pos >= 0 and (starts_before_word or are_improper_starts_allowed):
             if pos < start_pos:
                 r_index = i
                 start_pos = pos
-                must_remain_within_word = is_in_word
+                has_improper_start = not starts_before_word
     if r_index < 0:
         # No start of markup found
         return s
@@ -184,30 +186,36 @@ def latexifyMarkup(s):
     markup_start_str = r_data[r_index][0]
     markup_end_str = r_data[r_index][1]
     end_pos = -1
-    level = 0
+    level = 1
     offset = start_pos + len(markup_start_str)
-    while offset < len(s):
-        end_pos = findMarkupStop(s, markup_end_str, offset)
-        if end_pos >= 0:
-            # Look for nested markups, or if we are already within one
-            found_new_nested = \
-              findMarkupStart(s, markup_start_str, offset, end_pos)[0] >= 0
-            already_inside_nested = level > 0
-            if found_new_nested or already_inside_nested:
-                offset = end_pos + len(markup_end_str)
-                if found_new_nested:
-                    level += 1
-                level -= 1
-                continue
 
-            # If markup must remain within word, check that it does
-            if must_remain_within_word:
-                word_sep_chars = " /-"
-                found_word_sep = s[offset:end_pos].find(word_sep_chars) >= 0
-                if found_word_sep:
-                    # Found a start of markup that is not valid
-                    skip_to_pos = start_pos + len(markup_start_str)
-                    return s[:skip_to_pos] + latexifyMarkup(s[skip_to_pos:])
+    while offset < len(s):
+        end_pos, stops_after_word = findMarkupStop(s, markup_end_str, offset)
+        if end_pos >= 0:
+            if stops_after_word:
+                level -= 1
+            else:
+                if not has_improper_start:
+                    # Only proper markups (that is, markups which start at a
+                    # word and end after a word) may be nested
+                    new_start_pos, new_starts_before_word = \
+                        findMarkupStart(s, markup_start_str, end_pos)
+                    stop_is_new_markup_start = \
+                        (   new_start_pos == end_pos
+                        and new_starts_before_word
+                        )
+                    if stop_is_new_markup_start:
+                        level += 1
+                    else:
+                        are_improper_stops_allowed = r_data[r_index][4]
+                        if are_improper_stops_allowed:
+                            level -= 1
+                else:
+                    # All found stops are always valid if the start is improper
+                    level -= 1
+            if level > 0:
+                offset = end_pos + len(markup_end_str)
+                continue
 
             # Found valid markup region
             replace_start_str = r_data[r_index][2]
@@ -225,7 +233,7 @@ def latexifyMarkup(s):
             break
 
     # Failed to find end of markup
-    markup_must_have_end = r_data[r_index][5]
+    markup_must_have_end = r_data[r_index][6]
     if not markup_must_have_end:
         skip_to_pos = start_pos + len(markup_start_str)
         return s[:skip_to_pos] + latexifyMarkup(s[skip_to_pos:])
@@ -236,39 +244,38 @@ def latexifyMarkup(s):
                           )
 
 def findMarkupStart(s, start_str, offset = 0, stop = -1):
-    valid_pre_chars = " /-'\"([\n"
+    init_word_chars = " /-'\"([\n"
     if stop < 0:
         stop = len(s)
 
     start_pos = s.find(start_str, offset, stop)
     if start_pos == 0:
-        return (start_pos, False)
+        return (start_pos, True)
     elif start_pos > 0:
-        return (start_pos, valid_pre_chars.find(s[start_pos - 1]) < 0)
-        # The second value is a Boolean indicating whether the markup starts in
-        # the middle of a word
+        return (start_pos, init_word_chars.find(s[start_pos - 1]) >= 0)
+        # The second value is a Boolean indicating whether the markup starts
+        # right before a word
     else:
         # No valid markup start found
         return (-1, False)
 
 def findMarkupStop(s, end_str, offset = 0, stop = -1):
-    valid_post_chars = " /-,.;:!?'\")]\n"
+    term_word_chars = " /-,.;:!?'\")]\n"
     if stop < 0:
         stop = len(s)
 
-    while offset < len(s):
-        end_pos = s.find(end_str, offset, stop)
-        if end_pos > 0:
-            if end_pos + len(end_str) == len(s):
-                return end_pos
-            elif valid_post_chars.find(s[end_pos + len(end_str)]) >= 0:
-                return end_pos
-        elif end_pos < 0:
-            break
-        offset = end_pos + len(end_str)
-
-    # No valid markup start found
-    return -1
+    end_pos = s.find(end_str, offset, stop)
+    if end_pos > 0:
+        after_markup_pos = end_pos + len(end_str)
+        if after_markup_pos == len(s):
+            return (end_pos, True)
+        else:
+            return (end_pos, term_word_chars.find(s[after_markup_pos]) >= 0)
+            # The second value is a Boolean indicating whether the markup stops
+            # right after a word
+    else:
+        # No valid markup stop found
+        return (-1, False)
 
 def toLatex(s):
     url_start = "<"
