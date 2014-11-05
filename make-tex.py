@@ -796,8 +796,8 @@ while currentLine < len(content):
     elif isAtIndentedText(content[currentLine]):
         isAfterAPQuote = False
         print "\\begin{indentText}"
-        while ( currentLine < len(content)
-                and isAtIndentedText(content[currentLine])
+        while (   currentLine < len(content)
+              and isAtIndentedText(content[currentLine])
               ):
             j = currentLine + 1
             while j < len(content) and isAtIndentedTextContinue(content[j]):
