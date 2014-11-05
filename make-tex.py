@@ -171,13 +171,22 @@ def latexifyMarkup(s):
     start_pos = sys.maxint
     has_improper_start = False
     for i in range(len(r_data)):
-        pos, starts_before_word = findMarkupStart(s, r_data[i][0])
-        are_improper_starts_allowed = r_data[i][4]
-        if pos >= 0 and (starts_before_word or are_improper_starts_allowed):
-            if pos < start_pos:
-                r_index = i
-                start_pos = pos
-                has_improper_start = not starts_before_word
+        offset = 0
+        while offset < len(s):
+            search_str = r_data[i][0]
+            pos, starts_before_word = findMarkupStart(s, search_str, offset)
+            if pos >= 0:
+                are_improper_starts_allowed = r_data[i][4]
+                if starts_before_word or are_improper_starts_allowed:
+                    if pos < start_pos:
+                        r_index = i
+                        start_pos = pos
+                        has_improper_start = not starts_before_word
+                        break
+                else:
+                    offset = pos + len(search_str)
+            else:
+                break
     if r_index < 0:
         # No start of markup found
         return s
@@ -320,7 +329,13 @@ def toLatex(s):
     return new_s
 
 def toLatexSub(s):
+    s = s.replace(" * ", " &mul& ")
+    s = s.replace("'*'", "'&mul&'")
+    s = s.replace(" _ ", " &usc& ")
+    s = s.replace("'_'", "'&usc&'")
     s = latexifyMarkup(s)
+    s = s.replace("&usc&", "_")
+    s = s.replace("&mul&", "*")
 
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
@@ -328,8 +343,9 @@ def toLatexSub(s):
     s = s.replace("#", "\\#")
     s = s.replace("_", "\\_")
     s = s.replace("^", "\\^{}")
-    s = s.replace("'-'", "'\\texttt{-}'")
-    s = s.replace("'+'", "'\\texttt{+}'")
+    s = s.replace("`-'", "`\\texttt{-}'")
+    s = s.replace("`+'", "`\\texttt{+}'")
+    s = s.replace("`*'", "`\\texttt{*}'")
     s = s.replace("[...]", "\\bracketsLDots{}")
     s = s.replace("...", "\\ldots{}")
     s = s.replace(" -- ", " \emdash{} ")
