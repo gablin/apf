@@ -17,9 +17,15 @@ import time
 # HELP FUNCTIONS
 #================
 
-def reportError(msg):
-    sys.stderr.write("ERROR at line " + str(i) + ":\n")
+def reportDebug(msg):
     sys.stderr.write(msg + "\n")
+
+def reportError(msg):
+    sys.stderr.write("ERROR at line " + str(i + 1) + ":\n")
+    sys.stderr.write(msg + "\n")
+
+def reportErrorAndExit(msg):
+    reportError(msg)
     sys.exit(1)
 
 def isAtChapterSeparator(s):
@@ -35,7 +41,7 @@ def isAtChapterName(s):
 
 def extractChapterName(s):
     if len(s) < 5:
-        reportError("Invalid chapter syntax");
+        reportErrorAndExit("Invalid chapter syntax");
     return s[4:].strip()
 
 def isAtSectionName(s):
@@ -141,52 +147,125 @@ def isAtQuoteDescriptionContinue(s):
 def isAtEmptyLine(s):
     return len(s) == 0
 
-def replace(s, m_start, m_end, t_start, t_end):
-    sep_chars = " '\",.(-/"
-    new_s = ""
-    i = 0
-    while i < len(s):
-        start_pos = s.find(m_start, i)
-        if start_pos < 0:
-            break
-        if start_pos + 1 < len(s) and s[start_pos + 1] == ' ':
-            new_s += s[i:start_pos + 1]
-            i = start_pos + 1
-            continue
-        must_be_within_same_word = (m_start == m_end
-                                    and start_pos != 0
-                                    and sep_chars.find(s[start_pos - 1]) < 0)
-        end_pos = s.find(m_end, start_pos + len(m_start))
-        if end_pos < 0:
-            break
-        do_skip = False
-        if end_pos > start_pos + len(m_start):
-            if s[end_pos - 1] == ' ':
-                do_skip = True
-                i = end_pos + len(m_end)
-            if not do_skip and must_be_within_same_word:
-                section_start_pos = start_pos + len(m_start)
-                section = s[section_start_pos:end_pos]
-                for c in sep_chars:
-                    sep_pos = section.find(c)
-                    if sep_pos >= 0:
-                        do_skip = True
-                        end_pos = section_start_pos + sep_pos
-                        break
-            if not do_skip:
-                new_s += (s[i:start_pos]
-                          + t_start
-                          + s[start_pos + len(m_start):end_pos]
-                          + t_end)
-                i = end_pos + len(m_end)
+def latexifyMarkup(s):
+    # Element within the list:
+    #    #0: String that starts markup
+    #    #1: String that ends markup
+    #    #2: String to replace the markup start with
+    #    #3: String to replace the markup end with
+    #    #4: Whether the markup can start in the middle of a word
+    #    #5: Whether a matching end of markup must be found if a start is found
+    r_data = [ [  "_",  "_",    "\\emph{",  "}", False,  True ]
+             , [  "*",  "*",    "\\emph{",  "}",  True,  True ]
+             , [" <<", ">>", "\\foonote{",  "}", False,  True ]
+             , [  "'",  "'",          "`",  "'", False, False ]
+             , [ "\"", "\"",         "``", "''", False,  True ]
+             ]
+
+    # Find earliest start of (any) markup
+    r_index = -1
+    start_pos = sys.maxint
+    must_remain_within_word = False
+    for i in range(len(r_data)):
+        pos, is_in_word = findMarkupStart(s, r_data[i][0])
+        if pos >= 0 and (not is_in_word or r_data[i][4]):
+            if pos < start_pos:
+                r_index = i
+                start_pos = pos
+                must_remain_within_word = is_in_word
+    if r_index < 0:
+        # No start of markup found
+        return s
+
+    # Find end of markup (remember that markups can be nested)
+    markup_start_str = r_data[r_index][0]
+    markup_end_str = r_data[r_index][1]
+    end_pos = -1
+    level = 0
+    offset = start_pos + len(markup_start_str)
+    while offset < len(s):
+        end_pos = findMarkupStop(s, markup_end_str, offset)
+        if end_pos >= 0:
+            # Look for nested markups, or if we are already within one
+            found_new_nested = \
+              findMarkupStart(s, markup_start_str, offset, end_pos)[0] >= 0
+            already_inside_nested = level > 0
+            if found_new_nested or already_inside_nested:
+                offset = end_pos + len(markup_end_str)
+                if found_new_nested:
+                    level += 1
+                level -= 1
+                continue
+
+            # If markup must remain within word, check that it does
+            if must_remain_within_word:
+                word_sep_chars = " /-"
+                found_word_sep = s[offset:end_pos].find(word_sep_chars) >= 0
+                if found_word_sep:
+                    # Found a start of markup that is not valid
+                    skip_to_pos = start_pos + len(markup_start_str)
+                    return s[:skip_to_pos] + latexifyMarkup(s[skip_to_pos:])
+
+            # Found valid markup region
+            replace_start_str = r_data[r_index][2]
+            replace_end_str = r_data[r_index][3]
+            s_within_markup = s[start_pos + len(markup_start_str):end_pos]
+            s_after_markup = s[end_pos + len(markup_end_str):]
+            return ( s[:start_pos]
+                   + replace_start_str
+                   + latexifyMarkup(s_within_markup)
+                   + replace_end_str
+                   + latexifyMarkup(s_after_markup)
+                   )
         else:
-            do_skip = True
-            end_pos += len(m_end)
-        if do_skip:
-            new_s += s[i:end_pos]
-            i = end_pos
-    new_s += s[i:]
-    return new_s
+            # No end of markup found
+            break
+
+    # Failed to find end of markup
+    markup_must_have_end = r_data[r_index][5]
+    if not markup_must_have_end:
+        skip_to_pos = start_pos + len(markup_start_str)
+        return s[:skip_to_pos] + latexifyMarkup(s[skip_to_pos:])
+    else:
+        reportErrorAndExit( "Required end of markup ("
+                          + markup_end_str
+                          + ") not found"
+                          )
+
+def findMarkupStart(s, start_str, offset = 0, stop = -1):
+    valid_pre_chars = " /-'\"(["
+    if stop < 0:
+        stop = len(s)
+
+    start_pos = s.find(start_str, offset, stop)
+    if start_pos == 0:
+        return (start_pos, False)
+    elif start_pos > 0:
+        return (start_pos, valid_pre_chars.find(s[start_pos - 1]) < 0)
+        # The second value is a Boolean indicating whether the markup starts in
+        # the middle of a word
+    else:
+        # No valid markup start found
+        return (-1, False)
+
+def findMarkupStop(s, end_str, offset = 0, stop = -1):
+    valid_post_chars = " /-,.;:!?'\")]"
+    if stop < 0:
+        stop = len(s)
+
+    while offset < len(s):
+        end_pos = s.find(end_str, offset, stop)
+        if end_pos > 0:
+            if end_pos + len(end_str) == len(s):
+                return end_pos
+            elif valid_post_chars.find(s[end_pos + len(end_str)]) >= 0:
+                return end_pos
+        elif end_pos < 0:
+            break
+        offset = end_pos + len(end_str)
+
+    # No valid markup start found
+    return -1
 
 def toLatex(s):
     url_start = "<"
@@ -199,8 +278,9 @@ def toLatex(s):
         url_start_pos = s.find(url_start, i)
         if url_start_pos < 0:
             break
-        is_url_start_ok = (url_start_pos + 1 < len(s)
-                           and s[url_start_pos + 1] != ' ')
+        is_url_start_ok = (   url_start_pos + 1 < len(s)
+                          and s[url_start_pos + 1] != ' '
+                          )
         if not is_url_start_ok:
             i = url_start_pos + len(url_start)
             continue
@@ -212,27 +292,25 @@ def toLatex(s):
         has_url_spaces = url_section.find(' ') >= 0
         if (not is_url_end_ok
             or has_url_spaces
-            or (not url_section.find("@") >= 0
-                and not url_section[:7] == "http://"
-                and not url_section[:6] == "ftp://"
-                )
+            or (   not url_section.find("@") >= 0
+               and not url_section[:7] == "http://"
+               and not url_section[:6] == "ftp://"
+               )
             ):
             i = url_end_pos + len(url_end)
             continue
 
         # Found URL section
-        new_s += (toLatexSub(s[offset:url_start_pos])
-                  + "\\typesetUrl{" + url_section + "}")
+        new_s += ( toLatexSub(s[offset:url_start_pos])
+                   + "\\typesetUrl{" + url_section + "}"
+                 )
         offset = url_end_pos + len(url_end)
         i = offset
     new_s += toLatexSub(s[offset:])
     return new_s
 
 def toLatexSub(s):
-    s = replace(s, "_", "_", "\\emph{", "}")
-    s = replace(s, "*", "*", "\\emph{", "}")
-    s = replace(s, " <<", ">>", "\\footnote{", "}")
-    s = replace(s, "<<", ">>", "\\footnote{", "}") # Just in case...
+    s = latexifyMarkup(s)
 
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
@@ -344,9 +422,10 @@ def typesetUsenet(s):
                 if string.letters.find(s[j]) >= 0:
                     end_pos = j + 1
                     break
-            new_s = (s[i:start_pos]
-                     + "\\typesetUsenet{"
-                     + s[start_pos:end_pos] + "}")
+            new_s = ( s[i:start_pos]
+                    + "\\typesetUsenet{"
+                    + s[start_pos:end_pos] + "}"
+                    )
             i = end_pos
         else:
             break
@@ -372,8 +451,9 @@ def typesetPath(s):
                 while True:
                     next_pos = s.find("/", last_pos)
                     has_next_pos = next_pos >= 0
-                    has_space = (has_next_pos
-                                 and s[last_pos:next_pos].find(" ") >= 0)
+                    has_space = (    has_next_pos
+                                and s[last_pos:next_pos].find(" ") >= 0
+                                )
                     if has_next_pos and not has_space:
                         last_pos = next_pos + 1
                     else:
@@ -433,35 +513,38 @@ def typesetDeath(s):
                     previous_was_uppercase = True
                 else:
                     previous_was_uppercase = False
-            if (num_uppercase >= 3
-                and at_least_two_adjacent_uppercase
-                and at_least_one_space
-                and section != "VIA CLOACA"
-                and section != "VENI VIDI VICI: A"
-                and section != "SEE ALSO"
-                and section != "LIVE FATS DIE YO GNU"
-                and section != "BORN TO RUNE"
-                and section != "JOE'S LIVERY STABLE"
-                and section != "TINKLE. TINKLE. *FIZZ"
-                and section != "TALK THAT TALK"
-                and section != ("HLISTEN TO ZEE CHILDREN OFF DER NIGHT... VOT "
-                                + "VONDERFUL MHUSICK DEY MAKE")
-                and section != "WHAT WE ARE FIGHTING FOR"
-                ):
+            if (   num_uppercase >= 3
+               and at_least_two_adjacent_uppercase
+               and at_least_one_space
+               and section != "VIA CLOACA"
+               and section != "VENI VIDI VICI: A"
+               and section != "SEE ALSO"
+               and section != "LIVE FATS DIE YO GNU"
+               and section != "BORN TO RUNE"
+               and section != "JOE'S LIVERY STABLE"
+               and section != "TINKLE. TINKLE. *FIZZ"
+               and section != "TALK THAT TALK"
+               and section != ("HLISTEN TO ZEE CHILDREN OFF DER NIGHT... VOT "
+                               + "VONDERFUL MHUSICK DEY MAKE")
+               and section != "WHAT WE ARE FIGHTING FOR"
+               ):
                 section = section[0] + section[1:].lower()
 
                 # Make 'I' into uppercase
                 k = 0
                 while k < len(section):
-                    if (section[k] == 'i'
-                        and (k + 1 < len(section)
-                             and not section[k + 1].isalpha())
-                        and (k == 0
-                             or not section[k - 1].isalpha())
-                        ):
-                        section = (section[:k]
-                                   + section[k].upper()
-                                   + section[k + 1:])
+                    if (    section[k] == 'i'
+                       and (   k + 1 < len(section)
+                           and not section[k + 1].isalpha()
+                           )
+                       and (  k == 0
+                           or not section[k - 1].isalpha()
+                           )
+                       ):
+                        section = ( section[:k]
+                                  + section[k].upper()
+                                  + section[k + 1:]
+                                  )
                     k += 1
 
                 # Make first letter of new sentence uppercase
@@ -497,10 +580,11 @@ def typesetHex(s):
         plus_end_pos = s.rfind("+", plus_start_pos + 1)
         if plus_end_pos >= 0:
             plus_end_pos += 1
-            return (s[:plus_start_pos]
-                    + "\\texttt{"
-                    + s[plus_start_pos:plus_end_pos] + "}"
-                    + s[plus_end_pos])
+            return ( s[:plus_start_pos]
+                   + "\\texttt{"
+                   + s[plus_start_pos:plus_end_pos] + "}"
+                   + s[plus_end_pos]
+                   )
     return s
 
 def extractQuoteParts(s):
@@ -519,7 +603,7 @@ def extractQuoteParts(s):
             pages = s[2:pos]
             quote = s[pos + 1:].strip()
         else:
-            reportError("Invalid quote syntax")
+            reportErrorAndExit("Invalid quote syntax")
 
     # Same but truly UGLY fixes for solving overflowing \hboxes, but I can find
     # no better way of doing it...
@@ -582,7 +666,7 @@ def extractMetaData(content, tag):
                     break
             return data
     # Whole document scanned without finding the tag
-    reportError("Metadata tag '" + tag + "' not found")
+    reportErrorAndExit("Metadata tag '" + tag + "' not found")
 
 def printMetadata(cmd_suffix, value):
     print "\\renewcommand{\\this" + cmd_suffix + "}{" + toLatex(value) + "}"
@@ -667,7 +751,7 @@ while True:
         break
     i += 1
     if i >= len(content):
-        reportError("Beginning of first chapter not found")
+        reportErrorAndExit("Beginning of first chapter not found")
 
 # Process regular content
 isFirstChapter = True
@@ -686,10 +770,13 @@ while i < len(content):
                     hasPrintedMainMatterCommand = True
                     print "\\mainmatter"
                     print
-            print "\\chapter{" + toLatex(extractChapterName(content[i])) + "}"
+            print ( "\\chapter{"
+                  + toLatex(extractChapterName(content[i]))
+                  + "}"
+                  )
             i += 1
             if not isAtChapterSeparator(content[i]):
-                reportError("Expected chapter separator not found")
+                reportErrorAndExit("Expected chapter separator not found")
             i += 1
         else:
             # At end of content
@@ -706,29 +793,37 @@ while i < len(content):
     elif isAtIndentedText(content[i]):
         isAfterAPQuote = False
         print "\\begin{indentText}"
-        while i < len(content) and isAtIndentedText(content[i]):
+        while ( i < len(content)
+                and isAtIndentedText(content[i])
+              ):
             j = i + 1
             while j < len(content) and isAtIndentedTextContinue(content[j]):
                 j += 1
-            print ("\\item "
-                   + toLatex(
-                        " ".join([ content[k].strip() for k in range(i, j) ])
-                     )
-                   )
+            print ( "\\item "
+                  + toLatex( " ".join( [ content[k].strip()
+                                         for k in range(i, j)
+                                       ]
+                                     )
+                           )
+                  )
             i = j
         print "\end{indentText}"
     elif isAtTextExcerpt(content[i]):
         isAfterAPQuote = False
         print "\\begin{excerptText}"
-        while i < len(content) and isAtTextExcerpt(content[i]):
+        while (   i < len(content)
+              and isAtTextExcerpt(content[i])
+              ):
             j = i + 1
             while j < len(content) and isAtTextExcerptContinue(content[j]):
                 j += 1
-            print ("\\item "
-                   + toLatex(
-                        " ".join([ content[k].strip() for k in range(i, j) ])
-                     )
-                   )
+            print ( "\\item "
+                  + toLatex( " ".join( [ content[k].strip()
+                                         for k in range(i, j)
+                                       ]
+                                     )
+                           )
+                  )
             i = j
         print "\end{excerptText}"
     elif isAtQuote(content[i]):
@@ -736,16 +831,20 @@ while i < len(content):
         j = i + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
             j += 1
-        sign, pages, quote = extractQuoteParts(
-            " ".join([ content[k].strip() for k in range(i, j) ])
-            )
-        print ("\\apQuote{"
-               + sign
-               + "}{"
-               + pages.replace("p. ", "p.\\:")
-               + "}{"
-               + toLatex(typesetHex(typesetDeath(quote)))
-               + "}")
+        sign, pages, quote = \
+          extractQuoteParts( " ".join( [ content[k].strip()
+                                         for k in range(i, j)
+                                       ]
+                                     )
+                           )
+        print ( "\\apQuote{"
+              + sign
+              + "}{"
+              + pages.replace("p. ", "p.\\:")
+              + "}{"
+              + toLatex(typesetHex(typesetDeath(quote)))
+              + "}"
+              )
         i = j
     elif isAtEmptyLine(content[i]):
         if isAfterAPQuote:
@@ -758,7 +857,11 @@ while i < len(content):
         j = i + 1
         while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
             j += 1
-        text = toLatex(" ".join([ content[k].strip() for k in range(i, j) ]))
+        text = toLatex(" ".join( [ content[k].strip()
+                                   for k in range(i, j)
+                                 ]
+                               )
+                      )
         printParagraph(text)
         i = j
     else:
