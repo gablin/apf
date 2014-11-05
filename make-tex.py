@@ -127,7 +127,7 @@ def isAtIndentedText(s):
     return checkSpacesExact(s, 6)
 
 def isAtIndentedTextContinue(s):
-    return checkSpacesAtLeast(s, 8)
+    return checkSpacesAtLeast(s, 7)
 
 def isAtTextExcerpt(s):
     return checkSpacesExact(s, 8)
