@@ -118,10 +118,10 @@ def extractSectionName(s):
     return s
 
 def checkSpacesExact(s, num):
-    return len(s) > num + 1 and s[0:num] == " " * num and s[num] != ' '
+    return len(s) > num + 1 and s[0:num] == (" " * num) and s[num] != ' '
 
 def checkSpacesAtLeast(s, num):
-    return len(s) > num + 1 and s[0:num] == " " * num
+    return len(s) > num + 1 and s[0:num] == (" " * num)
 
 def isAtIndentedText(s):
     return checkSpacesExact(s, 6)
@@ -141,14 +141,20 @@ def isAtQuote(s):
 def isAtQuoteContinue(s):
     return checkSpacesExact(s, 2)
 
-def isAtQuoteDescription(s):
+def isAtParagraph(s):
     return checkSpacesExact(s, 2)
 
-def isAtQuoteDescriptionContinue(s):
+def isAtParagraphContinue(s):
     return checkSpacesExact(s, 2)
 
 def isAtEmptyLine(s):
     return len(s) == 0
+
+def isAtNormalText(s):
+    return (  isAtParagraph(s)
+           or isAtIndentedText(s)
+           or isAtTextExcerpt(s)
+           )
 
 def latexifyMarkup(s):
     # Element within the list:
@@ -329,13 +335,20 @@ def toLatex(s):
     return new_s
 
 def toLatexSub(s):
-    s = s.replace(" * ", " &mul& ")
-    s = s.replace("'*'", "'&mul&'")
-    s = s.replace(" _ ", " &usc& ")
-    s = s.replace("'_'", "'&usc&'")
+    # Avoid special cases that will break the markup routine
+    s = s.replace(" * ", " &m& ")
+    s = s.replace("'*'", "'&m&'")
+    s = s.replace( "P**! P*! B****! B**! D******!"
+                 , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
+                 )
+    s = s.replace(" _ ", " &u& ")
+    s = s.replace("'_'", "'&u&'")
+
     s = latexifyMarkup(s)
-    s = s.replace("&usc&", "_")
-    s = s.replace("&mul&", "*")
+
+    # Undo special cases
+    s = s.replace("&u&", "_")
+    s = s.replace("&m&", "*")
 
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
@@ -343,9 +356,9 @@ def toLatexSub(s):
     s = s.replace("#", "\\#")
     s = s.replace("_", "\\_")
     s = s.replace("^", "\\^{}")
-    s = s.replace("`-'", "`\\texttt{-}'")
-    s = s.replace("`+'", "`\\texttt{+}'")
-    s = s.replace("`*'", "`\\texttt{*}'")
+    s = s.replace("`-'", "`$-$'")
+    s = s.replace("`+'", "`$+$'")
+    s = s.replace("`*'", "`$*$'")
     s = s.replace("[...]", "\\bracketsLDots{}")
     s = s.replace("...", "\\ldots{}")
     s = s.replace(" -- ", " \emdash{} ")
@@ -820,40 +833,6 @@ while currentLine < len(content):
             isAtVersionSection = False
         print "\\section{" + toLatex(section_name) + "}"
         currentLine += 1
-    elif isAtIndentedText(content[currentLine]):
-        isAfterAPQuote = False
-        items = []
-        while (   currentLine < len(content)
-              and isAtIndentedText(content[currentLine])
-              ):
-            j = currentLine + 1
-            while j < len(content) and isAtIndentedTextContinue(content[j]):
-                j += 1
-            item = toSingleLine(content[currentLine:j])
-            items.append(item)
-            currentLine = j
-        items = toLatex("\n\n".join(items)).split("\n\n")
-        print "\\begin{indentText}"
-        for i in items:
-            print "\\item " + i
-        print "\end{indentText}"
-    elif isAtTextExcerpt(content[currentLine]):
-        isAfterAPQuote = False
-        items = []
-        while (   currentLine < len(content)
-              and isAtTextExcerpt(content[currentLine])
-              ):
-            j = currentLine + 1
-            while j < len(content) and isAtTextExcerptContinue(content[j]):
-                j += 1
-            item = toSingleLine(content[currentLine:j])
-            items.append(item)
-            currentLine = j
-        items = toLatex("\n\n".join(items)).split("\n\n")
-        print "\\begin{excerptText}"
-        for i in items:
-            print "\\item " + i
-        print "\end{excerptText}"
     elif isAtQuote(content[currentLine]):
         isAfterAPQuote = True
         j = currentLine + 1
@@ -876,30 +855,92 @@ while currentLine < len(content):
         else:
             print
         currentLine += 1
-    elif isAtQuoteDescription(content[currentLine]):
+    elif isAtNormalText(content[currentLine]):
         isAfterAPQuote = False
-        paragraphs = []
-        while (   currentLine < len(content)
-              and isAtQuoteDescription(content[currentLine])
-              ):
-            j = currentLine + 1
-            while j < len(content) and isAtQuoteDescriptionContinue(content[j]):
-                j += 1
-            par = toSingleLine(content[currentLine:j])
-            paragraphs.append(par)
-            while j < len(content) and len(content[j]) == 0:
-                j += 1
-            currentLine = j
-        paragraphs = toLatex("\n\n".join(paragraphs)).split("\n\n")
-        for p in paragraphs:
-            printParagraph(p)
+
+        # All text regions will be separated by a double line break, and
+        # each item within a region will be separated by a single line break.
+        # The different text regions will be signified using indentation, and
+        # it can be assumed that all items have exactly the same indentation
+        # within a single region
+        NUM_INDENTS_PARAGRAPH = 0
+        NUM_INDENTS_INDENTED  = 2
+        NUM_INDENTS_EXCERPT   = 4
+        text = ""
+        while isAtNormalText(content[currentLine]):
+            if isAtParagraph(content[currentLine]):
+                j = currentLine + 1
+                while j < len(content) and isAtParagraphContinue(content[j]):
+                    j += 1
+                par = toSingleLine(content[currentLine:j])
+                text += (" " * NUM_INDENTS_PARAGRAPH) + par + "\n\n"
+                currentLine = j
+            elif isAtIndentedText(content[currentLine]):
+                while (   currentLine < len(content)
+                      and isAtIndentedText(content[currentLine])
+                      ):
+                    j = currentLine + 1
+                    while (   j < len(content)
+                          and isAtIndentedTextContinue(content[j])
+                          ):
+                        j += 1
+                    item = toSingleLine(content[currentLine:j])
+                    text += (" " * NUM_INDENTS_INDENTED) + item + "\n"
+                    currentLine = j
+                text += "\n"
+            elif isAtTextExcerpt(content[currentLine]):
+                while (   currentLine < len(content)
+                      and isAtTextExcerpt(content[currentLine])
+                      ):
+                    j = currentLine + 1
+                    while (   j < len(content)
+                          and isAtTextExcerptContinue(content[j])
+                          ):
+                        j += 1
+                    item = toSingleLine(content[currentLine:j])
+                    text += (" " * NUM_INDENTS_EXCERPT) + item + "\n"
+                    currentLine = j
+                text += "\n"
+            else:
+                j = currentLine
+                while j < len(content) and isAtEmptyLine(content[j]):
+                    j += 1
+                currentLine = j
+            if currentLine >= len(content):
+                break
+        text = toLatex(text)
+        regions = text.rstrip().split("\n\n")
+        is_first_region = True
+        for r in regions:
+            if is_first_region:
+                is_first_region = False
+            else:
+                print
+
+            lines = r.split("\n")
+            first_line = lines[0]
+            if checkSpacesExact(first_line, NUM_INDENTS_INDENTED):
+                print "\\begin{indentText}"
+                for l in lines:
+                    print "\\item " + l
+                print "\end{indentText}"
+            elif checkSpacesExact(first_line, NUM_INDENTS_EXCERPT):
+                print "\\begin{excerptText}"
+                for l in lines:
+                    print "\\item " + l
+                print "\end{excerptText}"
+            else:
+                # Must be a paragraph
+                for i in range(len(lines)):
+                    if i > 0:
+                        print
+                    printParagraph(lines[i])
     else:
-        isAfterAPQuote = False
         j = currentLine
         while j < len(content) and not isAtEmptyLine(content[j]):
             j += 1
-        text = toLatex(toSingleLine(content[currentLine:j]))
+        line = toLatex(toSingleLine(content[currentLine:j]))
         if isAtVersionSection:
             print "\\noindent%"
-        printParagraph(text)
+        printParagraph(line)
         currentLine = j
