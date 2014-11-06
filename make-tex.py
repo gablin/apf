@@ -359,9 +359,12 @@ def toLatexSub(s):
                                 , "twere"
                                 , "twixt"
                                 ]
-    words_ending_with_quote = [ "Evenin"
+    words_ending_with_quote = [ "drillin"
+                              , "Evenin"
                               , "Jus"
+                              , "lukin"
                               , "Wi"
+                              , "wouldna"
                               ]
     for w in words_starting_with_quote:
         for cs in valid_word_start_chars:
