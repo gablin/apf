@@ -123,16 +123,16 @@ def checkSpacesExact(s, num):
 def checkSpacesAtLeast(s, num):
     return len(s) > num + 1 and s[0:num] == (" " * num)
 
-def isAtIndentedText(s):
+def isAtQuoteIndentedText(s):
     return checkSpacesExact(s, 6)
 
-def isAtIndentedTextContinue(s):
+def isAtQuoteIndentedTextContinue(s):
     return checkSpacesAtLeast(s, 7)
 
-def isAtTextExcerpt(s):
+def isAtQuoteTextExcerpt(s):
     return checkSpacesExact(s, 8)
 
-def isAtTextExcerptContinue(s):
+def isAtQuoteTextExcerptContinue(s):
     return checkSpacesAtLeast(s, 10)
 
 def isAtQuote(s):
@@ -141,19 +141,19 @@ def isAtQuote(s):
 def isAtQuoteContinue(s):
     return checkSpacesExact(s, 2)
 
-def isAtParagraph(s):
+def isAtQuoteParagraph(s):
     return checkSpacesExact(s, 2)
 
-def isAtParagraphContinue(s):
+def isAtQuoteParagraphContinue(s):
     return checkSpacesExact(s, 2)
 
 def isAtEmptyLine(s):
     return len(s) == 0
 
-def isAtNormalText(s):
-    return (  isAtParagraph(s)
-           or isAtIndentedText(s)
-           or isAtTextExcerpt(s)
+def isAtQuoteText(s):
+    return (  isAtQuoteParagraph(s)
+           or isAtQuoteIndentedText(s)
+           or isAtQuoteTextExcerpt(s)
            )
 
 def latexifyMarkup(s):
@@ -918,7 +918,7 @@ while currentLine < len(content):
         else:
             print
         currentLine += 1
-    elif isAtNormalText(content[currentLine]):
+    elif isAtQuoteText(content[currentLine]) and isAfterAPQuote:
         isAfterAPQuote = False
 
         # All text regions will be separated by a double line break, and
@@ -930,43 +930,37 @@ while currentLine < len(content):
         NUM_INDENTS_INDENTED  = 2
         NUM_INDENTS_EXCERPT   = 4
         text = ""
+        f_data = [ [ isAtQuoteParagraph
+                   , isAtQuoteParagraphContinue
+                   , NUM_INDENTS_PARAGRAPH
+                   ]
+                 , [ isAtQuoteIndentedText
+                   , isAtQuoteIndentedTextContinue
+                   , NUM_INDENTS_INDENTED
+                   ]
+                 , [ isAtQuoteTextExcerpt
+                   , isAtQuoteTextExcerptContinue
+                   , NUM_INDENTS_EXCERPT
+                   ]
+                 ]
         while (   currentLine < len(content)
-              and isAtNormalText(content[currentLine])
+              and isAtQuoteText(content[currentLine])
               ):
-            if isAtParagraph(content[currentLine]):
-                j = currentLine + 1
-                while j < len(content) and isAtParagraphContinue(content[j]):
-                    j += 1
-                par = toSingleLine(content[currentLine:j])
-                text += (" " * NUM_INDENTS_PARAGRAPH) + par + "\n\n"
-                currentLine = j
-            elif isAtIndentedText(content[currentLine]):
-                while (   currentLine < len(content)
-                      and isAtIndentedText(content[currentLine])
-                      ):
-                    j = currentLine + 1
-                    while (   j < len(content)
-                          and isAtIndentedTextContinue(content[j])
+            for fCheck, fCheckContinue, NUM_INDENTS in f_data:
+                if currentLine < len(content) and fCheck(content[currentLine]):
+                    while (   currentLine < len(content)
+                          and fCheck(content[currentLine])
                           ):
-                        j += 1
-                    item = toSingleLine(content[currentLine:j])
-                    text += (" " * NUM_INDENTS_INDENTED) + item + "\n"
-                    currentLine = j
-                text += "\n"
-            elif isAtTextExcerpt(content[currentLine]):
-                while (   currentLine < len(content)
-                      and isAtTextExcerpt(content[currentLine])
-                      ):
-                    j = currentLine + 1
-                    while (   j < len(content)
-                          and isAtTextExcerptContinue(content[j])
-                          ):
-                        j += 1
-                    item = toSingleLine(content[currentLine:j])
-                    text += (" " * NUM_INDENTS_EXCERPT) + item + "\n"
-                    currentLine = j
-                text += "\n"
-
+                        j = currentLine + 1
+                        while (   j < len(content)
+                              and fCheckContinue(content[j])
+                              ):
+                            j += 1
+                        t = toSingleLine(content[currentLine:j])
+                        text += (" " * NUM_INDENTS) + t + "\n"
+                        currentLine = j
+                    text += "\n"
+                    break
             # Skip empty lines
             while (   currentLine < len(content)
                   and isAtEmptyLine(content[currentLine])
@@ -997,7 +991,7 @@ while currentLine < len(content):
                 # Must be a paragraph, which always only contain a single line
                 # within the region
                 printParagraph(first_line)
-
+        print
     else:
         j = currentLine
         while j < len(content) and not isAtEmptyLine(content[j]):
