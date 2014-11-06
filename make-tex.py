@@ -164,12 +164,11 @@ def latexifyMarkup(s):
     #    #3: String to replace the markup end with
     #    #4: Whether the markup can occur in the middle of a word
     #    #5: Whether the markup can span across multiple paragraphs
-    #    #6: Whether a matching end of markup must be found if a start is found
-    r_data = [ [  "_",  "_",    "\\emph{",  "}", False, False,  True ]
-             , [  "*",  "*",    "\\emph{",  "}",  True, False,  True ]
-             , [" <<", ">>", "\\foonote{",  "}", False, False,  True ]
-             , [  "'",  "'",          "`",  "'", False, False, False ]
-             , [ "\"", "\"",         "``", "''", False,  True,  True ]
+    r_data = [ [  "_",  "_",    "\\emph{",  "}", False, False ]
+             , [  "*",  "*",    "\\emph{",  "}",  True, False ]
+             , [" <<", ">>", "\\foonote{",  "}", False, False ]
+             , [  "'",  "'",          "`",  "'", False, False ]
+             , [ "\"", "\"",         "``", "''", False,  True ]
              ]
 
     # Find earliest start of (any) markup
@@ -248,15 +247,10 @@ def latexifyMarkup(s):
             break
 
     # Failed to find end of markup
-    markup_must_have_end = r_data[r_index][6]
-    if not markup_must_have_end:
-        skip_to_pos = start_pos + len(markup_start_str)
-        return s[:skip_to_pos] + latexifyMarkup(s[skip_to_pos:])
-    else:
-        reportErrorAndExit( "Required end of markup ("
-                          + markup_end_str
-                          + ") not found (perhaps due to incorrected nesting)"
-                          )
+    reportErrorAndExit( "Required end of markup ("
+                      + markup_end_str
+                      + ") not found (perhaps due to incorrected nesting)"
+                      )
 
 def findMarkupStart(s, start_str, offset = 0, stop = -1):
     init_word_chars = " /-'\"([\n"
@@ -341,14 +335,15 @@ def toLatexSub(s):
     s = s.replace( "P**! P*! B****! B**! D******!"
                  , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
                  )
-    s = s.replace(" _ ", " &u& ")
-    s = s.replace("'_'", "'&u&'")
+    words_starting_with_quote = ["tis", "twere", "n"]
+    for w in words_starting_with_quote:
+        s = s.replace(" '" + w + " ", " &q&" + w + " ")
 
     s = latexifyMarkup(s)
 
     # Undo special cases
-    s = s.replace("&u&", "_")
     s = s.replace("&m&", "*")
+    s = s.replace("&q&", "'")
 
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
