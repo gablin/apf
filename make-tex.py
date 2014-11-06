@@ -123,6 +123,24 @@ def checkSpacesExact(s, num):
 def checkSpacesAtLeast(s, num):
     return len(s) > num + 1 and s[0:num] == (" " * num)
 
+def isAtQuote(s):
+    return len(s) > 2 and (s[0] == '-' or s[0] == '+') and s[1] == ' '
+
+def isAtQuoteContinue(s):
+    return checkSpacesExact(s, 2)
+
+def isAtQuoteText(s):
+    return (  isAtQuoteParagraph(s)
+           or isAtQuoteIndentedText(s)
+           or isAtQuoteTextExcerpt(s)
+           )
+
+def isAtQuoteParagraph(s):
+    return checkSpacesExact(s, 2)
+
+def isAtQuoteParagraphContinue(s):
+    return checkSpacesExact(s, 2)
+
 def isAtQuoteIndentedText(s):
     return checkSpacesExact(s, 6)
 
@@ -133,28 +151,50 @@ def isAtQuoteTextExcerpt(s):
     return checkSpacesExact(s, 8)
 
 def isAtQuoteTextExcerptContinue(s):
-    return checkSpacesAtLeast(s, 10)
+    return checkSpacesAtLeast(s, 9)
 
-def isAtQuote(s):
-    return len(s) > 2 and (s[0] == '-' or s[0] == '+') and s[1] == ' '
+def isAtSomethingOtherThanMiscText(s):
+    return (  isAtChapterSeparator(s)
+           or isAtSectionName(s)
+           or isAtQuote(s)
+           )
 
-def isAtQuoteContinue(s):
+def isAtMiscText(s):
+    return (   not isAtSomethingOtherThanMiscText(s)
+           and (  isAtMiscParagraph(s)
+               or isAtMiscQuoteText(s)
+               or isAtMiscIndentedText(s)
+               or isAtMiscTextExcerpt(s)
+               )
+           )
+
+
+def isAtMiscParagraph(s):
+    return checkSpacesExact(s, 0) and not isAtSomethingOtherThanMiscText(s)
+
+def isAtMiscParagraphContinue(s):
+    return checkSpacesExact(s, 0)
+
+def isAtMiscQuoteText(s):
     return checkSpacesExact(s, 2)
 
-def isAtQuoteParagraph(s):
+def isAtMiscQuoteTextContinue(s):
     return checkSpacesExact(s, 2)
 
-def isAtQuoteParagraphContinue(s):
-    return checkSpacesExact(s, 2)
+def isAtMiscIndentedText(s):
+    return checkSpacesExact(s, 6)
+
+def isAtMiscIndentedTextContinue(s):
+    return checkSpacesAtLeast(s, 7)
+
+def isAtMiscTextExcerpt(s):
+    return checkSpacesExact(s, 8)
+
+def isAtMiscTextExcerptContinue(s):
+    return checkSpacesAtLeast(s, 9)
 
 def isAtEmptyLine(s):
     return len(s) == 0
-
-def isAtQuoteText(s):
-    return (  isAtQuoteParagraph(s)
-           or isAtQuoteIndentedText(s)
-           or isAtQuoteTextExcerpt(s)
-           )
 
 def latexifyMarkup(s):
     # Element within the list:
@@ -414,6 +454,7 @@ def toLatexSub(s):
     s = s.replace("&m&", "*")
     s = s.replace("&q&", "'")
 
+    # Replace special characters
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
     s = s.replace("%", "\\%")
@@ -947,7 +988,7 @@ while currentLine < len(content):
               and isAtQuoteText(content[currentLine])
               ):
             for fCheck, fCheckContinue, NUM_INDENTS in f_data:
-                if currentLine < len(content) and fCheck(content[currentLine]):
+                if fCheck(content[currentLine]):
                     while (   currentLine < len(content)
                           and fCheck(content[currentLine])
                           ):
@@ -977,7 +1018,11 @@ while currentLine < len(content):
 
             lines = r.split("\n")
             first_line = lines[0]
-            if checkSpacesExact(first_line, NUM_INDENTS_INDENTED):
+            if checkSpacesExact(first_line, NUM_INDENTS_PARAGRAPH):
+                # A paragraph always only contains a single line within the
+                # region
+                printParagraph(first_line)
+            elif checkSpacesExact(first_line, NUM_INDENTS_INDENTED):
                 print "\\begin{indentText}"
                 for l in lines:
                     print "\\item " + l.lstrip()
@@ -988,17 +1033,98 @@ while currentLine < len(content):
                     print "\\item " + l.lstrip()
                 print "\end{excerptText}"
             else:
-                # Must be a paragraph, which always only contain a single line
-                # within the region
+                reportErrorAndExit( "Unrecognized region. "
+                                  + "Something is seriously wrong..."
+                                  )
+        print
+    elif isAtMiscText(content[currentLine]):
+        isAfterAPQuote = False
+
+        # All text regions will be separated by a double line break, and
+        # each item within a region will be separated by a single line break.
+        # The different text regions will be signified using indentation, and
+        # it can be assumed that all items have exactly the same indentation
+        # within a single region
+        NUM_INDENTS_PARAGRAPH = 0
+        NUM_INDENTS_QUOTE     = 2
+        NUM_INDENTS_INDENTED  = 4
+        NUM_INDENTS_EXCERPT   = 6
+        text = ""
+        f_data = [ [ isAtMiscParagraph
+                   , isAtMiscParagraphContinue
+                   , NUM_INDENTS_PARAGRAPH
+                   ]
+                 , [ isAtMiscQuoteText
+                   , isAtMiscQuoteTextContinue
+                   , NUM_INDENTS_QUOTE
+                   ]
+                 , [ isAtMiscIndentedText
+                   , isAtMiscIndentedTextContinue
+                   , NUM_INDENTS_INDENTED
+                   ]
+                 , [ isAtMiscTextExcerpt
+                   , isAtMiscTextExcerptContinue
+                   , NUM_INDENTS_EXCERPT
+                   ]
+                 ]
+        while (   currentLine < len(content)
+              and isAtMiscText(content[currentLine])
+              ):
+            for fCheck, fCheckContinue, NUM_INDENTS in f_data:
+                if fCheck(content[currentLine]):
+                    while (   currentLine < len(content)
+                          and fCheck(content[currentLine])
+                          ):
+                        j = currentLine + 1
+                        while (   j < len(content)
+                              and fCheckContinue(content[j])
+                              ):
+                            j += 1
+                        t = toSingleLine(content[currentLine:j])
+                        text += (" " * NUM_INDENTS) + t + "\n"
+                        currentLine = j
+                    text += "\n"
+                    break
+            # Skip empty lines
+            while (   currentLine < len(content)
+                  and isAtEmptyLine(content[currentLine])
+                  ):
+                currentLine += 1
+
+        text = toLatex(text)
+        regions = text.rstrip().split("\n\n")
+        is_first_region = True
+        for r in regions:
+            if is_first_region:
+                is_first_region = False
+            else:
+                print
+
+            lines = r.split("\n")
+            first_line = lines[0]
+            if checkSpacesExact(first_line, NUM_INDENTS_PARAGRAPH):
+                # A paragraph always only contains a single line within the
+                # region
+                if isAtVersionSection:
+                    print "\\noindent%"
                 printParagraph(first_line)
+            elif checkSpacesExact(first_line, NUM_INDENTS_QUOTE):
+                # A quote always only contains a single line within the region
+                printParagraph(first_line)
+            elif checkSpacesExact(first_line, NUM_INDENTS_INDENTED):
+                print "\\begin{indentText}"
+                for l in lines:
+                    print "\\item " + l.lstrip()
+                print "\end{indentText}"
+            elif checkSpacesExact(first_line, NUM_INDENTS_EXCERPT):
+                print "\\begin{excerptText}"
+                for l in lines:
+                    print "\\item " + l.lstrip()
+                print "\end{excerptText}"
+            else:
+                reportErrorAndExit( "Unrecognized region. "
+                                  + "Something is seriously wrong..."
+                                  )
         print
     else:
-        j = currentLine
-        while j < len(content) and not isAtEmptyLine(content[j]):
-            j += 1
-        line = toLatex(toSingleLine(content[currentLine:j]))
-        if isAtVersionSection:
-            print "\\noindent%"
-        printParagraph(line)
-        print
-        currentLine = j
+        reportErrorAndExit("Unrecognized text region")
