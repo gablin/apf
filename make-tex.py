@@ -986,12 +986,12 @@ while currentLine < len(content):
             if checkSpacesExact(first_line, NUM_INDENTS_INDENTED):
                 print "\\begin{indentText}"
                 for l in lines:
-                    print "\\item " + l
+                    print "\\item " + l.lstrip()
                 print "\end{indentText}"
             elif checkSpacesExact(first_line, NUM_INDENTS_EXCERPT):
                 print "\\begin{excerptText}"
                 for l in lines:
-                    print "\\item " + l
+                    print "\\item " + l.lstrip()
                 print "\end{excerptText}"
             else:
                 # Must be a paragraph, which always only contain a single line
