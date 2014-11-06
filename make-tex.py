@@ -253,7 +253,7 @@ def latexifyMarkup(s):
                       )
 
 def findMarkupStart(s, start_str, offset = 0, stop = -1):
-    init_word_chars = " /-'\"([\n"
+    init_word_chars = " /-'\"*_([\n"
     if stop < 0:
         stop = len(s)
 
@@ -269,7 +269,7 @@ def findMarkupStart(s, start_str, offset = 0, stop = -1):
         return (-1, False)
 
 def findMarkupStop(s, end_str, offset = 0, stop = -1):
-    term_word_chars = " /-,.;:!?'\")[]\n"
+    term_word_chars = " /-,.;:!?'\"*_)[]\n"
     if stop < 0:
         stop = len(s)
 
