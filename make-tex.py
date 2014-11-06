@@ -335,15 +335,20 @@ def toLatexSub(s):
     s = s.replace( "P**! P*! B****! B**! D******!"
                  , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
                  )
+    valid_word_stop_chars = " ,."
     words_starting_with_quote = [ "n"
                                 , "tis"
                                 , "tween"
                                 , "twere"
                                 ]
-    valid_word_stop_chars = " ,."
     for w in words_starting_with_quote:
         for c in valid_word_stop_chars:
             s = s.replace(" '" + w + c, " &q&" + w + c)
+    words_ending_with_quote = [ "Evenin"
+                              ]
+    for w in words_ending_with_quote:
+        for c in valid_word_stop_chars:
+            s = s.replace(w + "'" + c, w + "&q&" + c)
 
     s = latexifyMarkup(s)
 
