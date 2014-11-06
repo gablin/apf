@@ -735,7 +735,6 @@ def printParagraph(s):
     print s
     if isUrlPar(s):
         print "\\par\\justifying%"
-    print
 
 def toSingleLine(lines):
     return " ".join([ lines[k].strip() for k in range(len(lines)) ])
@@ -867,7 +866,9 @@ while currentLine < len(content):
         NUM_INDENTS_INDENTED  = 2
         NUM_INDENTS_EXCERPT   = 4
         text = ""
-        while isAtNormalText(content[currentLine]):
+        while (   currentLine < len(content)
+              and isAtNormalText(content[currentLine])
+              ):
             if isAtParagraph(content[currentLine]):
                 j = currentLine + 1
                 while j < len(content) and isAtParagraphContinue(content[j]):
@@ -901,13 +902,12 @@ while currentLine < len(content):
                     text += (" " * NUM_INDENTS_EXCERPT) + item + "\n"
                     currentLine = j
                 text += "\n"
-            else:
-                j = currentLine
-                while j < len(content) and isAtEmptyLine(content[j]):
-                    j += 1
-                currentLine = j
-            if currentLine >= len(content):
-                break
+
+            # Skip empty lines
+            while (   currentLine < len(content)
+                  and isAtEmptyLine(content[currentLine])
+                  ):
+                currentLine += 1
         text = toLatex(text)
         regions = text.rstrip().split("\n\n")
         is_first_region = True
@@ -930,11 +930,10 @@ while currentLine < len(content):
                     print "\\item " + l
                 print "\end{excerptText}"
             else:
-                # Must be a paragraph
-                for i in range(len(lines)):
-                    if i > 0:
-                        print
-                    printParagraph(lines[i])
+                # Must be a paragraph, which always only contain a single line
+                # within the region
+                printParagraph(first_line)
+
     else:
         j = currentLine
         while j < len(content) and not isAtEmptyLine(content[j]):
@@ -943,4 +942,5 @@ while currentLine < len(content):
         if isAtVersionSection:
             print "\\noindent%"
         printParagraph(line)
+        print
         currentLine = j
