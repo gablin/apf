@@ -513,9 +513,9 @@ def typesetUsenet(s):
         start_pos = s.find("alt.", i)
         if start_pos < 0:
             start_pos = s.find("rec.", i)
-        if start_pos < 0:
+        elif start_pos < 0:
             start_pos = s.find("sci.", i)
-        if start_pos < 0:
+        elif start_pos < 0:
             start_pos = s.find("lspace.", i)
         if start_pos >= 0:
             end_pos = s.find(" ", start_pos)
@@ -525,10 +525,10 @@ def typesetUsenet(s):
                 if string.letters.find(s[j]) >= 0:
                     end_pos = j + 1
                     break
-            new_s = ( s[i:start_pos]
-                    + "\\typesetUsenet{"
-                    + s[start_pos:end_pos] + "}"
-                    )
+            new_s += ( s[i:start_pos]
+                     + "\\typesetUsenet{"
+                     + s[start_pos:end_pos] + "}"
+                     )
             i = end_pos
         else:
             break
