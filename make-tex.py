@@ -335,19 +335,33 @@ def toLatexSub(s):
     s = s.replace( "P**! P*! B****! B**! D******!"
                  , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
                  )
+    s = s.replace(" 'n' ", " &q&n&q& ")
     valid_word_start_chars = "\"' _*"
     valid_word_stop_chars = " ,.!?_*"
-    words_starting_with_quote = [ "E's"
+    words_starting_with_quote = [ "92"
+                                , "Ave"
+                                , "cos"
+                                , "E's"
                                 , "Ello"
+                                , "Em"
                                 , "em"
                                 , "ere"
+                                , "im"
                                 , "n"
+                                , "S"
+                                , "s"
+                                , "t"
+                                , "Til"
+                                , "til"
                                 , "tis"
                                 , "tween"
                                 , "Twas"
                                 , "twere"
+                                , "twixt"
                                 ]
     words_ending_with_quote = [ "Evenin"
+                              , "Jus"
+                              , "Wi"
                               ]
     for w in words_starting_with_quote:
         for cs in valid_word_start_chars:
