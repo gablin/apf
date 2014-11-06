@@ -206,19 +206,35 @@ def latexifyMarkup(s):
     while offset < len(s):
         end_pos, stops_after_word = findMarkupStop(s, markup_end_str, offset)
         if end_pos >= 0:
+            new_start_pos, new_starts_before_word = \
+                findMarkupStart(s, markup_start_str, end_pos)
+            stop_could_be_new_markup_start = \
+                new_start_pos == end_pos and new_starts_before_word
+
+            # If the start and end position completely wraps the start of *some*
+            # markup (not necessarily) the same, then the potential start of a
+            # nested markup becomes an actual start
+            is_start_of_new_markup = False
+            if stop_could_be_new_markup_start:
+                text_between_markup = \
+                    s[start_pos + len(markup_start_str):end_pos]
+
+                for i in range(len(r_data)):
+                    if text_between_markup == r_data[i][0]:
+                        is_start_of_new_markup = True
+                        break
+            if is_start_of_new_markup:
+                level += 1
+                offset = end_pos + len(markup_end_str)
+                continue
+
             if stops_after_word:
                 level -= 1
             else:
                 if not has_improper_start:
                     # Only proper markups (that is, markups which start at a
                     # word and end after a word) may be nested
-                    new_start_pos, new_starts_before_word = \
-                        findMarkupStart(s, markup_start_str, end_pos)
-                    stop_is_new_markup_start = \
-                        (   new_start_pos == end_pos
-                        and new_starts_before_word
-                        )
-                    if stop_is_new_markup_start:
+                    if stop_could_be_new_markup_start:
                         level += 1
                     else:
                         are_improper_stops_allowed = r_data[r_index][4]
