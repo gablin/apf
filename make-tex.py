@@ -363,6 +363,7 @@ def toLatexSub(s):
                                 , "em"
                                 , "ere"
                                 , "im"
+                                , "m"
                                 , "n"
                                 , "S"
                                 , "s"
@@ -379,6 +380,7 @@ def toLatexSub(s):
                               , "Evenin"
                               , "Jus"
                               , "lukin"
+                              , "o"
                               , "Wi"
                               , "wouldna"
                               ]
