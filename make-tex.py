@@ -343,45 +343,58 @@ def findMarkupStop(s, end_str, offset = 0, stop = -1):
         return (-1, False)
 
 def toLatex(s):
-    url_start = "<"
-    url_end = ">"
+    URL_START_STR = "<"
+    URL_END_STR = ">"
+    REPLACE_START_STR = "<["
+    REPLACE_END_STR = "]>"
 
-    new_s = ""
-    offset = 0
-    i = offset
+    urls = []
+    s_wo_urls = ""
+    offset = i = 0
     while i < len(s):
-        url_start_pos = s.find(url_start, i)
-        if url_start_pos < 0:
+        # Find start and end of URL
+        start_pos = s.find(URL_START_STR, i)
+        if start_pos < 0:
             break
-        is_url_start_ok = (   url_start_pos + 1 < len(s)
-                          and s[url_start_pos + 1] != ' '
+        is_url_start_ok = (   start_pos + 1 < len(s)
+                          and s[start_pos + 1] != ' '
                           )
         if not is_url_start_ok:
-            i = url_start_pos + len(url_start)
+            i = start_pos + len(URL_START_STR)
             continue
-        url_end_pos = s.find(url_end, url_start_pos + len(url_start))
-        if url_end_pos < 0:
+        end_pos = s.find(URL_END_STR, start_pos + len(URL_START_STR))
+        if end_pos < 0:
             break
-        is_url_end_ok = s[url_end_pos - 1] != ' '
-        url_section = s[url_start_pos + len(url_start):url_end_pos]
-        has_url_spaces = url_section.find(' ') >= 0
-        if (not is_url_end_ok
-            or has_url_spaces
-            or (   not url_section.find("@") >= 0
-               and not url_section[:7] == "http://"
-               and not url_section[:6] == "ftp://"
-               )
-            ):
-            i = url_end_pos + len(url_end)
+
+        # Check that we've actually found an URL and not something else
+        url_text = s[start_pos + len(URL_START_STR):end_pos]
+        is_url_end_ok = s[end_pos - 1] != ' '
+        has_url_spaces = url_text.find(' ') >= 0
+        if (  not is_url_end_ok
+           or has_url_spaces
+           or (   not url_text.find("@") >= 0
+              and not url_text[:7] == "http://"
+              and not url_text[:6] == "ftp://"
+              )
+           ):
+            i = end_pos + len(URL_END_STR)
             continue
 
-        # Found URL section
-        new_s += ( toLatexSub(s[offset:url_start_pos])
-                   + "\\typesetUrl{" + url_section + "}"
-                 )
-        offset = url_end_pos + len(url_end)
-        i = offset
-    new_s += toLatexSub(s[offset:])
+        # Replace URL with place-holder text
+        url_replace_str = REPLACE_START_STR + str(len(urls)) + REPLACE_END_STR
+        urls.append(url_text)
+        s_wo_urls += s[offset:start_pos] + url_replace_str
+        offset = i = start_pos + 1
+    s_wo_urls += s[offset:]
+
+    new_s = toLatexSub(s_wo_urls)
+
+    # Replace place-holders with URLs
+    for i in range(len(urls)):
+        new_s = new_s.replace( REPLACE_START_STR + str(i) + REPLACE_END_STR
+                             , "\\typesetUrl{" + urls[i] + "}"
+                             )
+
     return new_s
 
 def toLatexSub(s):
