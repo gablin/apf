@@ -277,11 +277,12 @@ THE COLOUR OF MAGIC
   the joke / read very carefully (the NonKirbyFan explanation) is a matter
   still under discussion.
 
-- [p. 18/17] The inn called 'The Broken Drum' gets burned down in this
-  book. The later Discworld novels all feature an inn called 'The Mended
-  Drum'. The novel _Strata_ contains (on p. 35/42) an explanation of why
-  you would call a pub 'The Broken Drum' in the first place: "You can't
-  beat it".
+- [p. 18/17] The Broken/Mended Drum
+
+  The inn called 'The Broken Drum' gets burned down in this book. The later
+  Discworld novels all feature an inn called 'The Mended Drum'. The novel
+  _Strata_ contains (on p. 35/42) an explanation of why you would call a pub
+  'The Broken Drum' in the first place: "You can't beat it".
 
   This is probably as good a place as any to mention some intriguing
   information that I received from one of my correspondents: if you have
@@ -316,10 +317,12 @@ THE COLOUR OF MAGIC
   the Invisible College, where a scientist is happily dissecting a dead
   orangutan. I don't think that scene was *entirely* coincidental...
 
-- [p. 24/22] Terry has this to say about the name 'Twoflower': "[...]
-  there's no joke in Twoflower. I just wanted a coherent way of making up
-  'foreign' names and I think I pinched the Mayan construction (Nine
-  Turning Mirrors, Three Rabbits, etc.)."
+- [p. 24/22] Twoflower
+
+  Terry has this to say about the name 'Twoflower': "[...] there's no joke in
+  Twoflower. I just wanted a coherent way of making up 'foreign' names and I
+  think I pinched the Mayan construction (Nine Turning Mirrors, Three Rabbits,
+  etc.)."
 
 - [p. 26/24] "'If you mean: is this coin the same as, say, a fifty-dollar
   piece, then the answer is no.'"
@@ -449,7 +452,9 @@ THE COLOUR OF MAGIC
   People have been quick to point out to me that Hardy never actually said
   "fine mess", though, but always "nice mess".
 
-- [p. 75/67] This is the first occurrence of the name 'Dunmanifestin' for
+- [p. 75/67] _Dunmanifestin_
+
+  This is the first occurrence of the name 'Dunmanifestin' for
   the home of the Gods at the top of Cori Celesti. It is used again in
   several places throughout the other Discworld novels.
 
@@ -548,11 +553,12 @@ THE COLOUR OF MAGIC
   gullible person. According to the Oxford English Dictionary, 'cully' may
   also have been a gypsy word.
 
-- [p. 118/104] The entire _Lure of the Wyrm_ section parodies the Pern
-  novels (an sf/fantasy series) by Anne McCaffrey. The heroine of the first
-  Pern novel _Dragonflight_ is called Lessa, and the exclamation mark in
-  Terry's dragonriders' names parallels the similar use of apostrophes in
-  McCaffrey's names.
+- [p. 118/104] _Lure of the Wyrm_
+
+  The entire _Lure of the Wyrm_ section parodies the Pern novels (an sf/fantasy
+  series) by Anne McCaffrey. The heroine of the first Pern novel _Dragonflight_
+  is called Lessa, and the exclamation mark in Terry's dragonriders' names
+  parallels the similar use of apostrophes in McCaffrey's names.
 
 - [p. 124/109] "_The dragons sense Liessa's presence._"
 
@@ -768,9 +774,11 @@ THE LIGHT FANTASTIC
   'FOXed') on the pages of a book. This does not usually reduce the value
   of the book, but booksellers tend to be scrupulous about such matters.
 
-- [p. 8/8] Many people have commented on the last name of the 304th
-  Chancellor of Unseen University: Weatherwax, and asked if there is a
-  connection with Granny Weatherwax.
+- [p. 8/8] Weatherwax and the Unseen University
+
+  Many people have commented on the last name of the 304th Chancellor of Unseen
+  University: Weatherwax, and asked if there is a connection with Granny
+  Weatherwax.
 
   In _Lords and Ladies_, Terry supplies the following piece of dialogue (on
   p. 224/161) between Granny and Archchancellor Ridcully as an answer:
@@ -1006,11 +1014,12 @@ THE LIGHT FANTASTIC
   developed character in his own right, in _Sourcery_. See also the
   annotation for p. 125/113 of _Sourcery_.
 
-- [p. 133/133] The idea of a strange little shop that appears, sells the
-  most peculiar things, and then vanishes again first appears in a short
-  story by H. G. Wells, appropriately called _The Magic Shop_. A recent
-  variation on the same theme can be found in Stephen King's _Needful
-  Things_.
+- [p. 133/133] Little vanishing shops
+
+  The idea of a strange little shop that appears, sells the most peculiar
+  things, and then vanishes again first appears in a short story by H. G. Wells,
+  appropriately called _The Magic Shop_. A recent variation on the same theme
+  can be found in Stephen King's _Needful Things_.
 
   When an a.f.p. reader mistakenly thought that this type of shop was
   invented by Fritz Leiber (see the annotation for p. 9/9 of _The Colour of
@@ -1055,7 +1064,7 @@ THE LIGHT FANTASTIC
 
 EQUAL RITES
 
-- Regarding the theme.
+- The theme
 
   A central theme of this book (as well as of the other Discworld witch
   novels) is the contrast between on one side the (female) witches or
@@ -1073,7 +1082,7 @@ EQUAL RITES
 
   Refers to Lucille Ball from _I Love Lucy_ fame.
 
-- Terry comments on Josh Kirby's artwork.
+- Terry comments on Josh Kirby's artwork
 
   One of my correspondents recalls that he interviewed Terry in 1987 for a
   university magazine. In that interview Terry said that one thing which
@@ -1085,7 +1094,7 @@ EQUAL RITES
   supposed to be the basis of the "witches flying around on broomsticks"
   myth).
 
-- Kirby on the back cover.
+- Kirby on the back cover
 
   Kirby caricatures himself as the pointy-eared wizard on the back cover --
   anyone who has seen his picture in _The Josh Kirby Posterbook_ can
@@ -4093,12 +4102,12 @@ MOVING PICTURES
 This one has uncountable references to classic Hollywood movies and
 anecdotes.
 
-- About Gaspode.
+- Gaspode
 
   Terry actually meant for Gaspode to die at the end of the book, but his
   editors/beta-readers made him reconsider.
 
-- About Ginger and Ruby.
+- Ginger and Ruby
 
   People have noticed that the two femmes fatale of this novel are called
   Ginger and Ruby, both names signifying a red colour. Terry Pratchett says
@@ -4648,7 +4657,7 @@ anecdotes.
   interesting to recall that before he became a full-time writer Terry
   Pratchett worked as press officer for nuclear power stations.
 
-- About the Oscar statue.
+- The Oscar statue
 
   As far as the giant statue is concerned (and the running gag about it
   reminding everyone of their uncle Oswald or Osric etc.): the nickname
@@ -4671,12 +4680,12 @@ REAPER MAN
   chagrin of his publishers, who would have probably preferred it if he had
   called it _Mort II_).
 
-- Parallels with other works.
+- Parallels with other works
 
   The 'Bill Door' sections of this novel have many parallels with classic
   Westerns, e.g. _High Plains Drifter_.
 
-- Recommended reads.
+- Recommended reads
 
   If you liked the idea of the trolley life-form, you may also want to
   check out a short story by Avram Davidson called _Or All The Sea With
@@ -6717,7 +6726,7 @@ SMALL GODS
   Death dreads playing symbolic last chess games because "he could never
   remember how the knight was supposed to move".
 
-- Rumours about missing scene.
+- Rumours about missing scene
 
   There is a rumour going round that there was to be a crucifixion scene at
   the end of this book but that the publishers made Terry take it out.
@@ -7600,7 +7609,7 @@ LORDS AND LADIES
 
 MEN AT ARMS
 
-- About 'Discworld' as a registered trademark.
+- 'Discworld' as a registered trademark
 
   Starting with "Men at Arms", the word 'Discworld' appeared on the
   copyright page with a 'registered trademark' symbol appended to it.
@@ -7620,7 +7629,7 @@ MEN AT ARMS
   afp readers ought to know that. It's been done so that we have a decent
   lever if there's a BIG problem."
 
-- Terry comments on potential spoilers in the back cover.
+- Terry comments on potential spoilers in the back cover
 
   Someone complained on the net that the picture of the Gonne on the back
   cover of _Men at Arms_ gives away too much information about the story.
@@ -10083,7 +10092,7 @@ INTERESTING TIMES
 
 MASKERADE
 
-- About the book.
+- The book.
 
   _Maskerade_, as a parody of _The Phantom of the Opera_, is based largely
   upon the musical by Andrew Lloyd Webber, but makes the events and
@@ -11283,7 +11292,7 @@ HOGFATHER
   question to him: "'Actually... where *do* [the Tooth Fairies] take the
   teeth?'"
 
-+ Terry comments on the book.
++ Terry comments on the book
 
   When _Hogfather_ was being written, Terry answered the question what it
   was going to be about as follows:
@@ -16754,7 +16763,7 @@ THE DISCWORLD COMPANION
   his career he printed more than 70 books, 20 of them his own translations
   from the Latin, French, and Dutch. Wynkyn de Worde was his successor.
 
-- About coats of arms in Discworld.
+- Coats of arms in Discworld
 
   _The Discworld Companion_ contains neat illustrations and heraldic
   descriptions of all the coats of arms of the various important guilds and
@@ -16974,7 +16983,7 @@ This book was released in May 2005. No annotations yet.
 
 THE STREETS OF ANKH-MORPORK
 
-- B4--D4 Chrononhotonthologos Street.
+- B4--D4 Chrononhotonthologos Street
 
   _Chrononhotonthologos_ is the name of an 18th century burlesque stage
   farce by Henry Carey. I have no idea why there is a Chrononhotonthologos
@@ -17851,7 +17860,7 @@ GOOD OMENS
         And what rough beast, its hour come round at last
         Slouches toward Bethlehem to be born?
 
-- About potential sequal.
+- Potential sequal
 
   Terry Pratchett and Neil Gaiman did have the title _668 -- The Neighbour
   of the Beast_ on hand for a _Good Omens_ sequel, but since Neil Gaiman
@@ -17862,7 +17871,7 @@ GOOD OMENS
   of them predating _Good Omens_. Terry again points out that it's only to
   be expected since the joke is so obvious.
 
-- About _Good Omens_ and ads.
+- _Good Omens_ and ads
 
   There is a British KitKat chocolate bar TV commercial that predates _Good
   Omens_, and which involves an angel and a devil who are just starting
@@ -17894,7 +17903,7 @@ GOOD OMENS
   Tempest_, and someone said "Hell is empty and all the devils are here".
   It was a weird evening, really."
 
-- About the back cover photograph.
+- The back cover photograph
 
   People have been wondering (a) where the back cover photograph of _Good
   Omens_ was taken, and (b) which one of them is Terry Pratchett.
@@ -17918,7 +17927,7 @@ GOOD OMENS
 
 STRATA
 
-- About the book.
+- The book
 
   The whole book is, in a very general way, modelled on Larry Niven's
   classic _Ringworld_ novel: a group of differently-raced beings explore an
@@ -17975,7 +17984,7 @@ STRATA
 
 THE DARK SIDE OF THE SUN
 
-- Homage to Isaac Asimov.
+- Homage to Isaac Asimov
 
   Just as _Strata_ borrows from Larry Niven, so does _The Dark Side of the
   Sun_ pay homage to the famous SF-writer Isaac Asimov.
@@ -18194,7 +18203,7 @@ DIGGERS
   didn't like it. In the US, there were no objections, so to this day US
   editions of the Nome trilogy are subtitled _The Bromeliad_.
 
-- Terry comments on similarities to the _Borrowers_ books.
+- Terry comments on similarities to the _Borrowers_ books
 
   People have commented on the similarity between the Nome trilogy and
   other childrens stories involving "little people". In particular, the
@@ -18212,7 +18221,7 @@ DIGGERS
   defend them as being *more serious* than the Borrowers. It depends on how
   you define 'serious'."
 
-- Differences between the versions.
+- Differences between the versions
 
   The American version of the Nome trilogy is not word-for-word the same as
   the original one.
@@ -19204,7 +19213,7 @@ The examples I have had reported to me so far:
   and in one episode of _Due South_ Fraser and his partner are locked in a
   meat storage room and nearly freeze to death...
 
-- Computer Games.
+- Computer Games
 
   References to the Discworld have occasionally been cropping up in
   otherwise unrelated computer games. In _Angband_, for instance, one of
@@ -19219,7 +19228,7 @@ The examples I have had reported to me so far:
   the Luggage.
 
 - _Dream Park: The Californian Voodoo Game_, by Larry Niven and Stephen
-  Barnes, 1991.
+  Barnes, 1991
 
   The UK edition of this book describes the character Alan Myers as "a
   Terry Pratchett wizard". In the U.S. edition this sentence was simply
@@ -19234,7 +19243,7 @@ The examples I have had reported to me so far:
   Note the misspelling of Discworld.
 
 - _Object-Oriented Languages, Systems and Applications_, by Blair,
-  Hutchinson, Gallagher and Shepherd, 1991.
+  Hutchinson, Gallagher and Shepherd, 1991
 
   "Consider the domain of Colours. If we have Red, Green and Blue, but now
   widen the domain to include Octaroon, an old program may read an unknown
@@ -19246,7 +19255,7 @@ The examples I have had reported to me so far:
   formal text book, _The Colour of Magic_ gets a proper mention in the
   references.
 
-- The _British Medical Journal_, January 1996 edition.
+- The _British Medical Journal_, January 1996 edition
 
   The BMJ has a 'Soundings' page, where doctors get a chance to write about
   a subject of their choice. In this issue, Liam Farrell, a GP from
@@ -19255,19 +19264,19 @@ The examples I have had reported to me so far:
   "This is only common sense, but, as we have said before, in academic
   general practice, common sense is as rare as a tourist in Ankh-Morpork."
 
-- _The Books of Magic_, by John Ney Rieber, issue #13, April 1995.
+- _The Books of Magic_, by John Ney Rieber, issue #13, April 1995
 
   Tim and Molly on their way through Soho, London, pass a movie theatre.
   The Billboard says: "PRATCHETT THEATRE -- now playing: Unseen Demo..."
   (the rest is cut off).
 
-- _The Books of Magic II_, by Neil Gaiman and Scott Hampton, 1990.
+- _The Books of Magic II_, by Neil Gaiman and Scott Hampton, 1990
 
   Tim is told of an occult battle taking place offstage in Calcutta: "You
   wouldn't believe it. The cult of Kali, three Ninja death squads, the
   Brotherhood of the Cold Flame, a thousand elephants..."
 
-- _Dirty Work_, by Dan McGirt, 1993, Pan Books, ISBN 0 330 32391 1, p. 215.
+- _Dirty Work_, by Dan McGirt, 1993, Pan Books, ISBN 0 330 32391 1, p. 215
 
   The relevant quotation is:
 
