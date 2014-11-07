@@ -14852,9 +14852,9 @@ THIEF OF TIME
   Refers back to the conversation Susan had with Albert back in _Soul
   Music_:
 
-       Susan:  "I mean I'm an ordinary kid!"
+      Susan:  "I mean I'm an ordinary kid!"
 
-       Albert: "Listen, ordinary kids get a xylophone. They don't just ask
+      Albert: "Listen, ordinary kids get a xylophone. They don't just ask
                their granddad to take his shirt off!"
 
 + [p. 18] "'We are Myria LeJean. _Lady_ Myria LeJean.'"
@@ -17924,10 +17924,10 @@ THE DARK SIDE OF THE SUN
 
 - [p. 5/5] _The Lights In The Sky Are Photofloods_
 
-   _The Lights in the Sky are Stars_ is the title of a science fiction
-   novel by Fredric Brown (who was most famous for his 'twisted-ending'
-   short-short stories, but who is unfortunately almost completely
-   forgotten today).
+  _The Lights in the Sky are Stars_ is the title of a science fiction
+  novel by Fredric Brown (who was most famous for his 'twisted-ending'
+  short-short stories, but who is unfortunately almost completely
+  forgotten today).
 
 - [p. 6/6] The best dagon fishers could ride a shell with their toes.
 
