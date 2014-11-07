@@ -476,6 +476,7 @@ def toLatexSub(s):
     s = s.replace("^", "\\^{}")
     s = s.replace("`-'", "`$-$'")
     s = s.replace("`+'", "`$+$'")
+    s = s.replace(" * ", " $*$ ")
     s = s.replace("`*'", "`$*$'")
     s = s.replace("[...]", "\\bracketsLDots{}")
     s = s.replace("...", "\\ldots{}")
