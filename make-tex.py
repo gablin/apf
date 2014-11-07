@@ -384,7 +384,7 @@ def toLatex(s):
         url_replace_str = REPLACE_START_STR + str(len(urls)) + REPLACE_END_STR
         urls.append(url_text)
         s_wo_urls += s[offset:start_pos] + url_replace_str
-        offset = i = start_pos + 1
+        offset = i = end_pos + 1
     s_wo_urls += s[offset:]
 
     new_s = toLatexSub(s_wo_urls)
