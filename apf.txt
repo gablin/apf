@@ -20838,9 +20838,3 @@ abide with the informal requests and restrictions outlined in the previous
 section, _Copying the APF_.
 
 ---------------------------------------------------------------------------
-
-;;; And now some information for my editor. Pay no attention...
-;;; Local Variables:
-;;; mode:indented-text
-;;; fill-column:75
-;;; End:
