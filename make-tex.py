@@ -572,16 +572,23 @@ def typesetUsenet(s):
         elif start_pos < 0:
             start_pos = s.find("lspace.", i)
         if start_pos >= 0:
-            end_pos = s.find(" ", start_pos)
-            if end_pos < 0:
-                end_pos = len(s) - 1
+            end_pos = start_pos
+            while (   end_pos < len(s)
+                  and (  s[end_pos].isalpha()
+                      or s[end_pos] == '.'
+                      )
+                  ):
+                end_pos += 1
+            if s[end_pos - 1] == '.':
+                end_pos -= 1
             for j in reversed(range(start_pos, end_pos)):
                 if string.letters.find(s[j]) >= 0:
                     end_pos = j + 1
                     break
             new_s += ( s[i:start_pos]
                      + "\\typesetUsenet{"
-                     + s[start_pos:end_pos] + "}"
+                     + s[start_pos:end_pos]
+                     + "}"
                      )
             i = end_pos
         else:
