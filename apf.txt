@@ -15585,10 +15585,14 @@ NIGHT WATCH
 
 THE WEE FREE MEN
 
-+ [title] The working title of this book was _For Fear of Little Men_. See
-  also the annotation for p. 287/207 of _Lords and Ladies_.
++ [title] _The Wee Free Men_
 
-+ The Nac Mac Feegle appear to be very Scottish in nature. Terry says:
+  The working title of this book was _For Fear of Little Men_. See also the
+  annotation for p. 287/207 of _Lords and Ladies_.
+
++ The Nac Mac Feegle appear to be very Scottish in nature.
+
+  Terry says:
 
   "Um. The Nac Mac Feegle are not Scottish. There is no Scotland on
   Discworld. They may, in subtle ways, suggest some aspects of the Scottish
