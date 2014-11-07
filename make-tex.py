@@ -405,7 +405,7 @@ def toLatexSub(s):
                  , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
                  )
     s = s.replace(" 'n' ", " &q&n&q& ")
-    valid_word_start_chars = "\"' _*"
+    valid_word_start_chars = "\"' _*("
     valid_word_stop_chars = " ,.!?_*\""
     words_starting_with_quote = [ "92"
                                 , "Ave"
