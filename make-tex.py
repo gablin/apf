@@ -68,7 +68,7 @@ def extractSectionName(s):
     # Make every start of word uppercase
     i = 0
     while i < len(s):
-        if s[i] == ' ':
+        if s[i] == ' ' or s[i] == '-':
             i += 1
             s = s[:i] + s[i].upper() + s[i + 1:]
         else:
