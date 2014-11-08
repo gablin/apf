@@ -14,7 +14,7 @@
 \usepackage{libertine} % Sans-serif font
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
-\usepackage{aurical}  % Font for sections
+\usepackage{yfonts}  % Font for sections
 \usepackage{adjustbox}
 \usepackage{anyfontsize}
 \usepackage{calc}
@@ -160,12 +160,14 @@
     \item Preprocessing, typesetting, and cover design\Footnote{*}{The material
       for the said design have been shamelessly taken without prior permission,
       and copyrights have most definitely been infringed. So if you happen to
-      meet the copyright holders in question, please don't tell them.}
-      (using Python, \LaTHeX, and Adobe Photoshop) by:
-      Gabriel Hjort Blindell \typesetUrl{ghb@kth.se}
+      meet the copyright holders in question, please don't tell them.}  (using
+      Python, \LaTeX\Footnote{\dagger}{Pratchett fans being what they are --
+        that is to say, geeky and with too much time on their hands -- why is
+        there yet no \LaTHeX?}, and Adobe Photoshop) by: Gabriel Hjort Blindell
+      \typesetUrl{ghb@kth.se}
     \item Fonts: \emph{Garamond} (serif basefont, \baseFontSize), \emph{Linux
-      Libertine} (sans-serif), \emph{Bera Mono} (monotype), and \emph{Lukas
-      Svatba} (for sections).
+      Libertine} (sans-serif), \emph{Bera Mono} (monotype), and Yannis
+      Haralambous' \emph{Gothic} (for sections).
   \end{copyrightText}%
   \pagebreak%
 }
@@ -273,18 +275,9 @@
 }
 
 % Change typesetting of sections
-\newcommand{\sectionFont}{\Fontlukas}
-\newlength{\sectionOrnamentWidth}
-\newsavebox{\sectionOrnament}
-\savebox{\sectionOrnament}{%
-  {\Huge$\filleddiamond$\hspace*{2mm}}%
-}
-\settowidth{\sectionOrnamentWidth}{\usebox{\sectionOrnament}}
+\newcommand{\sectionFont}{\gothfamily}
 \newcommand*{\typesetSection}[1]{%
-  \noindent\parbox[t]{\sectionOrnamentWidth}{\usebox{\sectionOrnament}}%
-  \parbox[t]{\textwidth-\sectionOrnamentWidth}{%
-    \raggedright\Huge\sectionFont #1%
-  }%
+  \raggedright\Huge\sectionFont #1%
 }
 \setsecheadstyle{
   % Prevent section titles from appearing alone on the bottom of a page

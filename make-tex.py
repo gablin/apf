@@ -752,6 +752,19 @@ def typesetHex(s):
                    )
     return s
 
+def fixBadTypesetting(s):
+    # Prevent ligatures as this makes gothic fonts harder to read
+    new_s = ""
+    for c in s:
+        new_s += c
+        if c.isalpha():
+            new_s += "\\/"
+
+    # Prevent that 's' looks like an 'f' (this happens when using gothic fonts)
+    new_s = new_s.replace("s", "s:")
+
+    return new_s
+
 def extractQuoteParts(s):
     sign = ""
     pages = ""
@@ -956,7 +969,11 @@ while currentLine < len(content):
             isAtVersionSection = True
         else:
             isAtVersionSection = False
-        print "\\section{" + toLatex(section_name) + "}"
+        formatted_section_name = toLatex(section_name)
+        print ( "\\section[" + formatted_section_name + "]{"
+              + fixBadTypesetting(formatted_section_name)
+              + "}"
+              )
         currentLine += 1
     elif isAtQuote(content[currentLine]):
         isAfterAPQuote = True
