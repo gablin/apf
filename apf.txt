@@ -277,7 +277,7 @@ THE COLOUR OF MAGIC
   the joke / read very carefully (the NonKirbyFan explanation) is a matter
   still under discussion.
 
-- [p. 18/17] The Broken/Mended Drum
+- [p. 18/17] The Broken/Mended Drum.
 
   The inn called 'The Broken Drum' gets burned down in this book. The later
   Discworld novels all feature an inn called 'The Mended Drum'. The novel
@@ -317,7 +317,7 @@ THE COLOUR OF MAGIC
   the Invisible College, where a scientist is happily dissecting a dead
   orangutan. I don't think that scene was *entirely* coincidental...
 
-- [p. 24/22] Twoflower
+- [p. 24/22] Terry comments on the name of Twoflower.
 
   Terry has this to say about the name 'Twoflower': "[...] there's no joke in
   Twoflower. I just wanted a coherent way of making up 'foreign' names and I
@@ -452,7 +452,7 @@ THE COLOUR OF MAGIC
   People have been quick to point out to me that Hardy never actually said
   "fine mess", though, but always "nice mess".
 
-- [p. 75/67] _Dunmanifestin_
+- [p. 75/67] Dunmanifestin.
 
   This is the first occurrence of the name 'Dunmanifestin' for
   the home of the Gods at the top of Cori Celesti. It is used again in
@@ -480,7 +480,7 @@ THE COLOUR OF MAGIC
   interactions of the gods in 'The Sending of Eight' strongly bring to mind
   the Godshome scenes in Leiber's _Swords_ series.
 
-- [p. 78/70] _The Sending of Eight_
+- [p. 78/70] _The Sending of Eight_.
 
   Just as the first chapter of _The Colour of Magic_ has many resonances
   with Fritz Leiber's _Swords_ series, so can this chapter be regarded as a
@@ -553,9 +553,9 @@ THE COLOUR OF MAGIC
   gullible person. According to the Oxford English Dictionary, 'cully' may
   also have been a gypsy word.
 
-- [p. 118/104] _Lure of the Wyrm_
+- [p. 118/104] _The Lure of the Wyrm_.
 
-  The entire _Lure of the Wyrm_ section parodies the Pern novels (an sf/fantasy
+  The entire 'Lure of the Wyrm' section parodies the Pern novels (an sf/fantasy
   series) by Anne McCaffrey. The heroine of the first Pern novel _Dragonflight_
   is called Lessa, and the exclamation mark in Terry's dragonriders' names
   parallels the similar use of apostrophes in McCaffrey's names.
@@ -611,8 +611,10 @@ THE COLOUR OF MAGIC
   correspondents thought Terry was changing Liessa's name on purpose as an
   explicit parody.
 
-- [p. 169/146] After Rincewind and Twoflower escape from the Wyrmberg they
-  are flying a dragon one moment and a modern jetliner the next.
+- [p. 169/146] Rincewind and Twoflower on an (air)plaine.
+
+  After Rincewind and Twoflower escape from the Wyrmberg they are flying a
+  dragon one moment and a modern jetliner the next.
 
   Clearly they have been, get this, translated to another plane (the last
   few paragraphs of this section seem to support the theory that Terry
@@ -741,7 +743,7 @@ THE COLOUR OF MAGIC
 
 THE LIGHT FANTASTIC
 
-- [title] _The Light Fantastic_
+- [title] _The Light Fantastic_.
 
   The book's title comes from the poem _L'Allegro_, written by John Milton
   in 1631:
@@ -774,7 +776,7 @@ THE LIGHT FANTASTIC
   'FOXed') on the pages of a book. This does not usually reduce the value
   of the book, but booksellers tend to be scrupulous about such matters.
 
-- [p. 8/8] Weatherwax and the Unseen University
+- [p. 8/8] Weatherwax and the Unseen University.
 
   Many people have commented on the last name of the 304th Chancellor of Unseen
   University: Weatherwax, and asked if there is a connection with Granny
@@ -810,7 +812,7 @@ THE LIGHT FANTASTIC
   morning --> Late --> Dead --> Book of the Dead. But I doubt if even Terry
   is *that* twisted.
 
-- [p. 10/10] Dandelion Clock
+- [p. 10/10] Dandelion Clock.
 
   Amongst English (and Australian) children there exists the folk-belief
   that the seed-heads of dandelions can be used to tell the time. The
@@ -1014,7 +1016,7 @@ THE LIGHT FANTASTIC
   developed character in his own right, in _Sourcery_. See also the
   annotation for p. 125/113 of _Sourcery_.
 
-- [p. 133/133] Little vanishing shops
+- [p. 133/133] Little vanishing shops.
 
   The idea of a strange little shop that appears, sells the most peculiar
   things, and then vanishes again first appears in a short story by H. G. Wells,
@@ -1064,7 +1066,7 @@ THE LIGHT FANTASTIC
 
 EQUAL RITES
 
-- The theme
+- The theme.
 
   A central theme of this book (as well as of the other Discworld witch
   novels) is the contrast between on one side the (female) witches or
@@ -1082,7 +1084,7 @@ EQUAL RITES
 
   Refers to Lucille Ball from _I Love Lucy_ fame.
 
-- Terry comments on Josh Kirby's artwork
+- Terry comments on Josh Kirby's artwork.
 
   One of my correspondents recalls that he interviewed Terry in 1987 for a
   university magazine. In that interview Terry said that one thing which
@@ -1094,7 +1096,7 @@ EQUAL RITES
   supposed to be the basis of the "witches flying around on broomsticks"
   myth).
 
-- Kirby on the back cover
+- Kirby on the back cover.
 
   Kirby caricatures himself as the pointy-eared wizard on the back cover --
   anyone who has seen his picture in _The Josh Kirby Posterbook_ can
@@ -1242,10 +1244,12 @@ EQUAL RITES
         After the pain of old age,
         The ground will have us, the ground will have us.
 
-- [p. 132/130] The maid at Unseen University is called Ksandra, which puns
-  on Troy's Cassandra; but might also refer to Sandra being yet another
-  typical 'Tracey/Sharon' sort of name in England. See also the entry for
-  p. 106/95 of _Reaper Man_.
+- [p. 132/130] The maid Ksandra.
+
+  The maid at Unseen University is called Ksandra, which puns on Troy's
+  Cassandra; but might also refer to Sandra being yet another typical
+  'Tracey/Sharon' sort of name in England. See also the entry for p. 106/95 of
+  _Reaper Man_.
 
   Perhaps the fact that nobody can understand Ksandra (because she talks
   with her mouth full of clothes-pegs) is also an obscure reference to the
@@ -1269,11 +1273,13 @@ EQUAL RITES
   Britain, Australia and New Zealand) a generic name for the modeling clay
   children play with.
 
-- [p. 163/159] Some folks thought they recognised the duel between Granny
-  Weatherwax and Archchancellor Cutangle from T. H. White's description of
-  a similar duel in his _Arthur, The Once and Future King_ (also depicted
-  as a very funny fragment in Disney's _The Sword in the Stone_, which was
-  an animation film based on this book). However, Terry says:
+- [p. 163/159] Terry comments on duelling influences.
+
+  Some folks thought they recognised the duel between Granny Weatherwax and
+  Archchancellor Cutangle from T. H. White's description of a similar duel in
+  his _Arthur, The Once and Future King_ (also depicted as a very funny fragment
+  in Disney's _The Sword in the Stone_, which was an animation film based on
+  this book). However, Terry says:
 
   "The magical duel in _Equal Rites_ is certainly not lifted from T. H.
   White. Beware of secondary sources. Said duel (usually between a man and
@@ -1364,8 +1370,9 @@ MORT
   echoes Charles Dickens' _Great Expectations_ (where Estelle, for
   instance, also insists on calling Pip 'Boy' all the time).
 
-- [p. 34/29] Albert's stove has 'The Little Moloch (Ptntd)' embossed on its
-  door.
+- [p. 34/29] The writing above Albert's stove.
+
+  Albert's stove has 'The Little Moloch (Ptntd)' embossed on its door.
 
   There exists a make of woodburning stove called 'The Little Wenlock'.
 
@@ -1566,20 +1573,23 @@ MORT
   across the fields someone who is now a professor of medieval history fell
   down a disused mineshaft and still carried on singing."
 
-- [p. 154/126] Alberto Malich was rumoured to have disappeared when trying
-  to perform the Rite of AshkEnte backwards. Since we know that the Rite is
-  used to summon Death, it doesn't seem too unreasonable to suppose that
-  performing it backwards might drive Death away from you, which is
-  probably why Albert did it. Unfortunately for him, it is also not very
-  unreasonable to suppose that performing the rite backwards will instead
-  summon *you* to Death...
+- [p. 154/126] Reversed rites.
+
+  Alberto Malich was rumoured to have disappeared when trying to perform the
+  Rite of AshkEnte backwards. Since we know that the Rite is used to summon
+  Death, it doesn't seem too unreasonable to suppose that performing it
+  backwards might drive Death away from you, which is probably why Albert did
+  it. Unfortunately for him, it is also not very unreasonable to suppose that
+  performing the rite backwards will instead summon *you* to Death...
 
   There also are two villages called Ash in Kent, UK. It is unknown if
   there is a deliberate connection.
 
-- [p. 161/132] Queen Ezeriel refers to our world's Cleopatra who also used
-  to bathe in asses' milk, and who eventually committed honourable suicide
-  by clutching a venomous snake (an asp, to be precise) to her bosom.
+- [p. 161/132] Queen Ezeriel.
+
+  Queen Ezeriel refers to our world's Cleopatra who also used to bathe in asses'
+  milk, and who eventually committed honourable suicide by clutching a venomous
+  snake (an asp, to be precise) to her bosom.
 
 - [p. 183/149] "'Do not meddle in the affairs of wizards because a refusal
   often offends, I read somewhere.'"
@@ -1636,7 +1646,8 @@ MORT
   Tolkien's _The Hobbit_, where the great Wizard Gandalf was famed (in
   times of peace) for entertaining everybody with fireworks.
 
-- [p. 212/172] In the Disc model, Ankh-Morpork was a carbuncle.
+- [p. 212/172] "There was a large disc of the world in one corner [...]
+  Ankh-Morpork, for instance, was a carbuncle."
 
   A carbuncle is (1) a red semiprecious gem, and (2) a festering sore like
   a boil.
@@ -1938,9 +1949,10 @@ SOURCERY
   For more information, see also the Hawkwind song 'Hassan I Sabbah' on
   their album _Quark, Strangeness and Charm_.
 
-- [p. 126/114] Creosote's poetry is mostly based on Edward Fitzgerald's
-  translation of the _Rubaiyat_ of Omar Khayyam. The poem parodied on this
-  page goes:
+- [p. 126/114] Creosote's poetry.
+
+  Creosote's poetry is mostly based on Edward Fitzgerald's translation of the
+  _Rubaiyat_ of Omar Khayyam. The poem parodied on this page goes:
 
         A book of verses underneath the bough
         A jug of wine, a loaf of bread, and thou
@@ -2100,7 +2112,9 @@ SOURCERY
   be admitted to if you managed a test. The test was to sit in a corner,
   and *not* think of a white bear.
 
-- [p. 215/193] Significant Quest --> Trivial Pursuit.
+- [p. 215/193] Significant Quest.
+
+  Significant Quest --> Trivial Pursuit.
 
 - [p. 227/204] "Other things besides the cream floated to the top, he
   reflected sourly."
@@ -2157,7 +2171,7 @@ SOURCERY
 
 WYRD SISTERS
 
-- [title] _Wyrd Sisters_
+- [title] _Wyrd Sisters_.
 
   In _Macbeth_, the three witches are sometimes called the weird sisters,
   e.g. act 2, scene 1: (Banquo) "I dreamt last night of the three weird
@@ -2297,7 +2311,7 @@ WYRD SISTERS
   _Macbeth_ after the killing of Duncan in act 5, scene 1: "Out, damned
   spot!", etc.
 
-- [p. 36/35] _The Hedgehog Can Never Be Buggered At All_
+- [p. 36/35] _The Hedgehog Can Never Be Buggered At All_.
 
   Terry invented this title; he has *not* written any words to it (apart
   from the fragments that appear in the novels); but many fans (including a
@@ -2768,7 +2782,7 @@ WYRD SISTERS
 
 PYRAMIDS
 
-- [p. 5/5] The Titles of the Books
+- [p. 5/5] The titles of the books.
 
   _Pyramids_ is split into four 'Books', a structure that gives it a unique
   position amongst the otherwise chapterless Discworld novels (_The Colour
@@ -2918,13 +2932,14 @@ PYRAMIDS
 
   Refers to the Biblical 'Plague of Frogs' from Exodus.
 
-- [p. 20/20] On the subject of the Assassin's Guild School, Terry has this
-  to say: "Yes, the whole setup of the Assassin's Guild school has, uh, a
-  certain resonance with Rugby School in _Tom Brown's Schooldays_ (note to
-  Americans: a minor Victorian classic of school literature which no-one
-  reads anymore and which is probably now more famous for the first
-  appearance of the Flashman character subsequently popularised by George
-  MacDonald Fraser)."
+- [p. 20/20] Terry comments on the Assassin's Guild School.
+
+  On the subject of the Assassin's Guild School, Terry has this to say: "Yes,
+  the whole setup of the Assassin's Guild school has, uh, a certain resonance
+  with Rugby School in _Tom Brown's Schooldays_ (note to Americans: a minor
+  Victorian classic of school literature which no-one reads anymore and which is
+  probably now more famous for the first appearance of the Flashman character
+  subsequently popularised by George MacDonald Fraser)."
 
   Teppic and his friends map directly to corresponding characters in _Tom
   Brown's Schooldays_: Teppic is Tom, Chidder is Harry "Scud" East, Arthur
@@ -3011,10 +3026,12 @@ PYRAMIDS
   conkers, if anything, more rather than less brittle. There's probably a
   lesson for us all in there somewhere.
 
-- [p. 50/49] The legend of Ankh-Morpork being founded by two orphaned
-  brothers who had been found and suckled by a hippopotamus refers to the
-  legend of Romulus and Remus who were two orphaned brothers raised by a
-  wolf, who later went on to found Rome (the brothers did, not the wolf).
+- [p. 50/49] The two brothers founding Ankh-Morpork.
+
+  The legend of Ankh-Morpork being founded by two orphaned brothers who had been
+  found and suckled by a hippopotamus refers to the legend of Romulus and Remus
+  who were two orphaned brothers raised by a wolf, who later went on to found
+  Rome (the brothers did, not the wolf).
 
 - [p. 58/56] "Hoot Koomi, high priest of Khefin [...] stepped forward."
 
@@ -3096,11 +3113,13 @@ PYRAMIDS
   an advert for Slumberdown beds, which featured a hippo sitting down next
   to a chick.
 
-- [p. 95/92] Pteppic's dream about the seven fat and seven thin cows is a
-  reference to the Bible's Joseph, who had to explain a similar dream
-  (which did not have the bit about the trombone, though), to the Pharaoh.
-  _Pyramids_ is of course riddled with religious references, most of which
-  are too obvious or too vague to warrant inclusion here.
+- [p. 95/92] Pteppic's dream.
+
+  Pteppic's dream about the seven fat and seven thin cows is a reference to the
+  Bible's Joseph, who had to explain a similar dream (which did not have the bit
+  about the trombone, though), to the Pharaoh.  _Pyramids_ is of course riddled
+  with religious references, most of which are too obvious or too vague to
+  warrant inclusion here.
 
 - [p. 100/97] "All things are defined by names. Change the name, and you
   change the thing."
@@ -3132,8 +3151,10 @@ PYRAMIDS
   mostly sinister meaning of some metamorphic life form taking the shape of
   a human being.
 
-- [p. 127/121] Notice the sound accompanying the pyramid flares. It
-  phonetically spells 'Cheops'.
+- [p. 127/121] The sound of the pyramid flares.
+
+  Notice the sound accompanying the pyramid flares. It phonetically spells
+  'Cheops'.
 
 - [p. 134/128] "It seemed to Teppic that its very weight was deforming the
   shape of things, stretching the kingdom like a lead ball on a rubber
@@ -3195,9 +3216,11 @@ PYRAMIDS
         Will gather there for certain, because
         Today's the day the Teddy Bears have their picnic.
 
-- [p. 176/169] The philosophers shooting arrows at tortoises are discussing
-  one of Zeno's three motion paradoxes. See also Douglas Hofstadter's
-  _Goedel, Escher, Bach_. Or Zeno.
+- [p. 176/169] The discussion by the shooting philosophers.
+
+  The philosophers shooting arrows at tortoises are discussing one of Zeno's
+  three motion paradoxes. See also Douglas Hofstadter's _Goedel, Escher,
+  Bach_. Or Zeno.
 
 - [p. 178/171] "The rest of them die of Heisenberg's Uncertainty Principle,
   [...]"
@@ -3210,7 +3233,7 @@ PYRAMIDS
   physically impossible to determine both velocity and position of the
   particle in question.
 
-- [p. 179/171] Philosophers' names.
+- [p. 179/171] The philosophers' names.
 
   Xeno refers to Zeno, of aforementioned paradox. Copolymer ("the greatest
   storyteller in the history of the world") might refer to both Homer
@@ -3284,8 +3307,9 @@ PYRAMIDS
   the term eventually came to be used for a meeting which combined elements
   of partying and intellectual interchange.
 
-- [p. 197/189] The Tsortean wars refer to the Trojan wars. (Read also
-  _Eric_. Or Homer.)
+- [p. 197/189] The Tsortean wars.
+
+  The Tsortean wars refer to the Trojan wars. (Read also _Eric_. Or Homer.)
 
 - [p. 201/193] "A philosopher had averred that although truth was beauty,
   beauty was not necessarily truth, and a fight was breaking out."
@@ -3465,12 +3489,16 @@ GUARDS! GUARDS!
   was a great one for nepotism. If you got a good Government job it was
   because "Bob's your uncle". It came to mean 'everything's all right'."
 
-- [p. 52/48] The fizzing and flashing illuminated sign outside Captain
-  Vimes' office is a reference to the tired old visual cliche from most
-  film noir. The seedy detective's office or apartment always has a big
-  neon sign just outside the window.
+- [p. 52/48] The sign outside Captain Vimes' office.
 
-- [p. 51/48] The motto of the Night Watch, "FABRICATI DIEM, PVNC", is dog
+  The fizzing and flashing illuminated sign outside Captain Vimes' office is a
+  reference to the tired old visual cliche from most film noir. The seedy
+  detective's office or apartment always has a big neon sign just outside the
+  window.
+
+- [p. 51/48] Night Watch's motto.
+
+  The motto of the Night Watch, "FABRICATI DIEM, PVNC", is dog
   Latin for "Make my day, punk".
 
   "Go ahead, make my day" is a well-known Clint 'Dirty Harry' Eastwood
@@ -3631,10 +3659,11 @@ GUARDS! GUARDS!
   Pretty obvious Bogart/Casablanca paraphrase, in keeping with Vimes' role
   as the Discworld equivalent of the ultimate film noir anti-hero.
 
-- [p. 114/104] The bit about the hero killing a monster in a lake, only to
-  have the monster's mum come right down the hall the next day and
-  *complain*, is a reference to Grendel and his mother, two famous monsters
-  from the _Beowulf_ saga.
+- [p. 114/104] On the hero killing a monster in a lake.
+
+  The bit about the hero killing a monster in a lake, only to have the monster's
+  mum come right down the hall the next day and *complain*, is a reference to
+  Grendel and his mother, two famous monsters from the _Beowulf_ saga.
 
 - [p. 114/104] "Pour encourjay lays ortras."
 
@@ -3812,9 +3841,10 @@ GUARDS! GUARDS!
   This leaves them stuck, since if either just turns away, the other will
   immediately shoot him.
 
-- [p. 284/257] The scene where Errol's supersonic boom smashes the dragon
-  out of the air is possibly based on another Clint Eastwood movie, the
-  1982 _Firefox_.
+- [p. 284/257] Errol's supersonic boom.
+
+  The scene where Errol's supersonic boom smashes the dragon out of the air is
+  possibly based on another Clint Eastwood movie, the 1982 _Firefox_.
 
 - [p. 289/262] "'In 1135 a hen was arrested for crowing on Soul Cake
   Thursday.'"
@@ -3849,7 +3879,7 @@ GUARDS! GUARDS!
 
 ERIC
 
-- [title] _Eric_
+- [title] _Eric_.
 
   The subtitle to _Eric_ ('Faust', crossed out) already indicates what
   story is being parodied in this novella: that of the German alchemist and
@@ -3869,9 +3899,11 @@ ERIC
   minor Greek goddes called Dione, and a Greek warrior called Diomedes, but
   neither of those sounds appropriate.
 
-- [p. 27/21] The book Eric uses to summon his demon has the title
-  _Mallificarum Sumpta Diabolicite Occularis Singularum_, or the Book of
-  Ultimate Control. But note the initials.
+- [p. 27/21] The title of Eric's summoning book.
+
+  The book Eric uses to summon his demon has the title _Mallificarum Sumpta
+  Diabolicite Occularis Singularum_, or the Book of Ultimate Control. But note
+  the initials.
 
   Also, the actual dog-Latin translates more or less to: "Evil-making
   Driver of the Little One-Eyed Devil".
@@ -3883,8 +3915,10 @@ ERIC
   The name 'Pandemonium' originates with Milton's _Paradise Lost_; it's the
   city built by Lucifer and his followers after the Fall.
 
-- [p. 46/41] The name of the Tezumen god, 'Quetzovercoatl', puns on the
-  actual Aztec god Quetzalcoatl.
+- [p. 46/41] Quetzovercoatl.
+
+  The name of the Tezumen god, 'Quetzovercoatl', puns on the actual Aztec god
+  Quetzalcoatl.
 
   According to Aztec mythology, Quetzalcoatl was also supposed to return to
   his people at some particular future date.
@@ -3913,8 +3947,10 @@ ERIC
   is of course also an item of women's clothing that became popular in the
   1920s.
 
-- [p. 58/51] Ponce da Quirm, looking for the Fountain of Youth, is based on
-  Ponce de Leon, the 15th century Spanish nobleman who did the same.
+- [p. 58/51] Ponce da Quirm.
+
+  Ponce da Quirm, looking for the Fountain of Youth, is based on Ponce de Leon,
+  the 15th century Spanish nobleman who did the same.
 
 - [p. 81/69] "Fortunately, Rincewind was able to persuade the man that the
   future was another country."
@@ -3934,7 +3970,9 @@ ERIC
         But of all the world's brave heroes there's none that can compare
         With a tow, row, row, row, row, row, to the British Grenadier.
 
-- [p. 89/75] Lavaeolus is not only a dog-Latin translation of 'Rincewind',
+- [p. 89/75] Lavaeolus.
+
+  Lavaeolus is not only a dog-Latin translation of 'Rincewind',
   but the character is also a parody of Ulysses, tragic hero of the Trojan
   wars. It's really not necessary to annotate all the stuff about wooden
   horses and such, right? Right?
@@ -4102,12 +4140,12 @@ MOVING PICTURES
 This one has uncountable references to classic Hollywood movies and
 anecdotes.
 
-- Gaspode
+- Gaspode.
 
   Terry actually meant for Gaspode to die at the end of the book, but his
   editors/beta-readers made him reconsider.
 
-- Ginger and Ruby
+- Ginger and Ruby.
 
   People have noticed that the two femmes fatale of this novel are called
   Ginger and Ruby, both names signifying a red colour. Terry Pratchett says
@@ -4134,7 +4172,9 @@ anecdotes.
   all alchemists is to discover a substance that will turn all base metals
   into gold.
 
-- [p. 19/15] Archchancellor Ridcully's wizard name is 'Ridcully the Brown'.
+- [p. 19/15] Archchancellor Ridcully's wizard name.
+
+  Archchancellor Ridcully's wizard name is 'Ridcully the Brown'.
 
   In Tolkien's _The Lord of the Rings_ there's a (relatively) minor wizard
   called 'Radagast the Brown', who was also very well in tune with nature,
@@ -4202,12 +4242,13 @@ anecdotes.
   The Goat with a Thousand Young. ('The Black Goat of the Woods with a
   Thousand Young' is the full, but less common, title).
 
-- [p. 35/29] Victor Tugelbend's university career, with his uncle's will
-  and all that, shows parallels to similar situations described in Roger
-  Zelazny's (highly recommended) science fiction novel _Doorways in the
-  Sand_, and in Richard Gordon's 'Doctor' series of medical comedy
-  books/movies (_Doctor in the House_, _Doctor in Love_, _Doctor at Sea_,
-  etc.)
+- [p. 35/29] On Victor Tugelbend's university career.
+
+  Victor Tugelbend's university career, with his uncle's will and all that,
+  shows parallels to similar situations described in Roger Zelazny's (highly
+  recommended) science fiction novel _Doorways in the Sand_, and in Richard
+  Gordon's 'Doctor' series of medical comedy books/movies (_Doctor in the
+  House_, _Doctor in Love_, _Doctor at Sea_, etc.)
 
   I had noticed the Zelazny parallel when I first read _Moving Pictures_,
   but thought the reference was too unlikely and too obscure to warrant
@@ -4219,10 +4260,11 @@ anecdotes.
   -- the people who drew up the will involving Victor thought they were
   cleverer than that. Maybe they'd seen the film..."
 
-- [p. 41/34] Movie producer Thomas Silverfish is directly modelled on movie
-  mogul Samuel Goldwyn, whose real name was Samuel Gelbfisch, and who spent
-  a short time as Samuel Goldfish before changing his name a second time to
-  Goldwyn.
+- [p. 41/34] Thomas Silverfish.
+
+  Movie producer Thomas Silverfish is directly modelled on movie mogul Samuel
+  Goldwyn, whose real name was Samuel Gelbfisch, and who spent a short time as
+  Samuel Goldfish before changing his name a second time to Goldwyn.
 
   Goldwyn was responsible for a whole sequence of malapropisms known
   collectively as Goldwynisms, some of which are so well known now as to
@@ -4281,12 +4323,14 @@ anecdotes.
   In Tolkien's _The Lord of the Rings_ you can find a very nasty monster
   called a Balrog.
 
-- [p. 81/67] Ginger's real name is Theda Withel, which might be a very
-  oblique reference to Theda Bara, famous movie star of the 1910s, a kind
-  of Elvira, Mistress of the Dark, avant la lettre ('Theda Bara' is an
-  anagram of 'Arab Death'!). Her portrayal of evil women in movies like
-  _When a Woman Sins_ and _The She Devil_ caused the current meaning of the
-  word 'vamp' to be added to the English language.
+- [p. 81/67] Ginger.
+
+  Ginger's real name is Theda Withel, which might be a very oblique reference to
+  Theda Bara, famous movie star of the 1910s, a kind of Elvira, Mistress of the
+  Dark, avant la lettre ('Theda Bara' is an anagram of 'Arab Death'!). Her
+  portrayal of evil women in movies like _When a Woman Sins_ and _The She Devil_
+  caused the current meaning of the word 'vamp' to be added to the English
+  language.
 
   Just as Dibbler later describes Ginger to Bezam Planter as "the daughter
   of a Klatchian pirate and his wild, headstrong captive", so does a studio
@@ -4345,7 +4389,7 @@ anecdotes.
   The 'DUMdi-dum-dum, dumdi-dumdi-DUM-DUM' rhythm also fits the song
   exactly.
 
-- [p. 97/80] _The Boke Of The Film_
+- [p. 97/80] _The Boke Of The Film_.
 
   Traditional (if somewhat archaic by now) subtitle for movie
   novelisations. The related phrase "The Book of the Series" is still alive
@@ -4381,9 +4425,11 @@ anecdotes.
         Just as true as the stars above,
         He was her man, but he done her wrong.
 
-- [p. 111/93] Ruby's song: "Vunce again I am fallink in luf / Vy iss it I
-  now am a blue colour? / Vot is the action I should take this time / I
-  can't help it. Hiya, big boy."
+- [p. 111/93] Ruby's song.
+
+  Ruby's song: "Vunce again I am fallink in luf / Vy iss it I now am a blue
+  colour? / Vot is the action I should take this time / I can't help it. Hiya,
+  big boy."
 
   In the 1930 movie _Blue Angel_ Marlene Dietrich plays Lola-Lola, the
   cabaret entertainer who ruins the life of the stuffy professor who falls
@@ -4579,11 +4625,13 @@ anecdotes.
   "It belongs in the same general category of promise as 'Free Beer
   Tomorrow'."
 
-- [p. 297/249] The climactic scene of the novel is not only a _King Kong_
-  reversal spoof. Terry says the 50 ft. woman also refers to the
-  protagonist from the 1958 movie _Attack of the 50 Ft. Woman_ (recently
-  and redundantly remade with Daryl Hannah in the title role -- if there's
-  one movie that did not need to be remade it was this one, trust me).
+- [p. 297/249] Movie spoofs.
+
+  The climactic scene of the novel is not only a _King Kong_ reversal
+  spoof. Terry says the 50 ft. woman also refers to the protagonist from the
+  1958 movie _Attack of the 50 Ft. Woman_ (recently and redundantly remade with
+  Daryl Hannah in the title role -- if there's one movie that did not need to be
+  remade it was this one, trust me).
 
 - [p. 304/254] "'If it bleeds, we can kill it!'"
 
@@ -4629,10 +4677,12 @@ anecdotes.
 
   See the annotation for p. 73/65 of _The Colour of Magic_.
 
-- [p. 319/266] Detritus hitting the gong in the underground theatre refers
-  to the Rank Organisation's man-with-the-gong trademark, which Rank used
-  at the start of each film just as Columbia used the Statue of Liberty and
-  MGM the roaring lion.
+- [p. 319/266] Detritus hitting the gong.
+
+  Detritus hitting the gong in the underground theatre refers to the Rank
+  Organisation's man-with-the-gong trademark, which Rank used at the start of
+  each film just as Columbia used the Statue of Liberty and MGM the roaring
+  lion.
 
 - [p. 323/270] "'Play it again, Sham,' said Holy Wood."
 
@@ -4657,7 +4707,7 @@ anecdotes.
   interesting to recall that before he became a full-time writer Terry
   Pratchett worked as press officer for nuclear power stations.
 
-- The Oscar statue
+- The Oscar statue.
 
   As far as the giant statue is concerned (and the running gag about it
   reminding everyone of their uncle Oswald or Osric etc.): the nickname
@@ -4669,7 +4719,7 @@ anecdotes.
 
 REAPER MAN
 
-- [title] _Reaper Man_
+- [title] _Reaper Man_.
 
   The title _Reaper Man_ parodies Alex Cox's 1984 cult movie _Repo Man_.
 
@@ -4680,12 +4730,12 @@ REAPER MAN
   chagrin of his publishers, who would have probably preferred it if he had
   called it _Mort II_).
 
-- Parallels with other works
+- Parallels with other works.
 
   The 'Bill Door' sections of this novel have many parallels with classic
   Westerns, e.g. _High Plains Drifter_.
 
-- Recommended reads
+- Recommended reads.
 
   If you liked the idea of the trolley life-form, you may also want to
   check out a short story by Avram Davidson called _Or All The Sea With
@@ -4708,9 +4758,11 @@ REAPER MAN
   often are, for some reason, scientists, mathematicians, or (ook!)
   librarians.
 
-- [p. 7/9] Azrael is not a reference to Gargamel's cat in the Smurf
-  cartoons. Rather, both Azraels are references to the Islamic Angel of
-  Death, supposedly the very last creature to die, ever.
+- [p. 7/9] Azrael.
+
+  Azrael is not a reference to Gargamel's cat in the Smurf cartoons. Rather,
+  both Azraels are references to the Islamic Angel of Death, supposedly the very
+  last creature to die, ever.
 
   In the actual legend, Azrael is bound in chains thousands of miles long,
   and possesses millions of eyes: one for every person that has ever lived
@@ -4791,9 +4843,10 @@ REAPER MAN
   Neighbour of the Beast_ (see the _Good Omens_ annotation on that
   subject).
 
-- [p. 66/60] Ridcully's uncle disappeared under mysterious circumstances
-  after eating a charcoal biscuit on top of a meal spiced up by half a pint
-  of Wow-Wow Sauce.
+- [p. 66/60] Ridcully's uncle's mysterious disappearance.
+
+  Ridcully's uncle disappeared under mysterious circumstances after eating a
+  charcoal biscuit on top of a meal spiced up by half a pint of Wow-Wow Sauce.
 
   The circumstances may become less mysterious once you realise that
   charcoal, sulphur and saltpetre are the basic ingredients of gunpowder.
@@ -5087,15 +5140,15 @@ REAPER MAN
 
   See the annotation for p. 277/243.
 
-- [p. 192/168] The harvesting battle between Death and the Combined
-  Harvester has echoes of various similar contests in American folklore.
+- [p. 192/168] The harvesting battle.
 
-  There is for instance the story of the legendary American lumberjack Paul
-  Bunyan and the Lumber Machine. According to that legend (as told in the
-  Disney cartoon, ahem), Paul realised, after a magnificent battle at the
-  end of which the Machine had won by a quarter-inch more timber, that the
-  age of the great lumberjacks was over, and he wandered off with his steed
-  Babe the Blue Ox, never to be seen again.
+  The harvesting battle between Death and the Combined Harvester has echoes of
+  various similar contests in American folklore. There is for instance the story
+  of the legendary American lumberjack Paul Bunyan and the Lumber
+  Machine. According to that legend (as told in the Disney cartoon, ahem), Paul
+  realised, after a magnificent battle at the end of which the Machine had won
+  by a quarter-inch more timber, that the age of the great lumberjacks was over,
+  and he wandered off with his steed Babe the Blue Ox, never to be seen again.
 
   There's also the much older American folk song 'John Henry', which
   describes a similar contest in which John Henry beats the new
@@ -5181,10 +5234,12 @@ REAPER MAN
   A quote that Terry uses again in another, similar situation. See the
   annotation for p. 236/170 of _Small Gods_.
 
-- [p. 259/226] The idea of a were-man and were-woman who fall in love, but
-  whose animal and human phases are out of sync with respect to each other
-  was the main plot element in the 1985 fantasy movie _Ladyhawke_, starring
-  Rutger Hauer and Michelle Pfeiffer.
+- [p. 259/226] The love of a were-man and were-woman.
+
+  The idea of a were-man and were-woman who fall in love, but whose animal and
+  human phases are out of sync with respect to each other was the main plot
+  element in the 1985 fantasy movie _Ladyhawke_, starring Rutger Hauer and
+  Michelle Pfeiffer.
 
 - [p. 264/230] "Azrael, the Great Attractor, the Death of Universes, [...]"
 
@@ -5345,9 +5400,11 @@ WITCHES ABROAD
   can cause a storm because in Chaos theory results are not proportional to
   causes.
 
-- [p. 9/9] The three urban legends Terry mentions briefly in the footnote
-  are all quite well-known, and can be found in any decent collection of
-  such stories, but just in case not everyone is familiar with them:
+- [p. 9/9] The three urban.
+
+  The three urban legends Terry mentions briefly in the footnote are all quite
+  well-known, and can be found in any decent collection of such stories, but
+  just in case not everyone is familiar with them:
 
   The first story is about a family whose grandmother dies on vacation. In
   order to avoid bureaucratic hassle they decide to strap her to the
@@ -5592,12 +5649,14 @@ WITCHES ABROAD
   astonished beyond belief). Similarly, 'die flabbergast' apparently was a
   Mozart-spoofing sketch that Dudley Moore did in _Beyond The Fringe_.
 
-- [p. 87/75] The names the witches are considering for themselves are puns
-  on existing airline companies or their acronyms. Nanny Ogg starts to say
-  _Virgin Airlines_, but is rudely interrupted by a gust of wind.
+- [p. 87/75] The names for the giant broomstick.
+
+  The names the witches are considering for themselves are puns on existing
+  airline companies or their acronyms. Nanny Ogg starts to say _Virgin
+  Airlines_, but is rudely interrupted by a gust of wind.
 
 - [p. 88/77] "'I like stuff that tells you plain what it is, like...
-  well... Bubble and Squeak, or... or... Spotted Dick,' said Nanny
+  well... Bubble and Squeak, or... or...' 'Spotted Dick,' said Nanny
   absently."
 
   Americans might be amazed to learn that Bubble and Squeak, Spotted Dick,
@@ -5734,9 +5793,10 @@ WITCHES ABROAD
   comes in a bottle, and many feel that Baum had alcohol in mind when he
   wrote it.
 
-- [p. 139/122] The farmhouse landing on Nanny Ogg, and the subsequent
-  events involving dwarfs looking for ruby-coloured footwear are references
-  to _The Wizard of Oz_.
+- [p. 139/122] Movie references.
+
+  The farmhouse landing on Nanny Ogg, and the subsequent events involving dwarfs
+  looking for ruby-coloured footwear are references to _The Wizard of Oz_.
 
   All Terry's references are to the movie version, incidentally, not the
   book. In the book Dorothy obtains Silver Shoes instead of Ruby Slippers,
@@ -5821,7 +5881,9 @@ WITCHES ABROAD
   See the annotation for p. 195/159 of _Mort_ for another type of meta-joke
   based on the alligator joke.
 
-- [p. 177/155] Emberella --> Embers; Cinderella --> Cinders...
+- [p. 177/155] Emberella.
+
+  Emberella --> Embers; Cinderella --> Cinders...
 
 - [p. 179/157] "'I am called Saturday.' 'Man Saturday, eh?' said Nanny Ogg."
 
@@ -5860,7 +5922,9 @@ WITCHES ABROAD
   the characters in the board game (and subsequent movie) _Clue_ (or
   _Cluedo_).
 
-- [p. 229/201] Casanunda, "the world's greatest lover", refers to our
+- [p. 229/201] Casanunda.
+
+  Casanunda, "the world's greatest lover", refers to our
   world's Casanova. Notice that Casanova is often roughly pronounced as
   'Casanover' (emphasis on the 'over'), and that Casanunda (emphasis on the
   'unda') is a dwarf...
@@ -5991,8 +6055,8 @@ SMALL GODS
 
   See the annotation for p. 88/79 of _Reaper Man_.
 
-- [p. 19/15] _You Don't Have To Be Pitilessly Sadistic To Work Here But It
-  Helps!!!_
+- [p. 19/15] "_You Don't Have To Be Pitilessly Sadistic To Work Here But It
+  Helps!!!_"
 
   Refers to those lame stickers and signs in offices and work areas all
   over the world that say: "You don't have to be insane to work here but it
@@ -6178,8 +6242,10 @@ SMALL GODS
   Officers slept in the after part of the ship where they could get easy
   access to the tiller.
 
-- [p. 117/85] Terry Pratchett translates the book title _Ego-Video Liber
-  Deorum_ here as _Gods: A Spotter's Guide_.
+- [p. 117/85] _Ego-Video Liber Deorum_.
+
+  Terry Pratchett translates the book title _Ego-Video Liber Deorum_ here as
+  _Gods: A Spotter's Guide_.
 
   Actually, the dog-Latin translates more literally to _The I-Spy Book of
   Gods_. I-Spy books are little books for children with lists of things to
@@ -6237,8 +6303,10 @@ SMALL GODS
   Indian mythology, who spent his youth playing the flute and dancing with
   as many as 100 milkmaids at a time.
 
-- [p. 139/101] Legibus's entrance incorporates some concepts borrowed from
-  several legends of famous philosophers.
+- [p. 139/101] Legibus's entrance.
+
+  Legibus's entrance incorporates some concepts borrowed from several legends of
+  famous philosophers.
 
   Archimedes was the one who jumped out of the bath and ran naked down the
   street shouting 'Eureka!' after he'd discovered the principle of fluid
@@ -6285,14 +6353,17 @@ SMALL GODS
 
   Federal Express (or FedEx) is an overnight shipping courier service.
 
-- [p. 154/112] A running gag in the book is the penguin associated with
-  Patina, the Goddess of Wisdom. This refers to Minerva or Pallas Athena
-  (*Pal*-las A-*thena*, get it, get it?), who was the Roman/Greek goddess
-  of wisdom, and whose symbol was an owl.
+- [p. 154/112] The bird in the doorway.
 
-- [p. 159/115] The Greek name Didactylos, besides having the word
-  'didactic' as its root (very appropriate for a philosopher), also
-  translates as 'Two-fingers'.
+  A running gag in the book is the penguin associated with Patina, the Goddess
+  of Wisdom. This refers to Minerva or Pallas Athena (*Pal*-las A-*thena*, get
+  it, get it?), who was the Roman/Greek goddess of wisdom, and whose symbol was
+  an owl.
+
+- [p. 159/115] Didactylos.
+
+  The Greek name Didactylos, besides having the word 'didactic' as its root
+  (very appropriate for a philosopher), also translates as 'Two-fingers'.
 
   The British equivalent of "giving someone the finger" consists of
   extending two fingers upwards, palm facing the gesturer, in a kind of
@@ -6320,13 +6391,17 @@ SMALL GODS
 
   That comment probably being: "It's all a load of balls".
 
-- [p. 168/121] _Nil Illegitimo Carborundum_ is dog-Latin for "Don't let the
-  bastards grind you down".
+- [p. 168/121] _Nil Illegitimo Carborundum_.
+
+  _Nil Illegitimo Carborundum_ is dog-Latin for "Don't let the bastards grind
+  you down".
 
   Variants of it crop up in various places, most notably _Nil Carborundi
   Illegitimo_ which apparently is a key phrase in the Illuminati mythos.
 
-- [p. 170/122] Urn's name is a reference to the old joke:
+- [p. 170/122] Urn.
+
+  Urn's name is a reference to the old joke:
 
       Question: "What's a Greek urn?"
       Answer: "About $2,50 an hour!"
@@ -6397,11 +6472,14 @@ SMALL GODS
 
   All libraries are connected through L-Space anyway, aren't they?
 
-- [p. 183/132] Didactylos carrying a lantern and living in a barrel is a
-  reference to Diogenes, the famous philosopher who is reputed to have done
-  the same.
+- [p. 183/132] Didactylos carrying a lantern.
 
-- [p. 184/132] Aristocrates = Aristotle + Socrates + aristocratic.
+  Didactylos carrying a lantern and living in a barrel is a reference to
+  Diogenes, the famous philosopher who is reputed to have done the same.
+
+- [p. 184/132] Aristocrates.
+
+  Aristocrates = Aristotle + Socrates + aristocratic.
 
 - [p. 185/133] "Art was not permitted in Omnia."
 
@@ -6503,8 +6581,10 @@ SMALL GODS
   of snow" comment which the press, seeking as usual for any excuse to make
   fun of British Rail, leapt upon with great glee.
 
-- [p. 231/166] Didactylos' anecdote about the royal road to learning
-  parodies a similar one told about Aristotle and Alexander the Great.
+- [p. 231/166] Didactylos' anecdote.
+
+  Didactylos' anecdote about the royal road to learning parodies a similar one
+  told about Aristotle and Alexander the Great.
 
 - [p. 236/170] "'I'm just going out,' said Brutha. 'I may be some time.'"
 
@@ -6716,8 +6796,9 @@ SMALL GODS
   "Hell is other people" is a quote from, and the message of, Jean-Paul
   Sartre's play _No Exit_.
 
-- [p. 355/255] Could the name Fasta Benj possibly be derived from 'Faster,
-  Ben Johnson'?
+- [p. 355/255] Fasta Benj.
+
+  Could the name Fasta Benj possibly be derived from 'Faster, Ben Johnson'?
 
 - [p. 377/270] "REMIND ME AGAIN, he said, HOW THE LITTLE HORSE-SHAPED ONES
   MOVE."
@@ -6726,7 +6807,7 @@ SMALL GODS
   Death dreads playing symbolic last chess games because "he could never
   remember how the knight was supposed to move".
 
-- Rumours about missing scene
+- Rumours about missing scene.
 
   There is a rumour going round that there was to be a crucifixion scene at
   the end of this book but that the publishers made Terry take it out.
@@ -7167,10 +7248,11 @@ LORDS AND LADIES
         Oh 'tis my delight on a shining night
         In the season of the year!
 
-- [p. 174/126] The three paths leading from the cross-roads in the woods
-  are variously described as being "all thorns and briars", "all winding",
-  and the last (which the Lancre Morris Men decide to take) as "Ferns grew
-  thickly alongside it".
+- [p. 174/126] The three paths.
+
+  The three paths leading from the cross-roads in the woods are variously
+  described as being "all thorns and briars", "all winding", and the last (which
+  the Lancre Morris Men decide to take) as "Ferns grew thickly alongside it".
 
   This echoes the poem and folk song 'Thomas the Rhymer', about a man who
   followes the Queen of Elves to Elfland:
@@ -7313,7 +7395,7 @@ LORDS AND LADIES
 
   Refers back to certain events described more fully in _Sourcery_.
 
-- [p. 250/180] _Jane's All The World Siege Weapons_
+- [p. 250/180] _Jane's All The World Siege Weapons_.
 
   _Jane's_ is a well known series of books/catalogues for military
   equipment of all sorts and types. There is a Jane's for aeroplanes, for
@@ -7609,7 +7691,7 @@ LORDS AND LADIES
 
 MEN AT ARMS
 
-- 'Discworld' as a registered trademark
+- 'Discworld' as a registered trademark.
 
   Starting with "Men at Arms", the word 'Discworld' appeared on the
   copyright page with a 'registered trademark' symbol appended to it.
@@ -7629,7 +7711,7 @@ MEN AT ARMS
   afp readers ought to know that. It's been done so that we have a decent
   lever if there's a BIG problem."
 
-- Terry comments on potential spoilers in the back cover
+- Terry comments on potential spoilers in the back cover.
 
   Someone complained on the net that the picture of the Gonne on the back
   cover of _Men at Arms_ gives away too much information about the story.
@@ -7952,9 +8034,11 @@ MEN AT ARMS
   star lunched himself in his car, although, come to think of it, not on
   chips."
 
-- [p. 159/120] Some people on a.f.p. indicated that they had difficulty
-  understanding just what the Gargoyle was saying, so here is a translation
-  into English of his side of the dialogue:
+- [p. 159/120] Gargoyle's dialogue.
+
+  Some people on a.f.p. indicated that they had difficulty understanding just
+  what the Gargoyle was saying, so here is a translation into English of his
+  side of the dialogue:
 
       "Right you are."
       "Cornice overlooking broadway."
@@ -8186,7 +8270,7 @@ MEN AT ARMS
   using the term in its original meaning, as a colloquialism for whisky --
   particularly, the homemade 'moonshine' variety.
 
-- [p. 218/165] VIA CLOACA
+- [p. 218/165] VIA CLOACA.
 
   The major sewer in ancient Rome, running down into the Tiber, was called
   the Cloaca Maxima. Anything with 'Via' in its name would have been a
@@ -8805,7 +8889,7 @@ SOUL MUSIC
   recently reintroduced to the public as a punchline to a joke in the movie
   _Who Framed Roger Rabbit_.
 
-- [p. 48/37] _A-bam-bop-a-re-bop-a-bim-bam-boom._
+- [p. 48/37] _A-bam-bop-a-re-bop-a-bim-bam-boom_.
 
   A-wap-ba-ba-looba-a-wap-bam-boom, one of rock 'n roll's most famous
   phrases, from Little Richard's 'Tutti Frutti'.
@@ -9160,7 +9244,7 @@ SOUL MUSIC
   The name of the classic movie is _Rebel Without A Cause_. Starring
   James... Dean.
 
-- [p. 174/131] Song Titles.
+- [p. 174/131] Song titles.
 
   'Don't Tread On My New Blue Boots' is Carl Perkins' 'Blue Suede Shoes',
   'Good Gracious Miss Polly' is Little Richard's 'Good Golly Miss Molly'
@@ -9724,7 +9808,7 @@ SOUL MUSIC
 
 INTERESTING TIMES
 
-- [title] _Interesting Times_
+- [title] _Interesting Times_.
 
   One remarkable thing about this book's title is that it changed at least
   twice since Terry began working on it. It started out as _Unclear
@@ -10311,7 +10395,7 @@ MASKERADE
   someone who played a hapless berk in a black beret, suddenly emerged as
   the suave Phantom."
 
-- [p. 138] Grand Guignol
+- [p. 138] Grand Guignol.
 
   See the annotation for p. 239/172 of _Lords and Ladies_.
 
@@ -11292,7 +11376,7 @@ HOGFATHER
   question to him: "'Actually... where *do* [the Tooth Fairies] take the
   teeth?'"
 
-+ Terry comments on the book
++ Terry comments on the book.
 
   When _Hogfather_ was being written, Terry answered the question what it
   was going to be about as follows:
@@ -15632,12 +15716,12 @@ NIGHT WATCH
 
 THE WEE FREE MEN
 
-+ [title] _The Wee Free Men_
++ [title] _The Wee Free Men_.
 
   The working title of this book was _For Fear of Little Men_. See also the
   annotation for p. 287/207 of _Lords and Ladies_.
 
-+ On the name _Nac Mac Feegle_.
++ The name _Nac Mac Feegle_.
 
   The Nac Mac Feegle appear to be very Scottish in nature. Terry says:
 
@@ -16763,7 +16847,7 @@ THE DISCWORLD COMPANION
   his career he printed more than 70 books, 20 of them his own translations
   from the Latin, French, and Dutch. Wynkyn de Worde was his successor.
 
-- Coats of arms in Discworld
+- Coats of arms in Discworld.
 
   _The Discworld Companion_ contains neat illustrations and heraldic
   descriptions of all the coats of arms of the various important guilds and
@@ -16983,7 +17067,7 @@ This book was released in May 2005. No annotations yet.
 
 THE STREETS OF ANKH-MORPORK
 
-- B4--D4 Chrononhotonthologos Street
+- B4--D4 Chrononhotonthologos Street.
 
   _Chrononhotonthologos_ is the name of an 18th century burlesque stage
   farce by Henry Carey. I have no idea why there is a Chrononhotonthologos
@@ -17241,7 +17325,9 @@ GOOD OMENS
   Antichrist being raised in a normal household) was forced by little
   Damien over the edge of an upstairs railing with his tricycle.
 
-- [p. 68/40] The nursery rhyme Nanny Astoreth sings to Warlock:
+- [p. 68/40] Nanny's rhyme.
+
+  The nursery rhyme Nanny Astoreth sings to Warlock:
 
         Oh, the grand old Duke of York
         He had ten thousand men
@@ -17299,11 +17385,13 @@ GOOD OMENS
         Lucky lucky lucky
         I should be so lucky in love
 
-  Notice that this is yet another misquote: there are only *four*
-  successive 'lucky's', not five.
+  Notice that this is yet another misquote: there are only *four* successive
+  'lucky's', not five.
 
-- [p. 79/46] The scenes of Adam growing up in Tadfield are an affectionate
-  parody of the _Just William_ books by Richmal Crompton.
+- [p. 79/46] Adam's upbringing in Tadfield.
+
+  The scenes of Adam growing up in Tadfield are an affectionate parody of the
+  _Just William_ books by Richmal Crompton.
 
   They are a series of books about William Brown (age 11) and his gang of
   Outlaws: Ginger, Douglas and Henry. The Johnsonites in _Good Omens_
@@ -17634,7 +17722,9 @@ GOOD OMENS
 
   See also the annotation for p. 239 of _Hogfather_.
 
-- [p. 265/180] The name Citron Deux-Chevaux refers to the Citroen 2CV, or
+- [p. 265/180] Citron Deux-Chevaux.
+
+  The name Citron Deux-Chevaux refers to the Citroen 2CV, or
   deux-chevaux as it is commonly called in Europe ("chevaux" means horses
   -- 'CV' has a (very loose) connection with horsepower).
 
@@ -17659,7 +17749,9 @@ GOOD OMENS
   I have subsequently been informed that currently existing 'Curl Up and
   Dye' hairdressers can be found in both Birmingham and Chepstow.
 
-- [p. 280/191] _Sprechen Sie Deutsch_ and _Parlez-vous Francais_ are German
+- [p. 280/191] Various language quotes.
+
+  _Sprechen Sie Deutsch_ and _Parlez-vous Francais_ are German
   and French respectively for "do you speak German/French", but "Wo bu hui
   jiang zhongwen" is Chinese for "I can't speak Chinese".
 
@@ -17752,7 +17844,9 @@ GOOD OMENS
   Crowley is trying to say 'Lord of the Flies', which is the literal
   meaning of the Hebrew word 'Beelzebub'.
 
-- [p. 355/248] Dick Turpin is the name of a famous British highwayman.
+- [p. 355/248] Dick Turpin.
+
+  Dick Turpin is the name of a famous British highwayman.
   Hence the joke about Newt's car being called 'Dick Turpin': "'Because
   everywhere I go, I hold up traffic,' he mumbled wretchedly."
 
@@ -17766,18 +17860,22 @@ GOOD OMENS
         There were angels dining at the Ritz
         And a nightingale sang in Berkeley Square
 
-- [p. 375/262] The _Necrotelecomnicom_ also appears (but spelled
-  'Necrotelicomnicom') in the Discworld books.
+- [p. 375/262] The _Necrotelecomnicom_.
+
+  The _Necrotelecomnicom_ also appears (but spelled 'Necrotelicomnicom') in the
+  Discworld books.
 
   See the annotation for p. 111/109 of _Equal Rites_).
 
-- [p. 375/262] The _Malleus Maleficarum_ is the name of an existing 15th
-  century guidebook for witch-hunters, written by Heinrich Kramer and
-  Joseph Sprenger (one a Dominican Inquisitor, the other the Mayor of
-  Cologne), two high-ranking officials of the Catholic church. This book
-  apparently became Europe's first best-seller after the invention of the
-  printing press, and the (early 20th century) English translation of this
-  book, _The Hammer of Witches_, is still in print today.
+- [p. 375/262] The _Malleus Maleficarum_.
+
+  The _Malleus Maleficarum_ is the name of an existing 15th century guidebook
+  for witch-hunters, written by Heinrich Kramer and Joseph Sprenger (one a
+  Dominican Inquisitor, the other the Mayor of Cologne), two high-ranking
+  officials of the Catholic church. This book apparently became Europe's first
+  best-seller after the invention of the printing press, and the (early 20th
+  century) English translation of this book, _The Hammer of Witches_, is still
+  in print today.
 
 - [p. 377/264] "It was Sunday afternoon."
 
@@ -17860,7 +17958,7 @@ GOOD OMENS
         And what rough beast, its hour come round at last
         Slouches toward Bethlehem to be born?
 
-- Potential sequal
+- Potential sequal.
 
   Terry Pratchett and Neil Gaiman did have the title _668 -- The Neighbour
   of the Beast_ on hand for a _Good Omens_ sequel, but since Neil Gaiman
@@ -17871,7 +17969,7 @@ GOOD OMENS
   of them predating _Good Omens_. Terry again points out that it's only to
   be expected since the joke is so obvious.
 
-- _Good Omens_ and ads
+- _Good Omens_ and ads.
 
   There is a British KitKat chocolate bar TV commercial that predates _Good
   Omens_, and which involves an angel and a devil who are just starting
@@ -17903,7 +18001,7 @@ GOOD OMENS
   Tempest_, and someone said "Hell is empty and all the devils are here".
   It was a weird evening, really."
 
-- The back cover photograph
+- The back cover photograph.
 
   People have been wondering (a) where the back cover photograph of _Good
   Omens_ was taken, and (b) which one of them is Terry Pratchett.
@@ -17927,7 +18025,7 @@ GOOD OMENS
 
 STRATA
 
-- The book
+- The book.
 
   The whole book is, in a very general way, modelled on Larry Niven's
   classic _Ringworld_ novel: a group of differently-raced beings explore an
@@ -17984,19 +18082,19 @@ STRATA
 
 THE DARK SIDE OF THE SUN
 
-- Homage to Isaac Asimov
+- Homage to Isaac Asimov.
 
   Just as _Strata_ borrows from Larry Niven, so does _The Dark Side of the
   Sun_ pay homage to the famous SF-writer Isaac Asimov.
 
-- [p. 5/5] _The Lights In The Sky Are Photofloods_
+- [p. 5/5] _The Lights In The Sky Are Photofloods_.
 
   _The Lights in the Sky are Stars_ is the title of a science fiction
   novel by Fredric Brown (who was most famous for his 'twisted-ending'
   short-short stories, but who is unfortunately almost completely
   forgotten today).
 
-- [p. 6/6] The best dagon fishers could ride a shell with their toes.
+- [p. 6/6] "The best dagon fishers could ride a shell with their toes."
 
   For an explanation of the word 'dagon' see the annotation for p. 197/149
   of _Men at Arms_.
@@ -18005,12 +18103,14 @@ THE DARK SIDE OF THE SUN
 
   A parallel to Asimov's psychohistory in the _Foundation Series_.
 
-- [p. 27/31] The robot Isaac is obviously modelled on Asimov's well-known
-  positronic robots (and less obviously inspired by a similar robot that
-  appears in Robert Sheckley's _Dimension of Miracles_). Isaac [the robot]
-  follows a more extended version of Asimov's equally famous 'Three Laws of
-  Robotics', though: on p. 53/62: "'[...] Eleventh Law of Robotics, Clause
-  C, As Amended,' said the robot firmly."
+- [p. 27/31] The robot Isaac.
+
+  The robot Isaac is obviously modelled on Asimov's well-known positronic robots
+  (and less obviously inspired by a similar robot that appears in Robert
+  Sheckley's _Dimension of Miracles_). Isaac [the robot] follows a more extended
+  version of Asimov's equally famous 'Three Laws of Robotics', though: on
+  p. 53/62: "'[...] Eleventh Law of Robotics, Clause C, As Amended,' said the
+  robot firmly."
 
 - [p. 42/49] "'Beng take them!'"
 
@@ -18187,7 +18287,7 @@ TRUCKERS
 
 DIGGERS
 
-- [title] _Diggers_
+- [title] _Diggers_.
 
   In the Corgi paperback editions I have, _Diggers_ and _Wings_ are
   subtitled "The Second [respectively Third] Book Of The Nomes".
@@ -18203,7 +18303,7 @@ DIGGERS
   didn't like it. In the US, there were no objections, so to this day US
   editions of the Nome trilogy are subtitled _The Bromeliad_.
 
-- Terry comments on similarities to the _Borrowers_ books
+- Terry comments on similarities to the _Borrowers_ books.
 
   People have commented on the similarity between the Nome trilogy and
   other childrens stories involving "little people". In particular, the
@@ -18221,7 +18321,7 @@ DIGGERS
   defend them as being *more serious* than the Borrowers. It depends on how
   you define 'serious'."
 
-- Differences between the versions
+- Differences between the versions.
 
   The American version of the Nome trilogy is not word-for-word the same as
   the original one.
@@ -18291,7 +18391,7 @@ computer shoot-em-up arcade game.
   "Let's say I've played Wing Commander and Elite and X-Wing and loads of
   other games, so writing that first page was easy for me :-)"
 
-- [p. 9/9] The Hero With A Thousand Extra Lives
+- [p. 9/9] The Hero With A Thousand Extra Lives.
 
   A reference to the title of Joseph Campbell's _The Hero with a Thousand
   Faces_, an anthropological work comparing and contrasting Hero myths from
@@ -18308,16 +18408,20 @@ computer shoot-em-up arcade game.
 
   'Asteroids' is the name of an ancient, very famous computer game.
 
-- [p. 27/27] Johnny's nickname for his friend: 'MC Spanner', spoofs our
-  world's pop-rap star 'MC Hammer' (a spanner is a wrench, and also
-  (colloquially) equates as a mild insult to the American English 'dork').
+- [p. 27/27] MC Spanner.
 
-- [p. 40/40] This is not really an annotation, because I think it is highly
-  improbable that there is an actual link here, but the idea of Terry's
-  'Cereal Killers' immediately reminded me of the short science fiction
-  stories by Philip K. Dick. Not any particular one, but just the whole
-  idea of something horrible masquerading as something ridiculously
-  innocent appears again and again in Dick's slightly paranoid oeuvre.
+  Johnny's nickname for his friend: 'MC Spanner', spoofs our world's pop-rap
+  star 'MC Hammer' (a spanner is a wrench, and also (colloquially) equates as a
+  mild insult to the American English 'dork').
+
+- [p. 40/40] The Cereal Killers.
+
+  This is not really an annotation, because I think it is highly improbable that
+  there is an actual link here, but the idea of Terry's 'Cereal Killers'
+  immediately reminded me of the short science fiction stories by Philip
+  K. Dick. Not any particular one, but just the whole idea of something horrible
+  masquerading as something ridiculously innocent appears again and again in
+  Dick's slightly paranoid oeuvre.
 
   The serial/cereal pun itself is of course fairly obvious, and can be
   found in many other places, from old Infocom adventure games to Neil
@@ -19192,7 +19296,7 @@ into their books.
 
 The examples I have had reported to me so far:
 
-- _Due South_
+- _Due South_.
 
   The most often remarked-upon reverse annotation of the past year or so
   concerns the television series _Due South_, which is about the adventures
@@ -19213,7 +19317,7 @@ The examples I have had reported to me so far:
   and in one episode of _Due South_ Fraser and his partner are locked in a
   meat storage room and nearly freeze to death...
 
-- Computer Games
+- Computer Games.
 
   References to the Discworld have occasionally been cropping up in
   otherwise unrelated computer games. In _Angband_, for instance, one of
@@ -19228,7 +19332,7 @@ The examples I have had reported to me so far:
   the Luggage.
 
 - _Dream Park: The Californian Voodoo Game_, by Larry Niven and Stephen
-  Barnes, 1991
+  Barnes, 1991.
 
   The UK edition of this book describes the character Alan Myers as "a
   Terry Pratchett wizard". In the U.S. edition this sentence was simply
@@ -19243,7 +19347,7 @@ The examples I have had reported to me so far:
   Note the misspelling of Discworld.
 
 - _Object-Oriented Languages, Systems and Applications_, by Blair,
-  Hutchinson, Gallagher and Shepherd, 1991
+  Hutchinson, Gallagher and Shepherd, 1991.
 
   "Consider the domain of Colours. If we have Red, Green and Blue, but now
   widen the domain to include Octaroon, an old program may read an unknown
@@ -19255,7 +19359,7 @@ The examples I have had reported to me so far:
   formal text book, _The Colour of Magic_ gets a proper mention in the
   references.
 
-- The _British Medical Journal_, January 1996 edition
+- The _British Medical Journal_, January 1996 edition.
 
   The BMJ has a 'Soundings' page, where doctors get a chance to write about
   a subject of their choice. In this issue, Liam Farrell, a GP from
@@ -19264,19 +19368,19 @@ The examples I have had reported to me so far:
   "This is only common sense, but, as we have said before, in academic
   general practice, common sense is as rare as a tourist in Ankh-Morpork."
 
-- _The Books of Magic_, by John Ney Rieber, issue #13, April 1995
+- _The Books of Magic_, by John Ney Rieber, issue #13, April 1995.
 
   Tim and Molly on their way through Soho, London, pass a movie theatre.
   The Billboard says: "PRATCHETT THEATRE -- now playing: Unseen Demo..."
   (the rest is cut off).
 
-- _The Books of Magic II_, by Neil Gaiman and Scott Hampton, 1990
+- _The Books of Magic II_, by Neil Gaiman and Scott Hampton, 1990.
 
   Tim is told of an occult battle taking place offstage in Calcutta: "You
   wouldn't believe it. The cult of Kali, three Ninja death squads, the
   Brotherhood of the Cold Flame, a thousand elephants..."
 
-- _Dirty Work_, by Dan McGirt, 1993, Pan Books, ISBN 0 330 32391 1, p. 215
+- _Dirty Work_, by Dan McGirt, 1993, Pan Books, ISBN 0 330 32391 1, p. 215.
 
   The relevant quotation is:
 
@@ -20845,5 +20949,3 @@ will appear. Until then, I merely claim the editorial copyright on the APF
 on behalf of Mike Kew and myself as editors, and I request that everyone
 abide with the informal requests and restrictions outlined in the previous
 section, _Copying the APF_.
-
----------------------------------------------------------------------------
