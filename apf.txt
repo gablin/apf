@@ -16748,8 +16748,47 @@ This collection of short stories and non-fiction was released in September
 
 GOING POSTAL
 
-This book was released in November 2004. No annotations yet.
++ [cover]
 
+  The cover design was inspired by the original _Star Wars_ film poster, due to
+  other Star Wars references in the book.
+
++ [title] _Going Postal_.
+
+  Around 1986 several mentally stressed U.S. Postal Service employees went on a
+  shooting rampage at post offices, killing employees and bystanders. This
+  resulted in the U.S. Postal Service (and many other organizations)
+  re-evaluating employee work conditions and decreasing stress in the work
+  place. The term has remained in U.S. slang for when an employee or ex-employee
+  goes on a murder rampage at his workplace, though it is more used to predict
+  that someone is getting upset with job conditions enough to go postal. In the
+  book this emotional condition is perfectly represented by Stanley.
+
++ The character Tolliver Groat.
+
+  The name, the character description, and the vast, runned-down Post Office
+  building are straight out of Mervyn Peake's three novels called the
+  _Gormenghast_ series; Tolliver Groat's personal take on the grotesque means
+  that he could walk in to Peake's fantasy virtually as is. Indeed, Groat's
+  dogged adherence to rule and ritual -- his having practically memorised the
+  Post Office rulebook long after the system has effectively collapsed and his
+  insistence the rules still be followed because, well, they are the Rules -- is
+  reminiscent of Barquentine: the ageing, repellent, and soap-innocent Master of
+  Ceremonies.
+
+  Moist von Lipwig's timely arrival to the Post Office makes him a less
+  malevolent version of Steerpike, the _Gormenghast_ character who shakes the
+  system up and reinvigorates it. Steerpike climbs, both metaphorically and
+  literally, from the lowest Hell-like depths of the kitchens, where he is
+  otherwise imprisoned for life as a lowly scullion, to the higher floors of the
+  castle -- via the *outside* of the building, where nobody questions his right
+  to be there -- which allows him to reintegrate himself at a higher social
+  level with a series of plausible cover stories. Compare this to Moist's
+  resurrection from the dead and rebirth into a higher social position. The
+  climbing metaphor becomes more explicit in _Making Money_, where, as with
+  Steerpike's desperation climb, Moist is found edificeering on the exterior of
+  his own building and just about to be exposed as a thief and a crook -- for
+  all the wrong reasons...
 
 THUD!
 
