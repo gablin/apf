@@ -10490,7 +10490,7 @@ MASKERADE
 
 FEET OF CLAY
 
-- [title] _Feet of Clay_
+- [title] _Feet of Clay_.
 
   The original working title for this book was _Words in the Head_.
 
@@ -12248,7 +12248,7 @@ HOGFATHER
 
 JINGO
 
-- [title] _Jingo_
+- [title] _Jingo_.
 
   "By jingo!" is an archaic, jocular oath, of obscure origin, used in
   Britain in the 18th and 19th centuries. The word -- with derived forms
@@ -12971,7 +12971,7 @@ JINGO
 
 THE LAST CONTINENT
 
-- [title] _The Last Continent_
+- [title] _The Last Continent_.
 
   The title puns on "The Lost Continent", a literary phrase associated with
   vanished worlds, both literal (e.g. Col James Churchward's 1931 _The Lost
@@ -14961,7 +14961,7 @@ THIEF OF TIME
   creature of time... which brought in Death and the Auditors, with their
   known animosity to life... and so it went."
 
-- [title] "_Thief of Time_"
+- [title] _Thief of Time_.
 
   From the old saying: Procrastination is the thief of time.
 
@@ -15551,7 +15551,7 @@ NIGHT WATCH
   Dickens' _A Tale of Two Cities_ to the actual Paris Commune of 1871, and
   everything in between.
 
-- [title] _Night Watch_
+- [title] _Night Watch_.
 
   The working title for this book was _The Nature of the Beast_, but this
   was discarded when Frances Fyfield published a book with exactly that
@@ -16113,7 +16113,7 @@ THE WEE FREE MEN
 
 MONSTROUS REGIMENT
 
-- [title] _Monstrous Regiment_
+- [title] _Monstrous Regiment_.
 
   The title of this book is a reference to the pamphlet _The First Blast of
   the Trumpet against the Monstrous Regiment of Women_, written by John
@@ -16819,7 +16819,7 @@ Terry mentioned this novel at the Discworld Convention 2004. It will be the
 fourth Tiffany Aching novel, and "depending on what happens in [it]", there
 may be a fifth one. But either fourth or fifth book will be the last one.
 
-- [title] _I Shall Wear Midnight_
+- [title] _I Shall Wear Midnight_.
 
   For an explanation of the title, see the annotation for p. 333 of _A Hat
   Full of Sky_.
