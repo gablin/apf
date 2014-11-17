@@ -774,8 +774,8 @@ def extractQuoteParts(s):
     sign = ""
     pages = ""
     quote = ""
-    pos = s.find("] ")
-    if pos >= 0:
+    pos = s.find("]")
+    if s[2] == "[" and pos >= 0:
         sign = s[0]
         pages = s[2:pos + 1]
         quote = s[pos + 2:].strip()
@@ -788,7 +788,7 @@ def extractQuoteParts(s):
         else:
             reportErrorAndExit("Invalid quote syntax")
 
-    # Same but truly UGLY fixes for solving overflowing \hboxes, but I can find
+    # Some truly UGLY fixes for solving overflowing \hboxes, but I can find
     # no better way of doing it...
     quote = quote.replace("\"Whoever would be wearing those suits, "
                           + "Rincewind decided, was expecting to boldly go "
