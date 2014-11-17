@@ -16766,7 +16766,25 @@ The page numbers refer to the Harper Fiction paperback edition.
   that someone is getting upset with job conditions enough to go postal. In the
   book this emotional condition is perfectly represented by Stanley.
 
-+ The character Tolliver Groat.
+
++ [p. 3] The clacks.
+
+  The Discworld's version of the electronic telegraph -- it is also a play on
+  the word 'fax' -- but is based on an optical semaphore device that uses
+  shutters to transmit information as signals of blinking light. With its eight
+  shutters, the clack tower resembles the real six-shutter semaphore design from
+  1795 by Lord George Murray. Other possible influences are the semaphore
+  network in Keith Roberts' novel _Pavane_, the hoodwinker towers in _The Blue
+  World_ by Jack Vance, and the telegraph system in _Lest Darkness Fall_ by
+  L. Sprangue de Camp. The name itself may have been influenced by William
+  Gibson and Bruce Sterling's steampunk novel _The Difference Engine_, where the
+  term 'clackers' is used for those operating the mechanical computers.
+
+  Moreover, since its first appearance in _The Fifth Elephant_ the clack tower
+  network has grown to the extent that it can be considered the 'Internet' of
+  Discworld.
+
++ [p. 29] The character Tolliver Groat.
 
   The name, the character description, and the vast, runned-down Post Office
   building are straight out of Mervyn Peake's three novels called the
@@ -16791,14 +16809,6 @@ The page numbers refer to the Harper Fiction paperback edition.
   Steerpike's desperation climb, Moist is found edificeering on the exterior of
   his own building and just about to be exposed as a thief and a crook -- for
   all the wrong reasons...
-
-+ [p. 3] The clacks.
-
-  The Discworld's version of the electronic telegraph -- it is also a play on
-  the word 'fax' -- but is based on an optical semaphore device that uses
-  shutters to transmit information as signals of blinking light. Moreover, since
-  its first appearance in _The Fifth Elephant_ the network of clack towers has
-  grown substantially to be considered the Internet of Discworld.
 
 
 THUD!
