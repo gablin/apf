@@ -464,6 +464,10 @@ def toLatexSub(s):
 
     s = latexifyMarkup(s)
 
+    # Remove initial space before footnotes due to the need to have a space
+    # in order to initiate the markup
+    s = s.replace(" \\footnote{", "\\footnote{")
+
     # Undo special cases
     s = s.replace("&m&", "*")
     s = s.replace("&q&", "'")
