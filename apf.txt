@@ -16750,11 +16750,6 @@ GOING POSTAL
 
 The page numbers refer to the Harper Fiction paperback edition.
 
-+ [cover]
-
-  The cover design was inspired by the original _Star Wars_ film poster, due to
-  other Star Wars references in the book.
-
 + [title] _Going Postal_.
 
   Around 1986 several mentally stressed U.S. Postal Service employees went on a
