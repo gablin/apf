@@ -16808,6 +16808,15 @@ The page numbers refer to the Harper Fiction paperback edition.
   his own building and just about to be exposed as a thief and a crook -- for
   all the wrong reasons...
 
++ [p. 103] "[...] And they talked a gibberish of their own, of [...] and
+  plug-code and hog-code and jacquard..."
+
+  'Jacquards' refer to the punched cards, developed by Joseph Marie Jacquard in
+  1805, on which patterns could be stamped. The cards were then inserted into a
+  mechanical loom called the 'Jacquard Loom' which would then weave the pattern.
+  There is a famous portrait of Jacquard, woven in silk, which required 24,000
+  punched cards to create.
+
 
 THUD!
 
