@@ -16782,7 +16782,11 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Moreover, since its first appearance in _The Fifth Elephant_ the clack tower
   network has grown to the extent that it can be considered the 'Internet' of
-  Discworld.
+  Discworld. There are even 'c-mail' addresses -- one appears on Igor's card
+  ("c-mail: Yethmarthter Uberwald") in _Thief of Time_ (p. 38), and another on
+  William de Worde's card ("e-mail: WDW@Times.AM") <<Yes, it actually *does* say
+  'e-mail' and not 'c-mail' on his card.>> in _Monstrous Regiment_ (p. 385) --
+  which is a clear reference to 'e-mail'.
 
 + [p. 29] The character Tolliver Groat.
 
