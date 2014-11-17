@@ -16748,6 +16748,8 @@ This collection of short stories and non-fiction was released in September
 
 GOING POSTAL
 
+The page numbers refer to the Harper Fiction paperback edition.
+
 + [cover]
 
   The cover design was inspired by the original _Star Wars_ film poster, due to
@@ -16789,6 +16791,14 @@ GOING POSTAL
   Steerpike's desperation climb, Moist is found edificeering on the exterior of
   his own building and just about to be exposed as a thief and a crook -- for
   all the wrong reasons...
+
++ [p. 3] The clacks.
+
+  The Discworld's version of the electronic telegraph -- it is also a play on
+  the word 'fax' -- but is based on an optical semaphore device that uses
+  shutters to transmit information as signals of blinking light. Moreover, since
+  its first appearance in _The Fifth Elephant_ the network of clack towers has
+  grown substantially to be considered the Internet of Discworld.
 
 
 THUD!
