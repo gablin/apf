@@ -16936,6 +16936,17 @@ The page numbers refer to the Harper Fiction paperback edition.
   morality fable). Now look at the chapter heading for the one that comes in
   between Chapter Seven and Chapter Nine. Look *closely* at it.
 
++ [p. 75] "'However, I note that since you acquired the Grand Trunk at a
+  fraction of its value, breakdowns are increasing, the speed of messages has
+  slowed down, and the cost to customers has risen.'"
+
+  While there are some parallels between the Grand Trunk and America's
+  now-broken AT&T telecommunications monopoly, there are far more parallels to
+  the UK's British Telecom, which is still a monopoly there and has very few
+  friends among its consumers. Interestingly, the history of BT is that it was
+  originally part of the British Post Office and was still known as "Post Office
+  Telecommunications" until 1980, shortly before it became privatized.
+
 + [p. 103] "And they talked a gibberish of their own, of [...] and plug-code and
   hog-code and jacquard..."
 
