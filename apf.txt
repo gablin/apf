@@ -16823,8 +16823,8 @@ The page numbers refer to the Harper Fiction paperback edition.
   Discworld equivalent of robots). Asimov, of course, didn't add the conditional
   "unless ordered to do so by duly constituted authority" that Vetinari did.
 
-+ [p. 27] "'"NEITHER RAIN NOR SNOW NOR GLO M OF NI T CAN STAY THESE MES ENGERS
-  ABO T THEIR DUTY."'"
++ [p. 27] "'NEITHER RAIN NOR SNOW NOR GLO M OF NI T CAN STAY THESE MES ENGERS
+  ABO T THEIR DUTY'"
 
   See annotation p. 72/54 in _Men at Arms_ (although a few letters appears to
   have fallen off since then).
