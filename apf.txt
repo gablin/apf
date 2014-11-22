@@ -16829,6 +16829,11 @@ The page numbers refer to the Harper Fiction paperback edition.
   See annotation p. 72/54 in _Men at Arms_ (although a few letters appears to
   have fallen off since then).
 
++ [p. 27] "'Who's Mrs. Cake? [...] They seem pretty frightened of her.'"
+
+  Mrs. Cake, first introduced in _Reaper Man_, is a psychic medium who, more
+  importantly, runs a boarding house for the undead of Ankh-Morpork.
+
 + [p. 29] The character Tolliver Groat.
 
   The name, the character description, and the vast, runned-down Post Office
