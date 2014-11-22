@@ -551,6 +551,9 @@ def toLatexSub(s):
     # Other layout fixes
     s = s.replace(" ]", "~]")
     s = s.replace(" p. ", " p.~")
+    s = s.replace("(p. ", "(p.~")
+    s = s.replace(" pp. ", " pp.~")
+    s = s.replace("(pp. ", "(pp.~")
 
     # A period followed by a lowercase letter is not a full stop
     i = 0
