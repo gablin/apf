@@ -16924,6 +16924,18 @@ The page numbers refer to the Harper Fiction paperback edition.
   particular -- are known for their persistent abuse of the apostrophe-ess
   combination on their handwritten signs.
 
++ [p. 66] "'The free golems earn 24--8 [...]'"
+
+  It's rarely mentioned anymore that the number eight is magically significant
+  on the Disc and tends to occur wherever our world would use a seven. In
+  particular, the Discworld week is 8 days long.
+
+  But at this point, go to your copy of _Going Postal_, which is the first
+  Discworld book to be separated into formal chapters (each has a heading where
+  the chapter contents are summarised at the start, in the manner of a Victorian
+  morality fable). Now look at the chapter heading for the one that comes in
+  between Chapter Seven and Chapter Nine. Look *closely* at it.
+
 + [p. 103] "And they talked a gibberish of their own, of [...] and plug-code and
   hog-code and jacquard..."
 
