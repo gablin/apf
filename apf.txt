@@ -135,7 +135,7 @@ will enjoy reading the APF as much as I have enjoyed putting it together.
 
 THE COLOUR OF MAGIC
 
-- [p. 7/7] "[...] He stares fixedly at the Destination."
+- [p. 7/7] "He stares fixedly at the Destination."
 
   This line is interesting not only because it foreshadows _The Light
   Fantastic_ (as in fact the entire prologue does), but also because it is
@@ -217,7 +217,7 @@ THE COLOUR OF MAGIC
   Widdershins is also the name of the planet where Dom, the hero from _The
   Dark Side of the Sun_ lives.
 
-- [p. 12/12] "'Why, it's Rincewind the wizard, isn't it?' [...]"
+- [p. 12/12] "'Why, it's Rincewind the wizard, isn't it?'"
 
   The story behind Rincewind's name goes back to 1924, when J. B. Morton
   took over authorship of the column 'By The Way' in the _Daily Express_, a
@@ -404,7 +404,7 @@ THE COLOUR OF MAGIC
   Go-Nim, finally, is the name of a Japanese board game similar to
   four-in-a-row.
 
-- [p. 62/55] "[...] I WAS EXPECTING TO MEET THEE IN PSEPHOPOLOLIS."
+- [p. 62/55] "I WAS EXPECTING TO MEET THEE IN PSEPHOPOLOLIS."
 
   Death and Rincewind are replaying their own version of the well-known
   folktale _Appointment in Samarra_. Terry says:
@@ -474,7 +474,7 @@ THE COLOUR OF MAGIC
 
   A correspondent tells me that 'Dun' is also an Old English word for hill.
 
-- [p. 76/68] "[...] Zephyrus the god of slight breezes."
+- [p. 76/68] "Zephyrus the god of slight breezes."
 
   Zephyrus was in fact the Greek god of the soft west winds. The
   interactions of the gods in 'The Sending of Eight' strongly bring to mind
@@ -4917,7 +4917,7 @@ REAPER MAN
   Trojan war and to the accompanying complete division of the divine
   pantheon into two opposing camps.
 
-- [p. 88/79] "[...] honorary vestigial virgining [..]"
+- [p. 88/79] "[...] honorary vestigial virgining [...]"
 
   Pun on the Vestal virgins (priestesses of the goddess Vesta) in ancient
   Rome. 'Vestigial' of course means "remaining or surviving in a degenerate
@@ -13191,7 +13191,7 @@ THE LAST CONTINENT
 
   The name of a well known Australian rock band.
 
-- [p. 97] "[..] The Small Boring Group of Faint Stars [...]"
+- [p. 97] "[...] The Small Boring Group of Faint Stars [...]"
 
   Appropriately enough, Rincewind's birth sign, according to _The Light
   Fantastic_.
@@ -16924,8 +16924,8 @@ The page numbers refer to the Harper Fiction paperback edition.
   particular -- are known for their persistent abuse of the apostrophe-ess
   combination on their handwritten signs.
 
-+ [p. 103] "[...] And they talked a gibberish of their own, of [...] and
-  plug-code and hog-code and jacquard..."
++ [p. 103] "And they talked a gibberish of their own, of [...] and plug-code and
+  hog-code and jacquard..."
 
   'Jacquards' refer to the punched cards, developed by Joseph Marie Jacquard in
   1805, on which patterns could be stamped. The cards were then inserted into a
