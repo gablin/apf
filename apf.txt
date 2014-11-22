@@ -16947,6 +16947,16 @@ The page numbers refer to the Harper Fiction paperback edition.
   originally part of the British Post Office and was still known as "Post Office
   Telecommunications" until 1980, shortly before it became privatized.
 
++ [p. 78] "'This, my lord', said Gilt, gesturing to the little side table [...]
+  'Is this not an original _Hnaflbaflsniflwhifltafl_ slab?'"
+
+  The Vikings were known to have played a game called _Hnefatafl_ (King's
+  Table). It consisted of a marked board and peg-like pieces and seems to have
+  some similarities to backgammon. 'Hnefatafl' seems to be the origin of the
+  word used for the Discworld game.
+
+  Of course, we learn much more of this game in _Thud!_
+
 + [p. 103] "And they talked a gibberish of their own, of [...] and plug-code and
   hog-code and jacquard..."
 
