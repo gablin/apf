@@ -207,7 +207,7 @@ def latexifyMarkup(s):
     r_data = [ [ "_",  "_",     "\\emph{",  "}", False, False ]
              , [ "*",  "*",     "\\emph{",  "}",  True, False ]
              , ["<<", ">>", "\\footnote{",  "}", False, False ]
-             , [ "'",  "'",           "`",  "'", False, False ]
+             , [ "'",  "'",          "{`", "'}", False, False ]
              , ["\"", "\"",          "``", "''", False,  True ]
              ]
 
