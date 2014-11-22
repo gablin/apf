@@ -16816,6 +16816,13 @@ The page numbers refer to the Harper Fiction paperback edition.
   It's also close to a quote from the 1999 film _The Mummy_: "He will never eat,
   he will never sleep, and he will never stop."
 
++ [p. 24] "'Wait! Wait! There's a rule! A golem mustn't harm a human being or
+  allow a human being to come to harm!'"
+
+  This is the first of Isaac Asimov's _Three Laws of Robotics_ (Golems are the
+  Discworld equivalent of robots). Asimov, of course, didn't add the conditional
+  "unless ordered to do so by duly constituted authority" that Vetinari did.
+
 + [p. 29] The character Tolliver Groat.
 
   The name, the character description, and the vast, runned-down Post Office
