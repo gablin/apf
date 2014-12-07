@@ -16952,8 +16952,8 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   The Vikings were known to have played a game called _Hnefatafl_ (King's
   Table). It consisted of a marked board and peg-like pieces and seems to have
-  some similarities to backgammon. 'Hnefatafl' seems to be the origin of the
-  word used for the Discworld game.
+  some similarities to backgammon. Hnefatafl seems to be the origin of the word
+  used for the Discworld game.
 
   Of course, we learn much more of this game in _Thud!_
 
@@ -16964,22 +16964,22 @@ The page numbers refer to the Harper Fiction paperback edition.
   This German is a bit mangled. With proper spaces and minor corrections, it is
   "Von alles vollkommen unverst\"{a}ndlich das das -keit" which translates as
   "From everything completely incomprehensible the the", followed by a suffix
-  that changes a word into a noun (this might refer to 'unverst\"{a}ndlich',
-  since 'unverst\"{a}ndlichkeit' would be 'incomprehensibility'). This also
+  that changes a word into a noun (this might refer to "unverst\"{a}ndlich",
+  since "unverst\"{a}ndlichkeit" would be "incomprehensibility"). This also
   appears to foreshadow the extensive employment of cod-German philosophy which
   defines Mr. Nutt's character in _Unseen Academicals_.
 
   Freidegger is a clever pun on the famous German philosopher Margin Heidegger,
   who wrote about time (and his writing is difficult to understand both in his
-  native German as well as in translation). The German word 'Frei' means 'free',
+  native German as well as in translation). The German word "Frei" means "free",
   therefore suited to the recurring topic of freedom in the book. In German, and
-  posssibly also in Uberwaldean, 'Freitag' is a day of the week (Friday) when
+  posssibly also in Uberwaldean, "Freitag" is a day of the week (Friday) when
   most people are freed of the burden of having to work for a living and get the
   weekend to themselves. One particular advertising campaign for chocolate
   cleverly used the slogan _That Friday Feeling_, and there's the acronym TGIF,
   for _Thank God It's Friday!_, to denote that expansive Friday-night feeling at
   the start of the weekend. (Although it should be pointed out, in the name of
-  accuracy, that the current name 'Freitag' is not derived from 'Free-day' but
+  accuracy, that the current name "Freitag" is not derived from "Free-day" but
   from the old Norse Goddess Freya.)
 
 + [p. 86] Stanley discusses the most expensive pin: "'They were hand-drawn and
@@ -16991,7 +16991,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 87] "'See a pin pick it up and all day long you'll have a pin.'"
 
   A variation on the Roundworld rhyme "See a pin pick it up, and all day long
-  you'll have good luck." Often 'penny' is substituted for pin.
+  you'll have good luck." Often "penny" is substituted for pin.
 
 + [p. 99] "'Do you understand anything I'm saying?' shouted Moist. 'You can't
   just go around killing people!' 'Why Not?'"
@@ -17006,9 +17006,9 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 103] "And they talked a gibberish of their own, of [...] plug-code and
   hog-code and jacquard..."
 
-  'Jacquards' refer to the punched cards, developed by Joseph Marie Jacquard in
+  "Jacquards" refer to the punched cards, developed by Joseph Marie Jacquard in
   1805, on which patterns could be stamped. The cards were then inserted into a
-  mechanical loom called the 'Jacquard Loom' which would then weave the pattern.
+  mechanical loom called the "Jacquard Loom" which would then weave the pattern.
   There is a famous portrait of Jacquard, woven in silk, which required 24,000
   punched cards to create.
 
@@ -17039,7 +17039,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 134] "It would be a poor lookout if [Moist] wasn't a better player of _les
   buggeures risible_ than this bunch of old fools!"
 
-  Pig French for 'silly buggers', a common English slang term for deliberately
+  Pig French for "silly buggers", a common English slang term for deliberately
   obstructive activity ("Someone's playing silly buggers, here...").
 
 + [p. 137] "This was going to be...ironic. They'd actually got hold of
@@ -17077,7 +17077,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 152] "'Three and a bit, that's the ticket. Only Bloody Stupid Johnson said
   that was untidy, so he designed a wheel where the pie was exactly three.'"
 
-  'Pie' here of course refers to the mathematical constant <pi>, to which there
+  "Pie" here of course refers to the mathematical constant <pi>, to which there
   is an old limerick:
 
         It's a favorite hobby of mine
@@ -17759,7 +17759,7 @@ GOOD OMENS
         I should be so lucky in love
 
   Notice that this is yet another misquote: there are only *four* successive
-  'lucky's', not five.
+  "lucky's", not five.
 
 - [p. 79/46] Adam's upbringing in Tadfield.
 
