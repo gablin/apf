@@ -204,7 +204,7 @@ def latexifyMarkup(s):
     #    #3: String to replace the markup end with
     #    #4: Whether the markup can occur in the middle of a word
     #    #5: Whether the markup can span across multiple paragraphs
-    r_data = [ [ "_",  "_",     "\\emph{", "}"  , False, False ]
+    R_DATA = [ [ "_",  "_",     "\\emph{", "}"  , False, False ]
              , [ "*",  "*",     "\\emph{", "}"  ,  True, False ]
              , ["<<", ">>", "\\footnote{", "}"  , False, False ]
              , [ "'",  "'",         "{`{", "}'}", False, False ]
@@ -220,13 +220,13 @@ def latexifyMarkup(s):
     r_index = -1
     start_pos = sys.maxint
     has_improper_start = False
-    for i in range(len(r_data)):
+    for i in range(len(R_DATA)):
         offset = 0
         while offset < len(s):
-            search_str = r_data[i][0]
+            search_str = R_DATA[i][0]
             pos, starts_before_word = findMarkupStart(s, search_str, offset)
             if pos >= 0:
-                are_improper_starts_allowed = r_data[i][4]
+                are_improper_starts_allowed = R_DATA[i][4]
                 if starts_before_word or are_improper_starts_allowed:
                     if pos < start_pos:
                         r_index = i
@@ -242,8 +242,8 @@ def latexifyMarkup(s):
         return s
 
     # Find end of markup (remember that markups can be nested)
-    markup_start_str = r_data[r_index][0]
-    markup_end_str = r_data[r_index][1]
+    markup_start_str = R_DATA[r_index][0]
+    markup_end_str = R_DATA[r_index][1]
     end_pos = -1
     level = 1
     offset = start_pos + len(markup_start_str)
@@ -264,8 +264,8 @@ def latexifyMarkup(s):
                 text_between_markup = \
                     s[start_pos + len(markup_start_str):end_pos]
 
-                for i in range(len(r_data)):
-                    if text_between_markup == r_data[i][0]:
+                for i in range(len(R_DATA)):
+                    if text_between_markup == R_DATA[i][0]:
                         is_start_of_new_markup = True
                         break
             if is_start_of_new_markup:
@@ -282,7 +282,7 @@ def latexifyMarkup(s):
                     if stop_could_be_new_markup_start:
                         level += 1
                     else:
-                        are_improper_stops_allowed = r_data[r_index][4]
+                        are_improper_stops_allowed = R_DATA[r_index][4]
                         if are_improper_stops_allowed:
                             level -= 1
                 else:
@@ -293,8 +293,8 @@ def latexifyMarkup(s):
                 continue
 
             # Found valid markup region
-            replace_start_str = r_data[r_index][2]
-            replace_end_str = r_data[r_index][3]
+            replace_start_str = R_DATA[r_index][2]
+            replace_end_str = R_DATA[r_index][3]
             s_within_markup = s[start_pos + len(markup_start_str):end_pos]
             s_after_markup = s[end_pos + len(markup_end_str):]
             return ( s[:start_pos]
@@ -314,7 +314,7 @@ def latexifyMarkup(s):
                       )
 
 def findMarkupStart(s, start_str, offset = 0, stop = -1):
-    init_word_chars = " /-'\"*_([\n"
+    INIT_WORD_CHARS = " /-'\"*_([\n"
     if stop < 0:
         stop = len(s)
 
@@ -322,7 +322,7 @@ def findMarkupStart(s, start_str, offset = 0, stop = -1):
     if start_pos == 0:
         return (start_pos, True)
     elif start_pos > 0:
-        return (start_pos, init_word_chars.find(s[start_pos - 1]) >= 0)
+        return (start_pos, INIT_WORD_CHARS.find(s[start_pos - 1]) >= 0)
         # The second value is a Boolean indicating whether the markup starts
         # right before a word
     else:
@@ -330,7 +330,7 @@ def findMarkupStart(s, start_str, offset = 0, stop = -1):
         return (-1, False)
 
 def findMarkupStop(s, end_str, offset = 0, stop = -1):
-    term_word_chars = " /-,.;:!?'\"*_)[]\n"
+    TERM_WORD_CHARS = " /-,.;:!?'\"*_)[]\n"
     if stop < 0:
         stop = len(s)
 
@@ -340,7 +340,7 @@ def findMarkupStop(s, end_str, offset = 0, stop = -1):
         if after_markup_pos == len(s):
             return (end_pos, True)
         else:
-            return (end_pos, term_word_chars.find(s[after_markup_pos]) >= 0)
+            return (end_pos, TERM_WORD_CHARS.find(s[after_markup_pos]) >= 0)
             # The second value is a Boolean indicating whether the markup stops
             # right after a word
     else:
@@ -410,9 +410,9 @@ def toLatexSub(s):
                  , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
                  )
     s = s.replace(" 'n' ", " &q&n&q& ")
-    valid_word_start_chars = "\"' _*("
-    valid_word_stop_chars = " ,.!?_*\""
-    words_starting_with_quote = [ "92"
+    VALID_WORD_START_CHARS = "\"' _*("
+    VALID_WORD_STOP_CHARS = " ,.!?_*\""
+    WORDS_STARTING_WITH_QUOTE = [ "92"
                                 , "Ave"
                                 , "Cause"
                                 , "cos"
@@ -441,7 +441,7 @@ def toLatexSub(s):
                                 , "twere"
                                 , "twixt"
                                 ]
-    words_ending_with_quote = [ "An"
+    WORDS_ENDING_WITH_QUOTE = [ "An"
                               , "an"
                               , "Cornwallis"
                               , "drillin"
@@ -459,13 +459,13 @@ def toLatexSub(s):
                               , "Wi"
                               , "wouldna"
                               ]
-    for w in words_starting_with_quote:
-        for cs in valid_word_start_chars:
-            for ce in valid_word_stop_chars:
+    for w in WORDS_STARTING_WITH_QUOTE:
+        for cs in VALID_WORD_START_CHARS:
+            for ce in VALID_WORD_STOP_CHARS:
                 s = s.replace(cs + "'" + w + ce, cs + "&q&" + w + ce)
-    for w in words_ending_with_quote:
-        for cs in valid_word_start_chars:
-            for ce in valid_word_stop_chars:
+    for w in WORDS_ENDING_WITH_QUOTE:
+        for cs in VALID_WORD_START_CHARS:
+            for ce in VALID_WORD_STOP_CHARS:
                 s = s.replace(cs + w + "'" + ce, cs + w + "&q&" + ce)
 
     s = latexifyMarkup(s)
