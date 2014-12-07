@@ -16957,7 +16957,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Of course, we learn much more of this game in _Thud!_
 
-+ [p. 103] "And they talked a gibberish of their own, of [...] and plug-code and
++ [p. 103] "And they talked a gibberish of their own, of [...] plug-code and
   hog-code and jacquard..."
 
   'Jacquards' refer to the punched cards, developed by Joseph Marie Jacquard in
