@@ -456,6 +456,7 @@ def toLatexSub(s):
                               , "o"
                               , "paradin"
                               , "Roberts"
+                              , "thinkin"
                               , "Wi"
                               , "wouldna"
                               ]
@@ -524,6 +525,7 @@ def toLatexSub(s):
     s = s.replace("naive", "na\\\"{i}ve")
     s = s.replace("Tir-far-Thionn", "Tir-far-Thi\\'{o}nn")
     s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
+    s = s.replace("unverstaendlich", "unverst\\\"{a}ndlich")
     s = s.replace("<genizah>", "\\cjRL{genyzah}")
 
     # Typeset certain text parts as Death
@@ -562,6 +564,8 @@ def toLatexSub(s):
     s = s.replace("(p. ", "(p.~")
     s = s.replace(" pp. ", " pp.~")
     s = s.replace("(pp. ", "(pp.~")
+    s = s.replace(" chap. ", " chap.~")
+    s = s.replace("(chap. ", "(chap.~")
     s = s.replace("Mr. ", "Mr.~")
     s = s.replace("Mrs. ", "Mrs.~")
     s = s.replace("Ms. ", "Ms.~")
