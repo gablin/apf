@@ -16969,6 +16969,16 @@ The page numbers refer to the Harper Fiction paperback edition.
   A variation on the Roundworld rhyme "See a pin pick it up, and all day long
   you'll have good luck." Often 'penny' is substituted for pin.
 
++ [p. 99] "'Do you understand anything I'm saying?' shouted Moist. 'You can't
+  just go around killing people!' 'Why Not?'"
+
+  Paraphrasing quotes from _Terminator 2_:
+
+      John Connor: "You can't just go around killing people!"
+      Terminator: "Why?"
+      "What do you mean, why? Because you can't!"
+      "Why?"
+
 + [p. 103] "And they talked a gibberish of their own, of [...] plug-code and
   hog-code and jacquard..."
 
