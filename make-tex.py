@@ -207,8 +207,13 @@ def latexifyMarkup(s):
     r_data = [ [ "_",  "_",     "\\emph{", "}"  , False, False ]
              , [ "*",  "*",     "\\emph{", "}"  ,  True, False ]
              , ["<<", ">>", "\\footnote{", "}"  , False, False ]
-             , [ "'",  "'",          "`{", "}'" , False, False ]
-             , ["\"", "\"",         "``{", "}''", False,  True ]
+             , [ "'",  "'",         "{`{", "}'}", False, False ]
+               # The double braces are used to really ensure that it is typeset
+               # as a single quote and not accidentally be merged into a double
+               # quote.
+             , ["\"", "\"",          "``",  "''", False,  True ]
+               # The double quotes cannot be surrounded with braces since the
+               # quote may span multiple paragraphs.
              ]
 
     # Find earliest start of (any) markup
