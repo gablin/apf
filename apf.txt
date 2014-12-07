@@ -17105,10 +17105,17 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 162] "'Coo, you're a good draw-er, Mr. Lipwig. That looks just like Lord
   Vetinari!' 'That's the penny stamp,' said Moist."
 
-  In our world, British Postmaster-General Sir Rowland Hill designed and
+  In our world, the British Postmaster-General Sir Rowland Hill designed and
   introduced the first penny stamp, with a profile of Queen Victoria, in 1840
   after much political debate. As on the Discworld, stamp collectors began to
   appear almost immediately afterward.
+
+  It's interesting that Moist writes "Post Office" on his stamps. On Roundworld,
+  there's a myth that this once happened by mistake when the stamps for
+  Mauritius were designed. According to the story, the engraver forgot the
+  correct wording ("Post Paid"), took a walk to the Post Office to ask, saw the
+  sign "Post Office", which jogged his memory and he turned back and wrote that
+  instead on the stamp.
 
 
 THUD!
