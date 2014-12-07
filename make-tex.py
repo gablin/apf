@@ -504,7 +504,7 @@ def toLatexSub(s):
                   "'? Ty\\o{} yur \\aa{}tl h\\o{} sooten g\\aa{}trunen?'")
     s = s.replace("doppelgaenger", "doppelg\\\"{a}nger")
     s = s.replace("Danae", "Dana\\\"{e}")
-    s = s.replace("Goetterdaemmerung", "G\\\"{o}tterd\"{a}mmerung")
+    s = s.replace("Goetterdaemmerung", "G\\\"{o}tterd\\\"{a}mmerung")
     s = s.replace("Bjorn Ulvaeus", "Bj\\\"{o}rn Ulvaeus")
     s = s.replace("Haendel", "H\\\"{a}ndel")
     s = s.replace("cliche", "clich\\'{e}")
