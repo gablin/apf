@@ -17161,9 +17161,9 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   In Jerusalem, old or damaged Bibles and Torahs are buried in special tombs
   rather than destroyed. The tradition is that words are sacred and have
-  power. The Hebrew name for such a depository is "genizah" (in Hebrew:
-  <genizah>), and is quite close to the wizards' word "gevaisa", which refers to
-  "a tomb of living words".
+  power. The Hebrew name for such a depository is <genizah>, pronounced
+  "geniza", which is quite close to the wizards' word "gevaisa", referring to "a
+  tomb of living words".
 
 + [p. 189] "'Where do they go [when they die]?' 'No one's sure, exactly, but you
   can hear the sounds of cutlery,' said Pelc, [...]"
