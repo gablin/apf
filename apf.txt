@@ -17053,7 +17053,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 141] "Yes, well, you know what we used to say: you *do* have to be mad to
   work here!"
 
-  Another spin on the Roundworld saying: "You don’t have to be mad to work here,
+  Another spin on the Roundworld saying: "You don't have to be mad to work here,
   but it helps". This is reinforced later on p. 180 when Moist looks at the
   unfortunate selection of mugs Stanley has used for preparing tea for him and
   Sacharissa Cripslock. The cup Moist receives reads
@@ -17065,6 +17065,42 @@ The page numbers refer to the Harper Fiction paperback edition.
 
       BE MAD
       IT HELPS
+
++ [p. 143] "'Look, I'm not the One you're looking for!'"
+
+  Possibly a reference to Neo's role as the One in the _Matrix_ films.
+
++ [p. 143] "Deliver Us!"
+
+  A pun on the Israelites' cry from the Biblical book of Exodus.
+
++ [p. 152] "'Three and a bit, that's the ticket. Only Bloody Stupid Johnson said
+  that was untidy, so he designed a wheel where the pie was exactly three.'"
+
+  'Pie' here of course refers to the mathematical constant <pi>, to which there
+  is an old limerick:
+
+        It's a favorite hobby of mine
+        A new value for pi to assign.
+        I would set it to three
+        'Cause it's simpler, you see,
+        Than three point one four one five nine.
+
+  Apparently, a US state legislature once tried to pass a law stating that <pi>
+  = 3. From <http://www.straightdope.com/classics/a3_341.html>:
+
+  "It happened in Indiana. Although the attempt to legislate pi was ultimately
+  unsuccessful, it did come pretty close. In 1897 Representative T.I. Record of
+  Posen county introduced House Bill #246 in the Indiana House of
+  Representatives. The bill, based on the work of a physician and amateur
+  mathematician named Edward J. Goodwin (Edwin in some accounts), suggests not
+  one but three numbers for pi, among them 3.2, as we shall see. The punishment
+  for unbelievers I have not been able to learn, but I place no credence in the
+  rumor that you had to spend the rest of your natural life in Indiana."
+
+  There is also a related urban legend that started as an April Fool's joke, but
+  somehow got turned into something that could be interpreted as an actual news
+  piece (see <http://www.snopes.com/religion/pi.asp> for the full story).
 
 
 THUD!

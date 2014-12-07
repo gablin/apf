@@ -414,6 +414,7 @@ def toLatexSub(s):
     valid_word_stop_chars = " ,.!?_*\""
     words_starting_with_quote = [ "92"
                                 , "Ave"
+                                , "Cause"
                                 , "cos"
                                 , "E's"
                                 , "Ello"
@@ -492,6 +493,9 @@ def toLatexSub(s):
     s = s.replace("...", "\\ldots{}")
     s = s.replace(" -- ", " \emdash{} ")
     s = s.replace("-->", "$\\rightarrow$")
+    s = s.replace("<pi>", "$\\pi$")
+    s = s.replace("<heart>", "\heartSymbol{}\label{heart-symbol}")
+    s = s.replace("(TM)", "\\texttrademark{}")
     s = s.replace("e.g. ", "e.g.\ ")
     s = s.replace("i.e. ", "i.e.\ ")
     s = s.replace("etc. ", "etc.\ ")
@@ -511,14 +515,12 @@ def toLatexSub(s):
     s = s.replace("Ole!", "!`Ol\\'{e}!")
     s = s.replace("Eminence", "\\'{E}minence")
     s = s.replace("Cafe", "Caf\\'{e}")
-    s = s.replace("<heart>", "\heartSymbol{}\label{heart-symbol}")
     s = s.replace("Walkuere", "Walk\\\"{u}re")
     s = s.replace("Schueschien", "Sch\\\"{u}schien")
     s = s.replace("Pluen", "Pl\\\"{u}n")
     s = s.replace("Tomas", "Tom\\'{a}s")
     s = s.replace("Nuernberg", "N\\\"{u}rnberg")
     s = s.replace("Blue Oyster", "Blue \\\"{O}yster")
-    s = s.replace("(TM)", "\\texttrademark{}")
     s = s.replace("naive", "na\\\"{i}ve")
     s = s.replace("Tir-far-Thionn", "Tir-far-Thi\\'{o}nn")
     s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
