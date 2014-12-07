@@ -17137,8 +17137,9 @@ The page numbers refer to the Harper Fiction paperback edition.
   Justice, Temperance, Fortitude, and Prudence. Their frescoed images adorn the
   Scrovegni Chapel in Padua, Italy.
 
-  And when looking up "Tubso" and "Bissonomy" on the Wiki of <lspace.org>, the
-  first paragraph says it all: "No, we haven't got a clue either."
+  And when looking up the "Tubso" and "Bissonomy" entries on
+  <http://wiki.lspace.org>, the first paragraph says it all: "No, we haven't got
+  a clue either."
 
 
 THUD!
