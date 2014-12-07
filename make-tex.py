@@ -204,11 +204,11 @@ def latexifyMarkup(s):
     #    #3: String to replace the markup end with
     #    #4: Whether the markup can occur in the middle of a word
     #    #5: Whether the markup can span across multiple paragraphs
-    r_data = [ [ "_",  "_",     "\\emph{",  "}", False, False ]
-             , [ "*",  "*",     "\\emph{",  "}",  True, False ]
-             , ["<<", ">>", "\\footnote{",  "}", False, False ]
-             , [ "'",  "'",          "{`", "'}", False, False ]
-             , ["\"", "\"",          "``", "''", False,  True ]
+    r_data = [ [ "_",  "_",     "\\emph{", "}"  , False, False ]
+             , [ "*",  "*",     "\\emph{", "}"  ,  True, False ]
+             , ["<<", ">>", "\\footnote{", "}"  , False, False ]
+             , [ "'",  "'",          "`{", "}'" , False, False ]
+             , ["\"", "\"",         "``{", "}''", False,  True ]
              ]
 
     # Find earliest start of (any) markup
