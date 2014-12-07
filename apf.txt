@@ -16962,12 +16962,12 @@ The page numbers refer to the Harper Fiction paperback edition.
   describes as _Vonallesvolkommenunverstandlichdasdaskeit_.'"
 
   This German is a bit mangled. With proper spaces and minor corrections, it is
-  "Von alles vollkommen unverst\"{a}ndlich das das -keit" which translates as
-  "From everything completely incomprehensible the the", followed by a suffix
-  that changes a word into a noun (this might refer to "unverst\"{a}ndlich",
-  since "unverst\"{a}ndlichkeit" would be "incomprehensibility"). This also
-  appears to foreshadow the extensive employment of cod-German philosophy which
-  defines Mr. Nutt's character in _Unseen Academicals_.
+  "Von alles vollkommen unverstaendlich das das -keit" which translates as "From
+  everything completely incomprehensible the the", followed by a suffix that
+  changes a word into a noun (this might refer to "unverstaendlich", since
+  "unverstaendlichkeit" would be "incomprehensibility"). This also appears to
+  foreshadow the extensive employment of cod-German philosophy which defines
+  Mr. Nutt's character in _Unseen Academicals_.
 
   Freidegger is a clever pun on the famous German philosopher Margin Heidegger,
   who wrote about time (and his writing is difficult to understand both in his
@@ -17182,6 +17182,32 @@ The page numbers refer to the Harper Fiction paperback edition.
   name. The single-foot gait is very smooth and easy on a rider if he uses a
   special saddle and sits further back on the horse. Moist, however, is riding
   bareback, carrying a heavy load over his shoulder, and leaning forward.
+
++ [p. 208] "'Er... Joe Camels, sir,' he said nervously. 'I'm the mayor here...'"
+
+  Joe Camel was the (un)official name of the now-defunct mascot of Camel
+  Cigarettes. The resemblance to the mayor ends with the name, however.
+
++ [p. 212] "And her hair was plaited and coiled up on either side of her head in
+  those discs that back home in Uberwald had been called 'snails,' but in
+  Anhk-Morpork put people in mind of a woman with a curly iced bun clamped to
+  each ear."
+
+  Think of old German beer waitresses, not Princess Leia from _Star Wars_.
+
++ [p. 221] "'Hmm,' said Moist, still staring at the letter. Well, well. 'Have
+  you heard of someone called "The Smoking Gnu," Mr. Groat?'"
+
+  A pun on "The Smoking Gun", which is a newsletter published by _The Lone
+  Gunmen_, a trio of computer hackers (or crackers) from the television series
+  _The X-Files_, on whom the members of the Smoking Gnu are based.
+
+  Although the real meaning of the word "gnu" refers to a species of large
+  antelope, it also eludes to the _GNU Project_ which is an enterprise that
+  promotes the development and distribution of free software. After many got
+  confused about the term "free", the foundation that supports the GNU Project
+  offered the following explanation: "To understand the concept, you should
+  think of 'free' as in 'free speech,' not as in 'free beer.'"
 
 
 THUD!
