@@ -21,7 +21,6 @@
 \usepackage{etoolbox}
 \usepackage{enumitem}
 \usepackage{fnpct} % For forcing footnote placements after conjunctions
-\usepackage{manyfoot} % To be able to customize the footnote symbol
 \usepackage{hyphenat}
 \usepackage{listings}
 \usepackage{mdframed}
@@ -33,6 +32,7 @@
 \usetikzlibrary{positioning,calc}
 \usepackage{url}
 \usepackage{xcolor}
+\usepackage{perpage} % For resetting the footnote counter after each page
 
 
 
@@ -157,13 +157,13 @@
     \item Document build: \texttt{\thisDocBuild}
   \end{copyrightText}
   \begin{copyrightText}
-    \item Preprocessing, typesetting, and cover design\Footnote{*}{The material
-      for the said design have been shamelessly taken without prior permission,
-      and copyrights have most definitely been infringed. So if you happen to
-      meet the copyright holders in question, please don't tell them.}  (using
-      Python, \LaTeX\Footnote{\dagger}{Pratchett fans being what they are --
-        that is to say, geeky and with too much time on their hands -- why is
-        there yet no \LaTHeX?}, and Adobe Photoshop) by: Gabriel Hjort Blindell
+    \item Preprocessing, typesetting, and cover design\footnote{The material for
+      the said design have been shamelessly taken without prior permission, and
+      copyrights have most definitely been infringed. So if you happen to meet
+      the copyright holders in question, please don't tell them.} (using Python,
+      \LaTeX\footnote{Pratchett fans being what they are -- that is to say,
+        geeky and with too much time on their hands -- why is there yet no
+        \LaTHeX?}, and Adobe Photoshop) by: Gabriel Hjort Blindell
       \typesetUrl{ghb@kth.se}
     \item Fonts: \emph{Garamond} (serif basefont, \baseFontSize), \emph{Linux
       Libertine} (sans-serif), \emph{Bera Mono} (monotype), and Yannis
@@ -224,18 +224,51 @@
   labelwidth=0pt,
 }
 
+% Restart footnote counters on every page
+\MakePerPage{footnote}
+
+% Change typesetting of footnotes
+\makeatletter
+\renewcommand*{\@fnsymbol}[1]{%
+  \ensuremath{%
+    \ifcase#1% 0
+    \or % 1
+      *%
+    \or % 2
+      \dagger
+    \or % 3
+      \ddagger
+    \or % 4
+      \mathsection
+    \or % 5
+      \mathparagraph
+    \else % >= 6
+      % I trust there will never be more than 5 footnotes on the same page
+    \fi
+  }%
+}
+\makeatother
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
 % Commands for typesetting quotes from the Pratchett books
 \newcommand{\apQuote}[3]{%
   \begin{mdframed}[%
       backgroundcolor=black!12.5,
       hidealllines=true,
       usetwoside=false, % Fixes lots of warnings about undefined pagelabel
+      footenotedistance=\baselineskip,
     ]
     \RaggedRight%
     \mbox{\texttt{#1\:#2}} #3
     \par\justifying\noindent%
   \end{mdframed}
 }
+
+% Change typesetting of footnotes within quotes
+\renewcommand{\thempfootnote}{*}%
+\makeatletter
+\renewcommand{\mdf@footnoterule}{}
+\makeatother
 
 % Removes chapter and section numbering
 \setsecnumdepth{book}
