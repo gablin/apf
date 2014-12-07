@@ -256,8 +256,9 @@
       backgroundcolor=black!12.5,
       hidealllines=true,
       usetwoside=false, % Fixes lots of warnings about undefined pagelabel
-      footenotedistance=\baselineskip,
+      footenotedistance=.75\baselineskip,
     ]
+    \setlength{\footmarkwidth}{0pt}%
     \RaggedRight%
     \mbox{\texttt{#1\:#2}} #3
     \par\justifying\noindent%
