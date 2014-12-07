@@ -16965,10 +16965,22 @@ The page numbers refer to the Harper Fiction paperback edition.
   "Von alles vollkommen unverst\"{a}ndlich das das -keit" which translates as
   "From everything completely incomprehensible the the", followed by a suffix
   that changes a word into a noun (this might refer to 'unverst\"{a}ndlich',
-  since 'unverst\"{a}ndlichkeit' would be 'incomprehensibility').
+  since 'unverst\"{a}ndlichkeit' would be 'incomprehensibility'). This also
+  appears to foreshadow the extensive employment of cod-German philosophy which
+  defines Mr. Nutt's character in _Unseen Academicals_.
 
-  This also appears to foreshadow the extensive employment of cod-German
-  philosophy which defines Mr. Nutt's character in _Unseen Academicals_.
+  Freidegger is a clever pun on the famous German philosopher Margin Heidegger,
+  who wrote about time (and his writing is difficult to understand both in his
+  native German as well as in translation). The German word 'Frei' means 'free',
+  therefore suited to the recurring topic of freedom in the book. In German, and
+  posssibly also in Uberwaldean, 'Freitag' is a day of the week (Friday) when
+  most people are freed of the burden of having to work for a living and get the
+  weekend to themselves. One particular advertising campaign for chocolate
+  cleverly used the slogan _That Friday Feeling_, and there's the acronym TGIF,
+  for _Thank God It's Friday!_, to denote that expansive Friday-night feeling at
+  the start of the weekend. (Although it should be pointed out, in the name of
+  accuracy, that the current name 'Freitag' is not derived from 'Free-day' but
+  from the old Norse Goddess Freya.)
 
 + [p. 86] Stanley discusses the most expensive pin: "'They were hand-drawn and
   had his trademark silver head with a microscopic engraving of a cockerel.'"
