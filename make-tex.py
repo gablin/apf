@@ -527,6 +527,7 @@ def toLatexSub(s):
     s = s.replace("Tir-fa-Tonn", "T\\'{i}r-fa-Tonn")
     s = s.replace("unverstaendlich", "unverst\\\"{a}ndlich")
     s = s.replace("<genizah>", "\\cjRL{genyzah}")
+    s = s.replace("It Could Be YOU", "\\textsc{it could be YOU}")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
