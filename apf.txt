@@ -17350,6 +17350,13 @@ The page numbers refer to the Harper Fiction paperback edition.
   "Baize" is the name given to the felt-like cloth used to cover billiards
   tables. As Stibbons later points out, it's also a pun on "phase space".
 
++ [p. 354] "'But it’s a book!' said Mr. Pony. 'It'll take all night to code. And
+  there's diagrams!'"
+
+  It was established in _Monstrous Regiment_ that the clacks towers could send
+  images, albeit slowly, by transmitting codes representing pixel data, which is
+  typically how computers store images.
+
 
 THUD!
 
