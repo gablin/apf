@@ -17207,7 +17207,7 @@ The page numbers refer to the Harper Fiction paperback edition.
   promotes the development and distribution of free software. After many got
   confused about the term "free", the foundation that supports the GNU Project
   offered the following explanation: "To understand the concept, you should
-  think of 'free' as in 'free speech,' not as in 'free beer.'"
+  think of 'free' as in 'free speech', not as in 'free beer'."
 
 + [p. 240] "'What is sticking in your foot is a Mitzy "Pretty Lucretia"
   four-inch heel, the most dangerous footwear in the world. Considered as pounds
