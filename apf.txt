@@ -17314,6 +17314,13 @@ The page numbers refer to the Harper Fiction paperback edition.
   pressed in quick succession, a phenomenon which the QWERTY keyboard was
   designed to make less likely.
 
++ [p. 326] "'You know how to pray, don't you? You just put your hands together
+  -- and hope.'"
+
+  A play on Lauren Bacall's famous line in the 1944 film _To Have and Have Not_:
+  "You know how to whistle, don't you, Steve? You just put your lips together
+  and blow."
+
 + [p. 333] "'So now you're, what was it again...crackers?' Moist said."
 
   Clearly a pun on the Roundworld computer hackers, although the term "crackers"
