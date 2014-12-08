@@ -17345,6 +17345,11 @@ The page numbers refer to the Harper Fiction paperback edition.
   larger than the maximum size, the ping of death would lead to buffer overflows
   and memory overwrites, typically causing the machine to crash.
 
++ [p. 341] "'I call it baize-space,' said Ponder Stibbons proudly."
+
+  "Baize" is the name given to the felt-like cloth used to cover billiards
+  tables. As Stibbons later points out, it's also a pun on "phase space".
+
 
 THUD!
 
