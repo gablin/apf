@@ -17203,7 +17203,8 @@ The page numbers refer to the Harper Fiction paperback edition.
   _The X-Files_, on whom the members of the Smoking Gnu are based.
 
   Although the real meaning of the word "gnu" refers to a species of large
-  antelope, it also eludes to the _GNU Project_ which is an enterprise that
+  antelope, it also eludes to the _GNU Project_ <<Here, GNU is a recursive
+  acronym and stands for "GNU's Not Unix".>> which is an enterprise that
   promotes the development and distribution of free software. After many got
   confused about the term "free", the foundation that supports the GNU Project
   offered the following explanation: "To understand the concept, you should
