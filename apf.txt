@@ -17302,6 +17302,18 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Refers to the Trump Tower, built by Donald Trump in New York City.
 
++ [p. 322] "'Did you spot how the swage armature can be made to jump off the
+  elliptical bearing if you hit the letter *K* and then send it to a tower with
+  an address higher than yours but *only* if you hit the letter Q first and the
+  drum spring is fully wound?'"
+
+  Certain early computer systems could be made to fail in similar ways. Unlikely
+  character strings can sometimes, in binary, be interpreted as system codes and
+  cause security breaches or outright system failures. Likewise, early
+  mechanical typewriters could lock up if the wrong series of letters were
+  pressed in quick succession, a phenomenon which the QWERTY keyboard was
+  designed to make less likely.
+
 + [p. 333] "'So now you're, what was it again...crackers?' Moist said."
 
   Clearly a pun on the Roundworld computer hackers, although the term "crackers"
@@ -17310,6 +17322,8 @@ The page numbers refer to the Harper Fiction paperback edition.
   uses his or her skills to build things, whereas a *cracker* puts them to
   malicious use (such as illegally breaking into others' systems). In security
   terms, hackers are referred to as "white hats", and crackers as "black hats".
+
+
 
 
 THUD!
