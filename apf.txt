@@ -17292,6 +17292,15 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Refers to the Trump Tower, built by Donald Trump in New York City.
 
++ [p. 333] "'So now you're, what was it again... crackers?' Moist said."
+
+  Clearly a pun on the Roundworld computer hackers, although the term "crackers"
+  does exists in our world as well. The general view is, although both denote
+  individuals with extensive knowledge and expertise in computers, a *hacker*
+  uses his or her skills to build things, whereas a *cracker* puts them to
+  malicious use (such as illegally breaking into others' systems). In security
+  terms, hackers are referred to as "white hats", and crackers as "black hats".
+
 
 THUD!
 
