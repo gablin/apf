@@ -17333,6 +17333,18 @@ The page numbers refer to the Harper Fiction paperback edition.
   systems). In security terms, hackers are also referred to as "white hats", and
   crackers as "black hats".
 
++ [p. 334] "'If you send the right kind of message, you can bust the
+  machinery.'"
+
+  Back in the days, it was possible to crash computers connected to the Internet
+  by sending a so-called "ping of death". A "ping" is a command that checks
+  whether another machine is reachable, which is sent as one or more IP
+  (Internet Protocol) packets. The maximum packet size is 65,535 bytes, but
+  early implementations could be exploited to send much larger packets. As
+  computer systems were often not guarded against receiving packets that were
+  larger than the maximum size, the ping of death would lead to buffer overflows
+  and memory overwrites, typically causing the machine to crash.
+
 
 THUD!
 
