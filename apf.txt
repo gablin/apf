@@ -17357,6 +17357,15 @@ The page numbers refer to the Harper Fiction paperback edition.
   images, albeit slowly, by transmitting codes representing pixel data, which is
   typically how computers store images.
 
++ [p. 368] "'It's still not *working*, Mr. Stibbons!' [Archchancellor Ridcully]
+  bellowed. 'Here's that damn enormous fiery eye again!'"
+
+  In J.R.R. Tolkien's _The Lord of the Rings_, Sauron appeared as a great fiery
+  cat's eye in visions and metaphoric descriptions. In Peter Jackson's movie
+  adaptations, the Eye appears (aside from a literal interpretation on top of
+  Sauron's fortress) in the _palantiri_ ("Seeing Stones"), which have a very
+  similar function to the University's omniscope.
+
 
 THUD!
 
