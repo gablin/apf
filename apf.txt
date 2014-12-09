@@ -17212,6 +17212,15 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Think of old German beer waitresses, not Princess Leia from _Star Wars_.
 
++ [p. 217] "'Ha, even the damn soup there is fifteen dollars!'"
+
+  Very likely a reference to the film _The Blues Brothers_, also referenced
+  sporadically throughout _Soul Music_. When the Brothers visit a former band
+  member -- now maitre d' in a posh Chicago restaurant -- at his place of work,
+  he encourages them to leave on the basis that they can't afford to eat there,
+  remarking: "Come on, guys... Let me buy you a cup of coffee. The soup here is
+  f*cking ten dollars."
+
 + [p. 221] "'Hmm,' said Moist, still staring at the letter. Well, well. 'Have
   you heard of someone called "The Smoking Gnu," Mr. Groat?'"
 
@@ -17377,6 +17386,16 @@ The page numbers refer to the Harper Fiction paperback edition.
   Fittingly, Andrew S. Tanenbaum wrote in his 1981 textbook _Computer Networks_:
   "Never underestimate the bandwidth of a station wagon full of tapes hurtling
   down the highway."
+
++ [p. 366] "Behind and above [Moist], the huge expanse of canvas was just enough
+  to block the line of sight between the two distant towers. In front of him,
+  the Smoking Gnu's half-sized tower was just the *right* size to look, to the
+  next tower in line, like a bigger tower a long way off. At night all you could
+  see were the lights."
+
+  This is what computer scientists and security researchers refer to as a
+  "man-in-the-middle attack", where a perpetrator fools a victim by imitating
+  some other, trusted source.
 
 + [p. 368] "'It's still not *working*, Mr. Stibbons!' [Archchancellor Ridcully]
   bellowed. 'Here's that damn enormous fiery eye again!'"

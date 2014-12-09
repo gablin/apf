@@ -409,6 +409,7 @@ def toLatexSub(s):
     s = s.replace( "P**! P*! B****! B**! D******!"
                  , "P&m&&m&! P&m&! B&m&&m&&m&&m&! B&m&&m&! D&m&&m&&m&&m&&m&&m&!"
                  )
+    s = s.replace("f*ck", "f&m&ck")
     s = s.replace(" 'n' ", " &q&n&q& ")
     VALID_WORD_START_CHARS = "\"' _*("
     VALID_WORD_STOP_CHARS = " ,.!?_*\""
@@ -528,6 +529,8 @@ def toLatexSub(s):
     s = s.replace("unverstaendlich", "unverst\\\"{a}ndlich")
     s = s.replace("<genizah>", "\\cjRL{genyzah}")
     s = s.replace("It Could Be YOU", "\\textsc{it could be YOU}")
+    s = s.replace("palantiri", "palant\\'{i}ri")
+    s = s.replace("maitre d'", "ma\\^{i}tre d'")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
