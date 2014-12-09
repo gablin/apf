@@ -16863,7 +16863,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 30, footnote] Dimwell Arrhythmic Rhyming Slang.
 
   'Dimwell Arrhythmic Rhyming Slang' is a variation on Cockney rhyming slang
-  (the "apples and pears" example is from Cockney slang). From
+  (the 'apples and pears' example is from Cockney slang). From
   <http://www.cockneyrhymingslang.co.uk/>:
 
   "Rhyming Slang phrases are derived from taking an expression which rhymes with
@@ -16944,8 +16944,8 @@ The page numbers refer to the Harper Fiction paperback edition.
   now-broken AT&T telecommunications monopoly, there are far more parallels to
   the UK's British Telecom, which is still a monopoly there and has very few
   friends among its consumers. Interestingly, the history of BT is that it was
-  originally part of the British Post Office and was still known as "Post Office
-  Telecommunications" until 1980, shortly before it became privatized.
+  originally part of the British Post Office and was still known as Post Office
+  Telecommunications until 1980, shortly before it became privatized.
 
 + [p. 78] "'This, my lord', said Gilt, gesturing to the little side table [...]
   'Is this not an original _Hnaflbaflsniflwhifltafl_ slab?'"
@@ -16964,22 +16964,22 @@ The page numbers refer to the Harper Fiction paperback edition.
   This German is a bit mangled. With proper spaces and minor corrections, it is
   "Von alles vollkommen unverstaendlich das das -keit" which translates as "From
   everything completely incomprehensible the the", followed by a suffix that
-  changes a word into a noun (this might refer to "unverstaendlich", since
-  "unverstaendlichkeit" would be "incomprehensibility"). This also appears to
+  changes a word into a noun (this might refer to 'unverstaendlich', since
+  'unverstaendlichkeit' would be 'incomprehensibility'). This also appears to
   foreshadow the extensive employment of cod-German philosophy which defines
   Mr. Nutt's character in _Unseen Academicals_.
 
   Freidegger is a clever pun on the famous German philosopher Margin Heidegger,
   who wrote about time (and his writing is difficult to understand both in his
-  native German as well as in translation). The German word "Frei" means "free",
+  native German as well as in translation). The German word 'Frei' means 'free',
   therefore suited to the recurring topic of freedom in the book. In German, and
-  posssibly also in Uberwaldean, "Freitag" is a day of the week (Friday) when
+  posssibly also in Uberwaldean, 'Freitag' is a day of the week (Friday) when
   most people are freed of the burden of having to work for a living and get the
   weekend to themselves. One particular advertising campaign for chocolate
   cleverly used the slogan _That Friday Feeling_, and there's the acronym TGIF,
   for _Thank God It's Friday!_, to denote that expansive Friday-night feeling at
   the start of the weekend. (Although it should be pointed out, in the name of
-  accuracy, that the current name "Freitag" is not derived from "Free-day" but
+  accuracy, that the current name 'Freitag' is not derived from 'Free-day' but
   from the old Norse Goddess Freya.)
 
 + [p. 86] Stanley discusses the most expensive pin: "'They were hand-drawn and
@@ -17006,9 +17006,9 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 103] "And they talked a gibberish of their own, of [...] plug-code and
   hog-code and jacquard..."
 
-  "Jacquards" refer to the punched cards, developed by Joseph Marie Jacquard in
+  'Jacquards' refer to the punched cards, developed by Joseph Marie Jacquard in
   1805, on which patterns could be stamped. The cards were then inserted into a
-  mechanical loom called the "Jacquard Loom" which would then weave the pattern.
+  mechanical loom called the 'Jacquard Loom' which would then weave the pattern.
   There is a famous portrait of Jacquard, woven in silk, which required 24,000
   punched cards to create.
 
@@ -17021,7 +17021,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 110] "[Reacher Gilt] certainly looked like a pirate, with his long, curly
   black hair, pointed beard, and eyepatch. He was even said to have a parrot."
 
-  The name "Reacher Gilt" is itself a pun on "Long John Silver", the pirate
+  The name 'Reacher Gilt' is itself a pun on 'Long John Silver', the pirate
   captain from Treasure Island, although Gilt's name, appearance and
   libertarian-capitalist ideology has stronger resonances with the charismatic
   capitalist hero John Galt and pirate Ragnar Danneskjold from Ayn Rand's _Atlas
@@ -17077,7 +17077,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 152] "'Three and a bit, that's the ticket. Only Bloody Stupid Johnson said
   that was untidy, so he designed a wheel where the pie was exactly three.'"
 
-  "Pie" here of course refers to the mathematical constant <pi>, to which there
+  'Pie' here of course refers to the mathematical constant <pi>, to which there
   is an old limerick:
 
         It's a favorite hobby of mine
@@ -17110,11 +17110,11 @@ The page numbers refer to the Harper Fiction paperback edition.
   after much political debate. As on the Discworld, stamp collectors began to
   appear almost immediately afterward.
 
-  It's interesting that Moist writes "Post Office" on his stamps. On Roundworld,
+  It's interesting that Moist writes 'Post Office' on his stamps. On Roundworld,
   there's a myth that this once happened by mistake when the stamps for
   Mauritius were designed. According to the story, the engraver forgot the
-  correct wording ("Post Paid"), took a walk to the Post Office to ask, saw the
-  sign "Post Office", which jogged his memory and he turned back and wrote that
+  correct wording ('Post Paid'), took a walk to the Post Office to ask, saw the
+  sign 'Post Office', which jogged his memory and he turned back and wrote that
   instead on the stamp.
 
 + [p. 170] When Moist shows Adora his stamp designs, she says: "What's this?
@@ -17148,7 +17148,7 @@ The page numbers refer to the Harper Fiction paperback edition.
   Justice, Temperance, Fortitude, and Prudence. Their frescoed images adorn the
   Scrovegni Chapel in Padua, Italy.
 
-  And when looking up the "Tubso" and "Bissonomy" entries on
+  And when looking up the 'Tubso' and 'Bissonomy' entries on
   <http://wiki.lspace.org>, the first paragraph says it all: "No, we haven't got
   a clue either."
 
@@ -17162,7 +17162,7 @@ The page numbers refer to the Harper Fiction paperback edition.
   In Jerusalem, old or damaged Bibles and Torahs are buried in special tombs
   rather than destroyed. The tradition is that words are sacred and have
   power. The Hebrew name for such a depository is <genizah>, pronounced
-  "geniza", which is quite close to the wizards' word "gevaisa", referring to "a
+  'geniza', which is quite close to the wizards' word 'gevaisa', referring to "a
   tomb of living words".
 
 + [p. 189] "'Where do they go [when they die]?' 'No one's sure, exactly, but you
@@ -17202,11 +17202,11 @@ The page numbers refer to the Harper Fiction paperback edition.
   Gunmen_, a trio of computer hackers (or crackers) from the television series
   _The X-Files_, on whom the members of the Smoking Gnu are based.
 
-  Although the real meaning of the word "gnu" refers to a species of large
+  Although the real meaning of the word 'gnu' refers to a species of large
   antelope, it also eludes to the _GNU Project_ <<Here, GNU is a recursive
   acronym and stands for "GNU's Not Unix".>> which is an enterprise that
   promotes the development and distribution of free software. After many got
-  confused about the term "free", the foundation that supports the GNU Project
+  confused about the term 'free', the foundation that supports the GNU Project
   offered the following explanation: "To understand the concept, you should
   think of 'free' as in 'free speech', not as in 'free beer'."
 
@@ -17326,18 +17326,18 @@ The page numbers refer to the Harper Fiction paperback edition.
   'Because we can crack the system.'"
 
   Although most might find this a pun on the Roundworld computer hackers, the
-  term "crackers" does exists in our world as well. The general view is,
+  term 'crackers' does exists in our world as well. The general view is,
   although both denote individuals with extensive knowledge and expertise in
-  computers, a *hacker* uses his or her skills to build things, whereas a
-  *cracker* puts them to malicious use (such as illegally breaking into others'
-  systems). In security terms, hackers are also referred to as "white hats", and
-  crackers as "black hats".
+  computers, a hacker uses his or her skills to build things, whereas a
+  cracker puts them to malicious use (such as illegally breaking into others'
+  systems). In security terms, hackers are also referred to as 'white hats', and
+  crackers as 'black hats'.
 
 + [p. 334] "'If you send the right kind of message, you can bust the
   machinery.'"
 
   Back in the days, it was possible to crash computers connected to the Internet
-  by sending a so-called "ping of death". A "ping" is a command that checks
+  by sending a so-called "ping of death". A 'ping' is a command that checks
   whether another machine is reachable, which is sent as one or more IP
   (Internet Protocol) packets. The maximum packet size is 65,535 bytes, but
   early implementations could be exploited to send much larger packets. As
@@ -17347,7 +17347,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 
 + [p. 341] "'I call it baize-space,' said Ponder Stibbons proudly."
 
-  "Baize" is the name given to the felt-like cloth used to cover billiards
+  'Baize' is the name given to the felt-like cloth used to cover billiards
   tables. As Stibbons later points out, it's also a pun on "phase space".
 
 + [p. 354] "'But it’s a book!' said Mr. Pony. 'It'll take all night to code. And
@@ -18008,7 +18008,7 @@ GOOD OMENS
         I should be so lucky in love
 
   Notice that this is yet another misquote: there are only *four* successive
-  "lucky's", not five.
+  'lucky's', not five.
 
 - [p. 79/46] Adam's upbringing in Tadfield.
 
