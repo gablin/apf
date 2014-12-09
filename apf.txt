@@ -17082,6 +17082,15 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   A pun on the Israelites' cry from the Biblical book of Exodus.
 
++ [p. 150] "'Actually it is the Sorting Engine,' said Groat. 'It's the curse of
+  the Post Office, sir. It had imps in it for the actual reading of the
+  envelopes, but they all evaporated years ago.'"
+
+  While imps are used as the basis for a lot of Discworld technology, the author
+  of this annotation doubts many people outside the Royal Mail know that the
+  huge sorting machines in every mail centre are called Integrated Mail
+  Processors, or IMPs for short!
+
 + [p. 152] "'Three and a bit, that's the ticket. Only Bloody Stupid Johnson said
   that was untidy, so he designed a wheel where the pie was exactly three.'"
 
