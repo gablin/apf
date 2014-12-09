@@ -17374,6 +17374,10 @@ The page numbers refer to the Harper Fiction paperback edition.
   images, albeit slowly, by transmitting codes representing pixel data, which is
   typically how computers store images.
 
+  Fittingly, Andrew S. Tanenbaum wrote in his 1981 textbook _Computer Networks_:
+  "Never underestimate the bandwidth of a station wagon full of tapes hurtling
+  down the highway."
+
 + [p. 368] "'It's still not *working*, Mr. Stibbons!' [Archchancellor Ridcully]
   bellowed. 'Here's that damn enormous fiery eye again!'"
 
