@@ -573,6 +573,10 @@ def toLatexSub(s):
     s = s.replace("Mr. ", "Mr.~")
     s = s.replace("Mrs. ", "Mrs.~")
     s = s.replace("Ms. ", "Ms.~")
+    s = s.replace("``{`", "``\\thinspace{`")
+    s = s.replace("`{``", "`\\thinspace{``")
+    s = s.replace("'}''", "'}\\thinspace''")
+    s = s.replace("''}'", "''}\\thinspace'")
 
     # A period followed by a lowercase letter is not a full stop
     i = 0
