@@ -17449,7 +17449,13 @@ The page numbers refer to the Harper Fiction paperback edition.
 
 THUD!
 
-This book was released in October 2005. No annotations yet.
+The page numbers refer to the Harper Fiction paperback edition.
+
++ [p. 4] "'Mr., er, Fizz does capture a very good likeness, sir,' [...]"
+
+  The editorial cartoonist in the _Times_ is a reference to Hablot Knight
+  Browne, 19th Century English artist, famous as Phiz, the illustrator of the
+  best-known books by Charles Dickens.
 
 
 WHERE'S MY COW?
