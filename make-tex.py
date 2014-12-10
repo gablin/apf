@@ -204,11 +204,16 @@ def latexifyMarkup(s):
     #    #3: String to replace the markup end with
     #    #4: Whether the markup can occur in the middle of a word
     #    #5: Whether the markup can span across multiple paragraphs
-    r_data = [ [ "_",  "_",     "\\emph{",  "}", False, False ]
-             , [ "*",  "*",     "\\emph{",  "}",  True, False ]
-             , ["<<", ">>", "\\footnote{",  "}", False, False ]
-             , [ "'",  "'",           "`",  "'", False, False ]
-             , ["\"", "\"",          "``", "''", False,  True ]
+    r_data = [ [ "_",  "_",     "\\emph{",   "}", False, False ]
+             , [ "*",  "*",     "\\emph{",   "}",  True, False ]
+             , ["<<", ">>", "\\footnote{",   "}", False, False ]
+             , [ "'",  "'",         "{`{", "}'}", False, False ]
+               # The double braces are used to really ensure that it is typeset
+               # as a single quote and not accidentally be merged into a double
+               # quote.
+             , ["\"", "\"",          "``",  "''", False,  True ]
+               # The double quotes cannot be surrounded with braces since the
+               # quote may span multiple paragraphs.
              ]
 
     # Find earliest start of (any) markup
@@ -546,6 +551,17 @@ def toLatexSub(s):
     # Other layout fixes
     s = s.replace(" ]", "~]")
     s = s.replace(" p. ", " p.~")
+    s = s.replace(" pp. ", " pp.~")
+    s = s.replace("(pp. ", "(pp.~")
+    s = s.replace(" chap. ", " chap.~")
+    s = s.replace("(chap. ", "(chap.~")
+    s = s.replace("Mr. ", "Mr.~")
+    s = s.replace("Mrs. ", "Mrs.~")
+    s = s.replace("Ms. ", "Ms.~")
+    s = s.replace("``{`", "``\\thinspace{`")
+    s = s.replace("`{``", "`\\thinspace{``")
+    s = s.replace("'}''", "'}\\thinspace''")
+    s = s.replace("''}'", "''}\\thinspace'")
 
     # A period followed by a lowercase letter is not a full stop
     i = 0
