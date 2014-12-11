@@ -11,6 +11,7 @@
 %==========
 
 \usepackage{microtype}
+\usepackage[OT2]{fontenc} % For typesetting Russian
 \usepackage{libertine} % Sans-serif font
 \usepackage{garamondx} % Serif font
 \usepackage[scaled=.75]{beramono} % Typewriter font
@@ -33,7 +34,7 @@
 \usepackage{url}
 \usepackage{xcolor}
 \usepackage{perpage} % For resetting the footnote counter after each page
-\usepackage{cjhebrew}
+\usepackage{cjhebrew} % For typesetting Hebrew
 
 
 
@@ -355,6 +356,12 @@
 }
 \newcommand{\heartSymbol}{$\heartsuit$}
 \newcommand{\bracketsLDots}{[$\ldots$]}
+\newcommand{\textcyr}[1]{{%
+  \renewcommand\rmdefault{wncyr}%
+  \renewcommand\encodingdefault{OT2}%
+  \normalfont%
+  \selectfont#1%
+}}
 
 
 

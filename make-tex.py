@@ -531,6 +531,15 @@ def toLatexSub(s):
     s = s.replace("It Could Be YOU", "\\textsc{it could be YOU}")
     s = s.replace("palantiri", "palant\\'{i}ri")
     s = s.replace("maitre d'", "ma\\^{i}tre d'")
+    s = s.replace("<Komsomol>", "\\textcyr{Komsom\\'ol}")
+    s = s.replace("<Vsesoyuznyii Deninskii Kommunisticheskii Soyuz Molodyozhi>",
+                  ( "\\textcyr{Vseso\\cyryu zny\\u{i} Deninski\\u{i} "
+                  + "Kommunist\\'i\\cyrch eski\\u{i} So\\u\\cyryu z "
+                  + "Molod\\\"e\\cyrzh i}"
+                  )
+                 )
+
+
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
