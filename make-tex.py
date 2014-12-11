@@ -508,6 +508,7 @@ def toLatexSub(s):
     s = s.replace("Danae", "Dana\\\"{e}")
     s = s.replace("Goetterdaemmerung", "G\\\"{o}tterd\\\"{a}mmerung")
     s = s.replace("Bjorn Ulvaeus", "Bj\\\"{o}rn Ulvaeus")
+    s = s.replace("if Bjorn is", "if Bj\\\"{o}rn is")
     s = s.replace("Haendel", "H\\\"{a}ndel")
     s = s.replace("cliche", "clich\\'{e}")
     s = s.replace("Goedel", "G\\\"{o}del")
@@ -538,8 +539,6 @@ def toLatexSub(s):
                   + "Molod\\\"e\\cyrzh i}"
                   )
                  )
-
-
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
