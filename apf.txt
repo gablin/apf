@@ -17478,8 +17478,8 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   The black ribbons are also reminiscent of the scarlet sash worn by members of
   the Junior Anti-Sex League in George Orwell's _1984_, and similar red ribbons
-  were used by the <Komsomol> <<This is pronounced 'komsomol', and is a syllabic
-  abbreviation of <Vsesoyuznyii Deninskii Kommunisticheskii Soyuz Molodyozhi>,
+  were used by <Komsomol> <<This is a syllabic abbreviation, pronounced
+  'komsomol', of <Vsesoyuznyii Deninskii Kommunisticheskii Soyuz Molodyozhi>,
   which is Russian for "All-Union Leninist Young Communist League".>> -- the
   Soviet Communist Party's youth wing.
 
