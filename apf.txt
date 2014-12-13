@@ -17006,9 +17006,9 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Paraphrasing quotes from _Terminator 2_:
 
-      John Connor: "You can't just go around killing people!"
+      John Connor: "You just can't go around killing people!"
       Terminator: "Why?"
-      "What do you mean, why? Because you can't!"
+      "What do you mean 'why'? 'Cause you *can't*!"
       "Why?"
 
 + [p. 103] "And they talked a gibberish of their own, of [...] plug-code and
