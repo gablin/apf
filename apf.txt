@@ -16842,7 +16842,7 @@ The page numbers refer to the Harper Fiction paperback edition.
   Mrs. Cake, first introduced in _Reaper Man_, is a psychic medium who, more
   importantly, runs a boarding house for the undead of Ankh-Morpork.
 
-+ [p. 29] The character Tolliver Groat.
++ [p. 29] Tolliver Groat.
 
   The name, the character description, and the vast, runned-down Post Office
   building are straight out of Mervyn Peake's three novels called the
@@ -17485,6 +17485,9 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Although, naturally, red is the *last* colour a group of reformed B-word
   addicts would choose for their ribbons!
+
+
+
 
 WHERE'S MY COW?
 
