@@ -775,7 +775,7 @@ def fixBadTypesetting(s):
     for c in s:
         new_s += c
         if c.isalpha():
-            new_s += "\\/"
+            new_s += "{}"
 
     # Prevent that 's' looks like an 'f' (this happens when using gothic fonts)
     new_s = new_s.replace("s", "s:")
