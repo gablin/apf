@@ -539,6 +539,7 @@ def toLatexSub(s):
                   + "Molod\\\"e\\cyrzh i}"
                   )
                  )
+    s = s.replace("360-degree", "360$^{\\circ}$")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
