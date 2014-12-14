@@ -459,6 +459,7 @@ def toLatexSub(s):
                               , "Roberts"
                               , "thinkin"
                               , "Wi"
+                              , "Williams"
                               , "wouldna"
                               ]
     for w in WORDS_STARTING_WITH_QUOTE:
