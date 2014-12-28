@@ -17663,6 +17663,25 @@ The page numbers refer to the Harper Fiction paperback edition.
   not-quite-right MIDI files that digitize otherwise quite nice tunes, and turn
   them into a sort of lift muzak?
 
++ [p. 107] The Breccia.
+
+  Breccia is a rock composed of broken fragments of minerals or rock cemented
+  together by a fine-grained matrix (from Wikipedia), as well as Ankh-Morpork's
+  version of the Mafia.
+
++ [p. 110] Chrysophrase's "Kew Eee Dee".
+
+  A phonetic version of QED (short for _quod erat demonstrandum_ in Latin),
+  which means "thus it is proven".
+
++ [p. 111] "'And dey cuts Slab w' bad sulfides an' cooks it up wi' ferric
+  chloride an' crap like dat. You thought Slab was bad? You wait 'til you see
+  Slide.'"
+
+  This could be a reference to the introduction of crack cocaine. No wonder
+  ferric chloride has a nasty effect on trolls' silicon brains; it's used to cut
+  circuit boards.
+
 + [p. 128] PLT.
 
   Pre-Lunar Tension.

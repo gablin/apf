@@ -403,7 +403,8 @@ def toLatex(s):
     return new_s
 
 def toLatexSub(s):
-    # Avoid special cases that will break the markup routine
+    # Avoid special cases that will break the markup routine and are too
+    # difficult to fix in a generic fashion
     s = s.replace(" * ", " &m& ")
     s = s.replace("'*'", "'&m&'")
     s = s.replace( "P**! P*! B****! B**! D******!"
@@ -411,6 +412,7 @@ def toLatexSub(s):
                  )
     s = s.replace("f*ck", "f&m&ck")
     s = s.replace(" 'n' ", " &q&n&q& ")
+    s = s.replace(" Slab w' ", " Slab w&q& ")
     VALID_WORD_START_CHARS = "\"' _*("
     VALID_WORD_STOP_CHARS = " ,.!?_*\""
     WORDS_STARTING_WITH_QUOTE = [ "92"
@@ -459,6 +461,7 @@ def toLatexSub(s):
                               , "Roberts"
                               , "thinkin"
                               , "Wi"
+                              , "wi"
                               , "Williams"
                               , "wouldna"
                               ]
