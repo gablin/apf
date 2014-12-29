@@ -473,6 +473,11 @@ def toLatexSub(s):
     s = s.replace("&q&", "'")
 
     # Replace special characters
+    #
+    # Certain replacements are surrounded by brackets since these can appear in
+    # section titles, and the extra brackets signify that these are commands
+    # and not individual characters. Otherwise the commands will be messed up
+    # by the kerning fixup routine.
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
     s = s.replace("%", "\\%")
@@ -483,9 +488,9 @@ def toLatexSub(s):
     s = s.replace("`+'", "`$+$'")
     s = s.replace(" * ", " $*$ ")
     s = s.replace("`*'", "`$*$'")
-    s = s.replace("[...]", "\\bracketsLDots{}")
-    s = s.replace("...", "\\ldots{}")
-    s = s.replace(" -- ", " \emdash{} ")
+    s = s.replace("[...]", "{\\bracketsLDots{}}")
+    s = s.replace("...", "{\\ldots{}}")
+    s = s.replace(" -- ", " {\emdash{}} ")
     s = s.replace("-->", "$\\rightarrow$")
     s = s.replace("e.g. ", "e.g.\ ")
     s = s.replace("i.e. ", "i.e.\ ")
@@ -769,16 +774,124 @@ def typesetHex(s):
                    )
     return s
 
-def fixBadTypesetting(s):
+def fixBadSectionTypesetting(s):
     # Prevent ligatures as this makes gothic fonts harder to read
     new_s = ""
+    is_inside_command = False
     for c in s:
         new_s += c
-        if c.isalpha():
+        if c == "{":
+            is_inside_command = True
+        elif c == "}":
+            is_inside_command = False
+        elif c.isalpha() and not is_inside_command:
+            # Prevent that 's' looks like an 'f' (this happens when using gothic
+            # fonts)
+            if c == "s":
+                new_s += ":"
             new_s += "{}"
 
-    # Prevent that 's' looks like an 'f' (this happens when using gothic fonts)
-    new_s = new_s.replace("s", "s:")
+    # Fix bad kerning
+    kern_table = [ [ 'A',  'b', "-.02em"  ]
+                 , [ 'A',  'c', "-.01em"  ]
+                 , [ 'a',  'd', "-.01em"  ]
+                 , [ 'a',  'i', "-.03em"  ]
+                 , [ 'a',  'k', "-.02em"  ]
+                 , [ 'a',  'l', "+.01em"  ]
+                 , [ 'A',  'P', "-.07em"  ]
+                 , [ 'A',  'r', "-.04em"  ]
+                 , [ 'a',  'r', "-.025em" ]
+                 , [ 'a',  't', "-.01em"  ]
+                 , [ 'C',  'a', "-.01em"  ]
+                 , [ 'D',  'e', "+.03em"  ]
+                 , [ 'd',  'i', "-.02em"  ]
+                 , [ 'e',  'a', "-.015em" ]
+                 , [ 'e',  'd', "-.01em"  ]
+                 , [ 'e',  'f', "-.01em"  ]
+                 , [ 'E',  'l', "+.02em"  ]
+                 , [ 'e',  'p', "-.01em"  ]
+                 , [ 'E',  'q', "-.05em"  ]
+                 , [ 'E',  'r', "-.02em"  ]
+                 , [ 'e',  'r', "-.03em"  ]
+                 , [ 'e',  's', "-.025em" ]
+                 , [ 'e',  ',', "-.06em"  ]
+                 , [ 'F',  'a', "-.09em"  ]
+                 , [ 'F',  'e', "-.08em"  ]
+                 , [ 'F',  'i', "-.08em"  ]
+                 , [ 'F',  'o', "-.09em"  ]
+                 , [ 'F',  'r', "-.09em"  ]
+                 , [ 'F',  'u', "-.07em"  ]
+                 , [ 'g',  'i', "-.01em"  ]
+                 , [ 'g',  'o', "-.02em"  ]
+                 , [ 'g',  't', "-.01em"  ]
+                 , [ 'i',  'c', "+.015em" ]
+                 , [ 'i',  'e', "+.015em" ]
+                 , [ 'i',  'g', "+.015em" ]
+                 , [ 'i',  'm', "+.02em"  ]
+                 , [ 'I',  'n', "-.06em"  ]
+                 , [ 'i',  'n', "+.01em"  ]
+                 , [ 'i',  's', "+.015em" ]
+                 , [ 'i',  't', "+.015em" ]
+                 , [ 'J',  'i', "-.08em"  ]
+                 , [ 'J',  'o', "-.06em"  ]
+                 , [ 'J',  'u', "-.06em"  ]
+                 , [ 'k',  'i', "-.02em"  ]
+                 , [ 'l',  'a', "-.03em"  ]
+                 , [ 'l',  'd', "-.04em"  ]
+                 , [ 'l',  'e', "-.04em"  ]
+                 , [ 'l',  'i', "-.06em"  ]
+                 , [ 'l',  'o', "-.04em"  ]
+                 , [ 'l',  's', "-.04em"  ]
+                 , [ 'l',  'u', "-.035em" ]
+                 , [ 'm',  'a', "+.01em"  ]
+                 , [ 'M',  'e', "-.03em"  ]
+                 , [ 'm',  'e', "+.01em"  ]
+                 , [ 'M',  'i', "-.03em"  ]
+                 , [ 'n',  'e', "+.01em"  ]
+                 , [ 'N',  'i', "-.03em"  ]
+                 , [ 'n',  '0', "+.01em"  ]
+                 , [ 'n',  't', "+.01em"  ]
+                 , [ 'o',  'd', "-.02em"  ]
+                 , [ 'o',  'f', "-.025em" ]
+                 , [ 'o',  'r', "-.03em"  ]
+                 , [ 'o',  't', "-.01em"  ]
+                 , [ 'P',  'F', "-.09em"  ]
+                 , [ 'P',  'i', "-.02em"  ]
+                 , [ 'r',  'a', "-.01em"  ]
+                 , [ 'R',  'e', "-.04em"  ]
+                 , [ 'R',  'i', "-.04em"  ]
+                 , [ 'r',  'i', "-.02em"  ]
+                 , [ 'r',  'l', "+.01em"  ]
+                 , [ 'r',  'p', "-.005em" ]
+                 , [ "s:", 'e', "+.01em"  ]
+                 , [ 'S',  'i', "-.03em"  ]
+                 , [ "s:", 'm', "+.01em"  ]
+                 , [ "s:", 't', "+.01em"  ]
+                 , [ 'T',  'h', "-.01em"  ]
+                 , [ 'T',  'i', "-.06em"  ]
+                 , [ 't',  'i', "-.02em"  ]
+                 , [ 'T',  'o', "-.05em"  ]
+                 , [ 'T',  'r', "-.05em"  ]
+                 , [ 't',  'r', "-.02em"  ]
+                 , [ 'T',  'u', "-.03em"  ]
+                 , [ 'u',  'l', "+.025em" ]
+                 , [ 'u',  's', "+.01em"  ]
+                 , [ 'V',  'e', "-.12em"  ]
+                 , [ 'v',  'i', "-.02em"  ]
+                 , [ 'W',  'a', "-.03em"  ]
+                 , [ 'W',  'i', "-.02em"  ]
+                 , [ 'w',  'i', "-.02em"  ]
+                 , [ '\'', 's', "-.05em"  ]
+                 ]
+    for [fst, snd, kern] in kern_table:
+        kern_str = "\\kern" + kern + " "
+        if fst[0].isalpha():
+            find_str = fst + "{}" + snd
+            replace_str = fst + "{}" + kern_str + snd
+        else:
+            find_str = fst + snd
+            replace_str = fst + kern_str + snd
+        new_s = new_s.replace(find_str, replace_str)
 
     return new_s
 
@@ -988,7 +1101,7 @@ while currentLine < len(content):
             isAtVersionSection = False
         formatted_section_name = toLatex(section_name)
         print ( "\\section[" + formatted_section_name + "]{"
-              + fixBadTypesetting(formatted_section_name)
+              + fixBadSectionTypesetting(formatted_section_name)
               + "}"
               )
         currentLine += 1
