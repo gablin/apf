@@ -458,6 +458,7 @@ def toLatexSub(s):
                               , "makin"
                               , "o"
                               , "paradin"
+                              , "Quarles"
                               , "Roberts"
                               , "thinkin"
                               , "Wi"
