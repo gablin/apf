@@ -5756,20 +5756,20 @@ WITCHES ABROAD
 
   In the jargon of American military planners, the DEFCON scale (for
   _Defence Readiness Condition_) is used to describe the level of
-  preparedness of U.S. military forces. I quote from _The Language of
+  preparedness of US military forces. I quote from _The Language of
   Nuclear War -- An Intelligent Citizen's Dictionary_ by H. Eric Semler,
   James J. Benjamin, Jr., and Adam P. Gross:
 
   "DEFCON 5 describes a state in which forces are at normal readiness,
   while DEFCON 1, referred to as the "cocked pistol," indicates a state of
-  extreme emergency, when forces are poised for attack. Not all U.S.
+  extreme emergency, when forces are poised for attack. Not all US
   military forces are simultaneously at the same DEFCON. The DEFCON varies
   depending upon the type of weapon with which the troops are equipped and
-  the region in which they are deployed. For example, U.S. troops in South
+  the region in which they are deployed. For example, US troops in South
   Korea are always at DEFCON 4 but soldiers tending nuclear missiles
-  deployed in the continental U.S. are normally kept at DEFCON 5. During
+  deployed in the continental US are normally kept at DEFCON 5. During
   the Cuban Missile Crisis, President John F. Kennedy raised the DEFCON of
-  U.S. forces to DEFCON 2 (a status just below wartime conditions)."
+  US forces to DEFCON 2 (a status just below wartime conditions)."
 
 - [p. 137/120] "'Oh? It's all wishing on stars and fairy dust, is it?'"
 
@@ -16752,11 +16752,11 @@ The page numbers refer to the Harper Fiction paperback edition.
 
 + [title] _Going Postal_.
 
-  Around 1986 several mentally stressed U.S. Postal Service employees went on a
+  Around 1986 several mentally stressed US postal service employees went on a
   shooting rampage at post offices, killing employees and bystanders. This
-  resulted in the U.S. Postal Service (and many other organizations)
+  resulted in the US Postal Service (and many other organizations)
   re-evaluating employee work conditions and decreasing stress in the work
-  place. The term has remained in U.S. slang for when an employee or ex-employee
+  place. The term has remained in US slang for when an employee or ex-employee
   goes on a murder rampage at his workplace, though it is more used to predict
   that someone is getting upset with job conditions enough to go postal. In the
   book this emotional condition is perfectly represented by Stanley.
@@ -17711,7 +17711,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 + [p. 149--150] "'And, incidentally, tomato ketchup is not a vegetable,' Sybil
   added."
 
-  In 1981, the U.S. Food and Drug Administration attempted to reclassify tomato
+  In 1981, the US Food and Drug Administration attempted to reclassify tomato
   ketchup and pickle relish as vegetables rather than condiments for school
   lunch programs. The goal was to relax nutritional requirements and cut
   costs. The measure met with resounding disapproval and was eventually
@@ -18847,7 +18847,7 @@ GOOD OMENS
 
 - [p. 377/264] "It was Sunday afternoon."
 
-  According to Terry, the U.S. edition of _Good Omens_ has about 700 extra
+  According to Terry, the US edition of _Good Omens_ has about 700 extra
   words in it, because:
 
   "After the MS had been accepted and edited by Gollancz, the *American*
@@ -20303,7 +20303,7 @@ The examples I have had reported to me so far:
   Barnes, 1991.
 
   The UK edition of this book describes the character Alan Myers as "a
-  Terry Pratchett wizard". In the U.S. edition this sentence was simply
+  Terry Pratchett wizard". In the US edition this sentence was simply
   left out.
 
   At a later point in the novel (both editions this time), two characters
