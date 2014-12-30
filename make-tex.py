@@ -597,6 +597,28 @@ def toLatexSub(s):
     s = s.replace("'}''", "'}\\thinspace''")
     s = s.replace("''}'", "''}\\thinspace'")
 
+    # Force full stop after certain words ending with capital letter
+    acronym_table = [ "ACME"
+                    , "APF"
+                    , "Charles I"
+                    , "CONCEPT"
+                    , "DEFCON"
+                    , "III"
+                    , "MAKE"
+                    , "NEXT"
+                    , "silent Q"
+                    , "So have I"
+                    , "So was I"
+                    , "TV"
+                    , "UK"
+                    , "US"
+                    , "VII"
+                    , "WWII"
+                    , "YMCA"
+                    ]
+    for a in acronym_table:
+        s = s.replace(a + ". ", a + "\\@. ")
+
     # A period followed by a lowercase letter is not a full stop
     i = 0
     while i + 2 < len(s):
