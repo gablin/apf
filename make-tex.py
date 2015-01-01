@@ -450,6 +450,7 @@ def toLatexSub(s):
                               , "drillin"
                               , "Evenin"
                               , "goin"
+                              , "havin"
                               , "hustlin"
                               , "James"
                               , "Jus"

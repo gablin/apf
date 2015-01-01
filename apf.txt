@@ -17771,6 +17771,22 @@ The page numbers refer to the Harper Fiction paperback edition.
   twelve-step program as a course of action for recovery from alcoholism, drug
   addiction, compulsion, and other behavioural problems.
 
++ [p. 220] The game Thud.
+
+  Thud was developed by Trevor Truran, Bernard the stout, Cunning Artificer to
+  the Gentry, and Terry Pratchett, and is similar to _Hnefatafl_ (see annotation
+  for p. 78 of _Going Postal_) although it is actually not a member of the
+  _tafl_ family as the manner of capture has been modernized and the game
+  involves no king piece.
+
+  The players play on a 165 octagonal shaped board as either the dwarfs or the
+  trolls. Eight trolls start the game in the middle of the board as they have
+  been ambushed by 32 dwarfs which surround them at the outer edge of the
+  board. Trolls and dwarfs have different ways of moving and capturing, and when
+  the first battle is over the players switch sides. Each battle is ended by
+  mutual agreement and then scored. The combined scores from both battles
+  determines the winner.
+
 + [p. 221] "'Gabbro is so good at playing from the dwarf viewpoint that his
   troll game is suffering, [...]'"
 
