@@ -17663,6 +17663,14 @@ The page numbers refer to the Harper Fiction paperback edition.
   not-quite-right MIDI files that digitize otherwise quite nice tunes, and turn
   them into a sort of lift muzak?
 
++ [p. 105] "[Detritus] unslung the Piecemaker, the crossbow he had personally
+  built from a converted siege weapon, the multiple bolts of which tended to
+  shatter in the air from the sheer stress of acceleration."
+
+  A reference to the Colt .45 Single Action Army revolver, also nicknamed
+  'Peacemaker'. There is also the strategic bomber Convair B-36 'Peacemaker',
+  which was operated by United States Air Force from 1949 to 1959.
+
 + [p. 107] The Breccia.
 
   Breccia is a rock composed of broken fragments of minerals or rock cemented
