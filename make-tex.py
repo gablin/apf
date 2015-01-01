@@ -464,6 +464,7 @@ def toLatexSub(s):
                               , "takin"
                               , "thinkin"
                               , "throwin"
+                              , "touchin"
                               , "Wi"
                               , "wi"
                               , "Williams"
