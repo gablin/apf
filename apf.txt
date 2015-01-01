@@ -17836,8 +17836,9 @@ The page numbers refer to the Harper Fiction paperback edition.
   Poosticks.>> when I was a nipper, though.'"
 
   'Tiddley-rats' is Ankh-Morpork's gutter version of Tiddlywinks, and
-  'Poosticks' is a reference to the game of Pooh-sticks from the Winnie the Pooh
-  stories, where the characters have races with sticks floating under a bridge.
+  'Poosticks' is a reference to the game of Pooh-sticks from the _Winnie the
+  Pooh_ stories, where the characters have races with sticks floating under a
+  bridge.
 
 + [p. 262] "'There's throwin' up and yellin' and unladylike behavior and takin'
   their vests off and I don't know what. 'S called...' he scratched his head
@@ -17854,6 +17855,12 @@ The page numbers refer to the Harper Fiction paperback edition.
   distribute their religious pamphlets in a similar manner. The name of his god,
   Om, is a mystical or sacred syllable in the Indian religions, including
   Hinduism, Sikhism, Jainism, and Buddhism.
+
++ [p. 303] "'Something happens at thirteen miles an hour. I don't know what.'"
+
+  The speed limit and flaming cabbages is probably a nod to the _Back to the
+  Future_ films, where the DeLorean traveled through time when it reached 88
+  mph, leaving flaming trails behind it.
 
 
 WHERE'S MY COW?

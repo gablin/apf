@@ -601,6 +601,7 @@ def toLatexSub(s):
     s = s.replace("`{``", "`\\thinspace{``")
     s = s.replace("'}''", "'}\\thinspace''")
     s = s.replace("''}'", "''}\\thinspace'")
+    s = s.replace(" mph", "\\thinspace mph")
 
     # Force full stop after certain words ending with capital letter
     acronym_table = [ "ACME"
