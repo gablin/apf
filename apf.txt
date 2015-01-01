@@ -17814,6 +17814,28 @@ The page numbers refer to the Harper Fiction paperback edition.
   forget that Discworld has 8 days a week (see also the annotation for p. 66 of
   _Going Postal_).
 
++ [p. 250] "_Quis custodiet ipsos custodes_, er, _qui custodes custodient?_ Was
+  that right for 'Who watches the watcher that watches the watchmen?'?"
+
+  _Quis custodiet ipsos custodes_ is a Latin phrase from the Roman poet Juvenal,
+  which literally translates to "Who will guard the guards themselves?", and is
+  variously translated in colloquial English as "Who watches the watchmen?",
+  "Who watches the watchers?", "Who will guard the guards?", "Who shall watch
+  the watchers?", "Who polices the police?", and so on.
+
+  The phrase was made famous in the graphic novel _Watchmen_ by Alan Moore. The
+  slogan is seen and heard throughout the novel on the basis that the Watchmen
+  are vigilantes that operate outside of the law, where no protective checks and
+  balances exist, thus there is no oversight to what they might do. For example,
+  Rorschach kills most of the bad guys he comes across, as did the Comedian.
+  When sent to prison, and subsequently recognised by criminals he allowed to
+  live in order to do time, Rorschach neatly turns the tables on their revenge
+  attack on him, and slaughters the lot in a manner most courts would consider
+  crosses the border from legitimate self-defence into cold calculated murder
+  (Rorschach blocks a toilet with the head of one attacker, which causes a flood
+  in the cell wing. He then uses the combination of ankle-deep water and lots of
+  bare metal fittings to electrocute a dozen more.)
+
 + [p. 251] Sam Vimes' inner, vehement dialogue: _"You scum, you rat-sucking
   little worm-eaters!"_ and so on...
 
@@ -17880,6 +17902,20 @@ The page numbers refer to the Harper Fiction paperback edition.
   have names like Bunny or Bubbles, [...]"
 
   A reference to the nicknames of stereotypical British public-school girls.
+
++ [p. 318] "The other thing that Vimes noticed was the landscape ahead was
+  strangely bluish, while behind them it had a relatively red tint."
+
+  This is a reference to the blue- and redshift phenomenon caused by the Doppler
+  effect. When you move towards an object, the observed wave propagation speed
+  of the light emitted by that object is reduced by your own velocity. A lower
+  propagation speed, while retaining its frequency, results in a smaller
+  wavelength. Therefore, given the right speed, something green in front of you
+  is observed as blue (hence a *blueshift*). Although the speed of approximately
+  one hundred miles per hour, at which the coach is driving, is far too low for
+  the effect to be observed, but the allusion is a clear one. This may also be
+  justified by the fact (mentioned in several earlier books) that Discworld
+  light travels a lot slower than Roundworld light.
 
 
 WHERE'S MY COW?
