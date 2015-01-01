@@ -17923,6 +17923,20 @@ The page numbers refer to the Harper Fiction paperback edition.
   is standing outside the doors of Moria and must utter a password for them to
   open, when Frodo asks "What is the Elvish word for 'friend'?"
 
++ [p. 362] "'This is just the story of the Things Tak Wrote,' Cheery whispered
+  to Vimes."
+
+  This must have been a loud whisper, as a couple of pages previously, Vimes had
+  sent Cheery back to the town. In later editions of the book, however, it is
+  Angua who is doing the whispering.
+
++ [p. 366] Bashfullsson rose, looking shocked and massaging his hand. "'It is
+  like using an axe,' he said, to no one in particular, 'but without the
+  axe...'"
+
+  It seems Bashfullsson has been practising something similar to Roundworld's
+  Karate, which is Japanese for "Empty Hand".
+
 
 WHERE'S MY COW?
 
