@@ -17463,8 +17463,8 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Otto resembles the campy vampire, made famous by Bela Lugosi.
 
-+ [p. 9--10] The Ankh-Morpork Mission of the Uberwald League of Temperance and
-  its black ribbons.
++ [p. 9] The Ankh-Morpork Mission of the Uberwald League of Temperance and its
+  black ribbons.
 
   A reference to the various temperance organizations that flourished in the
   19th century, in Britain and other countries, where its members were required
@@ -17605,7 +17605,7 @@ The page numbers refer to the Harper Fiction paperback edition.
   therefore, served as an elaborate treasure map, and spawned a genre of books
   known today as 'armchair treasure hunts'.
 
-+ [p. 50--51] "'War, Nobby. Huh! What is it good for?' he said. 'Dunno,
++ [p. 50] "'War, Nobby. Huh! What is it good for?' he said. 'Dunno,
   Sarge. Freeing slaves, maybe?' 'Absol---well, okay.'"
 
   A reference to the popular song _War_ by Edwin Starr, whose refrain goes:
@@ -17716,7 +17716,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 
         For worms, brave Percy
 
-+ [p. 149--150] "'And, incidentally, tomato ketchup is not a vegetable,' Sybil
++ [p. 149] "'And, incidentally, tomato ketchup is not a vegetable,' Sybil
   added."
 
   In 1981, the US Food and Drug Administration attempted to reclassify tomato
@@ -17753,9 +17753,9 @@ The page numbers refer to the Harper Fiction paperback edition.
   A variation of the catch phrase from Laurel and Hardy: "Well, here's another
   nice mess you've gotten me into."
 
-+ [p. 184--185] "'Tawneee's actually only her pole name,' Nobby said. 'She says
-  no one would be interested in an exotic dancer with a name like Betty. She
-  says it sounds like she'd be better with a bowl of cake mixture.'"
++ [p. 184] "'Tawneee's actually only her pole name,' Nobby said. 'She says no
+  one would be interested in an exotic dancer with a name like Betty. She says
+  it sounds like she'd be better with a bowl of cake mixture.'"
 
   Possibly a reference to Betty Crocker cake mixes, but also a reference to a
   famous 1950s stripper Betty Howard. There is also 40s/50s burlesque performer
@@ -18009,6 +18009,18 @@ The page numbers refer to the Harper Fiction paperback edition.
   donating only two _mites_ -- the smallest coins of all, also known as
   _Leptons_ -- has more value than all the gold ostentatiously placed in there
   by the Pharisees, simply because it is all she has to give.
+
++ [p. 117] "Food gets you through times of no gold much better than gold gets
+  you through times of no food."
+
+  This is a clever restating of a maxim that Shelton and Mavrides used in their
+  comic books _The Fabulous Furry Freak Brothers_ about three hippies and their
+  the alternative lifestyle, which originally states:
+
+      Dope gets you through times of no money better than money gets you through
+        times of no dope.
+
+  And 'dope', of course, is also known as _Acapulco Gold_.
 
 
 I SHALL WEAR MIDNIGHT
