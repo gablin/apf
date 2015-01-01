@@ -17985,7 +17985,14 @@ This book was released in September 2006. No annotations yet.
 
 MAKING MONEY
 
-This book was released in September 2007. No annotations yet.
+The page numbers refer to the Harper Fiction paperback edition.
+
++ [p. 13] "'If it's about the cabbage-flavored stamp glue---' Moist began."
+
+  This is a reference to a statement made by Vimes on p. 26 of _Thud!_:
+  "'Remember the cabbage-scented stamp last month? "Send your expatriate sons
+  and daughters the familiar odor of home"? They actually caught fire if you put
+  too many of them together!'"
 
 
 I SHALL WEAR MIDNIGHT
