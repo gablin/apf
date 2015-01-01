@@ -261,10 +261,12 @@
       usetwoside=false, % Fixes lots of warnings about undefined pagelabel
       footenotedistance=.75\baselineskip,
     ]
+    % Remove indentation of first line in footnote
     \setlength{\footmarkwidth}{0pt}%
+    \setlength{\footparindent}{0pt}%
+    \setlength{\footmarksep}{0pt}%
     \RaggedRight%
     \mbox{\texttt{#1\:#2}} #3
-    \par\justifying\noindent%
   \end{mdframed}
 }
 
