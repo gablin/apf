@@ -205,6 +205,7 @@ def latexifyMarkup(s):
     #    #4: Whether the markup can occur in the middle of a word
     #    #5: Whether the markup can span across multiple paragraphs
     R_DATA = [ [ "_",  "_",     "\\emph{", "}"  , False, False ]
+             , ["**", "**",   "\\textbf{", "}"  , False, False ]
              , [ "*",  "*",     "\\emph{", "}"  ,  True, False ]
              , ["<<", ">>", "\\footnote{", "}"  , False, False ]
              , [ "'",  "'",         "{`{", "}'}", False, False ]
