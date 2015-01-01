@@ -557,6 +557,7 @@ def toLatexSub(s):
                  )
     s = s.replace("360-degree", "360$^{\\circ}$")
     s = s.replace("Khazad-dum", "Khazad-d\\^um")
+    s = s.replace("cape a par", "cape \\`a par")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
