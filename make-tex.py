@@ -461,11 +461,14 @@ def toLatexSub(s):
                               , "paradin"
                               , "Quarles"
                               , "Roberts"
+                              , "takin"
                               , "thinkin"
+                              , "throwin"
                               , "Wi"
                               , "wi"
                               , "Williams"
                               , "wouldna"
+                              , "yellin"
                               ]
     for w in WORDS_STARTING_WITH_QUOTE:
         for cs in VALID_WORD_START_CHARS:
