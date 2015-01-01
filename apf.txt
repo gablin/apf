@@ -17066,13 +17066,13 @@ The page numbers refer to the Harper Fiction paperback edition.
   unfortunate selection of mugs Stanley has used for preparing tea for him and
   Sacharissa Cripslock. The cup Moist receives reads
 
-      YOU DON'T HAVE TO BE MAD
-      TO WORK HERE BUT IT HELPS
+      **YOU DON'T HAVE TO BE MAD**
+      **TO WORK HERE BUT IT HELPS**
 
   but most of the text has faded, leaving:
 
-      BE MAD
-      IT HELPS
+      **BE MAD**
+      **IT HELPS**
 
 + [p. 143] "'Look, I'm not the One you're looking for!'"
 
@@ -17993,6 +17993,12 @@ The page numbers refer to the Harper Fiction paperback edition.
   "'Remember the cabbage-scented stamp last month? "Send your expatriate sons
   and daughters the familiar odor of home"? They actually caught fire if you put
   too many of them together!'"
+
++ [p. 20] "He picked up the mug of tea. On it was printed: **You Don't Have to
+  Be Mad to Work Here But It Helps!**"
+
+  Seems like there are a lot of those cups around in the Post Office (see
+  annotation p. 141 of _Going Postal_).
 
 
 I SHALL WEAR MIDNIGHT
