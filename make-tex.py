@@ -639,6 +639,13 @@ def toLatexSub(s):
         else:
             i = pos + 1
 
+    # Remove indentation of certain paragraphs that are actually continuations
+    noindent_table = [ "And {`{dope}'}, of course,"
+                     , "It has been covered by countless bands since then."
+                     ]
+    for p in noindent_table:
+        s = s.replace(p, "\\noindent " + p)
+
     return s
 
 def typesetUsenet(s):
