@@ -17917,6 +17917,12 @@ The page numbers refer to the Harper Fiction paperback edition.
   justified by the fact (mentioned in several earlier books) that Discworld
   light travels a lot slower than Roundworld light.
 
++ [p. 361] "'What is the dwarf word for "open," Mr. Bashfullsson?' said Vimes."
+
+  A reference to the first _Lord of the Rings_ film. The fellowship of the ring
+  is standing outside the doors of Moria and must utter a password for them to
+  open, when Frodo asks "What is the Elvish word for 'friend'?"
+
 
 WHERE'S MY COW?
 
