@@ -17987,6 +17987,12 @@ MAKING MONEY
 
 The page numbers refer to the Harper Fiction paperback edition.
 
++ [theme]
+
+  Like the Roundworld game _Monopoly_, _Making Money_ involves a bank, financial
+  speculation, capital investment in a city, and striving to reduce your
+  opponents to absolute penury and degradation.
+
 + [p. 13] "'If it's about the cabbage-flavored stamp glue---' Moist began."
 
   This is a reference to a statement made by Vimes on p. 26 of _Thud!_:
