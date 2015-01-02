@@ -18029,6 +18029,35 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   And 'dope', of course, is also known as _Acapulco Gold_.
 
++ [p. 119] Ad Urbem Pertinet.
+
+  "Ad Urbem Pertinet" = "Belongs to the City".
+
++ [p. 119] Promitto fore ut possessori postulanti nummum unum solvem, an apte
+  satisfaciam.
+
+  "Promitto fore ut possessori postulanti nummum unum solvem, an apte
+  satisfaciam" = "I promise to pay the owner of one piece, or suitably satisfy".
+  This is very close to the legend "I promise to the bearer, on demand, the sum
+  of" which is written on all British banknotes.
+
+  When the use of banknotes started to become widespread in Europe in the 16
+  century, they were in effect a promise to pay the bearer an equivalent amount
+  in gold or silver coins. In Britain, the Bank of England was established in
+  1694 by King William III as a means of raising money for his war against
+  France. The first notes were handwritten and of varying amount, but gradually
+  moved to fixed denomination notes, ranging from GBP20 to GBP1,000, in the 18th
+  century. Gold shortages caused by several wars forced the introduction of
+  smaller banknotes into which larger notes could be exchanged -- first a GBP10
+  note, then GBP5, and lastly GBP2 and GBP1 notes -- and in 1853 the first fully
+  printed notes appeared. At the start of WWI the government again needed to
+  retain its gold and silver reserves, forcing the Bank to cease its gold
+  payouts and instead began to issue 10 shilling notes. The gold standard was
+  restored in 1925, but now the Bank was only obliged to exchange its notes for
+  gold in multiples of 400 ounces. Britain finally left the gold standard in
+  1931 and the note issue became entirely fiduciary, that is wholly backed by
+  securities instead of gold.
+
 + [p. 139] Jack Proust.
 
   Jack Proust is an aging comic and the central character in _The First 100

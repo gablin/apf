@@ -499,6 +499,7 @@ def toLatexSub(s):
     # by the kerning fixup routine.
     s = s.replace("&", "\\&")
     s = s.replace("$", "\\$")
+    s = s.replace("GBP", "\\textsterling ")
     s = s.replace("%", "\\%")
     s = s.replace("#", "\\#")
     s = s.replace("_", "\\_")
@@ -558,6 +559,11 @@ def toLatexSub(s):
     s = s.replace("360-degree", "360$^{\\circ}$")
     s = s.replace("Khazad-dum", "Khazad-d\\^um")
     s = s.replace("cape a par", "cape \\`a par")
+    s = s.replace("Ad Urbem Pertinet.", "{\\calligra Ad Urbem Pertinet.}")
+    s = s.replace("Promitto fore ut possessori postulanti nummum unum solvem, "
+                  + "an apte satisfaciam.",
+                  "{\\calligra Promitto fore ut possessori postulanti nummum "
+                  + "unum solvem, an apte satisfaciam.}")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
