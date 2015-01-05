@@ -18122,6 +18122,10 @@ UNSEEN ACADEMICALS
 
 The page numbers refer to the Harper Fiction paperback edition.
 
++ [theme]
+
+  TODO: Romeo and Juliet
+
 + [p. 4] "'Traditionally, in the lexicon of pathos, [Mr. Wobble] should have
   only one eye, but as the result of a childhood error in Glenda's sewing, he
   has three, and is more enlightened than the average bear.'"
@@ -18190,6 +18194,24 @@ The page numbers refer to the Harper Fiction paperback edition.
         To laughter and contempt; that she may feel
         How sharper than a serpent's tooth it is
         To have a thankless child! Away, away!
+
++ [p. 170] "'There are more things in Heaven and Disc than are dreamed of in our
+  philosophies.'"
+
+  Paraphrasing Shakespeare's _Hamlet_ here:
+
+        There are more things in heaven and earth, Horatio,
+        Than are dreamt of in your philosophy. [...]
+
++ [p. 403] The Dolly Sisters Players' production _Starcrossed_.
+
+  Through Glenda and Mr Nutt's discussion after having witnessed the play, it is
+  evident that _Starcrossed_ is a reference to Shakespeare's _Romeo and Juliet_.
+  Although explicitly described by Mr. Nutt "as one of the great romantic plays
+  of the last fifty years", in our timescale the Bernstein/Sondheim musical
+  _West Side Story_ -- an updated version of the plot of Romeo and Juliet, with
+  warring city street gangs -- was first performed in 1957, thus making it 52
+  years old.
 
 
 SCOUTING FOR TROLLS
