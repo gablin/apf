@@ -564,6 +564,7 @@ def toLatexSub(s):
                   + "an apte satisfaciam.",
                   "{\\calligra Promitto fore ut possessori postulanti nummum "
                   + "unum solvem, an apte satisfaciam.}")
+    s = s.replace(" ceili ", " c\\'eil\\'\\i{} ")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
@@ -645,6 +646,11 @@ def toLatexSub(s):
             i = pos + 2
         else:
             i = pos + 1
+
+    # Fix other 'false' full stops
+    fake_fullstop_table = [ "St" ]
+    for p in fake_fullstop_table:
+        s = s.replace(" " + p + ". ", " " + p + ".\\ ")
 
     # Remove indentation of certain paragraphs that are actually continuations
     noindent_table = [ "And {`{dope}'}, of course,"
