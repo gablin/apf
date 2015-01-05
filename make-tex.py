@@ -565,6 +565,7 @@ def toLatexSub(s):
                   "{\\calligra Promitto fore ut possessori postulanti nummum "
                   + "unum solvem, an apte satisfaciam.}")
     s = s.replace(" ceili ", " c\\'eil\\'\\i{} ")
+    s = s.replace("Patrick Suskind", "Patrick S\\\"uskind")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",

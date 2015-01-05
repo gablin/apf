@@ -18151,6 +18151,16 @@ The page numbers refer to the Harper Fiction paperback edition.
   The megapode is also a real bird, whose name appropriately enough means "large
   foot".
 
++ [p. 15] Juliet the WAG.
+
+  As becomes apparent later in the book, Juliet is, of course, Discworld's first
+  example of what the UK press refer to as a "WAG": the 'Wives And Girlfriends'
+  of famous footballers (for example Victoria 'Posh' Beckham). Stereotypically,
+  WAGs are incredibly glamourous but also incredibly vacuous, just like
+  Juliet. The union of a famous footballer (in this case, Trev Likely) to a
+  fashion model (Juliet) is a very typical WAG situation. Trev & Juliet are thus
+  Discworld's "Posh & Becks" (Mr & Mrs David Beckham).
+
 + [p. 20] "A detailed analysis of past minutes, coupled with Hex's enormous
   predictive abilities, meant that for a simple range of easily accessible
   givens, such as the agenda (which Ponder controlled in any case), the
@@ -18201,6 +18211,18 @@ The page numbers refer to the Harper Fiction paperback edition.
   Referring to the 1956 musical _My Fair Lady_, where street flower seller Eliza
   Doolittle improves her cockney speech to the point where she's taken for a
   fine lady at an embassy ball.
+
++ [p. 45] "[...] Miss Healstether found him a book on scent."
+
+  Mr Nutt's early life, education, and reception by his peers is reminiscent of
+  that of the character Grenouille in Patrick Suskind's novel _Perfume_, who is
+  similarly scorned, hated, and makes his way up -- or at least across -- from
+  the bottom. It is also worth noting that Grenouille was raised by a priest, at
+  least for a part of his life, and was effectively chained to a Hell-like
+  cellar apprenticeship until offered opportunity to better himself. Like
+  Steerpike in _Gormenghast_ (see the annotation for p. 29 of _Going Postal_),
+  Grenouille finally becomes a manipulative monster with a sinister power over
+  people.
 
 + [p. 170] "'There are more things in Heaven and Disc than are dreamed of in our
   philosophies.'"
