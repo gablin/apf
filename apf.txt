@@ -18120,8 +18120,15 @@ may be a fifth one. But either fourth or fifth book will be the last one.
 
 UNSEEN ACADEMICALS
 
-This book is in the planning stages only. No scheduled release date is
-known.
++ [p. 4] "'Traditionally, in the lexicon of pathos, [Mr. Wobble] should have
+  only one eye, but as the result of a childhood error in Glenda's sewing, he
+  has three, and is more enlightened than the average bear.'"
+
+  This is a reference to the picnic basket-stealing cartoon character, Yogi
+  Bear, who is frequently described as "smarter than the average bear". There is
+  also a reference to "opening one's third eye" which has to do with gaining
+  insight into the workings of the universe, a feature of several spiritual
+  traditions.
 
 
 SCOUTING FOR TROLLS
