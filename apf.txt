@@ -18120,6 +18120,8 @@ may be a fifth one. But either fourth or fifth book will be the last one.
 
 UNSEEN ACADEMICALS
 
+The page numbers refer to the Harper Fiction paperback edition.
+
 + [p. 4] "'Traditionally, in the lexicon of pathos, [Mr. Wobble] should have
   only one eye, but as the result of a childhood error in Glenda's sewing, he
   has three, and is more enlightened than the average bear.'"
@@ -18144,6 +18146,18 @@ UNSEEN ACADEMICALS
 
   The megapode is also a real bird, whose name appropriately enough means "large
   foot".
+
++ [p. 20] "A detailed analysis of past minutes, coupled with Hex's enormous
+  predictive abilities, meant that for a simple range of easily accessible
+  givens, such as the agenda (which Ponder controlled in any case), the
+  committee members, the time since breakfast, the time to dinner, and so on, in
+  most cases the minutes could be written beforehand."
+
+  Ponder Stibbons' technique for creating minutes of Faculty meetings is, in
+  purpose and execution, identical to standard British Civil Service policy (as
+  described in the great satire of government life, _Yes, Prime Minister_, in
+  which Sir Humphrey Appleby is an adept at predicting in advance how a meeting
+  will work out and can quite safely dictate the minutes in advance).
 
 
 SCOUTING FOR TROLLS
