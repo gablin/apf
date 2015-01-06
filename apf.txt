@@ -18327,6 +18327,23 @@ The page numbers refer to the Harper Fiction paperback edition.
         There are more things in heaven and earth, Horatio,
         Than are dreamt of in your philosophy. [...]
 
++ [p. 170] "'You gave the ball a mighty kick, Mister Stibbons, and yet you are,
+  by your own admission, a wet and a weed.'"
+
+  Molesworth, a schoolboy and the narrating character in a series of books by
+  Geoffrey Willans, would consistently refer to his brother, Molesworth 2, as "a
+  wet and a weed."
+
++ [p. 204] "Henry, with an agility unexpected in a wizard so far up the main
+  sequence as described in the well-known Owlspring/Tips Diagram, <<This diagram
+  was devised to chart the tendency of wizards, who start out small and pale, to
+  progress through the craft getting bigger and cholerically redder until at
+  last they swell up and explode in a cloud of pomposity.>> [...]"
+
+  This is a reference to Roundworld's Hertzsprung-Russell diagram, which is used
+  in astronomy to plot the absolute magnitude of stars against their spectral
+  class.
+
 + [p. 403] The Dolly Sisters Players' production _Starcrossed_.
 
   Through Glenda and Mr Nutt's discussion after having witnessed the play, it is
