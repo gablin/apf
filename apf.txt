@@ -18323,7 +18323,7 @@ The page numbers refer to the Harper Fiction paperback edition.
 
 + [p. 122] "Ah, yes, Robert Scandal's famous poem, 'Oi! To his Deaf Mistress'."
 
-  Refers to Andrew Marvell's _To His Coy Mistress_.
+  Refers to Andrew Marvell's "To His Coy Mistress".
 
 + [p. 170] "'There are more things in Heaven and Disc than are dreamed of in our
   philosophies.'"
@@ -18371,6 +18371,22 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Avec are drinks consumed with coffee after dinner. The word itself is French
   -- and probably also restaurant Quirmian -- and means "with".
+
++ [p. 260] "'They want to find her to ask her a lot of questions.' [...] 'What
+  sort of questions, then?' 'Oh, you know---What is your favourite colour? What
+  do you like to eat? Are you an item with anybody? What advice do you have for
+  young people today? Do you wax? Where do you get your hair done?  What is your
+  favourite spoon?'"
+
+  The satirical magazine _Private Eye_ carries a "Me and My Spoon" column in
+  every edition, in which a celebrity is quizzed minutely about their favourite
+  spoon. The column is meant as a joke at the expense of those journalists who
+  persist in asking the most vacuous, trivial, and lazy questions of the people
+  they are interviewing.
+
+  As a sort of foreshadowing of this, Vetinari is seen to be playing with a
+  spoon during the dinner at the University, thoughtfully studying it and the
+  way the varying concavity and convexity of it alters his reflection.
 
 + [p. 403] The Dolly Sisters Players' production _Starcrossed_.
 
