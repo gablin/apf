@@ -1192,6 +1192,8 @@ while currentLine < len(content):
               )
         currentLine += 1
     elif isAtQuote(content[currentLine]):
+        if isAfterAPQuote:
+            print "\\removeVSpaceBetweenAPQuotes"
         isAfterAPQuote = True
         j = currentLine + 1
         while j < len(content) and isAtQuoteContinue(content[j]):
