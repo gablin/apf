@@ -566,6 +566,7 @@ def toLatexSub(s):
                   + "unum solvem, an apte satisfaciam.}")
     s = s.replace(" ceili ", " c\\'eil\\'\\i{} ")
     s = s.replace("Patrick Suskind", "Patrick S\\\"uskind")
+    s = s.replace("Sven-Goran", "Sven-G\\\"oran")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
