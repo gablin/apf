@@ -18325,6 +18325,15 @@ The page numbers refer to the Harper Fiction paperback edition.
 
   Refers to Andrew Marvell's "To His Coy Mistress".
 
++ [p. 156] "'What about this micromail stuff?' said Glenda. [...] 'Chain mail as
+  fine as cloth and strong as steel!' [...] 'It's very---silvery.'"
+
+  Perhaps a reference to Frodo's mithril shirt in _Lord of the Rings_? A metal
+  called moonsilver is said to be a major component of micromail -- "moonsilver"
+  is a translation of the Elvish "mithril" -- and on pp. 356 and 396 we witness
+  how it not only *blocks* an assaulting blow, but also *rebounds* the force
+  against the attacker.
+
 + [p. 170] "'There are more things in Heaven and Disc than are dreamed of in our
   philosophies.'"
 
