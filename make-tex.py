@@ -508,6 +508,7 @@ def toLatexSub(s):
     s = s.replace("`+'", "`$+$'")
     s = s.replace(" * ", " $*$ ")
     s = s.replace("`*'", "`$*$'")
+    s = s.replace(" ... ", "\\thinspace\\ldots{}\\thinspace{}")
     s = s.replace("[...]", "{\\bracketsLDots{}}")
     s = s.replace("...", "{\\ldots{}}")
     s = s.replace(" -- ", " {\emdash{}} ")
@@ -567,6 +568,7 @@ def toLatexSub(s):
     s = s.replace(" ceili ", " c\\'eil\\'\\i{} ")
     s = s.replace("Patrick Suskind", "Patrick S\\\"uskind")
     s = s.replace("Sven-Goran", "Sven-G\\\"oran")
+    s = s.replace("LORD", "\\textsc{Lord}")
 
     # Typeset certain text parts as Death
     s = s.replace("\"I DON'T KNOW ABOUT YOU, BUT I COULD MURDER A CURRY\"",
