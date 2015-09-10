@@ -18512,6 +18512,8 @@ The page numbers refer to the Harper Fiction paperback edition.
 
 SNUFF
 
+The page numbers refer to the Harper Fiction paperback edition.
+
 + [p. 38] Lady Ariadne and her six daughters.
 
   Lady Ariadne's spinster daughters live in full expectation of the acknowledged
@@ -18578,6 +18580,31 @@ SNUFF
   is it not?'"
 
   Vimes is alluding to an _entente cordiale_ between Quirm and Ankh-Morpork.
+
+
+RAISING STEAM
+
+The page numbers refer to the Harper Fiction paperback edition.
+
++ [p. 13] Dick Simnel.
+
+  British readers will instinctively recognise his accent is meant to reflect
+  that of Northern England, the birthplace of British (and world) railways. But
+  which bit of northern England? The experienced dialectologist will pick out
+  occasional words in Yorkshire, Geordie and even Cumbrian slang. But the
+  dominant accent emerging is that of Lancashire. And one particular part of
+  Lancashire, at that. Dick's repeated use of the word "Gradely!", a Lancashire
+  dialect word meaning "Great! Smashing! Brilliant! Ideal!" etc., along with
+  other little quirks, points only in one direction.
+
+  Most likely, Dick Simnel is Pratchett's portray of Fred Dibnah (1938-2004), a
+  steeplejack and mechanic from Bolton, Lancashire, who embodied the old-time
+  Northern engineer in everything he did. He became a celebrity on TV, initially
+  for breath-taking steeplejacking, with a commentary delivered in a wry
+  self-deprecating Northern voice, usually while hanging upside down a couple of
+  hundred feet up. In later life, he had a second career restoring and driving
+  old steam engines, which he loved. TV series were made about this aspect of
+  his life.
 
 
 THE DISCWORLD COMPANION
