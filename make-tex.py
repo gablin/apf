@@ -204,7 +204,7 @@ def latexifyMarkup(s):
     #    #3: String to replace the markup end with
     #    #4: Whether the markup can occur in the middle of a word
     #    #5: Whether the markup can span across multiple paragraphs
-    R_DATA = [ [ "_",  "_",     "\\emph{", "}"  , False, False ]
+    R_DATA = [ [ "_",  "_",     "\\emph{", "}"  ,  True, False ]
              , ["**", "**",   "\\textbf{", "}"  , False, False ]
              , [ "*",  "*",     "\\emph{", "}"  ,  True, False ]
              , ["<<", ">>", "\\footnote{", "}"  , False, False ]
