@@ -16904,8 +16904,8 @@ The page numbers refer to the Harper Fiction paperback edition.
   not always omitted so Cockney expressions can vary in their construction, and
   it is simply a matter of convention which version is used."
 
-+ [p. 49] (p47) "'[Wings] on his hat and his ankles,' said Stanley. 'So he could
-  fly the messages at the speed of...messages.'"
++ [p. 49] "'[Wings] on his hat and his ankles,' said Stanley. 'So he could fly
+  the messages at the speed of...messages.'"
 
   Mercury (Hermes to the Greeks) was the messenger to the gods in general and
   Jupiter (Zeus) in particular. He's commonly depicted with a winged cap and
